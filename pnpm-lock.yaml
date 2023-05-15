@@ -20,6 +20,7 @@ importers:
 
   apps/web:
     specifiers:
+      '@project/configs': workspace:^0.0.1
       '@types/node': ^17.0.12
       '@types/react': ^18.0.22
       '@types/react-dom': ^18.0.7
@@ -27,8 +28,7 @@ importers:
       next: ^13.4.1
       react: ^18.2.0
       react-dom: ^18.2.0
-      tsconfig: workspace:*
-      typescript: ^4.5.3
+      typescript: ^5.0.4
       ui: workspace:*
     dependencies:
       next: 13.4.1_biqbaboplfbrettd7655fr4n2y
@@ -36,18 +36,21 @@ importers:
       react-dom: 18.2.0_react@18.2.0
       ui: link:../../packages/ui
     devDependencies:
+      '@project/configs': link:../../packages/configs
       '@types/node': 17.0.45
       '@types/react': 18.2.5
       '@types/react-dom': 18.2.3
       eslint-config-custom: link:../../packages/eslint-config-custom
-      tsconfig: link:../../packages/tsconfig
-      typescript: 4.9.5
+      typescript: 5.0.4
 
   packages/configs:
     specifiers:
+      '@tsconfig/next': ^1.0.5
       '@tsconfig/strictest': ^2.0.1
     dependencies:
       '@tsconfig/strictest': 2.0.1
+    devDependencies:
+      '@tsconfig/next': 1.0.5
 
   packages/eslint-config-custom:
     specifiers:
@@ -72,8 +75,7 @@ importers:
       eslint: ^7.32.0
       eslint-config-custom: workspace:*
       react: ^17.0.2
-      tsconfig: workspace:*
-      typescript: ^4.5.2
+      typescript: ^5.0.4
     devDependencies:
       '@project/configs': link:../configs
       '@types/react': 18.2.5
@@ -81,8 +83,7 @@ importers:
       eslint: 7.32.0
       eslint-config-custom: link:../eslint-config-custom
       react: 17.0.2
-      tsconfig: link:../tsconfig
-      typescript: 4.9.5
+      typescript: 5.0.4
 
 packages:
 
@@ -385,6 +386,10 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       defer-to-connect: 1.1.3
+    dev: true
+
+  /@tsconfig/next/1.0.5:
+    resolution: {integrity: sha512-ZpAlWqSGE3ZWFqKmI3FiQEu8WcBF3uii1z1ovedMcALflsRoJnExp3YzWQ/fU7lzGmYtfX1CWFpf1Gl8aEC6GQ==}
     dev: true
 
   /@tsconfig/strictest/2.0.1:
@@ -3797,17 +3802,10 @@ packages:
       is-typedarray: 1.0.0
     dev: true
 
-  /typescript/4.9.5:
-    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
-    engines: {node: '>=4.2.0'}
-    hasBin: true
-    dev: true
-
   /typescript/5.0.4:
     resolution: {integrity: sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==}
     engines: {node: '>=12.20'}
     hasBin: true
-    dev: false
 
   /unbox-primitive/1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
