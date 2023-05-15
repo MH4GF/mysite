@@ -1,0 +1,10 @@
+{
+  "name": "@project/configs",
+  "version": "0.0.1",
+  "description": "configs",
+  "main": "src/index.ts",
+  "packageManager": "pnpm@7.15.0",
+  "dependencies": {
+    "@tsconfig/strictest": "^2.0.1"
+  }
+}
