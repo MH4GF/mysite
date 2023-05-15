@@ -5,15 +5,17 @@
   "types": "./index.tsx",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint \"**/*.ts*\""
+    "lint": "run-s lint:*",
+    "lint:tsc": "tsc",
+    "lint:eslint": "eslint \"**/*.ts*\""
   },
   "devDependencies": {
+    "@project/configs": "workspace:^0.0.1",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
     "react": "^17.0.2",
-    "tsconfig": "workspace:*",
     "typescript": "^4.5.2"
   }
 }
