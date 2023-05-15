@@ -45,5 +45,4 @@ export const Default: Story = {}
 
 ```tsx
 export * from './{{ inputs.name }}'
-
 ```

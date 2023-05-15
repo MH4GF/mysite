@@ -33,7 +33,7 @@ questions:
 # `{{ inputs.name }}/src/index.ts`
 
 ```ts
-console.log("hello @project/{{ inputs.name }}")
+console.log('hello @project/{{ inputs.name }}')
 ```
 
 # `{{ inputs.name }}/tsconfig.json`
