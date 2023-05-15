@@ -4,10 +4,11 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "prettier --write .",
     "scaffold": "scaffdog generate"
   },
   "devDependencies": {
+    "@project/configs": "workspace:^0.0.1",
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
     "npm-run-all": "^4.1.5",

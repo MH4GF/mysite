@@ -2,12 +2,16 @@
   "name": "@project/configs",
   "version": "0.0.1",
   "description": "configs",
-  "main": "src/index.ts",
+  "exports": {
+    "./prettier": "./prettier/index.cjs",
+    "./tsconfig/*": "./tsconfig/*"
+  },
   "packageManager": "pnpm@7.15.0",
   "dependencies": {
     "@tsconfig/strictest": "^2.0.1"
   },
   "devDependencies": {
+    "@mh4gf/prettier-config": "^0.1.2",
     "@tsconfig/next": "^1.0.5"
   }
 }
