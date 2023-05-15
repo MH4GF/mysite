@@ -21,6 +21,7 @@ importers:
   apps/web:
     specifiers:
       '@project/configs': workspace:^0.0.1
+      '@project/ui': workspace:*
       '@types/node': ^17.0.12
       '@types/react': ^18.0.22
       '@types/react-dom': ^18.0.7
@@ -29,12 +30,11 @@ importers:
       react: ^18.2.0
       react-dom: ^18.2.0
       typescript: ^5.0.4
-      ui: workspace:*
     dependencies:
+      '@project/ui': link:../../packages/ui
       next: 13.4.1_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      ui: link:../../packages/ui
     devDependencies:
       '@project/configs': link:../../packages/configs
       '@types/node': 17.0.45
@@ -63,9 +63,6 @@ importers:
       eslint-config-prettier: 8.8.0_eslint@8.39.0
       eslint-config-turbo: 1.9.3_eslint@8.39.0
       eslint-plugin-react: 7.28.0_eslint@8.39.0
-
-  packages/tsconfig:
-    specifiers: {}
 
   packages/ui:
     specifiers:
