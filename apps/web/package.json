@@ -3,18 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "dev": "next dev",
     "lint": "run-s lint:*",
+    "lint:next": "next lint",
     "lint:tsc": "tsc",
-    "lint:next": "next lint"
+    "start": "next start"
   },
   "dependencies": {
+    "@project/ui": "workspace:*",
     "next": "^13.4.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@project/ui": "workspace:*"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@project/configs": "workspace:^0.0.1",
