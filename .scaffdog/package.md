@@ -17,15 +17,12 @@ questions:
   "main": "src/index.ts",
   "packageManager": "pnpm@7.15.0",
   "devDependencies": {
-    "@project/tsconfig": "workspace:*",
-    "@project/prettier": "workspace:*",
+    "@project/configs": "workspace:*",
     "typescript": "5.0.4"
   },
   "scripts": {
     "lint": "run-s -c lint:*",
-    "lint:tsc": "tsc",
-    "format": "run-s -c format:*",
-    "format:prettier": "prettier --write ."
+    "lint:tsc": "tsc"
   }
 }
 ```
