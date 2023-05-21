@@ -1,13 +1,13 @@
 {
   "name": "@project/ui",
   "version": "0.0.0",
+  "license": "MIT",
   "main": "./index.tsx",
   "types": "./index.tsx",
-  "license": "MIT",
   "scripts": {
     "lint": "run-s lint:*",
-    "lint:tsc": "tsc",
-    "lint:eslint": "eslint \"**/*.ts*\""
+    "lint:eslint": "eslint \"**/*.ts*\"",
+    "lint:tsc": "tsc"
   },
   "devDependencies": {
     "@project/configs": "workspace:^0.0.1",

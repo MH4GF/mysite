@@ -4,14 +4,15 @@
   "description": "configs",
   "exports": {
     "./prettier": "./prettier/index.cjs",
-    "./tsconfig/*": "./tsconfig/*"
+    "./tsconfig/*": "./tsconfig/*",
+    "./tailwindcss/*": "./tailwindcss/*"
   },
-  "packageManager": "pnpm@7.15.0",
   "dependencies": {
     "@tsconfig/strictest": "^2.0.1"
   },
   "devDependencies": {
-    "@mh4gf/prettier-config": "^0.1.2",
+    "@mh4gf/prettier-config": "^0.2.0",
     "@tsconfig/next": "^1.0.5"
-  }
+  },
+  "packageManager": "pnpm@7.15.0"
 }
