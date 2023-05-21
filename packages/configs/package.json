@@ -4,7 +4,8 @@
   "description": "configs",
   "exports": {
     "./prettier": "./prettier/index.cjs",
-    "./tsconfig/*": "./tsconfig/*"
+    "./tsconfig/*": "./tsconfig/*",
+    "./tailwindcss/*": "./tailwindcss/*"
   },
   "dependencies": {
     "@tsconfig/strictest": "^2.0.1"
