@@ -65,6 +65,16 @@ importers:
     devDependencies:
       '@mh4gf/eslint-config': 0.4.0_iacogk7kkaymxepzhgcbytyi7q
 
+  packages/markdownRenderer:
+    specifiers:
+      '@project/configs': workspace:*
+      '@project/eslint-config': workspace:^0.0.1
+      typescript: 5.0.4
+    devDependencies:
+      '@project/configs': link:../configs
+      '@project/eslint-config': link:../eslint-config
+      typescript: 5.0.4
+
   packages/ui:
     specifiers:
       '@project/configs': workspace:^0.0.1

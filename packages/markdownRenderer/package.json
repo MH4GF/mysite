@@ -1,0 +1,17 @@
+{
+  "name": "@project/markdownRenderer",
+  "version": "0.0.1",
+  "description": "markdownRenderer",
+  "main": "src/index.ts",
+  "scripts": {
+    "lint": "run-s -c lint:*",
+    "lint:eslint": "eslint .",
+    "lint:tsc": "tsc"
+  },
+  "devDependencies": {
+    "@project/configs": "workspace:*",
+    "@project/eslint-config": "workspace:^0.0.1",
+    "typescript": "5.0.4"
+  },
+  "packageManager": "pnpm@7.15.0"
+}
