@@ -15,15 +15,17 @@ questions:
   "version": "0.0.1",
   "description": "{{ inputs.name }}",
   "main": "src/index.ts",
-  "packageManager": "pnpm@7.15.0",
-  "devDependencies": {
-    "@project/configs": "workspace:*",
-    "typescript": "5.0.4"
-  },
   "scripts": {
     "lint": "run-s -c lint:*",
+    "lint:eslint": "eslint .",
     "lint:tsc": "tsc"
-  }
+  },
+  "devDependencies": {
+    "@project/configs": "workspace:*",
+    "@project/eslint-config": "workspace:^0.0.1",
+    "typescript": "5.0.4"
+  },
+  "packageManager": "pnpm@7.15.0"
 }
 ```
 
@@ -37,6 +39,16 @@ console.log('hello @project/{{ inputs.name }}')
 
 ```json
 {
-  "extends": "@project/tsconfig/tsconfig.json"
+  "extends": "@project/configs/tsconfig/react-package.json"
 }
+```
+
+# `{{ inputs.name }}/.eslintrc.cjs`
+
+```
+module.exports = {
+  root: true,
+  extends: ['@project/eslint-config/base'],
+}
+
 ```
