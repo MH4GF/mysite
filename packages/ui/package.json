@@ -15,7 +15,6 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "eslint": "^7.32.0",
-    "eslint-config-custom": "workspace:*",
     "react": "^17.0.2",
     "typescript": "^5.0.4"
   }
