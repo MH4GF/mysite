@@ -6,11 +6,12 @@
   "types": "./index.tsx",
   "scripts": {
     "lint": "run-s lint:*",
-    "lint:eslint": "eslint \"**/*.ts*\"",
+    "lint:eslint": "eslint .",
     "lint:tsc": "tsc"
   },
   "devDependencies": {
     "@project/configs": "workspace:^0.0.1",
+    "@project/eslint-config": "workspace:^0.0.1",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "eslint": "^7.32.0",
