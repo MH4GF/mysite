@@ -1,8 +1,9 @@
 import { createElement } from 'react'
-import rehypeParse from 'rehype-parse'
 import rehypeReact from 'rehype-react'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
 import { unified } from 'unified'
 
-export const processor = unified().use(rehypeParse, { fragment: true }).use(rehypeReact, {
+export const processor = unified().use(remarkParse).use(remarkRehype).use(rehypeReact, {
   createElement,
 })
