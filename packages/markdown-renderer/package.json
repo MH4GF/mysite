@@ -1,5 +1,5 @@
 {
-  "name": "@project/markdownRenderer",
+  "name": "@project/markdown-renderer",
   "version": "0.0.1",
   "description": "markdownRenderer",
   "main": "src/index.ts",
@@ -8,9 +8,18 @@
     "lint:eslint": "eslint .",
     "lint:tsc": "tsc"
   },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rehype-parse": "^8.0.4",
+    "rehype-react": "^7.2.0",
+    "unified": "^10.1.2"
+  },
   "devDependencies": {
     "@project/configs": "workspace:*",
     "@project/eslint-config": "workspace:^0.0.1",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
     "typescript": "5.0.4"
   },
   "packageManager": "pnpm@7.15.0"
