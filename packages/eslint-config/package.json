@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "description": "eslint-config",
   "exports": {
-    "./base": "./src/base.cjs"
+    "./*": "./src/*.cjs"
   },
   "dependencies": {
     "@mh4gf/eslint-config": "^0.4.0",
+    "eslint-config-next": "^13.4.4",
     "eslint-import-resolver-typescript": "^3.5.5"
   },
   "packageManager": "pnpm@7.15.0"
