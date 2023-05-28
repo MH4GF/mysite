@@ -10,5 +10,5 @@ interface Props {
 export const Article: FC<Props> = ({ id }) => {
   const article = use(getArticle(id))
 
-  return <article>{article}</article>
+  return <article className="prose">{article}</article>
 }
