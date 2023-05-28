@@ -1,14 +1,13 @@
-import type { FC } from 'react'
-import { use } from 'react'
-
 import { getArticle } from './getArticle'
 
 interface Props {
   id: string
+  handleNotFound: () => void
 }
 
-export const Article: FC<Props> = ({ id }) => {
-  const article = use(getArticle(id))
+// @ts-expect-error Async Server Component
+export const Article = async ({ id, handleNotFound }: Props): JSX.Element => {
+  const article = await getArticle(id, handleNotFound)
 
   return <article className="prose">{article}</article>
 }

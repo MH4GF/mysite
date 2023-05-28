@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation'
+
 import { Article } from './Article'
 
 interface Params {
@@ -9,7 +11,7 @@ interface Props {
 }
 
 export default function Page({ params }: Props) {
-  return <Article {...params} />
+  return <Article {...params} handleNotFound={notFound} />
 }
 
 export const generateStaticParams = (): Params[] => {
