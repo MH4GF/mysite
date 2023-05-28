@@ -3,7 +3,7 @@ import path from 'path'
 
 import { processor } from '@project/markdown-renderer'
 
-import { env } from '../../env'
+import { env } from '../../../env'
 
 export const getArticle = async (id: string, handleNotFound: () => void) => {
   const filePath = path.join(env.ARTICLES_PATH, `/${id}.md`)

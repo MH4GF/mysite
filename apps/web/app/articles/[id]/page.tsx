@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 
-import { Article } from './Article'
+import { Article } from './_features/Article'
 
 interface Params {
   id: string
