@@ -5,8 +5,9 @@
   "exports": {
     "./base": "./src/base.cjs"
   },
-  "devDependencies": {
-    "@mh4gf/eslint-config": "^0.4.0"
+  "dependencies": {
+    "@mh4gf/eslint-config": "^0.4.0",
+    "eslint-import-resolver-typescript": "^3.5.5"
   },
   "packageManager": "pnpm@7.15.0"
 }

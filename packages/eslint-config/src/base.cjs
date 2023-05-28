@@ -1,6 +1,6 @@
 /** @type {import('eslint/lib/shared/types').ConfigData} */
 module.exports = {
-  ...require('@mh4gf/eslint-config'),
+  extends: ['@mh4gf/eslint-config'],
   parserOptions: { project: './tsconfig.json' },
   settings: {
     'import/resolver': {
