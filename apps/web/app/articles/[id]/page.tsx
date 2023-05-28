@@ -1,4 +1,4 @@
-import { getArticle } from './getArticle'
+import { Article } from './Article'
 
 interface Params {
   id: string
@@ -8,10 +8,8 @@ interface Props {
   params: Params
 }
 
-export default async function Page({ params: { id } }: Props) {
-  const article = await getArticle(id)
-
-  return <>{article}</>
+export default function Page({ params }: Props) {
+  return <Article {...params} />
 }
 
 export const generateStaticParams = (): Params[] => {
