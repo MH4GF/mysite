@@ -11,7 +11,7 @@ export const Header = () => {
       <nav>
         <ul className="flex space-x-4 mt-4">
           <li>
-            <Link href="/" className="hover:text-gray-300">
+            <Link href="/articles" className="hover:text-gray-300">
               Articles
             </Link>
           </li>
