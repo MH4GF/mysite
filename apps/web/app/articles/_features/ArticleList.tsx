@@ -1,12 +1,10 @@
-import type { ComponentProps } from 'react'
-
 import { ArticleListItem } from './ArticleListItem'
+import { getArticles } from './getArticles'
 
-interface Props {
-  articles: ComponentProps<typeof ArticleListItem>[]
-}
-
-export const ArticleList = ({ articles }: Props) => {
+// @ts-expect-error Async Server Component
+export const ArticleList = async (): JSX.Element => {
+  const articles = await getArticles()
+  console.log({ articles })
   return (
     <>
       {articles.map((article, index) => (

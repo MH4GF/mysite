@@ -1,12 +1,8 @@
-import type { Route } from 'next'
 import Link from 'next/link'
 
-interface Props<T extends string> {
-  title: string
-  href: Route<T>
-  publishedAt: string
-  tags: string[]
-}
+import type { Article } from './type'
+
+type Props<T extends string> = Article<T>
 
 export const ArticleListItem = <T extends string>({ title, href, publishedAt, tags }: Props<T>) => {
   return (
