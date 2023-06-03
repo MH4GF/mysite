@@ -4,6 +4,7 @@ import { z } from 'zod'
 const articleSchema = z.object({
   title: z.string(),
   href: z.string(),
+  externalLink: z.boolean(),
   publishedAt: z.string(),
   tags: z.array(z.string()),
 })
