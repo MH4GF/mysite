@@ -62,8 +62,10 @@ importers:
       '@tailwindcss/typography': ^0.5.9
       '@tsconfig/next': ^1.0.5
       '@tsconfig/strictest': ^2.0.1
+      prettier-plugin-tailwindcss: ^0.3.0
     dependencies:
       '@tsconfig/strictest': 2.0.1
+      prettier-plugin-tailwindcss: 0.3.0_prettier@2.8.8
     devDependencies:
       '@mh4gf/prettier-config': 0.2.0_prettier@2.8.8
       '@tailwindcss/typography': 0.5.9
@@ -5146,6 +5148,64 @@ packages:
       synckit: 0.8.5
     dev: true
 
+  /prettier-plugin-tailwindcss/0.3.0_prettier@2.8.8:
+    resolution:
+      {
+        integrity: sha512-009/Xqdy7UmkcTBpwlq7jsViDqXAYSOMLDrHAdTMlVZOrKfM2o9Ci7EMWTMZ7SkKBFTG04UM9F9iM2+4i6boDA==,
+      }
+    engines: { node: '>=12.17.0' }
+    peerDependencies:
+      '@ianvs/prettier-plugin-sort-imports': '*'
+      '@prettier/plugin-pug': '*'
+      '@shopify/prettier-plugin-liquid': '*'
+      '@shufo/prettier-plugin-blade': '*'
+      '@trivago/prettier-plugin-sort-imports': '*'
+      prettier: '>=2.2.0'
+      prettier-plugin-astro: '*'
+      prettier-plugin-css-order: '*'
+      prettier-plugin-import-sort: '*'
+      prettier-plugin-jsdoc: '*'
+      prettier-plugin-marko: '*'
+      prettier-plugin-organize-attributes: '*'
+      prettier-plugin-organize-imports: '*'
+      prettier-plugin-style-order: '*'
+      prettier-plugin-svelte: '*'
+      prettier-plugin-twig-melody: '*'
+    peerDependenciesMeta:
+      '@ianvs/prettier-plugin-sort-imports':
+        optional: true
+      '@prettier/plugin-pug':
+        optional: true
+      '@shopify/prettier-plugin-liquid':
+        optional: true
+      '@shufo/prettier-plugin-blade':
+        optional: true
+      '@trivago/prettier-plugin-sort-imports':
+        optional: true
+      prettier-plugin-astro:
+        optional: true
+      prettier-plugin-css-order:
+        optional: true
+      prettier-plugin-import-sort:
+        optional: true
+      prettier-plugin-jsdoc:
+        optional: true
+      prettier-plugin-marko:
+        optional: true
+      prettier-plugin-organize-attributes:
+        optional: true
+      prettier-plugin-organize-imports:
+        optional: true
+      prettier-plugin-style-order:
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
+      prettier-plugin-twig-melody:
+        optional: true
+    dependencies:
+      prettier: 2.8.8
+    dev: false
+
   /prettier/2.8.8:
     resolution:
       {
@@ -5153,7 +5213,6 @@ packages:
       }
     engines: { node: '>=10.13.0' }
     hasBin: true
-    dev: true
 
   /prop-types/15.8.1:
     resolution:
