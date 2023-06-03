@@ -9,5 +9,5 @@ interface Props {
 export const Article = async ({ id, handleNotFound }: Props): JSX.Element => {
   const article = await getArticle(id, handleNotFound)
 
-  return <article className="prose">{article}</article>
+  return <article className="prose dark:prose-invert">{article}</article>
 }
