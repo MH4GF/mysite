@@ -24,7 +24,6 @@ importers:
       '@project/configs': workspace:^*
       '@project/eslint-config': workspace:^0.0.1
       '@project/markdown-renderer': workspace:^0.0.1
-      '@project/ui': workspace:*
       '@t3-oss/env-nextjs': ^0.4.0
       '@types/node': ^20.2.5
       '@types/react': ^18.2.8
@@ -41,7 +40,6 @@ importers:
       '@headlessui/react': 1.7.15_biqbaboplfbrettd7655fr4n2y
       '@heroicons/react': 2.0.18_react@18.2.0
       '@project/markdown-renderer': link:../../packages/markdown-renderer
-      '@project/ui': link:../../packages/ui
       '@t3-oss/env-nextjs': 0.4.0_i2fvzue2cjjncoywjfv7hcm7mu
       next: 13.4.4_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
@@ -108,29 +106,6 @@ importers:
       '@project/eslint-config': link:../eslint-config
       '@types/react': 18.2.8
       '@types/react-dom': 18.2.4
-      typescript: 5.1.3
-
-  packages/ui:
-    specifiers:
-      '@headlessui/react': ^1.7.15
-      '@heroicons/react': ^2.0.18
-      '@project/configs': workspace:^0.0.1
-      '@project/eslint-config': workspace:^0.0.1
-      '@types/react': ^18.2.8
-      '@types/react-dom': ^18.2.4
-      eslint: ^8.42.0
-      react: ^18.2.0
-      typescript: ^5.1.3
-    dependencies:
-      '@headlessui/react': 1.7.15_biqbaboplfbrettd7655fr4n2y
-      '@heroicons/react': 2.0.18_react@18.2.0
-    devDependencies:
-      '@project/configs': link:../configs
-      '@project/eslint-config': link:../eslint-config
-      '@types/react': 18.2.8
-      '@types/react-dom': 18.2.4
-      eslint: 8.42.0
-      react: 18.2.0
       typescript: 5.1.3
 
 packages:
@@ -3786,6 +3761,7 @@ packages:
       {
         integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==,
       }
+    dev: false
 
   /js-yaml/3.14.1:
     resolution:
@@ -3990,6 +3966,7 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
+    dev: false
 
   /lower-case/2.0.2:
     resolution:
@@ -5289,6 +5266,7 @@ packages:
     engines: { node: '>=0.10.0' }
     dependencies:
       loose-envify: 1.4.0
+    dev: false
 
   /read-cache/1.0.0:
     resolution:

@@ -14,7 +14,6 @@
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^2.0.18",
     "@project/markdown-renderer": "workspace:^0.0.1",
-    "@project/ui": "workspace:*",
     "@t3-oss/env-nextjs": "^0.4.0",
     "next": "^13.4.4",
     "react": "^18.2.0",
