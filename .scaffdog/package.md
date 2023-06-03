@@ -23,7 +23,7 @@ questions:
   "devDependencies": {
     "@project/configs": "workspace:*",
     "@project/eslint-config": "workspace:^0.0.1",
-    "typescript": "5.0.4"
+    "typescript": "5.1.3"
   },
   "packageManager": "pnpm@7.15.0"
 }
