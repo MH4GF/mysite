@@ -19,6 +19,8 @@ importers:
 
   apps/web:
     specifiers:
+      '@headlessui/react': ^1.7.15
+      '@heroicons/react': ^2.0.18
       '@project/configs': workspace:^*
       '@project/eslint-config': workspace:^0.0.1
       '@project/markdown-renderer': workspace:^0.0.1
@@ -36,6 +38,8 @@ importers:
       typescript: ^5.1.3
       zod: ^3.21.4
     dependencies:
+      '@headlessui/react': 1.7.15_biqbaboplfbrettd7655fr4n2y
+      '@heroicons/react': 2.0.18_react@18.2.0
       '@project/markdown-renderer': link:../../packages/markdown-renderer
       '@project/ui': link:../../packages/ui
       '@t3-oss/env-nextjs': 0.4.0_i2fvzue2cjjncoywjfv7hcm7mu
@@ -108,6 +112,8 @@ importers:
 
   packages/ui:
     specifiers:
+      '@headlessui/react': ^1.7.15
+      '@heroicons/react': ^2.0.18
       '@project/configs': workspace:^0.0.1
       '@project/eslint-config': workspace:^0.0.1
       '@types/react': ^18.2.8
@@ -115,6 +121,9 @@ importers:
       eslint: ^8.42.0
       react: ^18.2.0
       typescript: ^5.1.3
+    dependencies:
+      '@headlessui/react': 1.7.15_biqbaboplfbrettd7655fr4n2y
+      '@heroicons/react': 2.0.18_react@18.2.0
     devDependencies:
       '@project/configs': link:../configs
       '@project/eslint-config': link:../eslint-config
@@ -187,6 +196,32 @@ packages:
         integrity: sha512-6SWlXpWU5AvId8Ac7zjzmIOqMOba/JWY8XZ4A7q7Gn1Vlfg/SFFIlrtHXt9nPn4op9ZPAkl91Jao+QQv3r/ukw==,
       }
     engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
+
+  /@headlessui/react/1.7.15_biqbaboplfbrettd7655fr4n2y:
+    resolution:
+      {
+        integrity: sha512-OTO0XtoRQ6JPB1cKNFYBZv2Q0JMqMGNhYP1CjPvcJvjz8YGokz8oAj89HIYZGN0gZzn/4kk9iUpmMF4Q21Gsqw==,
+      }
+    engines: { node: '>=10' }
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
+    dependencies:
+      client-only: 0.0.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@heroicons/react/2.0.18_react@18.2.0:
+    resolution:
+      {
+        integrity: sha512-7TyMjRrZZMBPa+/5Y8lN0iyvUU/01PeMGX2+RE7cQWpEUIcb4QotzUObFkJDejj/HUH4qjP/eQ0gzzKs2f+6Yw==,
+      }
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@humanwhocodes/config-array/0.11.10:
     resolution:

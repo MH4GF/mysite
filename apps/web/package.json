@@ -11,6 +11,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
     "@project/markdown-renderer": "workspace:^0.0.1",
     "@project/ui": "workspace:*",
     "@t3-oss/env-nextjs": "^0.4.0",
