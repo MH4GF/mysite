@@ -5,4 +5,7 @@ module.exports = {
   experimental: {
     typedRoutes: true,
   },
+  images: {
+    domains: ['avatars.githubusercontent.com'],
+  },
 }
