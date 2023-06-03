@@ -17,7 +17,7 @@ const ExternalLink = <T extends string>({ href, title }: LinkProps<T>) => {
     <a className="hover:underline" href={href} target="_blank" rel="noreferrer">
       {title}
       <svg
-        className="w-6 h-6 ml-1 inline-block"
+        className="ml-1 inline-block h-6 w-6"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -45,7 +45,7 @@ export const ArticleListItem = <T extends string>({
 }: Props<T>) => {
   return (
     <article className="">
-      <h2 className="text-xl mb-2">
+      <h2 className="mb-2 text-xl">
         {externalLink ? (
           <ExternalLink href={href} title={title} />
         ) : (
@@ -53,7 +53,7 @@ export const ArticleListItem = <T extends string>({
         )}
       </h2>
       <div className="flex justify-between">
-        <div className="flex space-x-2 mt-2">
+        <div className="mt-2 flex space-x-2">
           {tags.map((tag, index) => (
             <span key={index}>{tag}</span>
           ))}

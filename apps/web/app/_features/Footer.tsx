@@ -13,7 +13,7 @@ export const Footer = () => {
             alt="My profile image"
             width="150"
             height="150"
-            className="rounded-full inline-block"
+            className="inline-block rounded-full"
           />
           <h1 className="mt-2 font-bold">Hirotaka Miyagi</h1>
           <p className="text-sm text-slate-400">Software Engineer / @mh4gf</p>
