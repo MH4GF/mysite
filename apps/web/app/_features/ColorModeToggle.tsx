@@ -51,9 +51,10 @@ export const ColorModeToggle = () => {
     const isDarkMode = document.documentElement.classList.toggle('dark')
 
     if (isDarkMode === isSystemDarkMode) {
-      delete window.localStorage.isDarkMode
+      // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
+      delete window.localStorage['isDarkMode']
     } else {
-      window.localStorage.isDarkMode = isDarkMode
+      window.localStorage['isDarkMode'] = isDarkMode
     }
   }
 
