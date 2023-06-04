@@ -14,7 +14,7 @@ export const Header = () => {
           </Link>
           <div className="flex items-center gap-x-12">
             {navigation.map((item) => (
-              <Link key={item.name} href={item.href} className="text-sm font-semibold leading-6">
+              <Link key={item.name} href={item.href} className="text-sm leading-6">
                 {item.name}
               </Link>
             ))}
