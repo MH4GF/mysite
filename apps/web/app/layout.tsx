@@ -1,7 +1,6 @@
 import '@project/configs/tailwindcss/global.css'
 import { Inter } from 'next/font/google'
 
-import { Footer } from './_features/Footer'
 import { Header } from './_features/Header'
 
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' })
@@ -13,7 +12,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="mx-auto grid min-h-screen max-w-2xl gap-8">
           <Header />
           {children}
-          <Footer />
         </main>
       </body>
     </html>

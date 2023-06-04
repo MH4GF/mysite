@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { externalLinks } from '../_utils/externalLinks'
+import { externalLinks } from '../../_utils/externalLinks'
 
 export const Footer = () => {
   return (
