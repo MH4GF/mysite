@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import { Article } from './_features/Article'
 
 interface Params {
-  id: string
+  slug: string
 }
 
 interface Props {
@@ -15,9 +15,10 @@ export default function Page({ params }: Props) {
 }
 
 export const generateStaticParams = (): Params[] => {
+  // TODO: articles.jsonから取得する
   return [
     {
-      id: 'frequently-used-gh-commands',
+      slug: 'frequently-used-gh-commands',
     },
   ]
 }
