@@ -1,5 +1,8 @@
 import { notFound } from 'next/navigation'
 
+import { getSlugs } from '../../_utils/getSlugs'
+import { rootJoin } from '../../_utils/rootJoin'
+
 import { Article } from './_features/Article'
 
 interface Params {
@@ -14,11 +17,7 @@ export default function Page({ params }: Props) {
   return <Article {...params} handleNotFound={notFound} />
 }
 
-export const generateStaticParams = (): Params[] => {
-  // TODO: articles.jsonから取得する
-  return [
-    {
-      slug: 'frequently-used-gh-commands',
-    },
-  ]
+export const generateStaticParams = (): Promise<Params[]> => {
+  const dirPath = rootJoin(`contents/articles`)
+  return getSlugs(dirPath)
 }
