@@ -2,10 +2,7 @@ import Link from 'next/link'
 
 import { ColorModeToggle } from './ColorModeToggle'
 
-const navigation = [
-  { name: 'Articles', href: '/articles' },
-  { name: 'About', href: '/' },
-] as const
+const navigation = [{ name: 'Articles', href: '/articles' }] as const
 
 export const Header = () => {
   return (
