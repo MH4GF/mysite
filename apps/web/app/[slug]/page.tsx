@@ -1,6 +1,9 @@
 import { notFound } from 'next/navigation'
 
+import { rootJoin } from '../_utils/rootJoin'
+
 import { Content } from './_features/Content'
+import { getSlugs } from './_features/getSlugs'
 
 interface Params {
   slug: string
@@ -14,14 +17,7 @@ export default function Page({ params }: Props) {
   return <Content {...params} handleNotFound={notFound} />
 }
 
-export const generateStaticParams = (): Params[] => {
-  // TODO: 実際のデータから取得する
-  return [
-    {
-      slug: 'behavior',
-    },
-    {
-      slug: 'thinking-in-career',
-    },
-  ]
+export const generateStaticParams = async (): Promise<Params[]> => {
+  const dirPath = rootJoin(`contents/about`)
+  return await getSlugs(dirPath)
 }
