@@ -13,3 +13,15 @@ interface Props {
 export default function Page({ params }: Props) {
   return <Content {...params} handleNotFound={notFound} />
 }
+
+export const generateStaticParams = (): Params[] => {
+  // TODO: 実際のデータから取得する
+  return [
+    {
+      slug: 'behavior',
+    },
+    {
+      slug: 'thinking-in-career',
+    },
+  ]
+}
