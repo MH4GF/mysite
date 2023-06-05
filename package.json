@@ -6,6 +6,7 @@
     "dev": "turbo run dev",
     "lint:turbo": "turbo run lint",
     "lint:depcruise": "depcruise --config .dependency-cruiser.js apps packages",
+    "lint:prettier": "prettier --cache --check .",
     "lint": "run-s -c lint:*",
     "format": "prettier --write .",
     "scaffold": "scaffdog generate"
