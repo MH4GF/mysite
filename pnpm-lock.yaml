@@ -60,13 +60,13 @@ importers:
 
   packages/configs:
     specifiers:
-      '@mh4gf/prettier-config': ^0.2.0
+      '@mh4gf/configs': ^0.2.0
       '@tailwindcss/typography': ^0.5.9
       '@tsconfig/next': ^1.0.5
       '@tsconfig/strictest': ^2.0.1
       prettier-plugin-tailwindcss: ^0.3.0
     dependencies:
-      '@mh4gf/prettier-config': 0.2.0_prettier@2.8.8
+      '@mh4gf/configs': 0.2.0_fmn3hee5wuy36djnstv237sjke
       '@tailwindcss/typography': 0.5.9
       '@tsconfig/next': 1.0.5
       '@tsconfig/strictest': 2.0.1
@@ -299,6 +299,20 @@ packages:
     engines: { node: '>=12' }
     dependencies:
       unist-util-visit: 1.4.1
+    dev: false
+
+  /@mh4gf/configs/0.2.0_fmn3hee5wuy36djnstv237sjke:
+    resolution:
+      {
+        integrity: sha512-ZoBPaTY7qgc3Qu8F+PlNRSRCEkCILiBm/XM/MnjF9osplUQgWQxDThfWyMlyqOEgmQWu4WDIsnHu4tMsSz9V8A==,
+      }
+    peerDependencies:
+      '@tsconfig/strictest': ^2
+    dependencies:
+      '@mh4gf/prettier-config': 0.2.0_prettier@2.8.8
+      '@tsconfig/strictest': 2.0.1
+    transitivePeerDependencies:
+      - prettier
     dev: false
 
   /@mh4gf/eslint-config/0.4.0_vhdfke232e2dhvwo3icln7w5zi:
