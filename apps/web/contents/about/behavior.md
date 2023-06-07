@@ -16,10 +16,11 @@
 ### リモートワーク
 
 - 情報が然るべき方法で「公開・整理・配信」されている状態を目指す ref: [社内向け「透明ガイド」を公開します｜ sonopy@Ubie Discovery](https://note.com/sonopy/n/na5cd53e7c204)
-  - フロー情報として作業は Slack に常に書き連ねる ref: [Working Out Loud](https://blog.studysapuri.jp/entry/2018/11/14/working-out-loud)
-  - ストック情報として知見や共有事項はドキュメント or Custom Linter(ex: [sider](https://sider.review/ja))に昇華する
-  - 意思決定は後から見返せる状態で公開する
+  - フロー情報として作業は GitHub Issue に常に書き連ねる ref: [Working Out Loud](https://blog.studysapuri.jp/entry/2018/11/14/working-out-loud)
+  - ストック情報として知見や共有事項はドキュメント or Custom Linter に昇華する
 - 基本非同期コミュニケーションとし、タイムゾーンを気にせず進められるようにする
+- チーム API を定義し、自身のチーム・他チームが協調しやすい状況をつくる: [30 分で分かった気になるチームトポロジー | Ryuzee.com](https://slide.meguro.ryuzee.com/slides/109)
+- 地理的距離が離れているからこその雑談の時間を大事にする
 
 ### ミーティング
 
@@ -69,11 +70,20 @@
 - 全ての開発は理想のインターフェースから始める
 - ロジックはテストを書く、書けないなら書けるように責務を分割する
   - バグの恒久対応はテストで表現する
-- 社内フレームワークではなく主流な手段で解決し、キャッチアップと採用を容易にする
 - コーディングスタイル(インデントなど)のレビューは一切せず、linter や[editorconfig](https://editorconfig.org/)に従う
   - 人間のレビューを減らすために linter を積極的に整備する
 - ビッグバンリリースはせずフィーチャートグルを利用する
 - OSS やコミュニティに積極的に還元する
+
+### 意思決定・技術選定
+
+- ADR(Architecture Decision Record)を積極的に書く
+  - 理論的根拠に対する強固な共通の理解を作るため
+  - できないこと（制約・リスク）を具体的に書き、許容できるかを判断できるようにするため
+  - [チーム開発における技術選定の進め方 - ROUTE06 Tech Blog](https://tech.route06.co.jp/entry/2023/06/07/120217)
+- 今しなくて良い意思決定は可能な限り遅延させ、情報を集め最適な選択肢を選べるようにする ref: [リーン開発での『決定を遅らせる』がやっと理解できた話 - 無気力生活 (ノ ´ω ｀)ノ ~゜](https://gdgd-shinoyu.hatenablog.com/entry/2018/12/16/081728)
+- 社内フレームワークではなく主流な手段で解決し、キャッチアップと採用を容易にする
+  - 主流な手段は世の中の情報量も多く、ChatGPT のような LLM を利用した問題解決も容易になる
 
 ### Git, Commit, Pull Request
 
