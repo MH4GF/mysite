@@ -1,4 +1,4 @@
-const defaultConfig = require('@mh4gf/prettier-config')
+const defaultConfig = require('@mh4gf/configs/prettier')
 
 module.exports = {
   ...defaultConfig,
