@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import { MyAvatar } from './_components/MyAvatar'
+import { SocialLink } from './_components/SocialLink'
 
 export default function Page() {
   return (
@@ -10,6 +11,10 @@ export default function Page() {
         <h1 className="text-5xl font-bold">Hirotaka Miyagi</h1>
       </div>
       <p>I'm a software engineer based in Tokyo, Japan.</p>
+      <div className="flex gap-4">
+        <SocialLink kind="twitter" />
+        <SocialLink kind="github" />
+      </div>
       <ul>
         <li>
           <Link href="#" className="cursor-not-allowed">
