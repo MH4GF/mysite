@@ -1,4 +1,4 @@
-# hirotaka_miyagi | 宮城 広隆
+# Hirotaka Miyagi | 宮城 広隆
 
 ## 自己PR
 
