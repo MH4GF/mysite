@@ -27,6 +27,9 @@ export default function Page() {
         <li>
           <Link href="/thinking-in-career">⛰️ キャリアの指向性(脳内メモ)</Link>
         </li>
+        <li>
+          <Link href="/resume">👋 Resume</Link>
+        </li>
       </ul>
     </div>
   )
