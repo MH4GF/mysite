@@ -10,6 +10,7 @@ export const MyAvatar = () => {
       width="150"
       height="150"
       className="inline-block rounded-full"
+      priority
     />
   )
 }
