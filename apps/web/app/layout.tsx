@@ -1,8 +1,7 @@
 import '@project/configs/tailwindcss/global.css'
 import { Inter } from 'next/font/google'
 
-import { ColorModeScript } from './_features/ColorModeScript'
-import { Header } from './_features/Header'
+import { Header, ColorModeScript } from './_features'
 
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' })
 
