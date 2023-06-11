@@ -1,6 +1,6 @@
 import { getMarkdownContent } from '@project/markdown-renderer'
 
-import { MarkdownContent } from '@/app/_components'
+import { MarkdownContent } from '@/app/_features'
 import { rootJoin } from '@/app/_utils'
 
 interface Props {
