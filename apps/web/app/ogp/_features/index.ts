@@ -1,0 +1,1 @@
+export { parseHTML } from './parseHTML'
