@@ -4,6 +4,7 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "test": "turbo run test",
     "lint:turbo": "turbo run lint",
     "lint:depcruise": "depcruise --config .dependency-cruiser.js apps packages",
     "lint:prettier": "prettier --cache --check .",
