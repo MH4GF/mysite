@@ -1,3 +1,0 @@
-{
-  "extends": "@project/configs/tsconfig/react-package.json"
-}
