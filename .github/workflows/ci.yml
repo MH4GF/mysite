@@ -13,13 +13,23 @@ env:
   TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
 
 jobs:
-  ci:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
         with:
           node-version-file: .node-version
-          pnpm-version: '7.15.0'
+          pnpm-version: '8.6.1'
       - run: pnpm i
       - run: pnpm lint
+  depcruise:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: MH4GF/dependency-cruiser-report-action@v2
+        with:
+          package-manager: pnpm
