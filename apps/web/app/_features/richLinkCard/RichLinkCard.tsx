@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { useId } from 'react'
 
+import type { OGPResult } from './getOGP'
 import { getOGP } from './getOGP'
-import type { OGPResult } from './types'
 
 type RichLinkCardInnerProps = OGPResult
 
