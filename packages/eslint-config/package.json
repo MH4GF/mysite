@@ -11,5 +11,8 @@
     "eslint-import-resolver-typescript": "^3.5.5",
     "eslint-plugin-tailwindcss": "^3.12.1"
   },
+  "devDependencies": {
+    "eslint-plugin-import-access": "^1.1.2"
+  },
   "packageManager": "pnpm@8.6.1"
 }
