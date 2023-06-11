@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { externalLinks } from '../_utils/constants'
+import { externalLinks } from '@/app/_utils/constants'
 
 export const MyAvatar = () => {
   return (

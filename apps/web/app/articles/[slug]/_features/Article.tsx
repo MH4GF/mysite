@@ -1,7 +1,7 @@
 import { getMarkdownContent } from '@project/markdown-renderer'
 
-import { MarkdownContent } from '../../../_components'
-import { rootJoin } from '../../../_utils'
+import { MarkdownContent } from '@/app/_components'
+import { rootJoin } from '@/app/_utils'
 
 interface Props {
   slug: string

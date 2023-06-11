@@ -1,0 +1,10 @@
+{
+  "extends": "@project/configs/tsconfig/base.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["apps/web/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

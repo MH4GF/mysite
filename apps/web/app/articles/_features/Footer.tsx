@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { MyAvatar } from '../../_components'
+import { MyAvatar } from '@/app/_components'
 
 export const Footer = () => {
   return (

@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation'
 
-import { rootJoin, getSlugs } from '../../_utils'
-
 import { Article } from './_features/Article'
+
+import { rootJoin, getSlugs } from '@/app/_utils'
 
 interface Params {
   slug: string
