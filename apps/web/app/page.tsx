@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
-import { MyAvatar } from './_components/MyAvatar'
-import { SocialLink } from './_components/SocialLink'
+import { MyAvatar, SocialLink } from './_components'
 
 export default function Page() {
   return (
