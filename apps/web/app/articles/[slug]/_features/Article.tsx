@@ -1,4 +1,4 @@
-import { MarkdownContent, getMarkdownContent } from '@/app/_features'
+import { MarkdownContent } from '@/app/_features'
 import { rootJoin } from '@/app/_utils'
 
 interface Props {
@@ -6,10 +6,8 @@ interface Props {
   handleNotFound: () => void
 }
 
-// @ts-expect-error Async Server Component
-export const Article = async ({ slug, handleNotFound }: Props): JSX.Element => {
+export const Article = ({ slug, handleNotFound }: Props): JSX.Element => {
   const filePath = rootJoin(`contents/articles/${slug}.md`)
-  const article = await getMarkdownContent(filePath, handleNotFound)
 
-  return <MarkdownContent>{article}</MarkdownContent>
+  return <MarkdownContent filePath={filePath} handleNotFound={handleNotFound} />
 }
