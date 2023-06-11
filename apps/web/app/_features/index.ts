@@ -1,2 +1,2 @@
 export { Header } from './Header'
-export { ColorModeScript } from './ColorModeScript'
+export { ColorModeScript } from './colorMode'

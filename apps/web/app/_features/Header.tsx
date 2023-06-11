@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { ColorModeToggle } from './ColorModeToggle'
+import { ColorModeToggle } from './colorMode'
 
 const navigation = [{ name: 'Articles', href: '/articles' }] as const
 
