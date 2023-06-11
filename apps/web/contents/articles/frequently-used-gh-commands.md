@@ -1,6 +1,6 @@
 # GitHub CLI でよく使うコマンド
 
-[GitHub CLI](https://cli.github.com/)
+https://cli.github.com/
 
 GitHub CLI を便利に使っている。基本的に GitHub の操作の起点は CLI からにしていて、現時点での自身の利用コマンドをまとめてみる。
 
