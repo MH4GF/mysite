@@ -20,7 +20,7 @@ jobs:
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
         with:
           node-version-file: .node-version
-          pnpm-version: '7.15.0'
+          pnpm-version: '8.6.1'
       - run: pnpm i
       - run: pnpm lint
   depcruise:
