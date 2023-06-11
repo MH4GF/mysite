@@ -1,0 +1,18 @@
+name: ci
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  depcruise:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: MH4GF/dependency-cruiser-report-action@v2
+        with:
+          package-manager: pnpm
