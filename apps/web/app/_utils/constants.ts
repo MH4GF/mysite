@@ -10,3 +10,7 @@ export const env = createEnv({
     PNPM_SCRIPT_SRC_DIR: process.env['PNPM_SCRIPT_SRC_DIR'],
   },
 })
+
+export const externalLinks = Object.freeze({
+  avatar: 'https://avatars.githubusercontent.com/u/31152321?v=4',
+})

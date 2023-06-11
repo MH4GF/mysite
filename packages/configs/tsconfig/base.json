@@ -3,5 +3,10 @@
   "extends": "@mh4gf/configs/tsconfig/base.json",
   "compilerOptions": {
     "noEmit": true
-  }
+  },
+  "plugins": [
+    {
+      "name": "eslint-plugin-import-access"
+    }
+  ]
 }

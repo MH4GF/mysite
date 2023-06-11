@@ -1,2 +1,2 @@
-export * from './processor'
-export * from './getMarkdownContent'
+/** @public */
+export { getMarkdownContent } from './getMarkdownContent'
