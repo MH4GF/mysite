@@ -1,6 +1,11 @@
 import { load } from 'cheerio'
 
-import type { OGPResult } from './types'
+export interface OGPResult {
+  url: string
+  title: string
+  description: string
+  imageSrc: string
+}
 
 export const getOGP = async (url: string): Promise<OGPResult> => {
   const response = await fetch(url, { next: { revalidate: 60 * 60 } })
