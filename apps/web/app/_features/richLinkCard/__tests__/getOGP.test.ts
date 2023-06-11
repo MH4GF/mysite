@@ -1,7 +1,7 @@
 import { setupServer } from 'msw/node'
 import { afterAll, afterEach, beforeAll, describe, expect, it } from 'vitest'
 
-import { parseHTML } from '../parseHTML'
+import { getOGP } from '../getOGP'
 
 import { NO_DATA_URL, SAMPLE_URL, handlers } from './handlers'
 
@@ -14,7 +14,7 @@ describe('parseHTML', () => {
 
   it('return parsed ogp', async () => {
     const url = SAMPLE_URL
-    const result = await parseHTML(url)
+    const result = await getOGP(url)
     const expected = {
       url: 'https://mh4gf.dev',
       title: 'Example Domain',
@@ -26,7 +26,7 @@ describe('parseHTML', () => {
 
   it('return empty when ogp properties are not found', async () => {
     const url = NO_DATA_URL
-    const result = await parseHTML(url)
+    const result = await getOGP(url)
     const expected = {
       url: 'https://nodata.mh4gf.dev',
       title: '',

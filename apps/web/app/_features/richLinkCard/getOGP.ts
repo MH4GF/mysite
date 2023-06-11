@@ -1,13 +1,8 @@
 import { load } from 'cheerio'
 
-interface OGPResult {
-  url: string
-  title: string
-  description: string
-  imageSrc: string
-}
+import type { OGPResult } from './types'
 
-export const parseHTML = async (url: string): Promise<OGPResult> => {
+export const getOGP = async (url: string): Promise<OGPResult> => {
   // TODO: cache
   const response = await fetch(url)
   const body = await response.text()
