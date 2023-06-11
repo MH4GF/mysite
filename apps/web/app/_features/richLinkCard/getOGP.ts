@@ -3,8 +3,7 @@ import { load } from 'cheerio'
 import type { OGPResult } from './types'
 
 export const getOGP = async (url: string): Promise<OGPResult> => {
-  // TODO: cache
-  const response = await fetch(url)
+  const response = await fetch(url, { next: { revalidate: 60 * 60 } })
   const body = await response.text()
   const $ = load(body)
 
