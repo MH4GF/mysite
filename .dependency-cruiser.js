@@ -256,7 +256,7 @@ module.exports = {
        defaults to './tsconfig.json'.
      */
     tsConfig: {
-     fileName: './tsconfig.depcruise.json'
+      fileName: './tsconfig.depcruise.json',
     },
 
     /* Webpack configuration to use to get resolve options from.
