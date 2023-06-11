@@ -1,6 +1,6 @@
 import { promises as fs } from 'fs'
 
-import { rootJoin } from '../../_utils/rootJoin'
+import { rootJoin } from '../../_utils'
 
 import type { Article } from './type'
 import { articlesSchema } from './type'

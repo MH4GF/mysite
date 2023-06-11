@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation'
 
-import { getSlugs } from '../_utils/getSlugs'
-import { rootJoin } from '../_utils/rootJoin'
+import { rootJoin, getSlugs } from '../_utils'
 
 import { Content } from './_features/Content'
 
