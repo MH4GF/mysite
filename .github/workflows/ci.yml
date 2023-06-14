@@ -15,6 +15,17 @@ env:
 jobs:
   lint:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
+        with:
+          node-version-file: .node-version
+          pnpm-version: '8.6.1'
+      - run: pnpm i
+      - run: pnpm lint
+
+  test:
+    runs-on: ubuntu-latest
     container:
       image: mcr.microsoft.com/playwright:v1.35.0-focal
     steps:
@@ -24,5 +35,4 @@ jobs:
           node-version-file: .node-version
           pnpm-version: '8.6.1'
       - run: pnpm i
-      - run: pnpm lint
       - run: pnpm test
