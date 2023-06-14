@@ -10,7 +10,7 @@
     "lint:tsc": "tsc",
     "start": "next start",
     "test": "run-s test:*",
-    "test:playwright": "playwright test",
+    "test:playwright": "docker run --rm --network host -v $(pwd)/../..:/work/ -w /work/apps/web mcr.microsoft.com/playwright:v1.35.0-focal /bin/bash -c 'npx playwright test -u'",
     "test:vitest": "vitest"
   },
   "dependencies": {
