@@ -9,7 +9,9 @@
     "lint:next": "next lint",
     "lint:tsc": "tsc",
     "start": "next start",
-    "test": "vitest"
+    "test": "run-s test:*",
+    "test:playwright": "playwright test",
+    "test:vitest": "vitest"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
@@ -27,6 +29,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.35.0",
     "@project/configs": "workspace:^*",
     "@project/eslint-config": "workspace:^0.0.1",
     "@types/node": "^20.2.5",
