@@ -12,7 +12,7 @@ export const Header = () => {
           <Link href="/" className="-m-1.5 p-1.5">
             mh4gf.dev
           </Link>
-          <div className="flex items-center gap-x-12">
+          <div className="flex items-center gap-x-6 sm:gap-x-12">
             {navigation.map((item) => (
               <Link key={item.name} href={item.href} className="text-sm leading-6">
                 {item.name}

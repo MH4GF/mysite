@@ -4,13 +4,13 @@ import { MyAvatar, SocialLink } from './_components'
 
 export default function Page() {
   return (
-    <div className="grid gap-8">
-      <div className="flex items-center gap-8">
+    <div className="grid gap-4 sm:gap-8">
+      <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-8">
         <MyAvatar />
-        <h1 className="text-5xl font-bold">Hirotaka Miyagi</h1>
+        <h1 className="text-3xl font-bold sm:text-5xl">Hirotaka Miyagi</h1>
       </div>
       <p>I'm a software engineer based in Tokyo, Japan.</p>
-      <div className="flex gap-4">
+      <div className="flex gap-2 sm:gap-4">
         <SocialLink kind="twitter" />
         <SocialLink kind="github" />
       </div>
