@@ -11,7 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="dark:bg-zinc-800">
         <ColorModeScript />
         <main className="dark:bg-gradient-to-tr dark:from-zinc-700 dark:via-zinc-900 dark:to-zinc-800 dark:text-zinc-100">
-          <div className="mx-auto grid min-h-screen max-w-2xl content-start gap-8">
+          <div className="mx-auto grid min-h-screen max-w-2xl content-start gap-8 px-4 sm:px-0">
             <Header />
             {children}
           </div>
