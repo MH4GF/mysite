@@ -9,12 +9,14 @@
     "lint:next": "next lint",
     "lint:tsc": "tsc",
     "start": "next start",
-    "test": "vitest"
+    "test": "run-s test:*",
+    "test-playwright-update": "docker run --rm --network host -v $(pwd)/../..:/work/ -w /work/apps/web mcr.microsoft.com/playwright:v1.35.0-focal /bin/bash -c 'npm run test:playwright -u'",
+    "test:playwright": "playwright test",
+    "test:vitest": "vitest"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^2.0.18",
-    "@project/markdown-renderer": "workspace:^0.0.1",
     "@t3-oss/env-nextjs": "^0.4.0",
     "cheerio": "1.0.0-rc.12",
     "next": "^13.4.4",
@@ -28,6 +30,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.35.0",
     "@project/configs": "workspace:^*",
     "@project/eslint-config": "workspace:^0.0.1",
     "@types/node": "^20.2.5",
