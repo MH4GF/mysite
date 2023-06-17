@@ -12,3 +12,10 @@ test('/', async ({ page }) => {
   expect(page.getByRole('heading', { name: 'Hirotaka Miyagi' }))
   await expect(page).toHaveScreenshot()
 })
+
+test('テーマ切り替えができる', async ({ page }) => {
+  await setup(page)
+  await page.getByRole('button', { name: 'Toggle dark mode' }).click()
+
+  await expect(page).toHaveScreenshot()
+})
