@@ -3,6 +3,8 @@ import { z } from 'zod'
 
 import { RichLinkCard } from '../../richLinkCard'
 
+import { TweetEmbed } from './TweetEmbed'
+
 type Props = ComponentProps<'p'>
 
 const maybeSingleUrl = (_children: ReactNode): string | null => {
@@ -13,11 +15,19 @@ const maybeSingleUrl = (_children: ReactNode): string | null => {
   return parsed.success ? parsed.data : null
 }
 
+const parseTweetId = (url: string): string | null => {
+  const regex = /https:\/\/twitter.com\/\w+\/status\/(\d+)/
+  const result = url.match(regex)
+  return result?.at(1) ?? null
+}
+
 export const Paragraph = ({ children }: Props) => {
   const maybeUrl = maybeSingleUrl(children)
-  if (maybeUrl !== null) {
-    return <RichLinkCard url={maybeUrl} />
-  }
+  if (maybeUrl === null) return <p>{children}</p>
 
-  return <p>{children}</p>
+  const maybeTweetId = parseTweetId(maybeUrl)
+  if (maybeTweetId !== null) return <TweetEmbed tweetId={maybeTweetId} />
+
+  // TODO: RichLinkCardをelements以下に移動する
+  return <RichLinkCard url={maybeUrl} />
 }
