@@ -2,8 +2,7 @@ import { type ReactNode, type ComponentProps, Children } from 'react'
 import { z } from 'zod'
 
 import { RichLinkCard } from '../../richLinkCard'
-
-import { TweetEmbed } from './TweetEmbed'
+import { TweetEmbed } from '../../tweetEmbed'
 
 type Props = ComponentProps<'p'>
 
