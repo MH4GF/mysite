@@ -24,7 +24,7 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
           <h1 className="overflow-hidden text-ellipsis text-base font-bold" id={labelledBy}>
             {title}
           </h1>
-          <p className="overflow-hidden text-xs text-gray-500">{description}</p>
+          <p className="overflow-hidden text-xs text-zinc-500">{description}</p>
         </div>
         <img className="col-span-1 h-full w-full object-cover" src={imageSrc} alt={title} />
       </a>
