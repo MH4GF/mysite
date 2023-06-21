@@ -12,9 +12,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ColorModeScript />
         <TwitterWidgets />
         <main className="dark:bg-gradient-to-tr dark:from-zinc-700 dark:via-zinc-900 dark:to-zinc-800 dark:text-zinc-100">
-          <div className="mx-auto grid min-h-screen max-w-2xl content-start gap-8 px-4 sm:px-0">
+          <div className="mx-auto min-h-screen px-4 sm:max-w-2xl sm:px-0">
             <Header />
-            {children}
+            <div className="mt-8">{children}</div>
           </div>
         </main>
       </body>
