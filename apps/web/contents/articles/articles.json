@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "ブログを Next.js App Router で構築し直した感想",
+      "publishedAt": "2023/06/21",
+      "externalLink": false,
+      "href": "/articles/rebuild-with-app-router",
+      "tags": ["Dev"]
+    },
+    {
       "title": "GitHub Actionsで実行するstorycap / reg-suit の高速化",
       "href": "https://tech.route06.co.jp/entry/2023/03/29/080000",
       "externalLink": true,
