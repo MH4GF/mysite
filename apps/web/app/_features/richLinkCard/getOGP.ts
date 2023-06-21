@@ -8,7 +8,7 @@ export interface OGPResult {
 }
 
 export const getOGP = async (url: string): Promise<OGPResult> => {
-  const response = await fetch(url, { next: { revalidate: 60 * 60 } }).catch((e) => {
+  const response = await fetch(url, { next: { revalidate: 60 * 60 } }).catch(() => {
     throw new Error(`Failed to fetch: ${url}`)
   })
   const body = await response.text()
