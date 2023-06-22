@@ -15,16 +15,16 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
       aria-labelledby={labelledBy}
     >
       <a
-        className="grid h-full grid-flow-row-dense grid-cols-4"
+        className="grid h-full grid-flow-row-dense grid-cols-4 overflow-hidden"
         href={url}
         target="_blank"
         rel="noreferrer"
       >
-        <div className="col-span-3 flex flex-col gap-2 overflow-hidden p-2">
+        <div className="col-span-3 flex flex-col gap-2 p-2">
           <h1 className="overflow-hidden text-ellipsis text-base font-bold" id={labelledBy}>
             {title}
           </h1>
-          <p className="overflow-hidden text-sm">{description}</p>
+          <p className="overflow-hidden text-xs text-zinc-500">{description}</p>
         </div>
         <img className="col-span-1 h-full w-full object-cover" src={imageSrc} alt={title} />
       </a>

@@ -58,7 +58,7 @@ export const ArticleListItem = <T extends string>({
             <span key={index}>{tag}</span>
           ))}
         </div>
-        <p className="text-gray-500">{publishedAt}</p>
+        <p className="text-zinc-500">{publishedAt}</p>
       </div>
     </article>
   )
