@@ -50,7 +50,7 @@ App Router ではデフォルトでは全てのコンポーネントが Server C
 
 Next.js 単体で型安全なルーティングを実現する機能で、個人的にはかなり好みな機能です。今まで Pages Router の時は [pathpida](https://github.com/aspida/pathpida) を使ったり、react-router の時は [react-router-typesafe-routes](https://github.com/fenok/react-router-typesafe-routes) を使って型安全ルーティングを実現していましたが、 どちらも `ROUTES.ARTICLES.DETAIL.buildPath({ slug: 'rebuild-with-app-router' })` のようなオブジェクトベースのパス構築になるため、最終的なパスを直感的に理解するのが難しいと感じていました。一方 Statically Typed Routes は Template Literal Type なので `/articles/rebuild-with-app-router` のような文字列の見た目になるのがいいです。
 
-ただ Statically Typed Routes を有効化すると Link コンポーネントなどに単純な string を渡すことができなくなるため、ちょっとした手間がいくつか必要でした。例えば href を受け取るコンポーネントは以下のようになります。
+ただ Statically Typed Routes を有効化すると Link コンポーネントなどに単純な string を渡すことができなくなるため、ちょっとした手間がいくつか必要でした。例えば href を受け取るコンポーネントは以下のようになります。(スタイリングを取り除くなど簡略化しています)
 
 ```tsx
 import Link from 'next/link'
@@ -66,7 +66,7 @@ export const ArticleListItem = <T extends string>({ title, href, publishedAt }: 
   return (
     <article>
       <Link href={href} title={title} />
-      <p className="text-gray-500">{publishedAt}</p>
+      <p>{publishedAt}</p>
     </article>
   )
 }
