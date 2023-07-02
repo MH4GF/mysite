@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "Amplify Hostingのプレビュー環境をGitHub Actionsでデプロイする",
+      "href": "https://tech.route06.co.jp/entry/2023/06/30/120807",
+      "externalLink": true,
+      "publishedAt": "2023/3/29",
+      "tags": ["ROUTE06 Tech Blog"]
+    },
+    {
       "title": "ブログを Next.js App Router で構築し直した感想",
       "publishedAt": "2023/06/21",
       "externalLink": false,
