@@ -1,0 +1,1 @@
+export { getRssFeed } from './getRssFeed'
