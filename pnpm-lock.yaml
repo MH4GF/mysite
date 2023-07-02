@@ -64,6 +64,9 @@ importers:
       remark-rehype:
         specifier: ^10.1.0
         version: 10.1.0
+      rss:
+        specifier: ^1.2.2
+        version: 1.2.2
       unified:
         specifier: ^10.1.2
         version: 10.1.2
@@ -89,6 +92,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.4
         version: 18.2.4
+      '@types/rss':
+        specifier: ^0.0.30
+        version: 0.0.30
       autoprefixer:
         specifier: ^10.4.14
         version: 10.4.14(postcss@8.4.24)
@@ -1145,6 +1151,13 @@ packages:
       }
     dependencies:
       '@types/node': 20.2.5
+    dev: true
+
+  /@types/rss@0.0.30:
+    resolution:
+      {
+        integrity: sha512-RnWs98qajbcAZqie6EWYraJ2N+1Q1Wy9KN7HcVPJ//sYJGVjLjvkChZdeQPwf88xAcNUCcLXt6Zz3kiid7s/yw==,
+      }
     dev: true
 
   /@types/scheduler@0.16.3:
@@ -5554,6 +5567,24 @@ packages:
       braces: 3.0.2
       picomatch: 2.3.1
 
+  /mime-db@1.25.0:
+    resolution:
+      {
+        integrity: sha512-5k547tI4Cy+Lddr/hdjNbBEWBwSl8EBc5aSdKvedav8DReADgWJzcYiktaRIw3GtGC1jjwldXtTzvqJZmtvC7w==,
+      }
+    engines: { node: '>= 0.6' }
+    dev: false
+
+  /mime-types@2.1.13:
+    resolution:
+      {
+        integrity: sha512-ryBDp1Z/6X90UvjUK3RksH0IBPM137T7cmg4OgD5wQBojlAiUwuok0QeELkim/72EtcYuNlmbkrcGuxj3Kl0YQ==,
+      }
+    engines: { node: '>= 0.6' }
+    dependencies:
+      mime-db: 1.25.0
+    dev: false
+
   /mimic-fn@2.1.0:
     resolution:
       {
@@ -6978,6 +7009,16 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /rss@1.2.2:
+    resolution:
+      {
+        integrity: sha512-xUhRTgslHeCBeHAqaWSbOYTydN2f0tAzNXvzh3stjz7QDhQMzdgHf3pfgNIngeytQflrFPfy6axHilTETr6gDg==,
+      }
+    dependencies:
+      mime-types: 2.1.13
+      xml: 1.0.1
+    dev: false
 
   /run-applescript@5.0.0:
     resolution:
@@ -8774,6 +8815,13 @@ packages:
       }
     engines: { node: '>=8' }
     dev: true
+
+  /xml@1.0.1:
+    resolution:
+      {
+        integrity: sha512-huCv9IH9Tcf95zuYCsQraZtWnJvBtLVE0QHMOs8bWyZAFZNDcYjsPq1nEx8jKA9y+Beo9v+7OBPRisQTjinQMw==,
+      }
+    dev: false
 
   /y18n@5.0.8:
     resolution:
