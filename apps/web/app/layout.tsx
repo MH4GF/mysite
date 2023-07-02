@@ -3,11 +3,9 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import { Header, ColorModeScript, TwitterWidgets } from './_features'
+import { siteInfo } from './_utils'
 
-const siteName = 'Hirotaka Miyagi'
-const description = 'My personal website.'
-const url = 'https://mh4gf.dev'
-const twitter = '@mh4gf'
+const { siteName, description, url, twitter } = siteInfo
 
 export const metadata: Metadata = {
   title: {
