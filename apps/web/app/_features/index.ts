@@ -1,4 +1,6 @@
 export { Header } from './Header'
 export { ColorModeScript } from './colorMode'
 export { TwitterWidgets } from './tweetEmbed'
+export { getArticles } from './articles'
+export type { Article } from './articles'
 export * from './markdownRenderer'

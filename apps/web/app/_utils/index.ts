@@ -1,4 +1,4 @@
 /** @public */
-export { env, externalLinks } from './constants'
+export { env, externalLinks, siteInfo } from './constants'
 /** @public */
 export { rootJoin } from './rootJoin'

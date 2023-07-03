@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import type { Article } from './type'
+import type { Article } from '@/app/_features'
 
 type LinkProps<T extends string> = Pick<Props<T>, 'href' | 'title'>
 

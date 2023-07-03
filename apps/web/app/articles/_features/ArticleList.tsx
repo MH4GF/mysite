@@ -1,5 +1,6 @@
 import { ArticleListItem } from './ArticleListItem'
-import { getArticles } from './getArticles'
+
+import { getArticles } from '@/app/_features'
 
 // @ts-expect-error Async Server Component
 export const ArticleList = async (): JSX.Element => {
