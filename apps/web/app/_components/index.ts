@@ -1,5 +1,5 @@
 /** @public */
-export { MoonIcon, SunIcon } from './Icons'
+export { MoonIcon, SunIcon, RssIcon } from './Icons'
 /** @public */
 export { MyAvatar } from './MyAvatar'
 /** @public */
