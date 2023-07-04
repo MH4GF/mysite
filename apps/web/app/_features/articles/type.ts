@@ -1,12 +1,24 @@
 import type { Route } from 'next'
 import { z } from 'zod'
 
+const tagsSchema = z.enum([
+  'ROUTE06 Tech Blog',
+  'Timee Product Team Blog',
+  'Zenn',
+  'Qiita',
+  'note',
+  'Dev',
+  'Life',
+])
+
+export type TagEnum = z.infer<typeof tagsSchema>
+
 const articleSchema = z.object({
   title: z.string(),
   href: z.string(),
   externalLink: z.boolean(),
   publishedAt: z.string(),
-  tags: z.array(z.string()),
+  tags: z.array(tagsSchema),
 })
 
 export const articlesSchema = z.object({

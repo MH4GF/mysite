@@ -47,7 +47,7 @@
       "publishedAt": "2022/12/31",
       "externalLink": false,
       "href": "/articles/2022-summary",
-      "tags": ["Dev, Life"]
+      "tags": ["Dev", "Life"]
     },
     {
       "title": "Next.js上のGraphQLクライアントから秘匿情報を安全に扱いつつAPIリクエストを行う",

@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import { Tag } from './Tag'
+
 import type { Article } from '@/app/_features'
 
 type LinkProps<T extends string> = Pick<Props<T>, 'href' | 'title'>
@@ -52,10 +54,10 @@ export const ArticleListItem = <T extends string>({
           <InternalLink href={href} title={title} />
         )}
       </h2>
-      <div className="flex justify-between">
-        <div className="mt-2 flex space-x-2">
+      <div className="mt-2 flex justify-between ">
+        <div className="flex space-x-2">
           {tags.map((tag, index) => (
-            <span key={index}>{tag}</span>
+            <Tag key={index} tag={tag} />
           ))}
         </div>
         <p className="text-zinc-500">{publishedAt}</p>
