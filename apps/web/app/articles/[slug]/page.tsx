@@ -27,5 +27,6 @@ export const generateStaticParams = (): Promise<Params[]> => {
 export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
   const href = `/articles/${params.slug}`
   const meta = await getArticleMeta(href)
-  return { title: meta?.title ?? null }
+  const title = meta?.title ?? ''
+  return { title, openGraph: { title }, twitter: { title } }
 }
