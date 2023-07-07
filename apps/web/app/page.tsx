@@ -1,6 +1,8 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import { MyAvatar, SocialLink } from './_components'
+import { siteInfo } from './_utils'
 
 export default function Page() {
   return (
@@ -32,4 +34,8 @@ export default function Page() {
       </ul>
     </div>
   )
+}
+
+export const metadata: Metadata = {
+  title: `MH4GF | ${siteInfo.siteName}`,
 }
