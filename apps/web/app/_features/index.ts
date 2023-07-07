@@ -1,6 +1,6 @@
 export { Header } from './Header'
 export { ColorModeScript } from './colorMode'
 export { TwitterWidgets } from './tweetEmbed'
-export { getArticlesMeta } from './articles'
+export { getArticlesMeta, getArticleMeta } from './articles'
 export type { ArticleMeta, TagEnum } from './articles'
 export * from './markdownRenderer'
