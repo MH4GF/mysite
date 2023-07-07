@@ -13,7 +13,7 @@ const tagsSchema = z.enum([
 
 export type TagEnum = z.infer<typeof tagsSchema>
 
-const articleSchema = z.object({
+const articleMetaSchema = z.object({
   title: z.string(),
   href: z.string(),
   externalLink: z.boolean(),
@@ -21,13 +21,16 @@ const articleSchema = z.object({
   tags: z.array(tagsSchema),
 })
 
-export const articlesSchema = z.object({
-  articles: z.array(articleSchema),
+export const articlesMetaSchema = z.object({
+  articles: z.array(articleMetaSchema),
 })
 
 /**
  * NOTE: nextのRoute型をzodで定義できなさそうなので別で定義
  */
-export type Article<T extends string = string> = Omit<z.infer<typeof articleSchema>, 'href'> & {
+export type ArticleMeta<T extends string = string> = Omit<
+  z.infer<typeof articleMetaSchema>,
+  'href'
+> & {
   href: Route<T>
 }

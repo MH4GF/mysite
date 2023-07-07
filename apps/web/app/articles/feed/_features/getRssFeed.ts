@@ -1,6 +1,6 @@
 import RSS from 'rss'
 
-import { getArticles } from '@/app/_features'
+import { getArticlesMeta } from '@/app/_features'
 import { siteInfo } from '@/app/_utils'
 
 export const getRssFeed = async (): Promise<string> => {
@@ -10,8 +10,8 @@ export const getRssFeed = async (): Promise<string> => {
     feed_url: `${siteInfo.url}/articles/feed`,
     site_url: siteInfo.url,
   })
-  const articles = await getArticles()
-  articles.forEach((article) => {
+  const articlesMeta = await getArticlesMeta()
+  articlesMeta.forEach((article) => {
     rss.item({
       title: article.title,
       description: '',

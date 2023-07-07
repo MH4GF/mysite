@@ -1,4 +1,6 @@
 /** @public */
-export { getArticles } from './getArticles'
+export { getArticlesMeta } from './getArticlesMeta'
 /** @public */
-export type { Article, TagEnum } from './type'
+export { getArticleMeta } from './getArticleMeta'
+/** @public */
+export type { ArticleMeta, TagEnum } from './type'

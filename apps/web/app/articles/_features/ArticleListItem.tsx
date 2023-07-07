@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import { Tag } from './Tag'
 
-import type { Article } from '@/app/_features'
+import type { ArticleMeta } from '@/app/_features'
 
 type LinkProps<T extends string> = Pick<Props<T>, 'href' | 'title'>
 
@@ -36,7 +36,7 @@ const ExternalLink = <T extends string>({ href, title }: LinkProps<T>) => {
   )
 }
 
-type Props<T extends string> = Article<T>
+type Props<T extends string> = ArticleMeta<T>
 
 export const ArticleListItem = <T extends string>({
   title,
