@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "StoryBook v7.0 へのアップデートで非推奨になった型",
+      "href": "https://zenn.dev/route06/articles/storybook-v7-deprecations",
+      "externalLink": true,
+      "publishedAt": "2023/07/05",
+      "tags": ["Zenn"]
+    },
+    {
       "title": "Amplify Hostingのプレビュー環境をGitHub Actionsでデプロイする",
       "href": "https://tech.route06.co.jp/entry/2023/06/30/120807",
       "externalLink": true,
