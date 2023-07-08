@@ -17,7 +17,7 @@ const articleMetaSchema = z.object({
   title: z.string(),
   href: z.string(),
   externalLink: z.boolean(),
-  publishedAt: z.string(),
+  publishedAt: z.coerce.date(),
   tags: z.array(tagsSchema),
 })
 
