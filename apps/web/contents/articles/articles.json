@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "2023/2/17 キャリアの指向性(脳内メモ)",
+      "publishedAt": "2023/02/17",
+      "externalLink": false,
+      "href": "/articles/2023-2-17-thinking-in-career",
+      "tags": ["Dev"]
+    },
+    {
       "title": "StoryBook v7.0 へのアップデートで非推奨になった型",
       "href": "https://zenn.dev/route06/articles/storybook-v7-deprecations",
       "externalLink": true,
@@ -11,7 +18,7 @@
       "title": "Amplify Hostingのプレビュー環境をGitHub Actionsでデプロイする",
       "href": "https://tech.route06.co.jp/entry/2023/06/30/120807",
       "externalLink": true,
-      "publishedAt": "2023/3/29",
+      "publishedAt": "2023/6/30",
       "tags": ["ROUTE06 Tech Blog"]
     },
     {
@@ -58,7 +65,7 @@
     },
     {
       "title": "Next.js上のGraphQLクライアントから秘匿情報を安全に扱いつつAPIリクエストを行う",
-      "publishedAt": "2023/12/10",
+      "publishedAt": "2022/12/10",
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/urql-client-working-with-credential-in-nextjs",
       "tags": ["Zenn"]

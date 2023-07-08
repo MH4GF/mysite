@@ -1,3 +1,4 @@
+import { format } from 'date-fns'
 import Link from 'next/link'
 
 import { Tag } from './Tag'
@@ -42,9 +43,11 @@ export const ArticleListItem = <T extends string>({
   title,
   href,
   externalLink,
-  publishedAt,
+  publishedAt: _publishedAt,
   tags,
 }: Props<T>) => {
+  const publishedAt = format(_publishedAt, 'yyyy/MM/dd')
+
   return (
     <article className="">
       <h2 className="mb-2 text-xl">
