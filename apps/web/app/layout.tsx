@@ -6,6 +6,8 @@ import { Inter } from 'next/font/google'
 import { Header, ColorModeScript, TwitterWidgets } from './_features'
 import { siteInfo } from './_utils'
 
+import { Box } from '@kuma-ui/core'
+
 const { siteName, description, url, twitter } = siteInfo
 
 export const metadata: Metadata = {
@@ -45,7 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main className="dark:bg-gradient-to-tr dark:from-zinc-700 dark:via-zinc-900 dark:to-zinc-800 dark:text-zinc-100">
             <div className="mx-auto min-h-screen px-4 sm:max-w-2xl sm:px-0">
               <Header />
-              <div className="mt-8">{children}</div>
+              <Box mt="2rem">{children}</Box>
             </div>
           </main>
         </KumaRegistry>
