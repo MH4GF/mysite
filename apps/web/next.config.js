@@ -1,5 +1,7 @@
+const { withKumaUI } = require('@kuma-ui/next-plugin')
+
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ['@project/ui', '@project/configs'],
   experimental: {
@@ -9,3 +11,5 @@ module.exports = {
     domains: ['avatars.githubusercontent.com'],
   },
 }
+
+module.exports = withKumaUI(nextConfig)
