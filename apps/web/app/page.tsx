@@ -26,7 +26,7 @@ export default function Page() {
           <Link href="/behavior">🚲 好む振る舞い</Link>
         </li>
         <li>
-          <Link href="/articles/2023-2-17-thinking-in-career">⛰️ キャリアの指向性(脳内メモ)</Link>
+          <Link href="/thinking-in-career">⛰️ キャリアの指向性(脳内メモ)</Link>
         </li>
         <li>
           <Link href="/resume">👋 Resume</Link>
