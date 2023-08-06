@@ -1,17 +1,22 @@
+import { Box, Heading, Link as KumaLink, Spacer, Text } from '@kuma-ui/core'
 import Link from 'next/link'
 
 import { MyAvatar } from '@/app/_components'
 
 export const Footer = () => {
   return (
-    <footer className="mb-4">
-      <section className="text-center">
-        <Link href="/" className="hover:underline">
+    <footer>
+      <Box as="section" textAlign={'center'}>
+        <KumaLink as={Link} href="/">
           <MyAvatar />
-          <h1 className="mt-2 font-bold">Hirotaka Miyagi</h1>
-          <p className="text-sm text-slate-400">Software Engineer / @mh4gf</p>
-        </Link>
-      </section>
+          <Spacer size={'0.5rem'} />
+          <Heading fontWeight={'bold'}>Hirotaka Miyagi</Heading>
+          <Text variant="sm" color="colors.slate.400">
+            Software Engineer / @mh4gf
+          </Text>
+        </KumaLink>
+      </Box>
+      <Spacer size={'1rem'} />
     </footer>
   )
 }

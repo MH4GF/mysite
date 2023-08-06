@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { Box, Heading, Image, Link, Text, VStack, css } from '@kuma-ui/core'
 import { useId } from 'react'
 
 import type { OGPResult } from './getOGP'
@@ -10,25 +11,51 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
   const labelledBy = useId()
 
   return (
-    <section
-      className={`not-prose h-24 w-full rounded-sm border border-solid hover:cursor-pointer`}
+    <Box
+      as="section"
+      height="6rem"
+      width="100%"
+      border={'1px solid'}
+      borderRadius={'0.125rem'}
+      className={`not-prose`}
       aria-labelledby={labelledBy}
     >
-      <a
-        className="grid h-full grid-flow-row-dense grid-cols-4 overflow-hidden"
+      <Link
         href={url}
         target="_blank"
         rel="noreferrer"
+        height={'100%'}
+        overflow={'hidden'}
+        display={'grid'}
+        gridTemplateColumns={'repeat(4, minmax(0, 1fr))'}
+        gridAutoFlow={'row dense'}
       >
-        <div className="col-span-3 flex flex-col gap-2 p-2">
-          <h1 className="overflow-hidden text-ellipsis text-base font-bold" id={labelledBy}>
+        <VStack gap={'0.5rem'} p={'0.5rem'} gridColumn={'span 3 / span 3'}>
+          <Heading
+            variant="base"
+            overflow="hidden"
+            fontWeight="bold"
+            textOverflow="ellipsis"
+            id={labelledBy}
+          >
             {title}
-          </h1>
-          <p className="overflow-hidden text-xs text-zinc-500">{description}</p>
-        </div>
-        <img className="col-span-1 h-full w-full object-cover" src={imageSrc} alt={title} />
-      </a>
-    </section>
+          </Heading>
+          <Text variant="xs" color="colors.zinc.500" overflow="hidden">
+            {description}
+          </Text>
+        </VStack>
+        <Image
+          width="100%"
+          height="100%"
+          gridColumn="span 1 / span 1"
+          className={css`
+            object-fit: cover;
+          `}
+          src={imageSrc}
+          alt={title}
+        />
+      </Link>
+    </Box>
   )
 }
 
