@@ -1,6 +1,6 @@
 # 2023 年 7 月にできた OSS コントリビュート
 
-[2023/7/9 キャリアの指向性(脳内メモ)](https://www.mh4gf.dev/articles/2023-7-9-thinking-in-career)でも記載した通り、今は OSS へのコントリビュートをもっと増やしたいと考えています。
+[2023/7/9 キャリアの指向性(脳内メモ)](https://www.mh4gf.dev/articles/2023-7-9-thinking-in-career)でも記載した通り、今は OSS へのコントリビュートをもっと増やしたいと考えています。  
 まずは仕事で利用している OSS の issue から見てみようと追っていますが、issue を読んでもさっぱりわからんということが多く、コードでの貢献はまだ難しいという気持ちです。できるところから始めつつなのですが、取り急ぎ毎月のコントリビュートを記録していくことにしました。
 
 ## vitejs/docs-ja
@@ -9,7 +9,8 @@
 
 https://twitter.com/MH4GF/status/1668423901922095105?s=20
 
-Vite の日本語翻訳プロジェクトは現在ほぼ翻訳が追従できている状態で、vitejs/vite の main ブランチにドキュメントの更新が追加されたら issue が作られるので挙手制でアサイン、差分を翻訳し PR を出すという運用になっています。過去に参考になる PR も多く、自分でも貢献しやすかったので参加してみました。今月は 8 件の PR を出すことができました。
+Vite の日本語翻訳プロジェクトは現在ほぼ翻訳が追従できている状態で、vitejs/vite の main ブランチにドキュメントの更新が追加されたら issue が作られるので挙手制でアサイン、差分を翻訳し PR を出すという運用になっています。  
+過去に参考になる PR も多く、自分でも貢献しやすかったので参加してみました。今月は 8 件の PR を出すことができました。
 
 - [docs: remove note about firefox not supporting ESM imports in Web Workers](https://github.com/vitejs/docs-ja/pull/1044)
 - [docs(static-deploy): add deployment instructions for AWS Amplify Hosting](https://github.com/vitejs/docs-ja/pull/1043)
@@ -41,7 +42,7 @@ Vite は仕事で利用しているので興味があるのと、 `contribution 
 
 ## 終わり
 
-というわけで初回の記録でした。
+というわけで初回の記録でした。  
 コードによる貢献もできるようにしていくために、8 月はバグレポートの issue を読みつつ手元で再現してみる、みたいなところから始めてみようかなと思っています。毎月ちょっとずつでもいいのでできることを増やしていきたいですね。
 
 ### おまけ: 7 月にマージされた PR の一覧を出すクエリ(自分用)
