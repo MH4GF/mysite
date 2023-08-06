@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "2023 年 7 月にできた OSS コントリビュート",
+      "publishedAt": "2023/08/07",
+      "externalLink": false,
+      "href": "/articles/2023-7-oss-contributions",
+      "tags": ["Dev"]
+    },
+    {
       "title": "2023/7/9 キャリアの指向性(脳内メモ)",
       "publishedAt": "2023/07/9",
       "externalLink": false,
