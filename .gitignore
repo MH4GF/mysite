@@ -36,3 +36,5 @@ yarn-error.log*
 .vercel
 
 tsconfig.tsbuildinfo
+
+.pnpm-store

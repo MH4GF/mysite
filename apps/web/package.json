@@ -10,7 +10,7 @@
     "lint:tsc": "tsc",
     "start": "next start",
     "test": "run-s test:*",
-    "test-playwright-update": "docker run --rm --network host -v $(pwd)/../..:/work/ -w /work/apps/web mcr.microsoft.com/playwright:v1.35.0-focal /bin/bash -c 'npm run test:playwright -- -u'",
+    "test-playwright-update": "docker run --rm --network host -v $(pwd)/../..:/work/ -v mysite_node_modules:/work/apps/web/node_modules -w /work/apps/web mcr.microsoft.com/playwright:v1.35.0-focal /bin/bash -c 'corepack enable && pnpm i && pnpm run test:playwright -u'",
     "test:playwright": "playwright test",
     "test:vitest": "vitest"
   },
