@@ -1,3 +1,4 @@
+import { Box, HStack, Text } from '@kuma-ui/core'
 import Link from 'next/link'
 
 import { ColorModeToggle } from './colorMode'
@@ -7,21 +8,28 @@ const navigation = [{ name: 'Articles', href: '/articles' }] as const
 export const Header = () => {
   return (
     <header>
-      <nav className="mx-auto flex items-center justify-between py-6" aria-label="Global">
-        <div className="flex w-full items-center justify-between gap-x-12">
-          <Link href="/" className="-m-1.5 p-1.5">
+      <HStack
+        as={'nav'}
+        alignItems="center"
+        justify={'space-between'}
+        py={'1.5rem'}
+        mx={'auto'}
+        aria-label="Global"
+      >
+        <HStack alignItems={'center'} justify={'space-between'} gap="3rem" width={'100%'}>
+          <Box as={Link} href="/" p={'0.375rem'} m={'-0.375rem'}>
             mh4gf.dev
-          </Link>
-          <div className="flex items-center gap-x-6 sm:gap-x-12">
+          </Box>
+          <HStack alignItems={'center'} gap={['1.5rem', '3rem']}>
             {navigation.map((item) => (
-              <Link key={item.name} href={item.href} className="text-sm leading-6">
+              <Text variant="sm" as={Link} key={item.name} href={item.href}>
                 {item.name}
-              </Link>
+              </Text>
             ))}
             <ColorModeToggle />
-          </div>
-        </div>
-      </nav>
+          </HStack>
+        </HStack>
+      </HStack>
     </header>
   )
 }

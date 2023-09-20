@@ -1,5 +1,5 @@
 interface SvgProps {
-  className: string
+  className?: string
 }
 
 export type IconComponent = (props: SvgProps) => JSX.Element

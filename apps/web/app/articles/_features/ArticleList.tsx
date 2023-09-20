@@ -1,3 +1,5 @@
+import { Grid } from '@kuma-ui/core'
+
 import { ArticleListItem } from './ArticleListItem'
 
 import { getArticlesMeta } from '@/app/_features'
@@ -6,10 +8,10 @@ import { getArticlesMeta } from '@/app/_features'
 export const ArticleList = async (): JSX.Element => {
   const articlesMeta = await getArticlesMeta()
   return (
-    <div className="grid gap-8">
+    <Grid gap={'2rem'}>
       {articlesMeta.map((article, index) => (
         <ArticleListItem key={index} {...article} />
       ))}
-    </div>
+    </Grid>
   )
 }
