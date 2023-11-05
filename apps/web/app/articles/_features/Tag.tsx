@@ -16,6 +16,7 @@ export const Tag = ({ tag }: Props) => {
     .with('Life', () => ['bg-rose-700'])
     .with('note', () => ['bg-green-600', 'dark:bg-green-700'])
     .with('Qiita', () => ['bg-teal-500', 'dark:bg-teal-700'])
+    .with('Speaker Deck', () => ['bg-teal-500', 'dark:bg-teal-700'])
     .exhaustive()
 
   return <span className={clsx(colors, 'rounded px-1 py-px text-sm text-white')}>{tag}</span>

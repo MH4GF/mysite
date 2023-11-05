@@ -9,6 +9,7 @@ const tagsSchema = z.enum([
   'note',
   'Dev',
   'Life',
+  'Speaker Deck',
 ])
 
 export type TagEnum = z.infer<typeof tagsSchema>

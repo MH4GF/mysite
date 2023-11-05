@@ -1,6 +1,34 @@
 {
   "articles": [
     {
+      "title": "学習しながらアーキテクチャを進化させていくためのモノレポ",
+      "href": "https://speakerdeck.com/mh4gf/xue-xi-sinagaraakitekutiyawojin-hua-saseteikutamenomonorepo",
+      "externalLink": true,
+      "publishedAt": "2023/10/06",
+      "tags": ["Speaker Deck"]
+    },
+    {
+      "title": "Amplify Hostingのプレビュー環境でパラメータストアの秘匿情報を取得する",
+      "href": "https://tech.route06.co.jp/entry/2023/09/22/102742",
+      "externalLink": true,
+      "publishedAt": "2023/09/22",
+      "tags": ["ROUTE06 Tech Blog"]
+    },
+    {
+      "title": "pnpm workspace実践ノウハウ",
+      "href": "https://speakerdeck.com/mh4gf/pnpm-workspaceshi-jian-nouhau",
+      "externalLink": true,
+      "publishedAt": "2023/09/09",
+      "tags": ["Speaker Deck"]
+    },
+    {
+      "title": "Plainのフロントエンドにおける技術選定(2023年8月版)",
+      "href": "https://tech.route06.co.jp/entry/2023/08/08/115253",
+      "externalLink": true,
+      "publishedAt": "2023/08/08",
+      "tags": ["ROUTE06 Tech Blog"]
+    },
+    {
       "title": "2023 年 7 月にできた OSS コントリビュート",
       "publishedAt": "2023/08/07",
       "externalLink": false,
