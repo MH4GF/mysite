@@ -30,16 +30,16 @@
   - Bonjour!
   * Hi!
 
-## 単体のURL文字列
+## 単体の URL 文字列
 
 ```
-<!-- リンクカードとしてレンダリング --> 
+<!-- リンクカードとしてレンダリング -->
 https://mh4gf.dev
 
-<!-- リンクテキストとしてレンダリング --> 
-- https://mh4gf.dev/articles 
+<!-- リンクテキストとしてレンダリング -->
+- https://mh4gf.dev/articles
 ```
 
 https://mh4gf.dev
 
-- https://mh4gf.dev/articles 
+- https://mh4gf.dev/articles
