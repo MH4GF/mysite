@@ -35,6 +35,11 @@
 ```
 <!-- リンクカードとしてレンダリング --> 
 https://mh4gf.dev
+
+<!-- リンクテキストとしてレンダリング --> 
+- https://mh4gf.dev/articles 
 ```
 
 https://mh4gf.dev
+
+- https://mh4gf.dev/articles 

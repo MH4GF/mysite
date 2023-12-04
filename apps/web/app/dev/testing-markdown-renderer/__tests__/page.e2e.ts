@@ -11,5 +11,6 @@ test('/dev/testing-markdown-renderer', async ({ page }) => {
 
   await expect(page.getByRole('heading', { name: '見出し' })).toBeVisible()
   await expect(page.getByRole('link', { name: /アンカーテキスト/i })).toBeVisible()
+  await expect(page.getByRole('link', { name: 'https://mh4gf.dev/articles' })).toBeVisible()
   await expect(page.getByRole('region', { name: /hirotaka miyagi/i })).toBeVisible()
 })
