@@ -1,4 +1,4 @@
-import { type ReactNode, type ComponentProps, Children } from 'react'
+import { type ReactNode, type ComponentProps, Children, isValidElement } from 'react'
 import { z } from 'zod'
 
 import { RichLinkCard } from '../../richLinkCard'
@@ -6,11 +6,24 @@ import { TweetEmbed } from '../../tweetEmbed'
 
 type Props = ComponentProps<'p'>
 
+const urlSchema = z.string().url()
+
+/**
+ *
+ * 以下のような単体のURLテキストを識別する
+ * ```markdown
+ * https://mh4gf.dev
+ * ```
+ * これはprocessorを通すと`<p><a href="https://mh4gf.dev">https://mh4gf.dev</a></p>`のような形で渡ってくる
+ */
 const maybeSingleUrl = (_children: ReactNode): string | null => {
   const children = Children.toArray(_children)
-  if (children.length === 0) return null
+  if (!(children.length === 1 && isValidElement(children[0]))) return null
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
+  const urlChildren = Children.toArray(children[0].props?.children ?? [])
 
-  const parsed = z.string().url().safeParse(children[0])
+  if (urlChildren.length !== 1) return null
+  const parsed = urlSchema.safeParse(urlChildren[0])
   return parsed.success ? parsed.data : null
 }
 

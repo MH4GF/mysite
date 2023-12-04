@@ -15,10 +15,12 @@ export const getOGP = async (url: string): Promise<OGPResult> => {
   const $ = load(body)
 
   const title =
+    $('meta[property="title"]').attr('content') ??
     $('meta[property="og:title"]').attr('content') ??
     $('meta[name="twitter:title"]').attr('content') ??
     ''
   const description =
+    $('meta[property="description"]').attr('content') ??
     $('meta[property="og:description"]').attr('content') ??
     $('meta[name="twitter:description"]').attr('content') ??
     ''

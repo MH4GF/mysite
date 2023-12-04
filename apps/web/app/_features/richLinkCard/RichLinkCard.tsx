@@ -10,6 +10,14 @@ type RichLinkCardInnerProps = OGPResult
 const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardInnerProps) => {
   const labelledBy = useId()
 
+  if (title === '') {
+    return (
+      <Link href={url} target="_blank" rel="noreferrer">
+        {url}
+      </Link>
+    )
+  }
+
   return (
     <Box
       as="section"
@@ -44,16 +52,18 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
             {description}
           </Text>
         </VStack>
-        <Image
-          width="100%"
-          height="100%"
-          gridColumn="span 1 / span 1"
-          className={css`
-            object-fit: cover;
-          `}
-          src={imageSrc}
-          alt={title}
-        />
+        {imageSrc !== '' && (
+          <Image
+            width="100%"
+            height="100%"
+            gridColumn="span 1 / span 1"
+            className={css`
+              object-fit: cover;
+            `}
+            src={imageSrc}
+            alt={title}
+          />
+        )}
       </Link>
     </Box>
   )
