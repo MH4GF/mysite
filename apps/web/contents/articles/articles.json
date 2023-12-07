@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "github-nippou の Web 版を作った",
+      "publishedAt": "2023/12/07",
+      "externalLink": false,
+      "href": "/articles/github-nippou-web",
+      "tags": ["Dev"]
+    },
+    {
       "title": "学習しながらアーキテクチャを進化させていくためのモノレポ",
       "href": "https://speakerdeck.com/mh4gf/xue-xi-sinagaraakitekutiyawojin-hua-saseteikutamenomonorepo",
       "externalLink": true,
