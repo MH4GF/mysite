@@ -1,7 +1,7 @@
 {
   "articles": [
     {
-      "title": "github-nippou の Web 版を作った",
+      "title": "github-nippou の Web 版を App Router + Go + Vercel で作った",
       "publishedAt": "2023/12/07",
       "externalLink": false,
       "href": "/articles/github-nippou-web",
