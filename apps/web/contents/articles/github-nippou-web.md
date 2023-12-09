@@ -170,7 +170,7 @@ function Page() {
 - 見直し: 認証情報のチェックは ServerActions 側でも行っていたためクライアントサイドでは外した。ログイン中はページ表示された瞬間に Run ボタンを押下できるようになり、未ログインの場合も押下後のアラート表示で十分と判断した
 
 これで JavaScript が無効な環境下でもフォームの送信ができるようになりました！やったぜ！！  
-...と言いたかったのですが、現在はVercel上ではHTMLフォームによる送信の場合は405 Method Not Allowed が返ってきてしまうようです。HTMLフォームでの送信はPOSTメソッドになるのでそれがブロックされている模様。Hobbyプランの制約かと思いProプランにアップグレードしてみましたが変わらず、VercelのDiscussionsに投稿して様子をみています。
+...と言いたかったのですが、現在は Vercel 上では HTML フォームによる送信の場合は 405 Method Not Allowed が返ってきてしまうようです。HTML フォームでの送信は POST メソッドになるのでそれがブロックされている模様。Hobby プランの制約かと思い Pro プランにアップグレードしてみましたが変わらず、Vercel の Discussions に投稿して様子をみています。
 
 https://github.com/orgs/vercel/discussions/5056
 
