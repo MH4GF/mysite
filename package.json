@@ -13,6 +13,7 @@
     "scaffold": "scaffdog generate"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.4.1",
     "@project/configs": "workspace:^*",
     "dependency-cruiser": "^13.0.3",
     "eslint": "^8.42.0",
