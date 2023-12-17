@@ -9,7 +9,7 @@
     "lint:depcruise": "depcruise --config .dependency-cruiser.js apps packages",
     "lint:prettier": "prettier --cache --check .",
     "lint": "run-s -c lint:*",
-    "format": "prettier --write .",
+    "format": "biome format .",
     "scaffold": "scaffdog generate"
   },
   "devDependencies": {
