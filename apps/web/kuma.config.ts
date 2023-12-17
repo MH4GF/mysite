@@ -50,7 +50,7 @@ type UserTheme = typeof theme;
 
 declare module "@kuma-ui/core" {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  export interface Theme extends UserTheme {}
+  export type Theme = UserTheme;
 }
 
 export default theme;

@@ -25,7 +25,7 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
       width="100%"
       border={"1px solid"}
       borderRadius={"0.125rem"}
-      className={`not-prose`}
+      className={"not-prose"}
       aria-labelledby={labelledBy}
     >
       <Link
