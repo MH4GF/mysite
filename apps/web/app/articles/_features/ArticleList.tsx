@@ -9,8 +9,8 @@ export const ArticleList = async (): JSX.Element => {
   const articlesMeta = await getArticlesMeta();
   return (
     <Grid gap={"2rem"}>
-      {articlesMeta.map((article, index) => (
-        <ArticleListItem key={index} {...article} />
+      {articlesMeta.map((article) => (
+        <ArticleListItem key={article.title} {...article} />
       ))}
     </Grid>
   );

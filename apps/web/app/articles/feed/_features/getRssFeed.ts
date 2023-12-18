@@ -11,14 +11,14 @@ export const getRssFeed = async (): Promise<string> => {
     site_url: siteInfo.url,
   });
   const articlesMeta = await getArticlesMeta();
-  articlesMeta.forEach((article) => {
+  for (const article of articlesMeta) {
     rss.item({
       title: article.title,
       description: "",
       url: article.href,
       date: article.publishedAt,
     });
-  });
+  }
 
   return rss.xml({ indent: true });
 };

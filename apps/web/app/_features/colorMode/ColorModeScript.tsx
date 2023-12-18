@@ -34,5 +34,6 @@ const modeScript = `
 `;
 
 export const ColorModeScript = () => {
+  // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
   return <script dangerouslySetInnerHTML={{ __html: modeScript }} />;
 };
