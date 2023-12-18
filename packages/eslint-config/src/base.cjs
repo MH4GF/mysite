@@ -21,5 +21,8 @@ module.exports = {
     // @see: https://typescript-eslint.io/rules/dot-notation/
     // @see: https://typescriptbook.jp/reference/tsconfig/nopropertyaccessfromindexsignature
     "@typescript-eslint/dot-notation": "off",
+
+    // biomeへ移行するためオフにする
+    "@typescript-eslint/no-empty-interface": "off",
   },
 };
