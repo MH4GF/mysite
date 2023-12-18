@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "configs",
   "exports": {
-    "./prettier": "./prettier/index.cjs",
     "./tsconfig/*": "./tsconfig/*",
     "./tailwindcss/*": "./tailwindcss/*"
   },
@@ -11,8 +10,7 @@
     "@mh4gf/configs": "^0.2.0",
     "@tailwindcss/typography": "^0.5.9",
     "@tsconfig/next": "^1.0.5",
-    "@tsconfig/strictest": "^2.0.1",
-    "prettier-plugin-tailwindcss": "^0.3.0"
+    "@tsconfig/strictest": "^2.0.1"
   },
   "devDependencies": {
     "eslint-plugin-import-access": "^1.1.2"
