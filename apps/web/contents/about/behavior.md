@@ -18,6 +18,7 @@
 - 情報が然るべき方法で「公開・整理・配信」されている状態を目指す ref: [社内向け「透明ガイド」を公開します｜ sonopy@Ubie Discovery](https://note.com/sonopy/n/na5cd53e7c204)
   - フロー情報として作業は GitHub Issue に常に書き連ねる ref: [Working Out Loud](https://blog.studysapuri.jp/entry/2018/11/14/working-out-loud)
   - ストック情報として知見や共有事項はドキュメント or Custom Linter に昇華する
+  - コンテキストを追えるよう可能な限り参照を張る。「このタスクがなぜ必要になったのかわからない」という状況を作らない
 - 基本非同期コミュニケーションとし、タイムゾーンを気にせず進められるようにする
 - チーム API を定義し、自身のチーム・他チームが協調しやすい状況をつくる: [30 分で分かった気になるチームトポロジー | Ryuzee.com](https://slide.meguro.ryuzee.com/slides/109)
 - 地理的距離が離れているからこその雑談の時間を大事にする
@@ -42,25 +43,25 @@
 
 ### Issue driven
 
-- 理想から逆算する
-- ユーザーファースト
+- 理想状態をまず定義する。制約やリスクと比較し最善を尽くす
+- お客様への価値貢献を最優先する
 
 ### チーム開発
 
-- HRT
-- 検査・適応・透明性 ref: [The Scrum Guide](https://scrumguides.org/docs/scrumguide/v1/Scrum-Guide-JA.pdf)
-- Fail Fast
+- HRT(謙虚・尊敬・信頼)を持って働く
+- 検査・適応・透明性を大事にする ref: [The Scrum Guide](https://scrumguides.org/docs/scrumguide/v1/Scrum-Guide-JA.pdf)
+- 人ではなく事に向かう 邪推をしない
+- Fail Fast 早期に失敗できる状態を作る
 - 集中状態にあるタスクがない場合、PR などのレビューを最優先タスクとする ref: [コードレビューのスピード](http://shuuji3.xyz/eng-practices/review/reviewer/speed.html)
 - 「引き継ぎ」をなくすように働く 怪我や病気で自身が突然離脱しても業務が回る状態に保つ
   - 適切なドキュメンテーション、作業や残タスクの可視化
-- 前にことを進めようとしている人のフォロワーになる
-  - チームメンバーの課題提起がスルーされないように、可能な限り反応する
-- この資料に記載していることをは自身のポリシーであり、違う意見があることを理解し受け入れる
+- 声を上げた人のフォロワーになる、リアクションをする ref: [チームで仕事をするなら、リアクションし続けよ｜森 一貴（Mori Kazuki）](https://note.com/dutoit6/n/ned66041f43ff)
+- この資料に記載していることをは自身のポリシーであり、違う意見があることは当たり前である
 
 ### Ops
 
-- You build it, You run it. ref: [A Conversation with Werner Vogels](https://queue.acm.org/detail.cfm?id=1142065)
-- ランタイムやライブラリのアップデートが苦しくならないように投資する
+- You build it, You run it. 自身が作ったものに対して責任を持ち自身で運用する ref: [A Conversation with Werner Vogels](https://queue.acm.org/detail.cfm?id=1142065)
+- ランタイムやライブラリのアップデートが苦しくならないように Renovate や Dependabot に投資する
 - トイルは山積みになり続けることが多いが、レバレッジが効く順序を検討し技術で解決していく
 
 ## Engineering
@@ -70,7 +71,7 @@
 - 全ての開発は理想のインターフェースから始める
 - ロジックはテストを書く、書けないなら書けるように責務を分割する
   - バグの恒久対応はテストで表現する
-- コーディングスタイル(インデントなど)のレビューは一切せず、linter や[editorconfig](https://editorconfig.org/)に従う
+- コーディングスタイル(インデントなど)のレビューは一切せず、linter や formatter に従う ref: [Why Prettier? · Prettier](https://prettier.io/docs/en/why-prettier)
   - 人間のレビューを減らすために linter を積極的に整備する
 - ビッグバンリリースはせずフィーチャートグルを利用する
 - OSS やコミュニティに積極的に還元する
@@ -91,6 +92,7 @@
 - PR は誰がいつ見ても理解できるような粒度でコンテキストを記載する
 - 想定される質問に対して全て置き回答してからレビューを依頼する
 - commit は cherry-pick で価値を生む単位
+- フィーチャーブランチに対する Force Push はコミットの整理のために活用するが、レビュー開始後は行わない
 - コミットメッセージの言語は社内の公用語やプロダクトの利用ユーザーの言語に合わせる
   - 日本人向けのプロダクトにも関わらず英語で書くことに価値は低いと考える
 
