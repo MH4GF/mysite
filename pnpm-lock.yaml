@@ -112,8 +112,8 @@ importers:
         specifier: ^18.2.4
         version: 18.2.4
       '@types/rss':
-        specifier: ^0.0.30
-        version: 0.0.30
+        specifier: ^0.0.32
+        version: 0.0.32
       autoprefixer:
         specifier: ^10.4.14
         version: 10.4.14(postcss@8.4.24)
@@ -2839,8 +2839,8 @@ packages:
       '@types/node': 20.2.5
     dev: true
 
-  /@types/rss@0.0.30:
-    resolution: {integrity: sha512-RnWs98qajbcAZqie6EWYraJ2N+1Q1Wy9KN7HcVPJ//sYJGVjLjvkChZdeQPwf88xAcNUCcLXt6Zz3kiid7s/yw==}
+  /@types/rss@0.0.32:
+    resolution: {integrity: sha512-2oKNqKyUY4RSdvl5eZR1n2Q9yvw3XTe3mQHsFPn9alaNBxfPnbXBtGP8R0SV8pK1PrVnLul0zx7izbm5/gF5Qw==}
     dev: true
 
   /@types/scheduler@0.16.3:
