@@ -21,6 +21,9 @@ export default function Page() {
       </HStack>
       <ul>
         <li>
+          <Link href="/behavior">📝 取扱説明書</Link>
+        </li>
+        <li>
           <Link href="/behavior">🚲 好む振る舞い</Link>
         </li>
         <li>
