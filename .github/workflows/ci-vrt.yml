@@ -4,13 +4,14 @@ on:
   deployment_status:
 
 jobs:
-  screenshots:
+  vrt:
     if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success' && github.event.deployment_status.environment == 'Preview'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
       contents: read
-
+    outputs:
+      failed: ${{ steps.compare.outputs.failed }}
     container:
       image: mcr.microsoft.com/playwright:v1.35.0-focal
 
@@ -44,10 +45,44 @@ jobs:
       - run: pnpm --filter web test:vrt:compare
         env:
           BASE_URL: ${{ github.event.deployment_status.environment_url }}
+        id: compare
+        continue-on-error: true
 
       - name: Upload failed screenshots
-        if: failure()
+        if: steps.compare.outcome == 'failure'
         uses: actions/upload-artifact@v3
         with:
           name: vrt-failed-screenshots-${{ github.sha }}
           path: apps/web/test-results/
+
+      - name: Set failure output
+        if: steps.compare.outcome == 'failure'
+        run: echo "{failed}={true}" >> $GITHUB_OUTPUT
+
+  comment-failed-result:
+    needs: vrt
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pull-requests: write
+
+    steps:
+      - uses: jwalton/gh-find-current-pr@v1
+        id: finder
+
+      - uses: marocchino/sticky-pull-request-comment@v2
+        if: ${{ needs.vrt.outputs.failed == 'true' }}
+        with:
+          number: ${{ steps.finder.outputs.pr }}
+          message: |
+            VRTが失敗しました :sob:
+            差分をダウンロードし確認してください: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            commit hash: ${{ github.sha }}
+
+      - uses: marocchino/sticky-pull-request-comment@v2
+        if: ${{ needs.vrt.outputs.failed != 'true' }}
+        with:
+          number: ${{ steps.finder.outputs.pr }}
+          message: |
+            VRTの差分はありませんでした :tada:
+            commit hash: ${{ github.sha }}
