@@ -7,7 +7,13 @@
 
 6 月あたりから Vite の日本語翻訳プロジェクトに参加しています。
 
-https://twitter.com/MH4GF/status/1668423901922095105?s=20
+<blockquote class="twitter-tweet">
+  <p lang="ja" dir="ltr">OSSちゃんとやっていきたい気持ちがあって、Viteの日本語翻訳プロジェクトの参加から始めてみることにした</p>
+  Hirotaka Miyagi (@MH4GF) 
+  <a href="https://twitter.com/MH4GF/status/1668423901922095105?ref_src=twsrc%5Etfw">
+    June 13, 2023
+  </a>
+</blockquote>
 
 Vite の日本語翻訳プロジェクトは現在ほぼ翻訳が追従できている状態で、vitejs/vite の main ブランチにドキュメントの更新が追加されたら issue が作られるので挙手制でアサイン、差分を翻訳し PR を出すという運用になっています。  
 過去に参考になる PR も多く、自分でも貢献しやすかったので参加してみました。今月は 8 件の PR を出すことができました。

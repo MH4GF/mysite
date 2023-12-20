@@ -91,7 +91,14 @@ GraphQL は今年最も学んでよかった技術でした。フロントエン
 
 ### 引っ越しをした
 
-https://twitter.com/MH4GF/status/1560767693128896512
+<blockquote class="twitter-tweet">
+  <p lang="ja" dir="ltr">
+    入居done
+    <a href="https://t.co/Zq5xb8Sg5a">pic.twitter.com/Zq5xb8Sg5a</a>
+  </p>
+  Hirotaka Miyagi (@MH4GF) 
+  <a href="https://twitter.com/MH4GF/status/1560767693128896512?ref_src=twsrc%5Etfw">August 19, 2022</a>
+</blockquote>
 
 都内で引っ越しをしました。フルリモートワークかつ部屋で過ごす時間は好きなので少し課金しても良いかなと思い、リビングがちょっと広めの 1LDK を選びました。作業中横を向くと飼ってるうさぎの様子が眺められるのはとても良いです。
 
