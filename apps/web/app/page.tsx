@@ -1,21 +1,21 @@
-import { Flex, Grid, HStack, Heading } from '@kuma-ui/core';
-import type { Metadata } from 'next';
-import Link from 'next/link';
+import { Flex, Grid, HStack, Heading } from "@kuma-ui/core";
+import type { Metadata } from "next";
+import Link from "next/link";
 
-import { MyAvatar, SocialLink } from './_components';
-import { siteInfo } from './_utils';
+import { MyAvatar, SocialLink } from "./_components";
+import { siteInfo } from "./_utils";
 
 export default function Page() {
   return (
-    <Grid gap={['1rem', '2rem']}>
-      <Flex flexDir={['column', 'row']} gap={['1rem', '2rem']} alignItems="center">
+    <Grid gap={["1rem", "2rem"]}>
+      <Flex flexDir={["column", "row"]} gap={["1rem", "2rem"]} alignItems="center">
         <MyAvatar />
-        <Heading fontWeight="bold" fontSize={['1.875rem', '3rem']}>
+        <Heading fontWeight="bold" fontSize={["1.875rem", "3rem"]}>
           Hirotaka Miyagi
         </Heading>
       </Flex>
       <p>I'm a software engineer based in Tokyo, Japan.</p>
-      <HStack gap={['0.5rem', '1rem']}>
+      <HStack gap={["0.5rem", "1rem"]}>
         <SocialLink kind="twitter" />
         <SocialLink kind="github" />
       </HStack>

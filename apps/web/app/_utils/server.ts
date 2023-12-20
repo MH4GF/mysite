@@ -1,2 +1,2 @@
 /** @public */
-export { getSlugs } from './getSlugs';
+export { getSlugs } from "./getSlugs";

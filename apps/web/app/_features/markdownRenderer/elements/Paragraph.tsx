@@ -1,10 +1,10 @@
-import { Children, type ComponentProps, type ReactNode, isValidElement } from 'react';
-import { z } from 'zod';
+import { Children, type ComponentProps, type ReactNode, isValidElement } from "react";
+import { z } from "zod";
 
-import { RichLinkCard } from '../../richLinkCard';
-import { TweetEmbed } from '../../tweetEmbed';
+import { RichLinkCard } from "../../richLinkCard";
+import { TweetEmbed } from "../../tweetEmbed";
 
-type Props = ComponentProps<'p'>;
+type Props = ComponentProps<"p">;
 
 const urlSchema = z.string().url();
 

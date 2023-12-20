@@ -1,14 +1,14 @@
-const { withKumaUI } = require('@kuma-ui/next-plugin');
+const { withKumaUI } = require("@kuma-ui/next-plugin");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ['@project/ui', '@project/configs'],
+  transpilePackages: ["@project/ui", "@project/configs"],
   experimental: {
     typedRoutes: true,
   },
   images: {
-    domains: ['avatars.githubusercontent.com'],
+    domains: ["avatars.githubusercontent.com"],
   },
 };
 

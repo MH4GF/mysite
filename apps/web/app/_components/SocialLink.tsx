@@ -1,17 +1,17 @@
-import type { IconComponent } from './Icons';
-import { GitHubIcon, TwitterIcon } from './Icons';
+import type { IconComponent } from "./Icons";
+import { GitHubIcon, TwitterIcon } from "./Icons";
 
-type SocialKind = 'twitter' | 'github';
+type SocialKind = "twitter" | "github";
 type Socials = Record<SocialKind, { Icon: IconComponent; url: string }>;
 
 const socials: Socials = {
   twitter: {
     Icon: TwitterIcon,
-    url: 'https://twitter.com/MH4GF',
+    url: "https://twitter.com/MH4GF",
   },
   github: {
     Icon: GitHubIcon,
-    url: 'https://github.com/MH4GF',
+    url: "https://github.com/MH4GF",
   },
 };
 

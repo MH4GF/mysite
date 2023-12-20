@@ -1,5 +1,5 @@
-import { MarkdownContent } from '@/app/_features';
-import { rootJoin } from '@/app/_utils';
+import { MarkdownContent } from "@/app/_features";
+import { rootJoin } from "@/app/_utils";
 
 interface Props {
   slug: string;

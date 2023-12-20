@@ -1,27 +1,27 @@
-'use client';
+"use client";
 
-import { MoonIcon, SunIcon } from '@/app/_components';
+import { MoonIcon, SunIcon } from "@/app/_components";
 
 export const ColorModeToggle = () => {
   function disableTransitionsTemporarily() {
-    document.documentElement.classList.add('[&_*]:!transition-none');
+    document.documentElement.classList.add("[&_*]:!transition-none");
     window.setTimeout(() => {
-      document.documentElement.classList.remove('[&_*]:!transition-none');
+      document.documentElement.classList.remove("[&_*]:!transition-none");
     }, 0);
   }
 
   function toggleMode() {
     disableTransitionsTemporarily();
 
-    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const isSystemDarkMode = darkModeMediaQuery.matches;
-    const isDarkMode = document.documentElement.classList.toggle('dark');
+    const isDarkMode = document.documentElement.classList.toggle("dark");
 
     if (isDarkMode === isSystemDarkMode) {
       // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
-      delete window.localStorage['isDarkMode'];
+      delete window.localStorage["isDarkMode"];
     } else {
-      window.localStorage['isDarkMode'] = isDarkMode;
+      window.localStorage["isDarkMode"] = isDarkMode;
     }
   }
 

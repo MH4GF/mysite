@@ -1,4 +1,4 @@
-import { getMarkdownContent } from './getMarkdownContent';
+import { getMarkdownContent } from "./getMarkdownContent";
 
 interface Props {
   filePath: string;

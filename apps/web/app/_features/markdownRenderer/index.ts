@@ -1,2 +1,2 @@
 /** @public */
-export { MarkdownContent } from './MarkdownContent';
+export { MarkdownContent } from "./MarkdownContent";

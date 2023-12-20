@@ -1,1 +1,1 @@
-export { getRssFeed } from './getRssFeed';
+export { getRssFeed } from "./getRssFeed";

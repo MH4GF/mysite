@@ -1,15 +1,15 @@
-import type { Route } from 'next';
-import { z } from 'zod';
+import type { Route } from "next";
+import { z } from "zod";
 
 const tagsSchema = z.enum([
-  'ROUTE06 Tech Blog',
-  'Timee Product Team Blog',
-  'Zenn',
-  'Qiita',
-  'note',
-  'Dev',
-  'Life',
-  'Speaker Deck',
+  "ROUTE06 Tech Blog",
+  "Timee Product Team Blog",
+  "Zenn",
+  "Qiita",
+  "note",
+  "Dev",
+  "Life",
+  "Speaker Deck",
 ]);
 
 export type TagEnum = z.infer<typeof tagsSchema>;
@@ -31,7 +31,7 @@ export const articlesMetaSchema = z.object({
  */
 export type ArticleMeta<T extends string = string> = Omit<
   z.infer<typeof articleMetaSchema>,
-  'href'
+  "href"
 > & {
   href: Route<T>;
 };

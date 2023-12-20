@@ -1,11 +1,11 @@
-import { Box, Spacer } from '@kuma-ui/core';
-import { KumaRegistry } from '@kuma-ui/next-plugin/registry';
-import '@project/configs/tailwindcss/global.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Box, Spacer } from "@kuma-ui/core";
+import { KumaRegistry } from "@kuma-ui/next-plugin/registry";
+import "@project/configs/tailwindcss/global.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 
-import { ColorModeScript, Header, TwitterWidgets } from './_features';
-import { siteInfo } from './_utils';
+import { ColorModeScript, Header, TwitterWidgets } from "./_features";
+import { siteInfo } from "./_utils";
 
 const { siteName, description, url, twitter } = siteInfo;
 
@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     url,
     siteName,
     description,
-    type: 'website',
-    locale: 'ja_JP',
+    type: "website",
+    locale: "ja_JP",
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: siteName,
     description,
     site: twitter,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
 };
 
-const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' });
+const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -44,9 +44,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ColorModeScript />
           <TwitterWidgets />
           <main className="dark:bg-gradient-to-tr dark:from-zinc-700 dark:via-zinc-900 dark:to-zinc-800 dark:text-zinc-100">
-            <Box px={['1rem', 0]} mx={'auto'} minHeight={'100vh'} maxWidth={['', '42rem']}>
+            <Box px={["1rem", 0]} mx={"auto"} minHeight={"100vh"} maxWidth={["", "42rem"]}>
               <Header />
-              <Spacer size={'2rem'} />
+              <Spacer size={"2rem"} />
               {children}
             </Box>
           </main>
