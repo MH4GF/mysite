@@ -20,7 +20,7 @@ export default function Page({ params }: Props) {
 }
 
 export const generateStaticParams = (): Promise<Params[]> => {
-  const dirPath = rootJoin(`contents/articles`);
+  const dirPath = rootJoin("contents/articles");
   return getSlugs(dirPath);
 };
 

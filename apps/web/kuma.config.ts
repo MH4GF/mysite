@@ -49,7 +49,7 @@ const theme = createTheme({
 type UserTheme = typeof theme;
 
 declare module "@kuma-ui/core" {
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  // biome-ignore lint/suspicious/noEmptyInterface: @kuma-ui/core で定義されている型を拡張するため
   export interface Theme extends UserTheme {}
 }
 

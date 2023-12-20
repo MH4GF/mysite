@@ -7,7 +7,7 @@ export const env = createEnv({
   },
   client: {},
   runtimeEnv: {
-    PWD: process.env["PWD"],
+    PWD: process.env.PWD,
   },
 });
 

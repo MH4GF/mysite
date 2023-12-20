@@ -66,6 +66,7 @@ export const RssIcon: IconComponent = (props) => {
       stroke="currentColor"
       {...props}
     >
+      <title>RSS</title>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
