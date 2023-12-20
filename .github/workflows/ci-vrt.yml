@@ -1,0 +1,53 @@
+name: VRT
+
+on:
+  deployment_status:
+
+jobs:
+  screenshots:
+    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success' && github.event.deployment_status.environment == 'Preview'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+
+    container:
+      image: mcr.microsoft.com/playwright:v1.35.0-focal
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v3.5.1
+        with:
+          node-version-file: .node-version
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.9.2
+          run_install: false
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}-setup-pnpm
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-setup-pnpm
+      - run: pnpm install
+        shell: bash
+
+      - run: pnpm --filter web test:vrt:screenshots
+        env:
+          BASE_URL: https://www.mh4gf.dev/
+
+      - run: pnpm test:vrt:compare
+        env:
+          BASE_URL: ${{ github.event.deployment_status.environment_url }}
+
+      - name: Upload failed screenshots
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: vrt-failed-screenshots-${{ github.sha }}
+          path: test-results
