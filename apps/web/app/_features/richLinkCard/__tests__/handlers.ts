@@ -1,4 +1,4 @@
-import { rest } from 'msw'
+import { rest } from 'msw';
 
 const SAMPLE_HTML = `
 <!doctype html>
@@ -27,16 +27,16 @@ const SAMPLE_HTML = `
   </div>
 </body>
 </html>
-`
+`;
 
-export const SAMPLE_URL = 'https://mh4gf.dev'
-export const NO_DATA_URL = 'https://nodata.mh4gf.dev'
+export const SAMPLE_URL = 'https://mh4gf.dev';
+export const NO_DATA_URL = 'https://nodata.mh4gf.dev';
 
 export const handlers = [
   rest.get(SAMPLE_URL, (_req, res, ctx) => {
-    return res(ctx.status(200), ctx.body(SAMPLE_HTML))
+    return res(ctx.status(200), ctx.body(SAMPLE_HTML));
   }),
   rest.get(NO_DATA_URL, (_req, res, ctx) => {
-    return res(ctx.status(200), ctx.body(''))
+    return res(ctx.status(200), ctx.body(''));
   }),
-]
+];

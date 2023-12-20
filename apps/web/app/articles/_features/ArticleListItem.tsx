@@ -1,20 +1,20 @@
-import { HStack, Heading, Link as KumaLink, Spacer, Text } from '@kuma-ui/core'
-import { format } from 'date-fns'
-import Link from 'next/link'
+import { HStack, Heading, Link as KumaLink, Spacer, Text } from '@kuma-ui/core';
+import { format } from 'date-fns';
+import Link from 'next/link';
 
-import { Tag } from './Tag'
+import { Tag } from './Tag';
 
-import type { ArticleMeta } from '@/app/_features'
+import type { ArticleMeta } from '@/app/_features';
 
-type LinkProps<T extends string> = Pick<Props<T>, 'href' | 'title'>
+type LinkProps<T extends string> = Pick<Props<T>, 'href' | 'title'>;
 
 const InternalLink = <T extends string>({ href, title }: LinkProps<T>) => {
   return (
     <Link href={href} legacyBehavior>
       <KumaLink>{title}</KumaLink>
     </Link>
-  )
-}
+  );
+};
 
 const ExternalLink = <T extends string>({ href, title }: LinkProps<T>) => {
   return (
@@ -35,10 +35,10 @@ const ExternalLink = <T extends string>({ href, title }: LinkProps<T>) => {
         ></path>
       </svg>
     </KumaLink>
-  )
-}
+  );
+};
 
-type Props<T extends string> = ArticleMeta<T>
+type Props<T extends string> = ArticleMeta<T>;
 
 export const ArticleListItem = <T extends string>({
   title,
@@ -47,7 +47,7 @@ export const ArticleListItem = <T extends string>({
   publishedAt: _publishedAt,
   tags,
 }: Props<T>) => {
-  const publishedAt = format(_publishedAt, 'yyyy/MM/dd')
+  const publishedAt = format(_publishedAt, 'yyyy/MM/dd');
 
   return (
     <article>
@@ -68,5 +68,5 @@ export const ArticleListItem = <T extends string>({
         <Text color={'colors.zinc.500'}>{publishedAt}</Text>
       </HStack>
     </article>
-  )
-}
+  );
+};

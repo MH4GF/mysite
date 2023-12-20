@@ -12,7 +12,6 @@
   },
   "javascript": {
     "formatter": {
-      "semicolons": "asNeeded",
       "quoteStyle": "single"
     }
   },

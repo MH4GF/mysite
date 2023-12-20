@@ -1,6 +1,6 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
-import { externalLinks } from '@/app/_utils'
+import { externalLinks } from '@/app/_utils';
 
 export const MyAvatar = () => {
   return (
@@ -12,5 +12,5 @@ export const MyAvatar = () => {
       className="inline-block rounded-full"
       priority
     />
-  )
-}
+  );
+};

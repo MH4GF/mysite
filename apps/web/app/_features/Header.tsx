@@ -1,9 +1,9 @@
-import { Box, HStack, Text } from '@kuma-ui/core'
-import Link from 'next/link'
+import { Box, HStack, Text } from '@kuma-ui/core';
+import Link from 'next/link';
 
-import { ColorModeToggle } from './colorMode'
+import { ColorModeToggle } from './colorMode';
 
-const navigation = [{ name: 'Articles', href: '/articles' }] as const
+const navigation = [{ name: 'Articles', href: '/articles' }] as const;
 
 export const Header = () => {
   return (
@@ -31,5 +31,5 @@ export const Header = () => {
         </HStack>
       </HStack>
     </header>
-  )
-}
+  );
+};

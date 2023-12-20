@@ -1,21 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
-import { Box, Heading, Image, Link, Text, VStack, css } from '@kuma-ui/core'
-import { useId } from 'react'
+import { Box, Heading, Image, Link, Text, VStack, css } from '@kuma-ui/core';
+import { useId } from 'react';
 
-import type { OGPResult } from './getOGP'
-import { getOGP } from './getOGP'
+import type { OGPResult } from './getOGP';
+import { getOGP } from './getOGP';
 
-type RichLinkCardInnerProps = OGPResult
+type RichLinkCardInnerProps = OGPResult;
 
 const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardInnerProps) => {
-  const labelledBy = useId()
+  const labelledBy = useId();
 
   if (title === '') {
     return (
       <Link href={url} target="_blank" rel="noreferrer">
         {url}
       </Link>
-    )
+    );
   }
 
   return (
@@ -66,14 +66,14 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
         )}
       </Link>
     </Box>
-  )
-}
+  );
+};
 
 interface Props {
-  url: string
+  url: string;
 }
 
 export const RichLinkCard = async ({ url }: Props) => {
-  const result = await getOGP(url)
-  return <RichLinkCardInner {...result} />
-}
+  const result = await getOGP(url);
+  return <RichLinkCardInner {...result} />;
+};

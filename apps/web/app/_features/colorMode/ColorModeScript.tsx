@@ -31,8 +31,8 @@ const modeScript = `
     // disableTransitionsTemporarily()
     updateMode()
   }
-`
+`;
 
 export const ColorModeScript = () => {
-  return <script dangerouslySetInnerHTML={{ __html: modeScript }} />
-}
+  return <script dangerouslySetInnerHTML={{ __html: modeScript }} />;
+};

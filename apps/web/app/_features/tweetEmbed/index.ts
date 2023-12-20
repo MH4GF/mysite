@@ -1,4 +1,4 @@
 /** @public */
-export { TweetEmbed } from './TweetEmbed'
+export { TweetEmbed } from './TweetEmbed';
 /** @public */
-export { TwitterWidgets } from './TwitterWidgets'
+export { TwitterWidgets } from './TwitterWidgets';

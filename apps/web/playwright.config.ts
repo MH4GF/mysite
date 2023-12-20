@@ -1,4 +1,4 @@
-import { defineConfig, devices } from '@playwright/test'
+import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: 'app',
@@ -31,4 +31,4 @@ export default defineConfig({
     port: 3000,
     reuseExistingServer: !process.env['CI'],
   },
-})
+});

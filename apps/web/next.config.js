@@ -1,4 +1,4 @@
-const { withKumaUI } = require('@kuma-ui/next-plugin')
+const { withKumaUI } = require('@kuma-ui/next-plugin');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -10,6 +10,6 @@ const nextConfig = {
   images: {
     domains: ['avatars.githubusercontent.com'],
   },
-}
+};
 
-module.exports = withKumaUI(nextConfig)
+module.exports = withKumaUI(nextConfig);

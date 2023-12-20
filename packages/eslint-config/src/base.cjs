@@ -22,4 +22,4 @@ module.exports = {
     // @see: https://typescriptbook.jp/reference/tsconfig/nopropertyaccessfromindexsignature
     '@typescript-eslint/dot-notation': 'off',
   },
-}
+};

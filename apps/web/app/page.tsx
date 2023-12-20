@@ -1,9 +1,9 @@
-import { Flex, Grid, HStack, Heading } from '@kuma-ui/core'
-import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Flex, Grid, HStack, Heading } from '@kuma-ui/core';
+import type { Metadata } from 'next';
+import Link from 'next/link';
 
-import { MyAvatar, SocialLink } from './_components'
-import { siteInfo } from './_utils'
+import { MyAvatar, SocialLink } from './_components';
+import { siteInfo } from './_utils';
 
 export default function Page() {
   return (
@@ -34,9 +34,9 @@ export default function Page() {
         </li>
       </ul>
     </Grid>
-  )
+  );
 }
 
 export const metadata: Metadata = {
   title: `MH4GF | ${siteInfo.siteName}`,
-}
+};

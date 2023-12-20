@@ -1,9 +1,9 @@
-import { Box, Grid, HStack } from '@kuma-ui/core'
-import Link from 'next/link'
+import { Box, Grid, HStack } from '@kuma-ui/core';
+import Link from 'next/link';
 
-import { RssIcon } from '../_components'
+import { RssIcon } from '../_components';
 
-import { ArticleList } from './_features'
+import { ArticleList } from './_features';
 
 export default function Page() {
   return (
@@ -23,5 +23,5 @@ export default function Page() {
       </HStack>
       <ArticleList />
     </Grid>
-  )
+  );
 }

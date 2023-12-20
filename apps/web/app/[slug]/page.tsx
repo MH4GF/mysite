@@ -1,23 +1,23 @@
-import { notFound } from 'next/navigation'
+import { notFound } from 'next/navigation';
 
-import { Content } from './_features'
+import { Content } from './_features';
 
-import { rootJoin } from '@/app/_utils'
-import { getSlugs } from '@/app/_utils/server'
+import { rootJoin } from '@/app/_utils';
+import { getSlugs } from '@/app/_utils/server';
 
 interface Params {
-  slug: string
+  slug: string;
 }
 
 interface Props {
-  params: Params
+  params: Params;
 }
 
 export default function Page({ params }: Props) {
-  return <Content {...params} handleNotFound={notFound} />
+  return <Content {...params} handleNotFound={notFound} />;
 }
 
 export const generateStaticParams = async (): Promise<Params[]> => {
-  const dirPath = rootJoin(`contents/about`)
-  return await getSlugs(dirPath)
-}
+  const dirPath = rootJoin(`contents/about`);
+  return await getSlugs(dirPath);
+};

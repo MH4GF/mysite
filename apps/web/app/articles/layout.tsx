@@ -1,9 +1,9 @@
-import type { ReactNode } from 'react'
+import type { ReactNode } from 'react';
 
-import { Footer } from './_features'
+import { Footer } from './_features';
 
 interface Props {
-  children: ReactNode
+  children: ReactNode;
 }
 
 export default function ArticlesLayout({ children }: Props) {
@@ -12,5 +12,5 @@ export default function ArticlesLayout({ children }: Props) {
       {children}
       <Footer />
     </>
-  )
+  );
 }

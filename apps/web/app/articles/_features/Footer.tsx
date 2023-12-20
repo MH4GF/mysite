@@ -1,7 +1,7 @@
-import { Box, Heading, Link as KumaLink, Spacer, Text } from '@kuma-ui/core'
-import Link from 'next/link'
+import { Box, Heading, Link as KumaLink, Spacer, Text } from '@kuma-ui/core';
+import Link from 'next/link';
 
-import { MyAvatar } from '@/app/_components'
+import { MyAvatar } from '@/app/_components';
 
 export const Footer = () => {
   return (
@@ -18,5 +18,5 @@ export const Footer = () => {
       </Box>
       <Spacer size={'1rem'} />
     </footer>
-  )
-}
+  );
+};

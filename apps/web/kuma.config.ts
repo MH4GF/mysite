@@ -1,4 +1,4 @@
-import { createTheme } from '@kuma-ui/core'
+import { createTheme } from '@kuma-ui/core';
 
 const textVariants = {
   xs: {
@@ -17,7 +17,7 @@ const textVariants = {
     fontSize: '1.25rem',
     lineHeight: '1.75rem',
   },
-}
+};
 
 const theme = createTheme({
   colors: {
@@ -44,13 +44,13 @@ const theme = createTheme({
       },
     },
   },
-})
+});
 
-type UserTheme = typeof theme
+type UserTheme = typeof theme;
 
 declare module '@kuma-ui/core' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   export interface Theme extends UserTheme {}
 }
 
-export default theme
+export default theme;

@@ -442,5 +442,5 @@ module.exports = {
       },
     },
   },
-}
+};
 // generated: dependency-cruiser@13.0.3 on 2023-06-04T23:42:15.937Z

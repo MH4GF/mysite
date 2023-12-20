@@ -1,10 +1,10 @@
-import clsx from 'clsx'
-import { match } from 'ts-pattern'
+import clsx from 'clsx';
+import { match } from 'ts-pattern';
 
-import type { TagEnum } from '@/app/_features'
+import type { TagEnum } from '@/app/_features';
 
 interface Props {
-  tag: TagEnum
+  tag: TagEnum;
 }
 
 export const Tag = ({ tag }: Props) => {
@@ -17,7 +17,7 @@ export const Tag = ({ tag }: Props) => {
     .with('note', () => ['bg-green-600', 'dark:bg-green-700'])
     .with('Qiita', () => ['bg-teal-500', 'dark:bg-teal-700'])
     .with('Speaker Deck', () => ['bg-teal-500', 'dark:bg-teal-700'])
-    .exhaustive()
+    .exhaustive();
 
-  return <span className={clsx(colors, 'rounded px-1 py-px text-sm text-white')}>{tag}</span>
-}
+  return <span className={clsx(colors, 'rounded px-1 py-px text-sm text-white')}>{tag}</span>;
+};

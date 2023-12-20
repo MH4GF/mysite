@@ -1,11 +1,11 @@
-import { Heading } from '@kuma-ui/core'
-import { notFound } from 'next/navigation'
+import { Heading } from '@kuma-ui/core';
+import { notFound } from 'next/navigation';
 
-import { MarkdownContent } from '@/app/_features'
-import { rootJoin } from '@/app/_utils'
+import { MarkdownContent } from '@/app/_features';
+import { rootJoin } from '@/app/_utils';
 
 export default function Page() {
-  const filePath = rootJoin(`app/dev/testing-markdown-renderer/sample.md`)
+  const filePath = rootJoin(`app/dev/testing-markdown-renderer/sample.md`);
 
   return (
     <main>
@@ -14,5 +14,5 @@ export default function Page() {
       </Heading>
       <MarkdownContent filePath={filePath} handleNotFound={notFound} />
     </main>
-  )
+  );
 }
