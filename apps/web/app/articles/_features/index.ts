@@ -1,2 +1,2 @@
-export { ArticleList } from './ArticleList'
-export { Footer } from './Footer'
+export { ArticleList } from "./ArticleList";
+export { Footer } from "./Footer";

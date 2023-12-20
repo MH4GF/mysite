@@ -10,12 +10,6 @@
     "indentStyle": "space",
     "lineWidth": 100
   },
-  "javascript": {
-    "formatter": {
-      "semicolons": "asNeeded",
-      "quoteStyle": "single"
-    }
-  },
   "vcs": {
     "enabled": true,
     "clientKind": "git",

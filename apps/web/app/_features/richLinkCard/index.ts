@@ -1,2 +1,2 @@
 /** @public */
-export { RichLinkCard } from './RichLinkCard'
+export { RichLinkCard } from "./RichLinkCard";
