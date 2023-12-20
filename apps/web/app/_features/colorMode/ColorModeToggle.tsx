@@ -1,6 +1,6 @@
 'use client'
 
-import { SunIcon, MoonIcon } from '@/app/_components'
+import { MoonIcon, SunIcon } from '@/app/_components'
 
 export const ColorModeToggle = () => {
   function disableTransitionsTemporarily() {

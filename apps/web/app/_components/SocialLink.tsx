@@ -1,5 +1,5 @@
 import type { IconComponent } from './Icons'
-import { TwitterIcon, GitHubIcon } from './Icons'
+import { GitHubIcon, TwitterIcon } from './Icons'
 
 type SocialKind = 'twitter' | 'github'
 type Socials = Record<SocialKind, { Icon: IconComponent; url: string }>
