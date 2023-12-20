@@ -12,7 +12,9 @@
     "test": "run-s test:*",
     "test-playwright-update": "docker run --rm --network host -v $(pwd)/../..:/work/ -v mysite_node_modules:/work/apps/web/node_modules -w /work/apps/web mcr.microsoft.com/playwright:v1.35.0-focal /bin/bash -c 'corepack enable && pnpm i --force && pnpm run test:playwright -u'",
     "test:playwright": "playwright test",
-    "test:vitest": "vitest"
+    "test:vitest": "vitest",
+    "test:vrt:screenshots": "playwright test --update-snapshots --config app/__vrt__/playwright.config.ts",
+    "test:vrt:compare": "playwright test --config app/__vrt__/playwright.config.ts"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
