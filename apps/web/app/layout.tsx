@@ -4,7 +4,7 @@ import '@project/configs/tailwindcss/global.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-import { Header, ColorModeScript, TwitterWidgets } from './_features'
+import { ColorModeScript, Header, TwitterWidgets } from './_features'
 import { siteInfo } from './_utils'
 
 const { siteName, description, url, twitter } = siteInfo
