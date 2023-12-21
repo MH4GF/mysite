@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -142,8 +142,8 @@ importers:
         specifier: ^0.5.9
         version: 0.5.9
       '@tsconfig/next':
-        specifier: ^1.0.5
-        version: 1.0.5
+        specifier: ^2.0.0
+        version: 2.0.1
       '@tsconfig/strictest':
         specifier: ^2.0.1
         version: 2.0.1
@@ -2730,8 +2730,8 @@ packages:
       path-browserify: 1.0.1
     dev: false
 
-  /@tsconfig/next@1.0.5:
-    resolution: {integrity: sha512-ZpAlWqSGE3ZWFqKmI3FiQEu8WcBF3uii1z1ovedMcALflsRoJnExp3YzWQ/fU7lzGmYtfX1CWFpf1Gl8aEC6GQ==}
+  /@tsconfig/next@2.0.1:
+    resolution: {integrity: sha512-8Za+6fv85ipdoO1u/Xknyurab8T92LbS0/KzRB0/GHvPh3xl0L4yf5+VmSxXNwjF1uS/xLSqf+BPhfaqasCpZw==}
     dev: false
 
   /@tsconfig/strictest@2.0.1:
