@@ -36,7 +36,7 @@ jobs:
           pnpm-version: '8.6.1'
       - run: pnpm i
       - run: pnpm test
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: test-results
