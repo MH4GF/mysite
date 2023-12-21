@@ -39,7 +39,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@playwright/test": "^1.35.0",
+    "@playwright/test": "1.40.1",
     "@project/configs": "workspace:^*",
     "@project/eslint-config": "workspace:^0.0.1",
     "@types/node": "^20.2.5",
