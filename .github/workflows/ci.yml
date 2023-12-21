@@ -20,7 +20,7 @@ jobs:
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
         with:
           node-version-file: .node-version
-          pnpm-version: '8.6.1'
+          pnpm-version: '8.12.1'
       - run: pnpm i
       - run: pnpm lint
 
@@ -33,7 +33,7 @@ jobs:
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
         with:
           node-version-file: .node-version
-          pnpm-version: '8.6.1'
+          pnpm-version: '8.12.1'
       - run: pnpm i
       - run: pnpm test
       - uses: actions/upload-artifact@v4
