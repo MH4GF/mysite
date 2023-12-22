@@ -1,10 +1,10 @@
 import { HStack, Heading, Link as KumaLink, Spacer, Text } from "@kuma-ui/core";
-import { format } from "date-fns";
 import Link from "next/link";
 
 import { Tag } from "./Tag";
 
 import type { ArticleMeta } from "@/app/_features";
+import { format } from "@/app/_utils";
 
 type LinkProps<T extends string> = Pick<Props<T>, "href" | "title">;
 
@@ -48,7 +48,7 @@ export const ArticleListItem = <T extends string>({
   publishedAt: _publishedAt,
   tags,
 }: Props<T>) => {
-  const publishedAt = format(_publishedAt, "yyyy/MM/dd");
+  const publishedAt = format(_publishedAt);
 
   return (
     <article>
