@@ -1,4 +1,4 @@
-import { rest } from "msw";
+import { http, HttpResponse } from "msw";
 
 const SAMPLE_HTML = `
 <!doctype html>
@@ -33,10 +33,10 @@ export const SAMPLE_URL = "https://mh4gf.dev";
 export const NO_DATA_URL = "https://nodata.mh4gf.dev";
 
 export const handlers = [
-  rest.get(SAMPLE_URL, (_req, res, ctx) => {
-    return res(ctx.status(200), ctx.body(SAMPLE_HTML));
+  http.get(SAMPLE_URL, () => {
+    return new HttpResponse(SAMPLE_HTML, { status: 200 });
   }),
-  rest.get(NO_DATA_URL, (_req, res, ctx) => {
-    return res(ctx.status(200), ctx.body(""));
+  http.get(NO_DATA_URL, () => {
+    return HttpResponse.json("", { status: 200 });
   }),
 ];
