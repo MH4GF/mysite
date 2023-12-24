@@ -1,4 +1,4 @@
-import { createElement } from "react";
+import * as prod from "react/jsx-runtime";
 import rehypeReact from "rehype-react";
 import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
@@ -12,8 +12,11 @@ export const processor = unified()
   .use(remarkGfm)
   .use(remarkRehype)
   .use(rehypeReact, {
-    createElement,
-    components: {
-      p: Paragraph,
-    },
+    // @ts-expect-error: the react types are missing.
+    Fragment: prod.Fragment,
+    // @ts-expect-error: the react types are missing.
+    jsx: prod.jsx,
+    // @ts-expect-error: the react types are missing.
+    jsxs: prod.jsxs,
+    components: { p: Paragraph },
   });
