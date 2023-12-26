@@ -1,7 +1,9 @@
 import { Box, Grid, HStack } from "@kuma-ui/core";
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { RssIcon } from "../_components";
+import { siteInfo } from "../_utils";
 
 import { ArticleList } from "./_features";
 
@@ -25,3 +27,7 @@ export default function Page() {
     </Grid>
   );
 }
+
+export const metadata: Metadata = {
+  title: `Articles | ${siteInfo.siteName}`,
+};
