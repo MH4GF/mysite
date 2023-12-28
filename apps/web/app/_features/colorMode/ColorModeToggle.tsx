@@ -18,7 +18,8 @@ export const ColorModeToggle = () => {
     const isDarkMode = document.documentElement.classList.toggle("dark");
 
     if (isDarkMode === isSystemDarkMode) {
-      window.localStorage.isDarkMode = undefined;
+      // biome-ignore lint/performance/noDelete: <explanation>
+      delete window.localStorage.isDarkMode;
     } else {
       window.localStorage.isDarkMode = isDarkMode;
     }
