@@ -1,8 +1,8 @@
 import { Box, Grid, HStack } from "@kuma-ui/core";
 import type { Metadata } from "next";
-import Link from "next/link";
 
 import { RssIcon } from "../_components";
+import { Link } from "../_features/viewTransition";
 import { siteInfo } from "../_utils";
 
 import { ArticleList } from "./_features";

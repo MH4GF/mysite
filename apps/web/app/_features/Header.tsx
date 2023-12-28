@@ -1,7 +1,7 @@
 import { Box, HStack, Text } from "@kuma-ui/core";
-import Link from "next/link";
 
 import { ColorModeToggle } from "./colorMode";
+import { Link } from "./viewTransition";
 
 const navigation = [{ name: "Articles", href: "/articles" }] as const;
 

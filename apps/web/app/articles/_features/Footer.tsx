@@ -1,7 +1,7 @@
 import { Box, Heading, Link as KumaLink, Spacer, Text } from "@kuma-ui/core";
-import Link from "next/link";
 
 import { MyAvatar } from "@/app/_components";
+import { Link } from "@/app/_features/viewTransition";
 
 export const Footer = () => {
   return (

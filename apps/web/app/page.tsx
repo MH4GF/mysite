@@ -1,8 +1,8 @@
 import { Flex, Grid, HStack, Heading } from "@kuma-ui/core";
 import type { Metadata } from "next";
-import Link from "next/link";
 
 import { MyAvatar, SocialLink } from "./_components";
+import { Link } from "./_features/viewTransition";
 import { siteInfo } from "./_utils";
 
 export default function Page() {
