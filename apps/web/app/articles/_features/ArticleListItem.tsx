@@ -1,9 +1,9 @@
 import { HStack, Heading, Link as KumaLink, Spacer, Text } from "@kuma-ui/core";
-import Link from "next/link";
 
 import { Tag } from "./Tag";
 
 import type { ArticleMeta } from "@/app/_features";
+import { Link } from "@/app/_features/viewTransition";
 import { format } from "@/app/_utils";
 
 type LinkProps<T extends string> = Pick<Props<T>, "href" | "title">;
