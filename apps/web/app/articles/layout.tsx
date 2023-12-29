@@ -1,12 +1,8 @@
-import type { ReactNode } from "react";
+import type { PropsWithChildren } from "react";
 
 import { Footer } from "../_components";
 
-interface Props {
-  children: ReactNode;
-}
-
-export default function ArticlesLayout({ children }: Props) {
+export default function ArticlesLayout({ children }: PropsWithChildren) {
   return (
     <>
       {children}
