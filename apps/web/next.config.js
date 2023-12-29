@@ -8,7 +8,12 @@ const nextConfig = {
     typedRoutes: true,
   },
   images: {
-    domains: ["avatars.githubusercontent.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
+    ],
   },
 };
 
