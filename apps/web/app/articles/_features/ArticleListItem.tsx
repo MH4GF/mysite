@@ -8,14 +8,6 @@ import { format } from "@/app/_utils";
 
 type LinkProps<T extends string> = Pick<Props<T>, "href" | "title">;
 
-const InternalLink = <T extends string>({ href, title }: LinkProps<T>) => {
-  return (
-    <Link href={href} legacyBehavior>
-      <KumaLink>{title}</KumaLink>
-    </Link>
-  );
-};
-
 const ExternalLink = <T extends string>({ href, title }: LinkProps<T>) => {
   return (
     <KumaLink href={href} target="_blank" rel="noreferrer">
@@ -56,7 +48,7 @@ export const ArticleListItem = <T extends string>({
         {externalLink ? (
           <ExternalLink href={href} title={title} />
         ) : (
-          <InternalLink href={href} title={title} />
+          <Link href={href}>{title}</Link>
         )}
       </Heading>
       <Spacer size={"0.5rem"} />
