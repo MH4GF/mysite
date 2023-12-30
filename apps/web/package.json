@@ -19,7 +19,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^2.0.18",
-    "@kuma-ui/core": "^1.4.0",
+    "@kuma-ui/core": "^1.5.5",
     "@kuma-ui/next-plugin": "^1.1.3",
     "@t3-oss/env-nextjs": "^0.7.0",
     "cheerio": "1.0.0-rc.12",
