@@ -11,7 +11,7 @@ jobs:
     permissions:
       contents: read
     outputs:
-      failed: ${{ steps.compare.outputs.failed }}
+      failed: ${{ steps.compare.outcome == 'failure' }}
     container:
       image: mcr.microsoft.com/playwright:v1.40.1-focal
 
