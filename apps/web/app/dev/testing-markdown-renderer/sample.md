@@ -39,7 +39,7 @@
 
 https://mh4gf.dev
 
-https://mh4gf.dev
+https://mh4gf.dev/articles
 
 <!-- 上下に空白行がない場合リンクテキストとしてレンダリング -->
 https://mh4gf.dev
@@ -50,7 +50,7 @@ https://mh4gf.dev
 
 https://mh4gf.dev
 
-https://mh4gf.dev
+https://mh4gf.dev/articles
 
 https://mh4gf.dev
 https://mh4gf.dev
