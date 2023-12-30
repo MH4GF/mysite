@@ -34,6 +34,10 @@ const targetPages: TargetPage[] = [
     name: "article-2022-summary",
     path: "/articles/2022-summary",
   },
+  {
+    name: "testing-markdown-renderer",
+    path: "/dev/testing-markdown-renderer",
+  },
 ];
 
 for (const targetPage of targetPages) {
