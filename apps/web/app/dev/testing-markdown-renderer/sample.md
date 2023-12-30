@@ -32,16 +32,28 @@
 ## 単体の URL 文字列
 
 ```
-<!-- リンクカードとしてレンダリング -->
-https://mh4gf.dev
-
 <!-- リンクテキストとしてレンダリング -->
 - https://mh4gf.dev/articles
-```
+
+<!-- 上下に空白行がある場合リンクカードとしてレンダリング -->
 
 https://mh4gf.dev
 
+https://mh4gf.dev
+
+<!-- 上下に空白行がない場合リンクテキストとしてレンダリング -->
+https://mh4gf.dev
+https://mh4gf.dev
+```
+
 - https://mh4gf.dev/articles
+
+https://mh4gf.dev
+
+https://mh4gf.dev
+
+https://mh4gf.dev
+https://mh4gf.dev
 
 ## インラインスタイル
 
