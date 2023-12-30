@@ -1,20 +1,28 @@
+/* eslint-disable @typescript-eslint/no-base-to-string */
+
 "use client";
 
+import { Link as KumaLink } from "@kuma-ui/core";
 import type { Route } from "next";
 import type { LinkProps } from "next/link";
 import NextLink from "next/link";
 
 import { useViewTransitionRouter } from "./useViewTransitionRouter";
 
-export function Link<T extends string = string>(props: LinkProps<T>) {
+export function Link<T extends string = string>({ children, href, ...props }: LinkProps<T>) {
   const router = useViewTransitionRouter();
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
 
-    // eslint-disable-next-line @typescript-eslint/no-base-to-string
-    router.push<Route>(props.href.toString() as Route);
+    router.push<Route>(href.toString() as Route);
   };
 
-  return <NextLink {...props} onClick={handleLinkClick} />;
+  return (
+    <NextLink {...props} href={href} legacyBehavior>
+      <KumaLink href={href.toString()} onClick={handleLinkClick}>
+        {children}
+      </KumaLink>
+    </NextLink>
+  );
 }
