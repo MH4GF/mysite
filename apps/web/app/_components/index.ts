@@ -4,3 +4,5 @@ export { MoonIcon, SunIcon, RssIcon } from "./Icons";
 export { MyAvatar } from "./MyAvatar";
 /** @public */
 export { SocialLink } from "./SocialLink";
+/** @public */
+export { Footer } from "./Footer";
