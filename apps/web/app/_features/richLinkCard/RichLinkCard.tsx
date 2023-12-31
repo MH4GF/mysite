@@ -29,7 +29,8 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
       marginY={"1.25rem"}
       aria-labelledby={labelledBy}
     >
-      <Link
+      <Box
+        as="a"
         href={url}
         target="_blank"
         rel="noreferrer"
@@ -44,12 +45,19 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
             variant="base"
             overflow="hidden"
             fontWeight="bold"
+            whiteSpace="nowrap"
             textOverflow="ellipsis"
             id={labelledBy}
           >
             {title}
           </Heading>
-          <Text variant="xs" color="colors.zinc.500" overflow="hidden">
+          <Text
+            variant="xs"
+            color="colors.zinc.500"
+            overflow="hidden"
+            whiteSpace="nowrap"
+            textOverflow="ellipsis"
+          >
             {description}
           </Text>
         </VStack>
@@ -65,7 +73,7 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
             alt={title}
           />
         )}
-      </Link>
+      </Box>
     </Box>
   );
 };
