@@ -29,7 +29,8 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
       marginY={"1.25rem"}
       aria-labelledby={labelledBy}
     >
-      <Link
+      <Box
+        as="a"
         href={url}
         target="_blank"
         rel="noreferrer"
@@ -65,7 +66,7 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
             alt={title}
           />
         )}
-      </Link>
+      </Box>
     </Box>
   );
 };
