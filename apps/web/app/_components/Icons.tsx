@@ -1,3 +1,16 @@
+import { Box, type BoxComponent } from "@kuma-ui/core";
+
+export const Icon: BoxComponent = (props) => {
+  return (
+    <Box
+      height={"1.5rem"}
+      width={"1.5rem"}
+      className="fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"
+      {...props}
+    />
+  );
+};
+
 interface SvgProps {
   className?: string;
 }
