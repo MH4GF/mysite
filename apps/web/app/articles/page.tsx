@@ -15,8 +15,7 @@ export default function Page() {
         display="flex"
         alignItems="center"
         fontWeight="bold"
-        fontSize={["1.5rem", "1.875rem"]}
-        lineHeight={["2rem", "2.25rem"]}
+        variant="xl3"
         gap="0.5rem"
       >
         <span>Articles</span>
