@@ -21,6 +21,10 @@ const textVariants = {
     fontSize: "1.875rem",
     lineHeight: "2.25rem",
   },
+  xl4: {
+    fontSize: "2.25rem",
+    lineHeight: "2.5rem",
+  },
 };
 
 const theme = createTheme({
