@@ -1,5 +1,3 @@
-# github-nippou の Web 版を App Router + Go + Vercel で作った
-
 GitHub アカウントでログインし実行すると、その日の GitHub での活動をマークダウンのリスト形式で出力する Web サイトを作りました。  
 日報を書く時に便利なので、ぜひ使ってみてください！
 
