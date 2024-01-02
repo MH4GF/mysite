@@ -1,7 +1,7 @@
 ---
 name: 'package'
 root: '.'
-output: './packages'
+output: ['./packages', './apps']
 ignore: []
 questions:
   name: 'Please enter the name for package.'
