@@ -1,5 +1,5 @@
 /** @type {import('eslint/lib/shared/types').ConfigData} */
 module.exports = {
   root: true,
-  extends: ["@project/eslint-config/next"],
+  extends: ["@project/eslint-config/next", "plugin:storybook/recommended"],
 };
