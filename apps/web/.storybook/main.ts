@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/nextjs";
+import KumaUIWebpackPlugin from "@kuma-ui/webpack-plugin";
 
 import { join, dirname } from "path";
 
@@ -23,6 +24,11 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: "tag",
+  },
+  webpackFinal: (config) => {
+    config.plugins = [...(config.plugins ?? []), new KumaUIWebpackPlugin()];
+
+    return config;
   },
 };
 export default config;

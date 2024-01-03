@@ -41,6 +41,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@kuma-ui/webpack-plugin": "^1.2.7",
     "@playwright/test": "1.40.1",
     "@project/configs": "workspace:^*",
     "@project/eslint-config": "workspace:^0.0.1",
