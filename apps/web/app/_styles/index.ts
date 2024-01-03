@@ -1,1 +1,0 @@
-export { inter } from "./font";

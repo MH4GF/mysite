@@ -24,6 +24,5 @@ module.exports = {
 
     // biomeへ移行するためオフにする
     "@typescript-eslint/no-empty-interface": "off",
-    "import/order": "off",
   },
 };
