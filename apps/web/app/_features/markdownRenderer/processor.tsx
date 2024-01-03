@@ -14,7 +14,9 @@ export const processor = unified()
   .use(remarkParse)
   .use(remarkGfm)
   .use(remarkRehype, { allowDangerousHtml: true })
-  .use(rehypePrettyCode, {})
+  .use(rehypePrettyCode, {
+    keepBackground: false,
+  })
   // @ts-expect-error ... rehypePrettyCode is not typed correctly
   .use(rehypeRaw)
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
