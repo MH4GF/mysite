@@ -2,10 +2,10 @@ import { Box, Spacer } from "@kuma-ui/core";
 import { KumaRegistry } from "@kuma-ui/next-plugin/registry";
 import "@project/configs/tailwindcss/global.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
 import { ColorModeScript, Header, TwitterWidgets } from "./_features";
 import { siteInfo } from "./_utils";
+import { inter } from "./_styles";
 
 const { siteName, description, url, twitter } = siteInfo;
 
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     canonical: url,
   },
 };
-
-const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
