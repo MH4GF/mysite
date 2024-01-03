@@ -4,8 +4,8 @@ import "@project/configs/tailwindcss/global.css";
 import type { Metadata } from "next";
 
 import { ColorModeScript, Header, TwitterWidgets } from "./_features";
-import { siteInfo } from "./_utils";
 import { inter } from "./_styles";
+import { siteInfo } from "./_utils";
 
 const { siteName, description, url, twitter } = siteInfo;
 

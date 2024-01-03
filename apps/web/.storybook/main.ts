@@ -1,7 +1,7 @@
-import type { StorybookConfig } from "@storybook/nextjs";
 import KumaUIWebpackPlugin from "@kuma-ui/webpack-plugin";
+import type { StorybookConfig } from "@storybook/nextjs";
 
-import { join, dirname } from "path";
+import { dirname, join } from "path";
 
 /**
  * This function is used to resolve the absolute path of a package.
