@@ -9,7 +9,9 @@
     "lint:depcruise": "depcruise --config .dependency-cruiser.js apps packages",
     "lint:biome": "biome check .",
     "lint": "run-s -c lint:*",
-    "format": "biome format . --write",
+    "format": "run-p -c format:*",
+    "format:biome-format": "biome format . --write",
+    "format:biome-check": "biome check . --apply",
     "scaffold": "scaffdog generate"
   },
   "devDependencies": {
