@@ -16,7 +16,8 @@
     "test:vrt:screenshots": "playwright test --update-snapshots --config app/__vrt__/playwright.config.ts",
     "test:vrt:compare": "playwright test --config app/__vrt__/playwright.config.ts",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_d59bfb33efbe1d2"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
@@ -58,6 +59,7 @@
     "@types/react-dom": "^18.2.4",
     "@types/rss": "^0.0.32",
     "autoprefixer": "^10.4.14",
+    "chromatic": "^10.2.0",
     "eslint-plugin-storybook": "^0.6.15",
     "msw": "^2.0.0",
     "postcss": "^8.4.24",
