@@ -17,7 +17,7 @@
     "test:vrt:compare": "playwright test --config app/__vrt__/playwright.config.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_d59bfb33efbe1d2"
+    "chromatic": "chromatic"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
