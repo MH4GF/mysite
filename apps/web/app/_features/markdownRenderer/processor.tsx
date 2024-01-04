@@ -16,6 +16,7 @@ export const processor = unified()
   .use(remarkRehype, { allowDangerousHtml: true })
   .use(rehypePrettyCode, {
     keepBackground: false,
+    theme: "catppuccin-frappe",
   })
   // @ts-expect-error ... rehypePrettyCode is not typed correctly
   .use(rehypeRaw)
