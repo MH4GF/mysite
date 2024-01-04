@@ -84,8 +84,18 @@ _イタリック_
 
 ## コードブロック
 
-```js
+### タイトルあり
+
+```js title="./lib/sample.js"
 const hello = () => {
   console.log("Hello, world!");
 };
+```
+
+### タイトルなし
+
+```ruby
+def hello
+  puts "Hello, world!"
+end
 ```
