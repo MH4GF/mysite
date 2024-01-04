@@ -10,6 +10,13 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-inter)"],
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: "100%",
+          },
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
