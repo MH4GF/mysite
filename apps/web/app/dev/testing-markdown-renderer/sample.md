@@ -81,3 +81,21 @@ _イタリック_
     October 25, 2023
   </a>
 </blockquote>
+
+## コードブロック
+
+### タイトルあり
+
+```js title="./lib/sample.js"
+const hello = () => {
+  console.log("Hello, world!");
+};
+```
+
+### タイトルなし
+
+```ruby
+def hello
+  puts "Hello, world!"
+end
+```

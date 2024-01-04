@@ -1,0 +1,17 @@
+figcaption[data-rehype-pretty-code-title] {
+  padding-top: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  font-size: 0.75rem;
+  width: fit-content;
+  color: var(--tw-prose-pre-code);
+  background-color: var(--tw-prose-pre-bg);
+}
+
+figure[data-rehype-pretty-code-figure] >
+figcaption[data-rehype-pretty-code-title] + pre {
+  margin-top: 0;
+  border-top-left-radius: 0;
+}

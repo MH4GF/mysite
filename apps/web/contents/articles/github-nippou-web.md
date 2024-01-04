@@ -102,8 +102,7 @@ https://nextjs.org/docs/app/api-reference/functions/server-actions
 
 実装のイメージとしては以下のような感じです。
 
-```tsx
-// showList.tsx
+```tsx title="app/showList.tsx"
 'use server'
 
 type Result =
@@ -126,8 +125,9 @@ export const showList = async (_prevState: Result, formData: FormData): Promise<
 
   return { success: true, result: ... }
 }
+```
 
-// page.tsx
+```tsx title="app/page.tsx"
 import { showList } from './showList'
 
 function Page() {
