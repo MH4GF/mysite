@@ -50,7 +50,7 @@ Next.js 単体で型安全なルーティングを実現する機能で、個人
 
 ただ Statically Typed Routes を有効化すると Link コンポーネントなどに単純な string を渡すことができなくなるため、ちょっとした手間がいくつか必要でした。例えば href を受け取るコンポーネントは以下のようになります。(スタイリングを取り除くなど簡略化しています)
 
-```tsx
+```tsx title="ArticleListItem.tsx"
 import Link from 'next/link'
 import type { Route } from 'next'
 

@@ -53,7 +53,7 @@ Vite は仕事で利用しているので興味があるのと、 `contribution 
 
 結果をフィルタリングしつつ、マークダウンの URL 記法に変換させています。ChatGPT に書いてもらいました。
 
-```
+```sh
 gh api graphql -f query='{
   viewer {
     pullRequests(first: 100, orderBy: { field: UPDATED_AT, direction: DESC }) {
