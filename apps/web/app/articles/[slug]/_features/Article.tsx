@@ -14,7 +14,7 @@ const ArticleMetaDetail = ({
       <Heading variant="xl4" fontWeight={800}>
         {title}
       </Heading>
-      <Box display="flex" justifyContent="flex-end">
+      <Box display="flex" justifyContent="flex-end" marginY="0.5rem">
         <Box as="time" dateTime={publishedAt} color={"colors.zinc.500"}>
           {publishedAt}
         </Box>
