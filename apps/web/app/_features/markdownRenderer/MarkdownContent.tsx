@@ -1,4 +1,5 @@
 import { getMarkdownContent } from "./getMarkdownContent";
+import "./styles/autoLinkHeadings.css";
 import "./styles/syntaxHighlighting.css";
 
 interface Props {

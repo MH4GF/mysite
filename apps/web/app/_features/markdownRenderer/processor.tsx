@@ -1,7 +1,9 @@
 import { createElement } from "react";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeRaw from "rehype-raw";
 import rehypeReact from "rehype-react";
+import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
@@ -14,6 +16,26 @@ export const processor = unified()
   .use(remarkParse)
   .use(remarkGfm)
   .use(remarkRehype, { allowDangerousHtml: true })
+  .use(rehypeSlug)
+  .use(rehypeAutolinkHeadings, {
+    behavior: "append",
+    properties: {
+      className: ["heading-anchor"],
+    },
+    content: {
+      type: "element",
+      tagName: "span",
+      properties: {
+        className: ["heading-anchor-text"],
+      },
+      children: [
+        {
+          type: "text",
+          value: "#",
+        },
+      ],
+    },
+  })
   .use(rehypePrettyCode, {
     keepBackground: false,
     theme: "catppuccin-frappe",
