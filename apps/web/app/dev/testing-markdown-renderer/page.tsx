@@ -1,4 +1,3 @@
-import { Heading } from "@kuma-ui/core";
 import { notFound } from "next/navigation";
 
 import { MarkdownContent } from "@/app/_features";
@@ -9,9 +8,7 @@ export default function Page() {
 
   return (
     <main>
-      <Heading as="h1" fontWeight="bold" fontSize={["1.875rem", "3rem"]}>
-        Testing Markdown Renderer
-      </Heading>
+      <h1 className="text-3xl font-bold sm:text-5xl">Testing Markdown Renderer</h1>
       <MarkdownContent filePath={filePath} handleNotFound={notFound} />
     </main>
   );
