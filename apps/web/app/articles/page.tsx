@@ -1,4 +1,3 @@
-import { Box, Grid, Heading } from "@kuma-ui/core";
 import type { Metadata } from "next";
 
 import { RssIcon } from "../_components";
@@ -9,22 +8,15 @@ import { ArticleList } from "./_features";
 
 export default function Page() {
   return (
-    <Grid gap="2rem">
-      <Heading
-        as="h1"
-        display="flex"
-        alignItems="center"
-        fontWeight="bold"
-        variant="xl3"
-        gap="0.5rem"
-      >
+    <div className="grid gap-8">
+      <h1 className="flex items-center gap-2 text-3xl font-bold">
         <span>Articles</span>
         <Link href="/articles/feed">
-          <Box as={RssIcon} height={"1.5rem"} width={"1.5rem"} />
+          <RssIcon className="h-6 w-6" />
         </Link>
-      </Heading>
+      </h1>
       <ArticleList />
-    </Grid>
+    </div>
   );
 }
 

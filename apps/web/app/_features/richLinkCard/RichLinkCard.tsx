@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { Box, Heading, Image, Link, Text, VStack, css } from "@kuma-ui/core";
 import { useId } from "react";
 
 import type { OGPResult } from "./getOGP";
@@ -12,69 +11,46 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
 
   if (title === "") {
     return (
-      <Link href={url} target="_blank" rel="noreferrer">
+      // TODO: 外部リンクと内部リンクの出しわけを行うコンポーネントを作る
+      <a href={url} target="_blank" rel="noreferrer">
         {url}
-      </Link>
+      </a>
     );
   }
 
   return (
-    <Box
-      as="section"
-      height="6rem"
-      width="100%"
-      border={"1px solid"}
-      borderRadius={"0.125rem"}
-      className={"not-prose"}
-      marginY={"1.25rem"}
+    <section
+      className="not-prose my-5 h-24 w-full rounded-sm border border-solid"
       aria-labelledby={labelledBy}
     >
-      <Box
-        as="a"
+      <a
         href={url}
         target="_blank"
         rel="noreferrer"
-        height={"100%"}
-        overflow={"hidden"}
-        display={"grid"}
-        gridTemplateColumns={"repeat(4, minmax(0, 1fr))"}
-        gridAutoFlow={"row dense"}
+        className="grid h-full grid-flow-row-dense grid-cols-4 overflow-hidden"
       >
-        <VStack gap={"0.5rem"} p={"0.5rem"} gridColumn={"span 3 / span 3"}>
-          <Heading
-            variant="base"
-            overflow="hidden"
-            fontWeight="bold"
-            whiteSpace="nowrap"
-            textOverflow="ellipsis"
+        <div className="col-span-3 flex flex-col gap-2 p-2">
+          <h2
             id={labelledBy}
+            className="overflow-hidden text-ellipsis whitespace-nowrap text-base font-bold"
           >
             {title}
-          </Heading>
-          <Text
-            variant="xs"
-            color="colors.zinc.500"
-            overflow="hidden"
-            whiteSpace="nowrap"
-            textOverflow="ellipsis"
-          >
+          </h2>
+          <p className="overflow-hidden text-ellipsis whitespace-nowrap text-xs text-zinc-500">
             {description}
-          </Text>
-        </VStack>
+          </p>
+        </div>
         {imageSrc !== "" && (
-          <Image
+          <img
             width="100%"
             height="100%"
-            gridColumn="span 1 / span 1"
-            className={css`
-              object-fit: cover;
-            `}
+            className="col-span-1 h-full w-full object-cover"
             src={imageSrc}
             alt={title}
           />
         )}
-      </Box>
-    </Box>
+      </a>
+    </section>
   );
 };
 

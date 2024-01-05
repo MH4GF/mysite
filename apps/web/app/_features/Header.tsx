@@ -1,6 +1,4 @@
-import { Box, HStack, Text } from "@kuma-ui/core";
-
-import { GitHubIcon, Icon } from "../_components/Icons";
+import { GitHubIcon } from "../_components/Icons";
 
 import { ColorModeToggle } from "./colorMode";
 import { Link } from "./viewTransition";
@@ -10,37 +8,29 @@ const navigation = [{ name: "Articles", href: "/articles" }] as const;
 export const Header = () => {
   return (
     <header>
-      <HStack
-        as={"nav"}
-        alignItems="center"
-        justify={"space-between"}
-        py={"1.5rem"}
-        mx={"auto"}
-        aria-label="Global"
-      >
-        <HStack alignItems={"center"} justify={"space-between"} gap="3rem" width={"100%"}>
-          <Box as={Link} href="/" p={"0.375rem"} m={"-0.375rem"}>
+      <nav className="mx-auto flex items-center justify-between py-6" aria-label="Global">
+        <div className="flex w-full items-center justify-between gap-12">
+          <Link href="/" className="-m-1.5 p-1.5">
             mh4gf.dev
-          </Box>
-          <HStack alignItems={"center"} gap={"1.5rem"}>
+          </Link>
+          <div className="flex items-center gap-6">
             {navigation.map((item) => (
-              <Text variant="sm" as={Link} key={item.name} href={item.href}>
+              <Link href={item.href} key={item.name}>
                 {item.name}
-              </Text>
+              </Link>
             ))}
-            <Box
-              as="a"
+            <a
               href="https://github.com/MH4GF/mysite"
               target="_blank"
               rel="noreferrer"
               className="group"
             >
-              <Icon as={GitHubIcon} />
-            </Box>
+              <GitHubIcon />
+            </a>
             <ColorModeToggle />
-          </HStack>
-        </HStack>
-      </HStack>
+          </div>
+        </div>
+      </nav>
     </header>
   );
 };
