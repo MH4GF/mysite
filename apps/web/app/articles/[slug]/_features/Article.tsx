@@ -1,5 +1,3 @@
-import { Box, Heading } from "@kuma-ui/core";
-
 import type { ArticleMeta } from "@/app/_features";
 import { MarkdownContent, getArticleMeta } from "@/app/_features";
 import { format, rootJoin } from "@/app/_utils";
@@ -11,14 +9,12 @@ const ArticleMetaDetail = ({
 
   return (
     <div>
-      <Heading variant="xl4" fontWeight={800}>
-        {title}
-      </Heading>
-      <Box display="flex" justifyContent="flex-end" marginY="0.5rem">
-        <Box as="time" dateTime={publishedAt} color={"colors.zinc.500"}>
+      <h2 className="text-4xl font-extrabold">{title}</h2>
+      <div className="my-2 flex justify-end">
+        <time dateTime={publishedAt} className="text-zinc-500">
           {publishedAt}
-        </Box>
-      </Box>
+        </time>
+      </div>
     </div>
   );
 };
