@@ -1,5 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
+import type { Route } from "next";
 import { useId } from "react";
+
+import { UniversalLink } from "../../_components";
 
 import type { OGPResult } from "./getOGP";
 import { getOGP } from "./getOGP";
@@ -10,12 +13,7 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
   const labelledBy = useId();
 
   if (title === "") {
-    return (
-      // TODO: 外部リンクと内部リンクの出しわけを行うコンポーネントを作る
-      <a href={url} target="_blank" rel="noreferrer">
-        {url}
-      </a>
-    );
+    return <UniversalLink href={url as Route}>{url}</UniversalLink>;
   }
 
   return (
@@ -23,10 +21,8 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
       className="not-prose my-5 h-24 w-full rounded-sm border border-solid"
       aria-labelledby={labelledBy}
     >
-      <a
-        href={url}
-        target="_blank"
-        rel="noreferrer"
+      <UniversalLink
+        href={url as Route}
         className="grid h-full grid-flow-row-dense grid-cols-4 overflow-hidden"
       >
         <div className="col-span-3 flex flex-col gap-2 p-2">
@@ -49,7 +45,7 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
             alt={title}
           />
         )}
-      </a>
+      </UniversalLink>
     </section>
   );
 };
