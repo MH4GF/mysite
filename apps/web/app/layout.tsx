@@ -1,4 +1,3 @@
-import { KumaRegistry } from "@kuma-ui/next-plugin/registry";
 import "@project/configs/tailwindcss/global.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -39,16 +38,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja" className={inter.variable} suppressHydrationWarning>
       <body className="dark:bg-zinc-800">
-        <KumaRegistry>
-          <ColorModeScript />
-          <TwitterWidgets />
-          <main className="dark:bg-gradient-to-tr dark:from-zinc-700 dark:via-zinc-900 dark:to-zinc-800 dark:text-zinc-100">
-            <div className="mx-auto flex min-h-screen max-w-2xl flex-col gap-8 px-4 sm:px-0">
-              <Header />
-              <div>{children}</div>
-            </div>
-          </main>
-        </KumaRegistry>
+        <ColorModeScript />
+        <TwitterWidgets />
+        <main className="dark:bg-gradient-to-tr dark:from-zinc-700 dark:via-zinc-900 dark:to-zinc-800 dark:text-zinc-100">
+          <div className="mx-auto flex min-h-screen max-w-2xl flex-col gap-8 px-4 sm:px-0">
+            <Header />
+            <div>{children}</div>
+          </div>
+        </main>
       </body>
     </html>
   );
