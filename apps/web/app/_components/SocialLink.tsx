@@ -1,5 +1,9 @@
+import type { Route } from "next";
+
 import type { IconComponent } from "./Icons";
 import { GitHubIcon, TwitterIcon } from "./Icons";
+
+import { UniversalLink } from ".";
 
 type SocialKind = "twitter" | "github";
 type Socials = Record<SocialKind, { Icon: IconComponent; url: string }>;
@@ -23,8 +27,8 @@ export const SocialLink = ({ kind }: Props) => {
   const { Icon, url } = socials[kind];
 
   return (
-    <a className="group -m-1 p-1" href={url}>
+    <UniversalLink className="group -m-1 p-1" href={url as Route}>
       <Icon />
-    </a>
+    </UniversalLink>
   );
 };
