@@ -2,7 +2,6 @@
 
 "use client";
 
-import { Link as KumaLink } from "@kuma-ui/core";
 import type { Route } from "next";
 import type { LinkProps } from "next/link";
 import NextLink from "next/link";
@@ -19,10 +18,8 @@ export function Link<T extends string = string>({ children, href, ...props }: Li
   };
 
   return (
-    <NextLink {...props} href={href} legacyBehavior>
-      <KumaLink href={href.toString()} onClick={handleLinkClick}>
-        {children}
-      </KumaLink>
+    <NextLink {...props} href={href} onClick={handleLinkClick}>
+      {children}
     </NextLink>
   );
 }
