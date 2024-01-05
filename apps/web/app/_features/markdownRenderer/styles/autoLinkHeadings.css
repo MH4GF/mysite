@@ -1,0 +1,16 @@
+a.heading-anchor {
+  color: #71717a;
+}
+
+.heading-anchor-text {
+  visibility: hidden;
+  margin-left: 0.25em;
+}
+
+h2:hover .heading-anchor-text,
+h3:hover .heading-anchor-text,
+h4:hover .heading-anchor-text,
+h5:hover .heading-anchor-text,
+h6:hover .heading-anchor-text {
+  visibility: visible;
+}
