@@ -1,4 +1,3 @@
-import { Flex, Grid, HStack, Heading } from "@kuma-ui/core";
 import type { Metadata } from "next";
 
 import { MyAvatar, SocialLink } from "./_components";
@@ -7,18 +6,16 @@ import { siteInfo } from "./_utils";
 
 export default function Page() {
   return (
-    <Grid gap={["1rem", "2rem"]}>
-      <Flex flexDir={["column", "row"]} gap={["1rem", "2rem"]} alignItems="center">
+    <div className="grid gap-4 sm:gap-8">
+      <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-8">
         <MyAvatar />
-        <Heading fontWeight="bold" fontSize={["1.875rem", "3rem"]}>
-          Hirotaka Miyagi
-        </Heading>
-      </Flex>
+        <h1 className="text-3xl font-bold sm:text-5xl">Hirotaka Miyagi</h1>
+      </div>
       <p>I'm a software engineer based in Tokyo, Japan.</p>
-      <HStack gap={["0.5rem", "1rem"]}>
+      <div className="flex gap-2 sm:gap-4">
         <SocialLink kind="twitter" />
         <SocialLink kind="github" />
-      </HStack>
+      </div>
       <ul>
         <li>
           <Link href="/readme">📝 取扱説明書</Link>
@@ -33,7 +30,7 @@ export default function Page() {
           <Link href="/resume">👋 Resume</Link>
         </li>
       </ul>
-    </Grid>
+    </div>
   );
 }
 
