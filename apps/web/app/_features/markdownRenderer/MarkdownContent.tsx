@@ -1,5 +1,5 @@
 import { getMarkdownContent } from "./getMarkdownContent";
-import "./syntaxHighlighting.css";
+import "./styles/syntaxHighlighting.css";
 
 interface Props {
   filePath: string;
