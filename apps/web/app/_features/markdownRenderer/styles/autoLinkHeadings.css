@@ -3,8 +3,8 @@ a.heading-anchor {
 }
 
 .heading-anchor-text {
-  visibility: hidden;
   margin-left: 0.25em;
+  visibility: hidden;
 }
 
 h2:hover .heading-anchor-text,
