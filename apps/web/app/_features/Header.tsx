@@ -1,6 +1,6 @@
 import { Box, HStack, Text } from "@kuma-ui/core";
 
-import { GitHubIcon, Icon } from "../_components/Icons";
+import { GitHubIcon } from "../_components/Icons";
 
 import { ColorModeToggle } from "./colorMode";
 import { Link } from "./viewTransition";
@@ -35,7 +35,7 @@ export const Header = () => {
               rel="noreferrer"
               className="group"
             >
-              <Icon as={GitHubIcon} />
+              <GitHubIcon />
             </Box>
             <ColorModeToggle />
           </HStack>
