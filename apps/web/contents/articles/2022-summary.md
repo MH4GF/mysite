@@ -65,7 +65,7 @@ GraphQL は今年最も学んでよかった技術でした。フロントエン
 
 今年達成できたことの一つとして、Kaigi on Rails の CFP が accept され初の登壇ができました。来年も 1 回くらいは登壇できるように頑張りたいです。トピックを用意せねば。
 
-[Kaigi on Rails 2022 に参加・登壇しました](https://log.mh4gf.dev/articles/kaigi-on-rails-2022)
+[Kaigi on Rails 2022 に参加・登壇しました](/articles/kaigi-on-rails-2022)
 
 ## OSS 活動
 
