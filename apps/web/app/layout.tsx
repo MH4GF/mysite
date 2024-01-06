@@ -1,3 +1,4 @@
+import { GoogleTagManager } from "@next/third-parties/google";
 import "@project/configs/tailwindcss/global.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div>{children}</div>
           </div>
         </main>
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""} />
       </body>
     </html>
   );
