@@ -9,6 +9,8 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 
+import { UniversalLink } from "../../_components";
+
 import { Paragraph } from "./elements";
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
@@ -47,5 +49,6 @@ export const processor = unified()
     createElement,
     components: {
       p: Paragraph,
+      a: UniversalLink,
     },
   });
