@@ -1,3 +1,4 @@
+import { UniversalLink } from "../_components";
 import { GitHubIcon } from "../_components/Icons";
 
 import { ColorModeToggle } from "./colorMode";
@@ -19,14 +20,9 @@ export const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <a
-              href="https://github.com/MH4GF/mysite"
-              target="_blank"
-              rel="noreferrer"
-              className="group"
-            >
+            <UniversalLink href="https://github.com/MH4GF/mysite" className="group">
               <GitHubIcon />
-            </a>
+            </UniversalLink>
             <ColorModeToggle />
           </div>
         </div>

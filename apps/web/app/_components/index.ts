@@ -6,3 +6,5 @@ export { MyAvatar } from "./MyAvatar";
 export { SocialLink } from "./SocialLink";
 /** @public */
 export { Footer } from "./Footer";
+/** @public */
+export { UniversalLink } from "./UniversalLink";
