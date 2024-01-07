@@ -1,7 +1,7 @@
 "use client";
 
 import type { Route } from "next";
-import { usePathname, useRouter as useNextRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useLayoutEffect, useRef } from "react";
 
 const safeStartViewTransition = (callback: () => Promise<void> | void) => {
@@ -12,8 +12,8 @@ const safeStartViewTransition = (callback: () => Promise<void> | void) => {
   document.startViewTransition(callback);
 };
 
-export const useViewTransitionRouter = (): ReturnType<typeof useNextRouter> => {
-  const router = useNextRouter();
+export const useViewTransitionRouter = (): ReturnType<typeof useRouter> => {
+  const router = useRouter();
   const pathname = usePathname();
 
   const promiseCallbacks = useRef<Record<"resolve" | "reject", () => void> | null>(null);
