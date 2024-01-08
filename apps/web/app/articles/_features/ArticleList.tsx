@@ -2,8 +2,7 @@ import { ArticleListItem } from "./ArticleListItem";
 
 import { getArticlesMeta } from "@/app/_features";
 
-// @ts-expect-error Async Server Component
-export const ArticleList = async (): JSX.Element => {
+export const ArticleList = async (): Promise<JSX.Element> => {
   const articlesMeta = await getArticlesMeta();
   return (
     <div className="grid gap-8">
