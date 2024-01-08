@@ -86,9 +86,6 @@ importers:
       shikiji:
         specifier: ^0.9.0
         version: 0.9.17
-      ts-pattern:
-        specifier: ^5.0.1
-        version: 5.0.1
       unified:
         specifier: ^10.1.2
         version: 10.1.2
@@ -6905,10 +6902,6 @@ packages:
 
   /ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
-
-  /ts-pattern@5.0.1:
-    resolution: {integrity: sha512-ZyNm28Lsg34Co5DS3e9DVyjlX2Y+2exkI4jqTKyU+9/OL6Y2fKOOuL8i+7no71o74C6mVS+UFoP3ekM3iCT1HQ==}
-    dev: false
 
   /tsconfig-paths-webpack-plugin@4.1.0:
     resolution: {integrity: sha512-xWFISjviPydmtmgeUAuXp4N1fky+VCtfhOkDUFIv5ea7p4wuTomI4QTrXvFBX2S4jZsmyTSrStQl+E+4w+RzxA==}
