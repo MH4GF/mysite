@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "Next.js App RouterでView Transitions APIの活用",
+      "publishedAt": "2024/01/08",
+      "externalLink": false,
+      "href": "/articles/view-transitions-api",
+      "tags": ["Dev"]
+    },
+    {
       "title": "VSCodeで閲覧しているファイルから、GitHubのコミット内のパーマリンクを取得する",
       "publishedAt": "2023/12/25",
       "externalLink": true,
