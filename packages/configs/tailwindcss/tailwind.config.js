@@ -14,6 +14,9 @@ module.exports = {
         DEFAULT: {
           css: {
             maxWidth: "100%",
+            a: {
+              wordWrap: "break-word",
+            },
           },
         },
       },
