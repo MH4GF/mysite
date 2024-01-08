@@ -1,4 +1,5 @@
-import { MyAvatar } from "@/app/_components";
+import { MyAvatar } from "./MyAvatar";
+
 import { Link } from "@/app/_features/viewTransition";
 
 export const Footer = () => {

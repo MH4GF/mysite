@@ -149,13 +149,16 @@ importers:
         version: 0.3.0(prettier@2.8.8)
       '@tailwindcss/typography':
         specifier: ^0.5.9
-        version: 0.5.9
+        version: 0.5.9(tailwindcss@3.4.0)
       '@tsconfig/next':
         specifier: ^2.0.0
         version: 2.0.1
       '@tsconfig/strictest':
         specifier: ^2.0.1
         version: 2.0.1
+      tailwindcss:
+        specifier: ^3.3.2
+        version: 3.4.0
 
   packages/eslint-config:
     dependencies:
@@ -1115,7 +1118,7 @@ packages:
       zod: 3.21.4
     dev: false
 
-  /@tailwindcss/typography@0.5.9:
+  /@tailwindcss/typography@0.5.9(tailwindcss@3.4.0):
     resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
@@ -1124,6 +1127,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
+      tailwindcss: 3.4.0
     dev: false
 
   /@tsconfig/next@2.0.1:

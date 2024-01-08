@@ -2,8 +2,7 @@ import type { Route } from "next";
 
 import type { IconComponent } from "./Icons";
 import { GitHubIcon, TwitterIcon } from "./Icons";
-
-import { UniversalLink } from ".";
+import { UniversalLink } from "./UniversalLink";
 
 type SocialKind = "twitter" | "github";
 type Socials = Record<SocialKind, { Icon: IconComponent; url: string }>;
