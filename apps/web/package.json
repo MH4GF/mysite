@@ -18,7 +18,6 @@
   },
   "dependencies": {
     "@next/third-parties": "^14.0.4",
-    "@t3-oss/env-nextjs": "^0.7.0",
     "cheerio": "1.0.0-rc.12",
     "next": "^14.0.0",
     "react": "^18.2.0",

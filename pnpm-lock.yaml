@@ -35,9 +35,6 @@ importers:
       '@next/third-parties':
         specifier: ^14.0.4
         version: 14.0.4(next@14.0.4)(react@18.2.0)
-      '@t3-oss/env-nextjs':
-        specifier: ^0.7.0
-        version: 0.7.0(typescript@5.1.3)(zod@3.21.4)
       cheerio:
         specifier: 1.0.0-rc.12
         version: 1.0.0-rc.12
@@ -1058,33 +1055,6 @@ packages:
     dependencies:
       defer-to-connect: 2.0.1
     dev: true
-
-  /@t3-oss/env-core@0.7.0(typescript@5.1.3)(zod@3.21.4):
-    resolution: {integrity: sha512-cgunN82CqgQOOyuMOK/bGtujX5/ooXQTwGMJVWI6mCowq6WE5EgRLOqF/DRcrElI0gSFGA9i9GrxzCnk73HZLQ==}
-    peerDependencies:
-      typescript: '>=4.7.2'
-      zod: ^3.0.0
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      typescript: 5.1.3
-      zod: 3.21.4
-    dev: false
-
-  /@t3-oss/env-nextjs@0.7.0(typescript@5.1.3)(zod@3.21.4):
-    resolution: {integrity: sha512-rjQIt6P3tac2eRx4BNQLNaJ+AIb2P8wXw4uFvYbEekqMGShikkUALnX3hUn1twYiGVGHXRm6UbU+LqtjIktuGg==}
-    peerDependencies:
-      typescript: '>=4.7.2'
-      zod: ^3.0.0
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@t3-oss/env-core': 0.7.0(typescript@5.1.3)(zod@3.21.4)
-      typescript: 5.1.3
-      zod: 3.21.4
-    dev: false
 
   /@tailwindcss/typography@0.5.9(tailwindcss@3.4.0):
     resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
@@ -7062,6 +7032,7 @@ packages:
     resolution: {integrity: sha512-XH627E9vkeqhlZFQuL+UsyAXEnibT0kWR2FWONlr4sTjvxyJYnyefgrkyECLzM5NenmKzRAy2rR/OlYLA1HkZw==}
     engines: {node: '>=14.17'}
     hasBin: true
+    dev: true
 
   /typescript@5.3.3:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
