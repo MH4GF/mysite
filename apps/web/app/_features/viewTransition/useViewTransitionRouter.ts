@@ -6,8 +6,7 @@ import { useLayoutEffect, useRef } from "react";
 
 const safeStartViewTransition = (callback: () => Promise<void> | void) => {
   if (!document.startViewTransition) {
-    void callback();
-    return;
+    return void callback();
   }
   document.startViewTransition(callback);
 };
