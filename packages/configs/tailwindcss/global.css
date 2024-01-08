@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :is(.dark .dark\:prose-invert) {
+    --mysite-code-bg: var(--mysite-invert-code-bg);
+  }
+}
