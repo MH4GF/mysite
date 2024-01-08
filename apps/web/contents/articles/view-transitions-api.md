@@ -128,15 +128,15 @@ export const useViewTransitionRouter = (): ReturnType<typeof useRouter> => {
 細かい箇所を解説していきます。
 上部で定義した`safeStartViewTransition()` を `router.push()` でラップするのは直感的かと思いますが、気になるのは単純に `router.push()` するだけでなく Promise オブジェクトでラップし、ref に格納していることかと思います。これは**ページ遷移処理(≒ 新しい DOM の用意)が終わってからアニメーションを動作させるために追加しています**。以下のような挙動となります:
 
-- `useViewTransitionRouter` の `router.push()` が呼び出されると新しい Promise が作成され、その `resolve` と `reject` コールバックが `promiseCallbacks` に保持される
-- `useRouter` の `router.push()` によるページ遷移が完了すると `usePathname` の `pathname` が変更するため、その変更をフックに `useLayoutEffect` が発火する その中身で Promise を resolve する
+- useViewTransitionRouter の `router.push()` が呼び出されると新しい Promise が作成され、その resolve と reject コールバックが `promiseCallbacks` に保持される
+- useRouter の `router.push()` によるページ遷移が完了すると usePathname の `pathname` が変更するため、その変更をフックに `useLayoutEffect` が発火する その中身で Promise を resolve する
 - `document.startViewTransition` は Promise の解決を待ってから実行され、アニメーションと同時に表示が切り替わる
 
 `router.push()` の Promise 化をすることで、遷移先のページが用意できてからアニメーションさせることができました。Promise 化しなくても動作するにはするのですが、この実装がない場合、development 環境などの prefetch が効いていない状況や、production 環境のデプロイ直後のキャッシュがない状況などでは初回はアニメーションが動かないはずです。2 回目以降の遷移でアニメーションが効く形となります。
 
 ### Link コンポーネントの実装
 
-最後に、 `useViewTransitionRouter` を利用する `Link` コンポーネントを追加します。こちらも `next/link` の `Link` コンポーネントにインターフェースを合わせる形とします。
+最後に、 useViewTransitionRouter を利用する `Link` コンポーネントを追加します。こちらも `next/link` の `Link` コンポーネントにインターフェースを合わせる形とします。
 
 ```tsx title="Link.tsx"
 "use client";
