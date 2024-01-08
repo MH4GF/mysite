@@ -17,12 +17,8 @@
     "test:vrt:compare": "playwright test --config app/__vrt__/playwright.config.ts"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.15",
-    "@heroicons/react": "^2.0.18",
     "@next/third-parties": "^14.0.4",
-    "@t3-oss/env-nextjs": "^0.7.0",
     "cheerio": "1.0.0-rc.12",
-    "clsx": "^2.0.0",
     "next": "^14.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -33,9 +29,10 @@
     "remark-gfm": "^3.0.0",
     "remark-parse": "^10.0.2",
     "remark-rehype": "^10.1.0",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-slug": "^6.0.0",
     "rss": "^1.2.2",
     "shikiji": "^0.9.0",
-    "ts-pattern": "^5.0.1",
     "unified": "^10.1.2",
     "zod": "^3.21.4"
   },
@@ -50,8 +47,6 @@
     "autoprefixer": "^10.4.14",
     "msw": "^2.0.0",
     "postcss": "^8.4.24",
-    "rehype-autolink-headings": "^7.1.0",
-    "rehype-slug": "^6.0.0",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.1.3",
     "vitest": "^1.0.0"
