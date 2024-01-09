@@ -3,13 +3,13 @@ import { z } from "zod";
 
 const tagsSchema = z.enum([
   "route06-tech-blog",
-  "Timee Product Team Blog",
-  "Zenn",
-  "Qiita",
+  "timee-product-team-blog",
+  "zenn",
+  "qiita",
   "note",
-  "Dev",
-  "Life",
-  "Speaker Deck",
+  "dev",
+  "life",
+  "speaker-deck",
 ]);
 
 export type TagEnum = z.infer<typeof tagsSchema>;

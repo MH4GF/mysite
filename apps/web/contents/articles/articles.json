@@ -5,42 +5,42 @@
       "publishedAt": "2024/01/08",
       "externalLink": false,
       "href": "/articles/view-transitions-api",
-      "tags": ["Dev"]
+      "tags": ["dev"]
     },
     {
       "title": "VSCodeで閲覧しているファイルから、GitHubのコミット内のパーマリンクを取得する",
       "publishedAt": "2023/12/25",
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/4ff18b864ef359",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "GitHub Actions のみで、actions/cache も使わない最軽量の VRT",
       "publishedAt": "2023/12/20",
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/tiny-vrt-with-github-actions",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "GitHubのCODEOWNERSで一部サブディレクトリだけ別のオーナーを指定する",
       "publishedAt": "2023/08/25",
       "externalLink": true,
       "href": "https://zenn.dev/route06/articles/codeowners-specify-different-owner",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "github-nippou の Web 版を App Router + Go + Vercel で作った",
       "publishedAt": "2023/12/07",
       "externalLink": false,
       "href": "/articles/github-nippou-web",
-      "tags": ["Dev"]
+      "tags": ["dev"]
     },
     {
       "title": "学習しながらアーキテクチャを進化させていくためのモノレポ",
       "href": "https://speakerdeck.com/mh4gf/xue-xi-sinagaraakitekutiyawojin-hua-saseteikutamenomonorepo",
       "externalLink": true,
       "publishedAt": "2023/10/06",
-      "tags": ["Speaker Deck"]
+      "tags": ["speaker-deck"]
     },
     {
       "title": "Amplify Hostingのプレビュー環境でパラメータストアの秘匿情報を取得する",
@@ -54,7 +54,7 @@
       "href": "https://speakerdeck.com/mh4gf/pnpm-workspaceshi-jian-nouhau",
       "externalLink": true,
       "publishedAt": "2023/09/09",
-      "tags": ["Speaker Deck"]
+      "tags": ["speaker-deck"]
     },
     {
       "title": "Plainのフロントエンドにおける技術選定(2023年8月版)",
@@ -68,28 +68,28 @@
       "publishedAt": "2023/08/07",
       "externalLink": false,
       "href": "/articles/2023-7-oss-contributions",
-      "tags": ["Dev"]
+      "tags": ["dev"]
     },
     {
       "title": "2023/7/9 キャリアの指向性(脳内メモ)",
       "publishedAt": "2023/07/9",
       "externalLink": false,
       "href": "/articles/2023-7-9-thinking-in-career",
-      "tags": ["Dev", "Life"]
+      "tags": ["dev", "life"]
     },
     {
       "title": "2023/2/17 キャリアの指向性(脳内メモ)",
       "publishedAt": "2023/02/17",
       "externalLink": false,
       "href": "/articles/2023-2-17-thinking-in-career",
-      "tags": ["Dev", "Life"]
+      "tags": ["dev", "life"]
     },
     {
       "title": "StoryBook v7.0 へのアップデートで非推奨になった型",
       "href": "https://zenn.dev/route06/articles/storybook-v7-deprecations",
       "externalLink": true,
       "publishedAt": "2023/07/05",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "Amplify Hostingのプレビュー環境をGitHub Actionsでデプロイする",
@@ -103,7 +103,7 @@
       "publishedAt": "2023/06/21",
       "externalLink": false,
       "href": "/articles/rebuild-with-app-router",
-      "tags": ["Dev"]
+      "tags": ["dev"]
     },
     {
       "title": "GitHub Actionsで実行するstorycap / reg-suit の高速化",
@@ -117,91 +117,91 @@
       "href": "https://zenn.dev/mh4gf/articles/graphql-codegen-client-preset",
       "externalLink": true,
       "publishedAt": "2023/1/26",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "graphql-codegenとzodのz.brandでCustom ScalarのNominal Typingを実現する例",
       "href": "https://zenn.dev/mh4gf/articles/nominal-typing-with-graphql-codegen-and-zod",
       "externalLink": true,
       "publishedAt": "2023/1/10",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "graphql-rubyで入力値の柔軟なバリデーションを実現する@constraint directiveを導入する",
       "publishedAt": "2023/1/5",
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/graphql-ruby-constraint-directive",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "2022年の振り返り 技術と仕事と生活",
       "publishedAt": "2022/12/31",
       "externalLink": false,
       "href": "/articles/2022-summary",
-      "tags": ["Dev", "Life"]
+      "tags": ["dev", "life"]
     },
     {
       "title": "Next.js上のGraphQLクライアントから秘匿情報を安全に扱いつつAPIリクエストを行う",
       "publishedAt": "2022/12/10",
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/urql-client-working-with-credential-in-nextjs",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "Kaigi on Rails 2022に参加・登壇しました",
       "publishedAt": "2022/11/10",
       "externalLink": false,
       "href": "/articles/kaigi-on-rails-2022",
-      "tags": ["Dev"]
+      "tags": ["dev"]
     },
     {
       "title": "Rails+Next.jsでGraphQLを導入する時に考えたこと",
       "publishedAt": "2022/9/29",
       "externalLink": true,
       "href": "https://tech.timee.co.jp/entry/2022/09/29/110000",
-      "tags": ["Timee Product Team Blog"]
+      "tags": ["timee-product-team-blog"]
     },
     {
       "title": "GitHub Apps / GitHub Actionsを使って別のリポジトリにファイルをコピーするPRを作成する",
       "publishedAt": "2022/9/18",
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/copy-file-to-another-repository",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "GitHub Container Registryへのdocker loginでGitHub CLIの認証情報を利用する",
       "publishedAt": "2022/8/5",
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/ff4a36eb2580a3",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "graphql-rubyで、queryだけのリクエストの場合リードレプリカに接続する",
       "publishedAt": "2022/7/18",
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/f3c606fce193f8",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "ActiveModelSerializersを利用しているRailsプロジェクトでgraphql-rubyを導入・共存させる",
       "publishedAt": "2022/7/7",
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/1110e9e962ad3f",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "dependency-cruiser-report-actionでPRの変更ファイルの依存関係を可視化してコメントする",
       "publishedAt": "2022/6/27",
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/12fcdcba14e576",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "GitHub CLIでよく使うコマンド",
       "href": "/articles/frequently-used-gh-commands",
       "externalLink": false,
       "publishedAt": "2022/6/19",
-      "tags": ["Dev"]
+      "tags": ["dev"]
     },
     {
       "title": "フリーランスエンジニアになって半年が経った",
@@ -215,21 +215,21 @@
       "publishedAt": "2022/5/7",
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/64456281f65fbe",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "ProseMirror Guide(日本語訳)",
       "publishedAt": "2022/3/10",
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/d25ef1ff30b5a6",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "docker-composeで立ち上げているminioをvirtual-hosted styleで接続する",
       "publishedAt": "2022/1/18",
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/873e34b95bbbdf",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "2021年 ソフトウェアエンジニアとしてできたことと振り返り",
@@ -271,7 +271,7 @@
       "publishedAt": "2021/9/27",
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/674cfdcf1e5d89d75d09",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "株式会社タイミーを退職しました。",
@@ -292,7 +292,7 @@
       "publishedAt": "2021/5/30",
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/d917c809991808",
-      "tags": ["Zenn"]
+      "tags": ["zenn"]
     },
     {
       "title": "2020年 ソフトウェアエンジニアとしてできたことと振り返り",
@@ -306,28 +306,28 @@
       "publishedAt": "2020/12/10",
       "externalLink": true,
       "href": "https://tech.timee.co.jp/entry/2020/12/10/131108",
-      "tags": ["Timee Product Team Blog"]
+      "tags": ["timee-product-team-blog"]
     },
     {
       "title": "Rails + RSpec + OpenAPI3 + Committeeでスキーマ駆動開発を運用するTips",
       "publishedAt": "2020/7/5",
       "externalLink": true,
       "href": "https://tech.timee.co.jp/entry/2020/07/05/150312",
-      "tags": ["Timee Product Team Blog"]
+      "tags": ["timee-product-team-blog"]
     },
     {
       "title": "RedashをFargate, Datadog, Terraformで構築/運用する",
       "publishedAt": "2020/4/20",
       "externalLink": true,
       "href": "https://tech.timee.co.jp/entry/2020/04/20/175821",
-      "tags": ["Timee Product Team Blog"]
+      "tags": ["timee-product-team-blog"]
     },
     {
       "title": "rubocop --auto-gen-config で、LineLengthのMaxを変更せず指摘に該当するファイルをexcludeする",
       "publishedAt": "2019/12/19",
       "externalLink": true,
       "href": "https://qiita.com/mh4gf/items/4611f60aa99905686c84",
-      "tags": ["Qiita"]
+      "tags": ["qiita"]
     }
   ]
 }

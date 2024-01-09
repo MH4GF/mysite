@@ -4,13 +4,13 @@ import type { TagEnum } from "@/app/_features";
 
 const tagColorMap: Record<TagEnum, string> = {
   "route06-tech-blog": "bg-blue-600 dark:bg-blue-900",
-  "Timee Product Team Blog": "bg-yellow-400 dark:bg-yellow-600",
-  Zenn: "bg-sky-600 dark:bg-sky-700",
-  Dev: "bg-orange-600 dark:bg-orange-700",
-  Life: "bg-rose-700",
+  "timee-product-team-blog": "bg-yellow-400 dark:bg-yellow-600",
+  zenn: "bg-sky-600 dark:bg-sky-700",
+  dev: "bg-orange-600 dark:bg-orange-700",
+  life: "bg-rose-700",
   note: "bg-green-600 dark:bg-green-700",
-  Qiita: "bg-teal-500 dark:bg-teal-700",
-  "Speaker Deck": "bg-teal-500 dark:bg-teal-700",
+  qiita: "bg-teal-500 dark:bg-teal-700",
+  "speaker-deck": "bg-teal-500 dark:bg-teal-700",
 } as const;
 
 interface Props {

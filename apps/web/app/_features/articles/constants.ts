@@ -2,11 +2,11 @@ import type { TagEnum } from "./type";
 
 export const tagLabelMap: Record<TagEnum, string> = {
   "route06-tech-blog": "ROUTE06 Tech Blog",
-  "Timee Product Team Blog": "Timee Product Team Blog",
-  Zenn: "Zenn",
-  Qiita: "Qiita",
+  "timee-product-team-blog": "Timee Product Team Blog",
+  zenn: "Zenn",
+  qiita: "Qiita",
   note: "note",
-  Dev: "Dev",
-  Life: "Life",
-  "Speaker Deck": "Speaker Deck",
+  dev: "Dev",
+  life: "Life",
+  "speaker-deck": "Speaker Deck",
 };
