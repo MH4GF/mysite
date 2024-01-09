@@ -2,7 +2,7 @@ import type { Route } from "next";
 import { z } from "zod";
 
 const tagsSchema = z.enum([
-  "ROUTE06 Tech Blog",
+  "route06-tech-blog",
   "Timee Product Team Blog",
   "Zenn",
   "Qiita",

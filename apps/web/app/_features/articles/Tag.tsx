@@ -1,7 +1,9 @@
+import { tagLabelMap } from "./constants";
+
 import type { TagEnum } from "@/app/_features";
 
 const tagColorMap: Record<TagEnum, string> = {
-  "ROUTE06 Tech Blog": "bg-blue-600 dark:bg-blue-900",
+  "route06-tech-blog": "bg-blue-600 dark:bg-blue-900",
   "Timee Product Team Blog": "bg-yellow-400 dark:bg-yellow-600",
   Zenn: "bg-sky-600 dark:bg-sky-700",
   Dev: "bg-orange-600 dark:bg-orange-700",
@@ -17,6 +19,7 @@ interface Props {
 
 export const Tag = ({ tag }: Props) => {
   const colors = tagColorMap[tag];
+  const label = tagLabelMap[tag];
 
-  return <span className={`${colors} rounded px-1 py-px text-sm text-white`}>{tag}</span>;
+  return <span className={`${colors} rounded px-1 py-px text-sm text-white`}>{label}</span>;
 };
