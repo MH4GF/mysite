@@ -12,5 +12,5 @@
     "eslint-plugin-tailwindcss": "^3.12.1",
     "eslint-plugin-import-access": "^1.1.2"
   },
-  "packageManager": "pnpm@8.12.1"
+  "packageManager": "pnpm@8.14.1"
 }
