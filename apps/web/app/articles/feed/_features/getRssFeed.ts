@@ -10,7 +10,7 @@ export const getRssFeed = async (): Promise<string> => {
     feed_url: `${siteInfo.url}/articles/feed`,
     site_url: siteInfo.url,
   });
-  const articlesMeta = await getArticlesMeta();
+  const articlesMeta = await getArticlesMeta({});
   for (const article of articlesMeta) {
     rss.item({
       title: article.title,
