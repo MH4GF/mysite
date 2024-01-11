@@ -1,3 +1,5 @@
+import { Link } from "../viewTransition";
+
 import { tagLabelMap } from "./constants";
 import type { TagEnum } from "./type";
 
@@ -20,5 +22,9 @@ export const Tag = ({ tag }: Props) => {
   const colors = tagColorMap[tag];
   const label = tagLabelMap[tag];
 
-  return <span className={`${colors} rounded px-1 py-px text-sm text-white`}>{label}</span>;
+  return (
+    <Link href={`/articles/tags/${tag}`}>
+      <span className={`${colors} rounded px-1 py-0.5 text-sm text-white`}>{label}</span>
+    </Link>
+  );
 };
