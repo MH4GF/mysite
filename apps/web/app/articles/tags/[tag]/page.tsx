@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { ArticleList, tagLabelMap, tagList, tagsSchema } from "../../../_features/articles";
-import { siteInfo } from "../../../_utils";
 
 interface Params {
   tag: string;
@@ -32,6 +31,10 @@ export const generateStaticParams = (): Params[] => {
   return tagList.map((tag) => ({ tag }));
 };
 
-export const metadata: Metadata = {
-  title: `Articles | ${siteInfo.siteName}`,
+export const generateMetadata = ({ params }: Props): Metadata => {
+  const tag = tagsSchema.parse(params.tag);
+  const label = tagLabelMap[tag];
+  const title = `Articles - ${label}`;
+
+  return { title, openGraph: { title }, twitter: { title } };
 };
