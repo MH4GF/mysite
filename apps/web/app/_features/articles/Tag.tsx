@@ -1,6 +1,5 @@
 import { tagLabelMap } from "./constants";
-
-import type { TagEnum } from "@/app/_features";
+import type { TagEnum } from "./type";
 
 const tagColorMap: Record<TagEnum, string> = {
   "route06-tech-blog": "bg-blue-600 dark:bg-blue-900",
