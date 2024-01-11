@@ -6,16 +6,25 @@ import NextLink from "next/link";
 
 import { Link } from "../_features/viewTransition";
 
+const sameOriginPrefixes = [
+  "/", // ルート相対パス
+  "#", // 同一ページ内リンク
+] as const;
+
 const baseOrigin = new URL(`https://${process.env.VERCEL_URL}` || "http://localhost:3000").origin;
 
 const isSameOrigin = <T extends string = string>(_href: Route<T> | UrlObject) => {
   // eslint-disable-next-line @typescript-eslint/no-base-to-string
   const href = _href.toString();
+  if (sameOriginPrefixes.some((prefix) => href.startsWith(prefix))) {
+    return true;
+  }
+
   let url: URL;
   try {
     url = new URL(href);
   } catch {
-    return href.startsWith("/");
+    return false;
   }
 
   return url.origin === baseOrigin;
