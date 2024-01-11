@@ -6,3 +6,7 @@ export { getArticleMeta } from "./getArticleMeta";
 export { Tag } from "./Tag";
 /** @public */
 export type { ArticleMeta, TagEnum } from "./type";
+/** @public */
+export { tagList, tagsSchema } from "./type";
+/** @public */
+export { tagLabelMap } from "./constants";

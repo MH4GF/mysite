@@ -1,7 +1,7 @@
 import type { Route } from "next";
 import { z } from "zod";
 
-const tagsSchema = z.enum([
+export const tagList = [
   "route06-tech-blog",
   "timee-product-team-blog",
   "zenn",
@@ -10,7 +10,9 @@ const tagsSchema = z.enum([
   "dev",
   "life",
   "speaker-deck",
-]);
+] as const;
+
+export const tagsSchema = z.enum(tagList);
 
 export type TagEnum = z.infer<typeof tagsSchema>;
 
