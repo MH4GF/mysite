@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { RssIcon } from "../_components";
 import { ArticleList } from "../_features/articles";
 import { Link } from "../_features/viewTransition";
-import { siteInfo } from "../_utils";
 
 export default function Page() {
   return (
@@ -20,5 +19,5 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-  title: `Articles | ${siteInfo.siteName}`,
+  title: "Articles",
 };
