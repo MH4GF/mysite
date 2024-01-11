@@ -1,8 +1,8 @@
 import { UniversalLink } from "../../_components";
+import { format } from "../../_utils";
 
-import type { ArticleMeta } from "@/app/_features";
-import { Tag } from "@/app/_features";
-import { format } from "@/app/_utils";
+import { Tag } from "./Tag";
+import type { ArticleMeta } from "./type";
 
 type Props<T extends string> = ArticleMeta<T>;
 

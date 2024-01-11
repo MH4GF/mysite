@@ -1,7 +1,6 @@
 import { ArticleListItem } from "./ArticleListItem";
-
-import type { TagEnum } from "@/app/_features";
-import { getArticlesMeta } from "@/app/_features";
+import { getArticlesMeta } from "./getArticlesMeta";
+import type { TagEnum } from "./type";
 
 type Props = {
   tag?: TagEnum;

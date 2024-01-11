@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 
 import { RssIcon } from "../_components";
+import { ArticleList } from "../_features/articles";
 import { Link } from "../_features/viewTransition";
 import { siteInfo } from "../_utils";
-
-import { ArticleList } from "./_features";
 
 export default function Page() {
   return (
