@@ -1,4 +1,4 @@
-import { Link } from "../viewTransition";
+import { UniversalLink } from "../../_components";
 
 import { tagLabelMap } from "./constants";
 import type { TagEnum } from "./type";
@@ -23,8 +23,8 @@ export const Tag = ({ tag }: Props) => {
   const label = tagLabelMap[tag];
 
   return (
-    <Link href={`/articles/tags/${tag}`}>
+    <UniversalLink href={`/articles/tags/${tag}`}>
       <span className={`${colors} rounded px-1 py-0.5 text-sm text-white`}>{label}</span>
-    </Link>
+    </UniversalLink>
   );
 };
