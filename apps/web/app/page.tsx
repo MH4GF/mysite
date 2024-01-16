@@ -17,16 +17,24 @@ export default function Page() {
       </div>
       <ul>
         <li>
-          <UniversalLink href="/readme">📝 取扱説明書</UniversalLink>
+          <UniversalLink href="/readme" isEnabledUnderline>
+            📝 取扱説明書
+          </UniversalLink>
         </li>
         <li>
-          <UniversalLink href="/behavior">🚲 好む振る舞い</UniversalLink>
+          <UniversalLink href="/behavior" isEnabledUnderline>
+            🚲 好む振る舞い
+          </UniversalLink>
         </li>
         <li>
-          <UniversalLink href="/thinking-in-career">⛰️ キャリアの指向性(脳内メモ)</UniversalLink>
+          <UniversalLink href="/thinking-in-career" isEnabledUnderline>
+            ⛰️ キャリアの指向性(脳内メモ)
+          </UniversalLink>
         </li>
         <li>
-          <UniversalLink href="/resume">👋 Resume</UniversalLink>
+          <UniversalLink href="/resume" isEnabledUnderline>
+            👋 Resume
+          </UniversalLink>
         </li>
       </ul>
     </div>
