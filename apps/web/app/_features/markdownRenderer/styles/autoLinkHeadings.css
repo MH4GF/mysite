@@ -1,10 +1,13 @@
 a.heading-anchor {
   color: #71717a;
+  border-bottom-width: 0; /* UniversalLinkのborderを打ち消す */
 }
 
 .heading-anchor-text {
-  visibility: hidden;
+  opacity: 0;
   margin-left: 0.25em;
+  transition-property: opacity;
+  transition-duration: 300ms;
 }
 
 h2:hover .heading-anchor-text,
@@ -12,5 +15,5 @@ h3:hover .heading-anchor-text,
 h4:hover .heading-anchor-text,
 h5:hover .heading-anchor-text,
 h6:hover .heading-anchor-text {
-  visibility: visible;
+  opacity: 1;
 }

@@ -18,7 +18,7 @@ export const ArticleListItem = <T extends string>({
   return (
     <article className="grid gap-2">
       <h2 className="text-xl">
-        <UniversalLink href={href} isExternal={externalLink}>
+        <UniversalLink href={href} isExternal={externalLink} isEnabledUnderline>
           {title}
           {externalLink && (
             <svg

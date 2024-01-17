@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
-import { MyAvatar, SocialLink } from "./_components";
-import { Link } from "./_features/viewTransition";
+import { MyAvatar, SocialLink, UniversalLink } from "./_components";
 import { siteInfo } from "./_utils";
 
 export default function Page() {
@@ -18,16 +17,24 @@ export default function Page() {
       </div>
       <ul>
         <li>
-          <Link href="/readme">📝 取扱説明書</Link>
+          <UniversalLink href="/readme" isEnabledUnderline>
+            📝 取扱説明書
+          </UniversalLink>
         </li>
         <li>
-          <Link href="/behavior">🚲 好む振る舞い</Link>
+          <UniversalLink href="/behavior" isEnabledUnderline>
+            🚲 好む振る舞い
+          </UniversalLink>
         </li>
         <li>
-          <Link href="/thinking-in-career">⛰️ キャリアの指向性(脳内メモ)</Link>
+          <UniversalLink href="/thinking-in-career" isEnabledUnderline>
+            ⛰️ キャリアの指向性(脳内メモ)
+          </UniversalLink>
         </li>
         <li>
-          <Link href="/resume">👋 Resume</Link>
+          <UniversalLink href="/resume" isEnabledUnderline>
+            👋 Resume
+          </UniversalLink>
         </li>
       </ul>
     </div>

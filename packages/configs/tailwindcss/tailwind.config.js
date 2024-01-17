@@ -20,6 +20,7 @@ module.exports = {
             maxWidth: "100%",
             a: {
               wordWrap: "break-word",
+              textDecoration: "none",
             },
             code: {
               backgroundColor: "var(--mysite-code-bg)",
