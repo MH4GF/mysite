@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "@storybook/testing-libraryのconfigure()はpreview.jsで呼び出す",
+      "publishedAt": "2024/01/11",
+      "externalLink": true,
+      "href": "https://zenn.dev/route06/articles/5a505fd0f471ab",
+      "tags": ["zenn"]
+    },
+    {
       "title": "Next.js App RouterでView Transitions APIの活用",
       "publishedAt": "2024/01/08",
       "externalLink": false,
