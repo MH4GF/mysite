@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "2023年の振り返り",
+      "publishedAt": "2024/01/17",
+      "externalLink": false,
+      "href": "/articles/2023-summary",
+      "tags": ["dev", "life"]
+    },
+    {
       "title": "@storybook/testing-libraryのconfigure()はpreview.jsで呼び出す",
       "publishedAt": "2024/01/11",
       "externalLink": true,
