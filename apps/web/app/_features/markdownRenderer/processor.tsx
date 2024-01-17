@@ -1,3 +1,4 @@
+import type { ComponentProps } from "react";
 import { createElement } from "react";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
@@ -12,6 +13,10 @@ import { unified } from "unified";
 import { UniversalLink } from "../../_components";
 
 import { Paragraph } from "./elements";
+
+const Link = (props: ComponentProps<typeof UniversalLink>) => {
+  return <UniversalLink {...props} isEnabledUnderline />;
+};
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
 export const processor = unified()
@@ -49,6 +54,6 @@ export const processor = unified()
     createElement,
     components: {
       p: Paragraph,
-      a: UniversalLink,
+      a: Link,
     },
   });
