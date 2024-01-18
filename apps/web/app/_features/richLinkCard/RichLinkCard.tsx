@@ -13,7 +13,11 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
   const labelledBy = useId();
 
   if (title === "") {
-    return <UniversalLink href={url as Route}>{url}</UniversalLink>;
+    return (
+      <UniversalLink href={url as Route} isEnabledUnderline>
+        {url}
+      </UniversalLink>
+    );
   }
 
   return (
