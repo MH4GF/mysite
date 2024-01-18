@@ -35,7 +35,7 @@ Ref: https://mh4gf.dev/articles/2022-summary
 ROUTE06 はエンタープライズ企業のデジタルトランスフォーメーションを支援するプロダクトサービスおよびプロフェッショナルサービスを提供している会社です。いくつかのプロダクトを運用していますが、自身は現在クラウド EDI を中心とした商取引 DX に注力しプロダクト開発を進めています。  
 入社のタイミングで Twitter Space で不定期配信しているルートシックスラジオに出演させてもらいました。
 
-<iframe src="https://podcasters.spotify.com/pod/show/route06-radio/embed/episodes/Miyagi-san-e1uhamq/a-a99ql7p" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://podcasters.spotify.com/pod/show/route06-radio/embed/episodes/Miyagi-san-e1uhamq/a-a99ql7p" height="102px" width="100%" frameborder="0" scrolling="no"></iframe>
 
 そろそろ 1 年が経つためそのタイミングで入社エントリも書こうと思いつつ、入社の決め手を簡単にだけ紹介すると以下の通りです。
 
