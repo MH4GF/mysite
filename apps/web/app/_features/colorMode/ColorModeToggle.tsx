@@ -29,7 +29,7 @@ export const ColorModeToggle = () => {
     <button
       type="button"
       aria-label="Toggle dark mode"
-      className="group rounded-md bg-white/90 px-3 py-2 ring-1 ring-zinc-900/5 backdrop-blur-[8px] transition duration-150 ease-in-out dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+      className="group rounded-sm bg-white/90 px-3 py-2 ring-1 ring-zinc-900/5 backdrop-blur-[8px] transition duration-150 ease-in-out dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={toggleMode}
     >
       <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600" />

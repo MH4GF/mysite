@@ -14,7 +14,7 @@ export const Tag = ({ tag }: Props) => {
     <UniversalLink
       href={`/articles/tags/${tag}`}
       isEnabledUnderline
-      className="rounded border border-zinc-200 px-1 py-0.5 text-sm text-zinc-500 hover:border-zinc-500 hover:text-zinc-700 dark:border-zinc-700 dark:hover:border-zinc-500 dark:hover:text-zinc-500"
+      className="rounded-sm border border-zinc-200 px-1 py-0.5 text-sm text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-500"
     >
       {label}
     </UniversalLink>

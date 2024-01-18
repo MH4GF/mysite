@@ -31,7 +31,7 @@ const isSameOrigin = <T extends string = string>(_href: Route<T> | UrlObject) =>
 };
 
 const animatedUnderline =
-  "no-underline transition-colors duration-300 border-b border-solid border-zinc-200 hover:border-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-300";
+  "no-underline transition-colors duration-300 border-b border-solid border-zinc-200 hover:border-zinc-500 dark:border-zinc-700 dark:hover:border-zinc-500";
 
 type Props<T extends string = string> = LinkProps<T> & {
   isExternal?: boolean;

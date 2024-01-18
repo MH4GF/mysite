@@ -13,17 +13,19 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
   const labelledBy = useId();
 
   if (title === "") {
-    return <UniversalLink href={url as Route}>{url}</UniversalLink>;
+    return (
+      <UniversalLink href={url as Route} isEnabledUnderline>
+        {url}
+      </UniversalLink>
+    );
   }
 
   return (
-    <section
-      className="not-prose my-5 h-24 w-full rounded-sm border border-solid"
-      aria-labelledby={labelledBy}
-    >
+    <section className="not-prose my-5 h-24 w-full" aria-labelledby={labelledBy}>
       <UniversalLink
         href={url as Route}
-        className="grid h-full grid-flow-row-dense grid-cols-4 overflow-hidden"
+        className="grid h-full grid-flow-row-dense grid-cols-4 overflow-hidden rounded-sm border"
+        isEnabledUnderline
       >
         <div className="col-span-3 flex flex-col gap-2 p-2">
           <h2
