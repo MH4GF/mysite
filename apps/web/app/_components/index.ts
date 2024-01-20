@@ -8,3 +8,5 @@ export { SocialLink } from "./SocialLink";
 export { Footer } from "./Footer";
 /** @public */
 export { UniversalLink } from "./UniversalLink";
+/** @public */
+export { Time } from "./Time";
