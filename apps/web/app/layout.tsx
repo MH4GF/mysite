@@ -3,6 +3,7 @@ import "@project/configs/tailwindcss/global.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import { Footer } from "./_components";
 import { ColorModeScript, Header, TwitterWidgets } from "./_features";
 import { siteInfo } from "./_utils";
 
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Header />
             <div>{children}</div>
           </div>
+          <Footer className="mt-8" />
         </main>
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""} />
       </body>
