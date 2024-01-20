@@ -23,7 +23,7 @@ jobs:
       - run: pnpm start &
       - uses: cygnetdigital/wait_for_response@v2.0.0
         with:
-          url: 'http://127.0.0.1:3000'
+          url: 'http://localhost:3000'
       - uses: lost-pixel/lost-pixel@v3.4.0
         env:
           LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}

@@ -24,7 +24,7 @@ export const config: CustomProjectConfig = {
         path: "/dev/testing-markdown-renderer",
       },
     ],
-    baseUrl: "http://127.0.0.1:3000",
+    baseUrl: "http://172.17.0.1:3000",
   },
   lostPixelProjectId: "clrle4r1n14nfnj0e2ij7un7c",
   apiKey: process.env.LOST_PIXEL_API_KEY,
