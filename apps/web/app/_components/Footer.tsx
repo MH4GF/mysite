@@ -1,16 +1,9 @@
-import { MyAvatar } from "./MyAvatar";
-import { UniversalLink } from "./UniversalLink";
-
-export const Footer = () => {
+export const Footer = ({ className }: { className?: string }) => {
   return (
-    <footer>
-      <section className="mb-4 text-center">
-        <UniversalLink href="/">
-          <MyAvatar />
-          <h2 className="mt-2 font-bold">Hirotaka Miyagi</h2>
-          <p className="text-sm text-slate-400">Software Engineer / @mh4gf</p>
-        </UniversalLink>
-      </section>
+    <footer className={`${className} flex border-t border-zinc-200 p-4 dark:border-zinc-600`}>
+      <p className="text-xs leading-5 text-zinc-500 dark:text-zinc-400">
+        &copy; 2024 Hirotaka Miyagi, All rights reserved.
+      </p>
     </footer>
   );
 };
