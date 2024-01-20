@@ -1,3 +1,4 @@
+import { Time } from "@/app/_components";
 import type { ArticleMeta } from "@/app/_features";
 import { MarkdownContent, Tag, getArticleMeta } from "@/app/_features";
 import { format, rootJoin } from "@/app/_utils";
@@ -16,9 +17,7 @@ const ArticleMetaDetail = ({
             <Tag key={tag} tag={tag} />
           ))}
         </div>
-        <time dateTime={publishedAt} className="text-zinc-500">
-          {publishedAt}
-        </time>
+        <Time dateTime={publishedAt}>{publishedAt}</Time>
       </div>
     </div>
   );
