@@ -1,9 +1,12 @@
 on:
-  deployment_status:
+  push:
+
+env:
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+  TURBO_TEAM: ${{ vars.TURBO_TEAM }}
 
 jobs:
   vrt:
-    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success' && github.event.deployment_status.environment == 'Preview'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
@@ -11,8 +14,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
+        with:
+          node-version-file: .node-version
+          pnpm-version: '8.12.1'
+      - run: pnpm i
+      - run: pnpm start
       - uses: lost-pixel/lost-pixel@v3.4.0
         env:
           LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
-          BASE_URL: ${{ github.event.deployment_status.environment_url }}
-          COMMIT_REF_NAME: ${{ github.event.deployment.ref }}
