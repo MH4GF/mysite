@@ -33,9 +33,14 @@ export const Article = async ({ slug, handleNotFound }: Props) => {
   const meta = await getArticleMeta(slug);
 
   return (
-    <>
-      {meta && <ArticleMetaDetail meta={meta} />}
+    <div>
+      {meta && (
+        <>
+          <ArticleMetaDetail meta={meta} />
+          <hr className="my-12 border-zinc-300 dark:border-zinc-600" />
+        </>
+      )}
       <MarkdownContent filePath={filePath} handleNotFound={handleNotFound} />
-    </>
+    </div>
   );
 };
