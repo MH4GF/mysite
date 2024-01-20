@@ -1,3 +1,4 @@
+import { Time } from "@/app/_components";
 import type { ArticleMeta } from "@/app/_features";
 import { MarkdownContent, Tag, getArticleMeta } from "@/app/_features";
 import { format, rootJoin } from "@/app/_utils";
@@ -9,16 +10,14 @@ const ArticleMetaDetail = ({
 
   return (
     <div>
-      <h2 className="text-4xl font-extrabold">{title}</h2>
+      <h2 className="text-2xl font-extrabold">{title}</h2>
       <div className="my-6 flex justify-between">
         <div className="flex gap-2">
           {tags.map((tag) => (
             <Tag key={tag} tag={tag} />
           ))}
         </div>
-        <time dateTime={publishedAt} className="text-zinc-500">
-          {publishedAt}
-        </time>
+        <Time dateTime={publishedAt}>{publishedAt}</Time>
       </div>
     </div>
   );
@@ -34,9 +33,14 @@ export const Article = async ({ slug, handleNotFound }: Props) => {
   const meta = await getArticleMeta(slug);
 
   return (
-    <>
-      {meta && <ArticleMetaDetail meta={meta} />}
+    <div>
+      {meta && (
+        <>
+          <ArticleMetaDetail meta={meta} />
+          <hr className="my-12 border-zinc-300 dark:border-zinc-600" />
+        </>
+      )}
       <MarkdownContent filePath={filePath} handleNotFound={handleNotFound} />
-    </>
+    </div>
   );
 };

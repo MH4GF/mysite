@@ -1,4 +1,4 @@
-import { UniversalLink } from "../../_components";
+import { Time, UniversalLink } from "../../_components";
 import { format } from "../../_utils";
 
 import { Tag } from "./Tag";
@@ -45,7 +45,7 @@ export const ArticleListItem = <T extends string>({
             <Tag key={tag} tag={tag} />
           ))}
         </div>
-        <p className="text-zinc-500">{publishedAt}</p>
+        <Time dateTime={publishedAt}>{publishedAt}</Time>
       </div>
     </article>
   );
