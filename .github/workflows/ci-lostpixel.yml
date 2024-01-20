@@ -19,7 +19,11 @@ jobs:
           node-version-file: .node-version
           pnpm-version: '8.12.1'
       - run: pnpm i
+      - run: pnpm build
       - run: pnpm start &
+      - uses: cygnetdigital/wait_for_response@v2.0.0
+        with:
+          url: 'http://localhost:3000'
       - uses: lost-pixel/lost-pixel@v3.4.0
         env:
           LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
