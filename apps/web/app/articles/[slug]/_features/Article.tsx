@@ -1,8 +1,7 @@
 import { ArticleMetaDetail } from "./ArticleMetaDetail";
 import { ArticleShareButton } from "./ArticleShareButton";
 
-import { MarkdownContent, getArticleMeta } from "@/app/_features";
-import { rootJoin } from "@/app/_utils";
+import { MarkdownRenderer, getArticleMeta } from "@/app/_features";
 
 interface Props {
   slug: string;
@@ -10,7 +9,6 @@ interface Props {
 }
 
 export const Article = async ({ slug, handleNotFound }: Props) => {
-  const filePath = rootJoin(`contents/articles/${slug}.md`);
   const meta = await getArticleMeta(slug);
 
   return (
@@ -21,7 +19,7 @@ export const Article = async ({ slug, handleNotFound }: Props) => {
           <hr className="my-12 border-zinc-300 dark:border-zinc-600" />
         </>
       )}
-      <MarkdownContent filePath={filePath} handleNotFound={handleNotFound} />
+      <MarkdownRenderer slug={`/article/${slug}`} handleNotFound={handleNotFound} />
       {meta && <ArticleShareButton meta={meta} />}
     </div>
   );
