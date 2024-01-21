@@ -27,7 +27,7 @@ jobs:
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
         with:
           node-version-file: .node-version
-          pnpm-version: '8.12.1'
+          pnpm-version: "8.14.1"
 
       - name: Restore next build
         uses: actions/cache@v3
