@@ -25,10 +25,7 @@ jobs:
           node-version-file: .node-version
           pnpm-version: "8.12.1"
       - run: pnpm i
-      - run: pnpm dev &
-      - run: pnpm --filter web test:vrt:compare
-        env:
-          BASE_URL: http://localhost:3000
+      - run: pnpm --filter web test:vrt:screenshots
       - uses: lost-pixel/lost-pixel@v3.4.0
         env:
           LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
