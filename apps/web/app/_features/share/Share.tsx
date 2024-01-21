@@ -26,7 +26,7 @@ interface Props {
   shareData: ShareData;
 }
 
-export const Share = ({ shareData }: Props) => {
+const Share = ({ shareData }: Props) => {
   const handleClick = useCallback(() => {
     if (!isShareSupported) return;
 
@@ -44,3 +44,9 @@ export const Share = ({ shareData }: Props) => {
     </button>
   ) : null;
 };
+
+// NOTE: App RouterのServer Componentからnext/dynamicで読み込む場合エラーになり、
+// default exportで読み込み必要があった
+// @see: https://github.com/vercel/next.js/issues/58238
+// @see: https://zenn.dev/euxn23/articles/cecab60f672d2d
+export default Share;
