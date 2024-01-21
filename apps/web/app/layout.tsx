@@ -37,6 +37,28 @@ export const metadata: Metadata = {
   alternates: {
     canonical: url,
   },
+  icons: [
+    {
+      rel: "icon",
+      url: "/favicon-32x32.png",
+      sizes: "32x32",
+    },
+    {
+      rel: "icon",
+      url: "/favicon-16x16.png",
+      sizes: "16x16",
+    },
+    {
+      rel: "apple-touch-icon",
+      url: "/apple-touch-icon.png",
+    },
+    {
+      rel: "mask-icon",
+      url: "/safari-pinned-tab.svg",
+      color: "#f7be2c",
+    },
+  ],
+  manifest: "/site.webmanifest",
   metadataBase: new URL(baseUrl),
 };
 

@@ -42,5 +42,5 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-  title: `MH4GF | ${siteInfo.siteName}`,
+  title: `About | ${siteInfo.siteName}`,
 };
