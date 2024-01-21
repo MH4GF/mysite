@@ -1,3 +1,9 @@
+---
+title: ブログを Next.js App Router で構築し直した感想
+publishedAt: 2023-06-21
+---
+
+
 このブログは今までは Astro で構築されていましたが、技術的な素振りとして Next.js の App Router で構築し直しました。今回の記事ではその学びを書きます。
 
 ## 利用技術

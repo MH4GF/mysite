@@ -1,3 +1,8 @@
+---
+title: Next.js App RouterでView Transitions APIの活用
+publishedAt: 2024-01-08
+---
+
 このサイトのリンク遷移で View Transitions API を有効化してみました。ヘッダーの Articles を押下するとフワッとページ遷移することがわかるかと思います。
 この記事では Next.js App Router での View Transitions API の利用方法や、まだ実現できていないことなどを紹介します。
 
