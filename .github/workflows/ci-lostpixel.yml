@@ -26,6 +26,6 @@ jobs:
           pnpm-version: "8.12.1"
       - run: pnpm i
       - run: pnpm --filter web test:vrt:screenshots
-      - uses: lost-pixel/lost-pixel@v3.4.0
+      - uses: lost-pixel/lost-pixel@v3.12.1
         env:
           LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
