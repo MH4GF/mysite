@@ -5,14 +5,9 @@ import { Inter } from "next/font/google";
 
 import { Footer } from "./_components";
 import { ColorModeScript, Header, ScrollToTopButton, TwitterWidgets } from "./_features";
-import { siteInfo } from "./_utils";
+import { baseUrl, siteInfo } from "./_utils";
 
 const { siteName, description, url, twitter } = siteInfo;
-
-const baseUrl =
-  process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000";
 
 export const metadata: Metadata = {
   title: {
