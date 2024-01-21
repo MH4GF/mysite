@@ -1,4 +1,5 @@
 import { ArticleMetaDetail } from "./ArticleMetaDetail";
+import { ArticleShareButton } from "./ArticleShareButton";
 
 import { MarkdownContent, getArticleMeta } from "@/app/_features";
 import { rootJoin } from "@/app/_utils";
@@ -21,6 +22,7 @@ export const Article = async ({ slug, handleNotFound }: Props) => {
         </>
       )}
       <MarkdownContent filePath={filePath} handleNotFound={handleNotFound} />
+      {meta && <ArticleShareButton meta={meta} />}
     </div>
   );
 };
