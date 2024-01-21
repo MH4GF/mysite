@@ -9,6 +9,11 @@ import { siteInfo } from "./_utils";
 
 const { siteName, description, url, twitter } = siteInfo;
 
+const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000";
+
 export const metadata: Metadata = {
   title: {
     default: siteName,
@@ -32,6 +37,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: url,
   },
+  metadataBase: new URL(baseUrl),
 };
 
 const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
