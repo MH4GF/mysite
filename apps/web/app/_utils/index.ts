@@ -1,5 +1,5 @@
 /** @public */
-export { externalLinks, siteInfo } from "./constants";
+export { externalLinks, siteInfo, baseUrl } from "./constants";
 /** @public */
 export { rootJoin } from "./rootJoin";
 /** @public */
