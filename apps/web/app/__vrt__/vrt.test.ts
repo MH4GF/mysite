@@ -1,7 +1,12 @@
-import type { Page } from "@playwright/test";
-import { expect, test } from "@playwright/test";
+import type { Page, TestInfo } from "@playwright/test";
+import { test } from "@playwright/test";
 
-const screenshot = async (page: Page, targetPage: TargetPage, colorMode: "light" | "dark") => {
+const screenshot = async (
+  page: Page,
+  testInfo: TestInfo,
+  targetPage: TargetPage,
+  colorMode: "light" | "dark",
+) => {
   await page.goto(targetPage.path);
   await page.waitForLoadState("networkidle");
 
@@ -9,7 +14,10 @@ const screenshot = async (page: Page, targetPage: TargetPage, colorMode: "light"
     await page.getByRole("button", { name: "Toggle dark mode" }).click();
   }
 
-  await expect(page).toHaveScreenshot({ fullPage: true });
+  await page.screenshot({
+    fullPage: true,
+    path: `app/__vrt__/screenshots/${targetPage.name}-${testInfo.project.name}-${colorMode}.png`,
+  });
 };
 
 interface TargetPage {
@@ -41,6 +49,8 @@ const targetPages: TargetPage[] = [
 ];
 
 for (const targetPage of targetPages) {
-  test(`${targetPage.name}-light`, async ({ page }) => await screenshot(page, targetPage, "light"));
-  test(`${targetPage.name}-dark`, async ({ page }) => await screenshot(page, targetPage, "dark"));
+  test(`${targetPage.name}-light`, async ({ page }, testInfo) =>
+    await screenshot(page, testInfo, targetPage, "light"));
+  test(`${targetPage.name}-dark`, async ({ page }, testInfo) =>
+    await screenshot(page, testInfo, targetPage, "dark"));
 }
