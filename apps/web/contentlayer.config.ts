@@ -6,6 +6,24 @@ export const Article = defineDocumentType(() => ({
   fields: {
     title: { type: "string", required: true },
     publishedAt: { type: "date", required: true },
+    tags: {
+      type: "list",
+      of: {
+        type: "enum",
+        options: [
+          "route06-tech-blog",
+          "timee-product-team-blog",
+          "zenn",
+          "qiita",
+          "note",
+          "dev",
+          "life",
+          "speaker-deck",
+        ],
+        required: true,
+      },
+      required: true,
+    },
   },
   computedFields: {
     url: { type: "string", resolve: (article) => `/article/${article._raw.flattenedPath}` },

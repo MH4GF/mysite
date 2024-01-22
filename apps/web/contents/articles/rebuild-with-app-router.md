@@ -1,6 +1,8 @@
 ---
 title: ブログを Next.js App Router で構築し直した感想
 publishedAt: 2023-06-21
+tags:
+  - dev
 ---
 
 

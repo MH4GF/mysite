@@ -1,6 +1,8 @@
 ---
 title: GitHub CLIでよく使うコマンド
 publishedAt: 2022-6-19
+tags:
+  - dev
 ---
 
 https://cli.github.com/

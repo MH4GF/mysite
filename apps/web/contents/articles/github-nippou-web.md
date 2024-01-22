@@ -1,6 +1,8 @@
 ---
 title: github-nippou の Web 版を App Router + Go + Vercel で作った
 publishedAt: 2023-12-07
+tags:
+  - dev
 ---
 
 
