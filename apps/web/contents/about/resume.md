@@ -1,3 +1,7 @@
+---
+title: Resume
+---
+
 # Hirotaka Miyagi | 宮城 広隆
 
 ## 自己 PR
