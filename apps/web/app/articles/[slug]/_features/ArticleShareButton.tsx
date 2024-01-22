@@ -1,19 +1,19 @@
 import dynamic from "next/dynamic";
 
-import type { ArticleMeta } from "@/app/_features";
 import { baseUrl } from "@/app/_utils";
+import type { Article } from "contentlayer/generated";
 
 const Share = dynamic(() => import("@/app/_features/share/Share"), { ssr: false });
 
 interface Props {
-  meta: ArticleMeta;
+  article: Article;
 }
 
-export const ArticleShareButton = ({ meta }: Props) => {
+export const ArticleShareButton = ({ article }: Props) => {
   const shareData: ShareData = {
-    title: meta?.title || "",
-    url: new URL(meta.href, baseUrl).toString(),
-    text: meta?.title || "",
+    title: article.title,
+    url: new URL(article.url, baseUrl).toString(),
+    text: article.title,
   };
 
   return <Share shareData={shareData} />;

@@ -2,3 +2,4 @@
 /playwright-report/
 /playwright/.cache/
 app/__vrt__/screenshots/
+.contentlayer

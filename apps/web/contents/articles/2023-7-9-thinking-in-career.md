@@ -1,3 +1,11 @@
+---
+title: 2023/7/9 キャリアの指向性(脳内メモ)
+publishedAt: 2023-07-09
+tags:
+  - dev
+  - life
+---
+
 ## これまで
 
 前回: [2023/2/17 キャリアの指向性(脳内メモ)](/articles/2023-2-17-thinking-in-career)

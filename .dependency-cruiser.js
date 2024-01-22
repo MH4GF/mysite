@@ -90,6 +90,7 @@ module.exports = {
       from: {
         pathNot: [
           ".next", // generated files
+          ".contentlayer", // generated files
         ],
       },
       to: {
