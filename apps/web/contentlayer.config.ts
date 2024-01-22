@@ -26,7 +26,7 @@ export const Article = defineDocumentType(() => ({
     },
   },
   computedFields: {
-    url: { type: "string", resolve: (article) => `/article/${article._raw.flattenedPath}` },
+    url: { type: "string", resolve: (article) => `/articles/${article._raw.flattenedPath}` },
   },
 }));
 
