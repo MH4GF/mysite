@@ -3,9 +3,8 @@ import { notFound } from "next/navigation";
 
 import { Article } from "./_features";
 
-import { getArticleMeta } from "@/app/_features";
-import { rootJoin } from "@/app/_utils";
-import { getSlugs } from "@/app/_utils/server";
+import { getArticle } from "@/app/_features";
+import { allArticles } from "contentlayer/generated";
 
 interface Params {
   slug: string;
@@ -19,13 +18,11 @@ export default function Page({ params }: Props) {
   return <Article {...params} handleNotFound={notFound} />;
 }
 
-export const generateStaticParams = (): Promise<Params[]> => {
-  const dirPath = rootJoin("contents/articles");
-  return getSlugs(dirPath);
-};
+export const generateStaticParams = (): Params[] =>
+  allArticles.map((article) => ({ slug: article._raw.flattenedPath }));
 
-export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
-  const meta = await getArticleMeta(params.slug);
-  const title = meta?.title ?? "";
+export const generateMetadata = ({ params }: Props): Metadata => {
+  const article = getArticle(`/articles/${params.slug}`);
+  const title = article?.title ?? "";
   return { title, openGraph: { title }, twitter: { title } };
 };
