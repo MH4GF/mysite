@@ -1,15 +1,14 @@
 import { ArticleMetaDetail } from "./ArticleMetaDetail";
 import { ArticleShareButton } from "./ArticleShareButton";
 
-import { MarkdownRenderer, getArticleMeta, getArticle } from "@/app/_features";
+import { MarkdownRenderer, getArticle } from "@/app/_features";
 
 interface Props {
   slug: string;
   handleNotFound: () => void;
 }
 
-export const Article = async ({ slug, handleNotFound }: Props) => {
-  const meta = await getArticleMeta(slug);
+export const Article = ({ slug, handleNotFound }: Props) => {
   const article = getArticle(`/article/${slug}`);
 
   if (!article) {
@@ -22,7 +21,7 @@ export const Article = async ({ slug, handleNotFound }: Props) => {
       <ArticleMetaDetail article={article} />
       <hr className="my-12 border-zinc-300 dark:border-zinc-600" />
       <MarkdownRenderer raw={article.body.raw} />
-      {meta && <ArticleShareButton meta={meta} />}
+      <ArticleShareButton article={article} />
     </div>
   );
 };
