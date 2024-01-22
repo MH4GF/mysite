@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@/*": ["apps/web/*"]
+      "@/*": ["apps/web/*"],
+      "contentlayer/generated": ["apps/web/.contentlayer/generated"]
     }
   },
   "exclude": ["node_modules"]
