@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const Article = ({ slug, handleNotFound }: Props) => {
-  const article = getArticle(`/article/${slug}`);
+  const article = getArticle(`/articles/${slug}`);
 
   if (!article) {
     handleNotFound();
