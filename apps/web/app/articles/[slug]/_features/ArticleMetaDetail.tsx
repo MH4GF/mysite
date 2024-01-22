@@ -1,14 +1,16 @@
 import { Time } from "@/app/_components";
-import type { ArticleMeta } from "@/app/_features";
 import { Tag } from "@/app/_features";
 import { format } from "@/app/_utils";
+import type { Article } from "contentlayer/generated";
 
 interface Props {
-  meta: ArticleMeta;
+  article: Article;
 }
 
-export const ArticleMetaDetail = ({ meta: { publishedAt: _publishedAt, title, tags } }: Props) => {
-  const publishedAt = format(_publishedAt);
+export const ArticleMetaDetail = ({
+  article: { publishedAt: _publishedAt, title, tags },
+}: Props) => {
+  const publishedAt = format(new Date(_publishedAt));
 
   return (
     <div>
