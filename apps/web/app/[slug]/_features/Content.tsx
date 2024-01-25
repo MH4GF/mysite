@@ -1,5 +1,5 @@
-import { MarkdownContent } from "@/app/_features";
-import { rootJoin } from "@/app/_utils";
+import { MarkdownRenderer } from "@/app/_features";
+import { allAbouts } from "contentlayer/generated";
 
 interface Props {
   slug: string;
@@ -7,7 +7,11 @@ interface Props {
 }
 
 export const Content = ({ slug, handleNotFound }: Props): JSX.Element => {
-  const filePath = rootJoin(`contents/about/${slug}.md`);
+  const about = allAbouts.find((about) => about.url === `/${slug}`);
+  if (!about) {
+    handleNotFound();
+    return <></>;
+  }
 
-  return <MarkdownContent filePath={filePath} handleNotFound={handleNotFound} />;
+  return <MarkdownRenderer raw={about.body.raw} />;
 };

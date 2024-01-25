@@ -3,8 +3,7 @@ import { notFound } from "next/navigation";
 
 import { Content } from "./_features";
 
-import { rootJoin } from "@/app/_utils";
-import { getSlugs } from "@/app/_utils/server";
+import { allAbouts } from "contentlayer/generated";
 
 interface Params {
   slug: string;
@@ -18,20 +17,10 @@ export default function Page({ params }: Props) {
   return <Content {...params} handleNotFound={notFound} />;
 }
 
-export const generateStaticParams = async (): Promise<Params[]> => {
-  const dirPath = rootJoin("contents/about");
-  return await getSlugs(dirPath);
-};
-
-const aboutContentMap: Record<string, string> = {
-  behavior: "好む振る舞い",
-  readme: "取扱説明書",
-  resume: "Resume",
-} as const;
+export const generateStaticParams = (): Params[] => allAbouts.map((about) => ({ slug: about.url }));
 
 export const generateMetadata = ({ params }: Props): Metadata => {
-  const value = aboutContentMap[params.slug];
-  const title = value ?? "";
+  const title = allAbouts.find((about) => about.url === params.slug)?.title ?? "";
 
   return { title, openGraph: { title }, twitter: { title } };
 };
