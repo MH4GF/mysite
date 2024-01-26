@@ -3,17 +3,18 @@ a.heading-anchor {
   border-bottom-width: 0; /* UniversalLinkのborderを打ち消す */
 }
 
-.heading-anchor-text {
+a.heading-anchor::after {
+  content: "#";
   opacity: 0;
   margin-left: 0.25em;
   transition-property: opacity;
   transition-duration: 300ms;
 }
 
-h2:hover .heading-anchor-text,
-h3:hover .heading-anchor-text,
-h4:hover .heading-anchor-text,
-h5:hover .heading-anchor-text,
-h6:hover .heading-anchor-text {
+h2:hover .heading-anchor::after,
+h3:hover .heading-anchor::after,
+h4:hover .heading-anchor::after,
+h5:hover .heading-anchor::after,
+h6:hover .heading-anchor::after {
   opacity: 1;
 }

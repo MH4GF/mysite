@@ -29,19 +29,6 @@ export const processor = unified()
     properties: {
       className: ["heading-anchor"],
     },
-    content: {
-      type: "element",
-      tagName: "span",
-      properties: {
-        className: ["heading-anchor-text"],
-      },
-      children: [
-        {
-          type: "text",
-          value: "#",
-        },
-      ],
-    },
   })
   .use(rehypePrettyCode, {
     keepBackground: false,
