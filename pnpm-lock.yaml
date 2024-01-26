@@ -168,9 +168,6 @@ importers:
       eslint-plugin-import-access:
         specifier: ^1.1.2
         version: 1.1.2(eslint@8.56.0)(typescript@5.3.3)
-      eslint-plugin-tailwindcss:
-        specifier: ^3.12.1
-        version: 3.12.1(tailwindcss@3.4.0)
 
 packages:
 
@@ -4022,17 +4019,6 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: false
 
-  /eslint-plugin-tailwindcss@3.12.1(tailwindcss@3.4.0):
-    resolution: {integrity: sha512-LyIRV0rx6prTpJZsSCXSNJ34Yry3Nj9OJwvzh1xTsiG6+UCnAPW1Bx41s7vZzUDKMlwFgpUN9Me+NK12T4DHYg==}
-    engines: {node: '>=12.13.0'}
-    peerDependencies:
-      tailwindcss: ^3.3.2
-    dependencies:
-      fast-glob: 3.2.12
-      postcss: 8.4.24
-      tailwindcss: 3.4.0
-    dev: false
-
   /eslint-plugin-unused-imports@3.0.0(@typescript-eslint/eslint-plugin@6.16.0)(eslint@8.56.0):
     resolution: {integrity: sha512-sduiswLJfZHeeBJ+MQaG+xYzSWdRXoSw61DpU13mzWumCkR0ufD0HmO4kdNokjrkluMHpj/7PJeN35pgbhW3kw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -6669,6 +6655,7 @@ packages:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+    dev: true
 
   /nanoid@3.3.7:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
@@ -7381,6 +7368,7 @@ packages:
       nanoid: 3.3.6
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: true
 
   /postcss@8.4.31:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
