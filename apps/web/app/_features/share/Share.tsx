@@ -36,7 +36,7 @@ const Share = ({ shareData }: Props) => {
   return isShareSupported ? (
     <button
       type="button"
-      className="inline-flex items-center gap-2 rounded-sm border border-zinc-200 p-2 text-sm text-zinc-600 transition-colors duration-300 hover:border-zinc-500 hover:text-zinc-800 dark:border-zinc-700 dark:text-zinc-400 dark:hover:border-zinc-500 dark:hover:text-zinc-300"
+      className="inline-flex items-center gap-2 rounded-sm border border-zinc-200 p-2 text-sm text-zinc-600 transition-colors duration-300 dark:border-zinc-700 dark:hover:border-zinc-500 hover:border-zinc-500 dark:hover:text-zinc-300 dark:text-zinc-400 hover:text-zinc-800"
       onClick={handleClick}
     >
       <ShareIcon className="h-4 w-4" />

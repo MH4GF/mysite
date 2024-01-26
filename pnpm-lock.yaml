@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@biomejs/biome':
-        specifier: 1.5.2
-        version: 1.5.2
+        specifier: 1.5.3-nightly.24fcf19
+        version: 1.5.3-nightly.24fcf19
       '@project/configs':
         specifier: workspace:^*
         version: link:packages/configs
@@ -168,9 +168,6 @@ importers:
       eslint-plugin-import-access:
         specifier: ^1.1.2
         version: 1.1.2(eslint@8.56.0)(typescript@5.3.3)
-      eslint-plugin-tailwindcss:
-        specifier: ^3.12.1
-        version: 3.12.1(tailwindcss@3.4.0)
 
 packages:
 
@@ -190,24 +187,24 @@ packages:
       regenerator-runtime: 0.13.11
     dev: false
 
-  /@biomejs/biome@1.5.2:
-    resolution: {integrity: sha512-LhycxGQBQLmfv6M3e4tMfn/XKcUWyduDYOlCEBrHXJ2mMth2qzYt1JWypkWp+XmU/7Hl2dKvrP4mZ5W44+nWZw==}
+  /@biomejs/biome@1.5.3-nightly.24fcf19:
+    resolution: {integrity: sha512-QHhabaQfex6kyxct0M9Gw2F9/EIQ0agg4t3MvcB/z8gcUQzbxQ+3TMTHLoVrZ/2yKePjVqkCps1F80+unAyoDg==}
     engines: {node: '>=14.*'}
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      '@biomejs/cli-darwin-arm64': 1.5.2
-      '@biomejs/cli-darwin-x64': 1.5.2
-      '@biomejs/cli-linux-arm64': 1.5.2
-      '@biomejs/cli-linux-arm64-musl': 1.5.2
-      '@biomejs/cli-linux-x64': 1.5.2
-      '@biomejs/cli-linux-x64-musl': 1.5.2
-      '@biomejs/cli-win32-arm64': 1.5.2
-      '@biomejs/cli-win32-x64': 1.5.2
+      '@biomejs/cli-darwin-arm64': 1.5.3-nightly.24fcf19
+      '@biomejs/cli-darwin-x64': 1.5.3-nightly.24fcf19
+      '@biomejs/cli-linux-arm64': 1.5.3-nightly.24fcf19
+      '@biomejs/cli-linux-arm64-musl': 1.5.3-nightly.24fcf19
+      '@biomejs/cli-linux-x64': 1.5.3-nightly.24fcf19
+      '@biomejs/cli-linux-x64-musl': 1.5.3-nightly.24fcf19
+      '@biomejs/cli-win32-arm64': 1.5.3-nightly.24fcf19
+      '@biomejs/cli-win32-x64': 1.5.3-nightly.24fcf19
     dev: true
 
-  /@biomejs/cli-darwin-arm64@1.5.2:
-    resolution: {integrity: sha512-3JVl08aHKsPyf0XL9SEj1lssIMmzOMAn2t1zwZKBiy/mcZdb0vuyMSTM5haMQ/90wEmrkYN7zux777PHEGrGiw==}
+  /@biomejs/cli-darwin-arm64@1.5.3-nightly.24fcf19:
+    resolution: {integrity: sha512-GrbZ415ezLy5HQrkAlFvG0FEdVMY/vJsgN2amKPXC5n5uBkvSaxxK3AApXSlXp+6RtSYyItK79Y3syLPi+CboQ==}
     engines: {node: '>=14.*'}
     cpu: [arm64]
     os: [darwin]
@@ -215,8 +212,8 @@ packages:
     dev: true
     optional: true
 
-  /@biomejs/cli-darwin-x64@1.5.2:
-    resolution: {integrity: sha512-QAPW9rZb/AgucUx+ogMg+9eJNipQDqvabktC5Tx4Aqb/mFzS6eDqNP7O0SbGz3DtC5Y2LATEj6o6zKIQ4ZT+3w==}
+  /@biomejs/cli-darwin-x64@1.5.3-nightly.24fcf19:
+    resolution: {integrity: sha512-nVExDggm627g/N5jvvVJm3GjwSdeNDnTatV0utm81mFQwPjBUN/JaAdzN3vjReBDQLxlMBDxDE12clhgKb4WCw==}
     engines: {node: '>=14.*'}
     cpu: [x64]
     os: [darwin]
@@ -224,8 +221,8 @@ packages:
     dev: true
     optional: true
 
-  /@biomejs/cli-linux-arm64-musl@1.5.2:
-    resolution: {integrity: sha512-Z29SjaOyO4QfajplNXSjLx17S79oPN42D094zjE24z7C7p3NxvLhKLygtSP9emgaXkcoESe2chOzF4IrGy/rlg==}
+  /@biomejs/cli-linux-arm64-musl@1.5.3-nightly.24fcf19:
+    resolution: {integrity: sha512-vtlFIeCp5eR47yvLRMTopWu52s0npecogIMPGLI/LAiI0wrfeRIX3bL1kBhkryQosIQpldt8j/x9ER+V2pksRw==}
     engines: {node: '>=14.*'}
     cpu: [arm64]
     os: [linux]
@@ -233,8 +230,8 @@ packages:
     dev: true
     optional: true
 
-  /@biomejs/cli-linux-arm64@1.5.2:
-    resolution: {integrity: sha512-fVLrUgIlo05rO4cNu+Py5EwwmXnXhWH+8KrNlWkr2weMYjq85SihUsuWWKpmqU+bUVR+m5gwfcIXZVWYVCJMHw==}
+  /@biomejs/cli-linux-arm64@1.5.3-nightly.24fcf19:
+    resolution: {integrity: sha512-ulIiXMCOwoMejx/8ZWgVZWecIWIpW2nmZVDejusSfwoEaaEXbx90ulSQG7lKtiR9A5rxDpk9jlpFuwWhvMXfYQ==}
     engines: {node: '>=14.*'}
     cpu: [arm64]
     os: [linux]
@@ -242,8 +239,8 @@ packages:
     dev: true
     optional: true
 
-  /@biomejs/cli-linux-x64-musl@1.5.2:
-    resolution: {integrity: sha512-ZolquPEjWYUmGeERS8svHOOT7OXEeoriPnV8qptgWJmYF9EO9HUGRn1UtCvdVziDYK+u1A7PxjOdkY1B00ty5A==}
+  /@biomejs/cli-linux-x64-musl@1.5.3-nightly.24fcf19:
+    resolution: {integrity: sha512-pdWUUvU3j7nz+Hx1w0GL30DKo8BnhC/UmHhLM8xZ0kNJMQ/eY6rBwYyQxnhVzUbFeIMhZlhIA0jzReUI0cof5g==}
     engines: {node: '>=14.*'}
     cpu: [x64]
     os: [linux]
@@ -251,8 +248,8 @@ packages:
     dev: true
     optional: true
 
-  /@biomejs/cli-linux-x64@1.5.2:
-    resolution: {integrity: sha512-ixqJtUHtF0ho1+1DTZQLAEwHGSqvmvHhAAFXZQoaSdABn+IcITYExlFVA3bGvASy/xtPjRhTx42hVwPtLwMHwg==}
+  /@biomejs/cli-linux-x64@1.5.3-nightly.24fcf19:
+    resolution: {integrity: sha512-T3sfho4vtl6Xttilt+eiTgWx59IVrdzG0Sm4Hkaq1zHZMoBiybnqbo0ZZiuTrYaGGOQcyR/qPOdyxizNClA12g==}
     engines: {node: '>=14.*'}
     cpu: [x64]
     os: [linux]
@@ -260,8 +257,8 @@ packages:
     dev: true
     optional: true
 
-  /@biomejs/cli-win32-arm64@1.5.2:
-    resolution: {integrity: sha512-DN4cXSAoFTdjOoh7f+JITj1uQgQSXt+1pVea9bFrpbgip+ZwkONqQq+jUcmFMMehbp9LuiVtNXFz/ReHn6FY7A==}
+  /@biomejs/cli-win32-arm64@1.5.3-nightly.24fcf19:
+    resolution: {integrity: sha512-n2jU38xM1R3/zMxLn7F+u6vUfubqf5YsogNVNIeYgzAN6g/0HGlLFQGLXrtZ0OQ16DkWhUpzGerugKobuvbTFw==}
     engines: {node: '>=14.*'}
     cpu: [arm64]
     os: [win32]
@@ -269,8 +266,8 @@ packages:
     dev: true
     optional: true
 
-  /@biomejs/cli-win32-x64@1.5.2:
-    resolution: {integrity: sha512-YvWWXZmk936FdrXqc2jcP6rfsXsNBIs9MKBQQoVXIihwNNRiAaBD9Iwa/ouU1b7Zxq2zETgeuRewVJickFuVOw==}
+  /@biomejs/cli-win32-x64@1.5.3-nightly.24fcf19:
+    resolution: {integrity: sha512-xjzcYWyRpUEurciofrw6QelpSWa3I4Dws3qVjzvm8yn2x7r6y6uaYqwbnBgNpXVP0RLTQp+BDzuWEA/ERXMaTw==}
     engines: {node: '>=14.*'}
     cpu: [x64]
     os: [win32]
@@ -4022,17 +4019,6 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: false
 
-  /eslint-plugin-tailwindcss@3.12.1(tailwindcss@3.4.0):
-    resolution: {integrity: sha512-LyIRV0rx6prTpJZsSCXSNJ34Yry3Nj9OJwvzh1xTsiG6+UCnAPW1Bx41s7vZzUDKMlwFgpUN9Me+NK12T4DHYg==}
-    engines: {node: '>=12.13.0'}
-    peerDependencies:
-      tailwindcss: ^3.3.2
-    dependencies:
-      fast-glob: 3.2.12
-      postcss: 8.4.24
-      tailwindcss: 3.4.0
-    dev: false
-
   /eslint-plugin-unused-imports@3.0.0(@typescript-eslint/eslint-plugin@6.16.0)(eslint@8.56.0):
     resolution: {integrity: sha512-sduiswLJfZHeeBJ+MQaG+xYzSWdRXoSw61DpU13mzWumCkR0ufD0HmO4kdNokjrkluMHpj/7PJeN35pgbhW3kw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -6669,6 +6655,7 @@ packages:
     resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+    dev: true
 
   /nanoid@3.3.7:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
@@ -7381,6 +7368,7 @@ packages:
       nanoid: 3.3.6
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: true
 
   /postcss@8.4.31:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}

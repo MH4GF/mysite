@@ -8,7 +8,7 @@ export default function Page() {
 
   return (
     <main>
-      <h1 className="text-3xl font-bold sm:text-5xl">Testing Markdown Renderer</h1>
+      <h1 className="font-bold text-3xl sm:text-5xl">Testing Markdown Renderer</h1>
       <MarkdownContent filePath={filePath} handleNotFound={notFound} />
     </main>
   );

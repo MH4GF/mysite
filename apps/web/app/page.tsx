@@ -8,7 +8,7 @@ export default function Page() {
     <div className="grid gap-4 sm:gap-8">
       <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-8">
         <MyAvatar />
-        <h1 className="text-3xl font-bold sm:text-5xl">Hirotaka Miyagi</h1>
+        <h1 className="font-bold text-3xl sm:text-5xl">Hirotaka Miyagi</h1>
       </div>
       <p>I'm a software engineer based in Tokyo, Japan.</p>
       <div className="flex gap-2 sm:gap-4">

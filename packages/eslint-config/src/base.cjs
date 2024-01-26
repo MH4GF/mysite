@@ -1,7 +1,7 @@
 /** @type {import('eslint/lib/shared/types').ConfigData} */
 module.exports = {
   plugins: ["import-access"],
-  extends: ["@mh4gf/eslint-config", "plugin:tailwindcss/recommended"],
+  extends: ["@mh4gf/eslint-config"],
   parserOptions: { project: "./tsconfig.json" },
   settings: {
     "import/resolver": {

@@ -19,7 +19,7 @@ export default function Page({ params: { tag: _tag } }: Props) {
 
   return (
     <div className="grid gap-8">
-      <h1 className="flex items-center gap-2 text-3xl font-bold">
+      <h1 className="flex items-center gap-2 font-bold text-3xl">
         <span>Articles - {label}</span>
       </h1>
       <ArticleList tag={tag} />
