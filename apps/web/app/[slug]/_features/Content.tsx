@@ -7,7 +7,7 @@ interface Props {
 }
 
 export const Content = ({ slug, handleNotFound }: Props): JSX.Element => {
-  const about = allAbouts.find((about) => about.url === `/${slug}`);
+  const about = allAbouts.find((about) => about.href === `/${slug}`);
   if (!about) {
     handleNotFound();
     return <></>;
