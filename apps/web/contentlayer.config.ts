@@ -27,6 +27,7 @@ export const Article = defineDocumentType(() => ({
   },
   computedFields: {
     href: { type: "string", resolve: (article) => `/${article._raw.flattenedPath}` },
+    externalLink: { type: "boolean", resolve: () => false },
   },
 }));
 

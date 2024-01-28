@@ -1,25 +1,11 @@
 {
   "articles": [
     {
-      "title": "2023年の振り返り",
-      "publishedAt": "2024/01/17",
-      "externalLink": false,
-      "href": "/articles/2023-summary",
-      "tags": ["dev", "life"]
-    },
-    {
       "title": "@storybook/testing-libraryのconfigure()はpreview.jsで呼び出す",
       "publishedAt": "2024/01/11",
       "externalLink": true,
       "href": "https://zenn.dev/route06/articles/5a505fd0f471ab",
       "tags": ["zenn"]
-    },
-    {
-      "title": "Next.js App RouterでView Transitions APIの活用",
-      "publishedAt": "2024/01/08",
-      "externalLink": false,
-      "href": "/articles/view-transitions-api",
-      "tags": ["dev"]
     },
     {
       "title": "VSCodeで閲覧しているファイルから、GitHubのコミット内のパーマリンクを取得する",
@@ -41,13 +27,6 @@
       "externalLink": true,
       "href": "https://zenn.dev/route06/articles/codeowners-specify-different-owner",
       "tags": ["zenn"]
-    },
-    {
-      "title": "github-nippou の Web 版を App Router + Go + Vercel で作った",
-      "publishedAt": "2023/12/07",
-      "externalLink": false,
-      "href": "/articles/github-nippou-web",
-      "tags": ["dev"]
     },
     {
       "title": "学習しながらアーキテクチャを進化させていくためのモノレポ",
@@ -78,27 +57,6 @@
       "tags": ["route06-tech-blog"]
     },
     {
-      "title": "2023 年 7 月にできた OSS コントリビュート",
-      "publishedAt": "2023/08/07",
-      "externalLink": false,
-      "href": "/articles/2023-7-oss-contributions",
-      "tags": ["dev"]
-    },
-    {
-      "title": "2023/7/9 キャリアの指向性(脳内メモ)",
-      "publishedAt": "2023/07/9",
-      "externalLink": false,
-      "href": "/articles/2023-7-9-thinking-in-career",
-      "tags": ["dev", "life"]
-    },
-    {
-      "title": "2023/2/17 キャリアの指向性(脳内メモ)",
-      "publishedAt": "2023/02/17",
-      "externalLink": false,
-      "href": "/articles/2023-2-17-thinking-in-career",
-      "tags": ["dev", "life"]
-    },
-    {
       "title": "StoryBook v7.0 へのアップデートで非推奨になった型",
       "href": "https://zenn.dev/route06/articles/storybook-v7-deprecations",
       "externalLink": true,
@@ -111,13 +69,6 @@
       "externalLink": true,
       "publishedAt": "2023/6/30",
       "tags": ["route06-tech-blog"]
-    },
-    {
-      "title": "ブログを Next.js App Router で構築し直した感想",
-      "publishedAt": "2023/06/21",
-      "externalLink": false,
-      "href": "/articles/rebuild-with-app-router",
-      "tags": ["dev"]
     },
     {
       "title": "GitHub Actionsで実行するstorycap / reg-suit の高速化",
@@ -148,25 +99,11 @@
       "tags": ["zenn"]
     },
     {
-      "title": "2022年の振り返り 技術と仕事と生活",
-      "publishedAt": "2022/12/31",
-      "externalLink": false,
-      "href": "/articles/2022-summary",
-      "tags": ["dev", "life"]
-    },
-    {
       "title": "Next.js上のGraphQLクライアントから秘匿情報を安全に扱いつつAPIリクエストを行う",
       "publishedAt": "2022/12/10",
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/urql-client-working-with-credential-in-nextjs",
       "tags": ["zenn"]
-    },
-    {
-      "title": "Kaigi on Rails 2022に参加・登壇しました",
-      "publishedAt": "2022/11/10",
-      "externalLink": false,
-      "href": "/articles/kaigi-on-rails-2022",
-      "tags": ["dev"]
     },
     {
       "title": "Rails+Next.jsでGraphQLを導入する時に考えたこと",
@@ -209,13 +146,6 @@
       "externalLink": true,
       "href": "https://zenn.dev/mh4gf/articles/12fcdcba14e576",
       "tags": ["zenn"]
-    },
-    {
-      "title": "GitHub CLIでよく使うコマンド",
-      "href": "/articles/frequently-used-gh-commands",
-      "externalLink": false,
-      "publishedAt": "2022/6/19",
-      "tags": ["dev"]
     },
     {
       "title": "フリーランスエンジニアになって半年が経った",

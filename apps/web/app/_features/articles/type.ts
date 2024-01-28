@@ -24,9 +24,7 @@ const articleMetaSchema = z.object({
   tags: z.array(tagsSchema),
 });
 
-export const articlesMetaSchema = z.object({
-  articles: z.array(articleMetaSchema),
-});
+export const articlesMetaSchema = z.array(articleMetaSchema);
 
 /**
  * NOTE: nextのRoute型をzodで定義できなさそうなので別で定義
