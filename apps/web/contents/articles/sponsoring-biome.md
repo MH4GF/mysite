@@ -56,13 +56,11 @@ https://github.com/biomejs/biome/pull/1272
 
 ESLint や Prettier を Biome 一つに置き換えられると理想ですが、自分のユースケースでは現状全てを代替することはできていません。
 
-Prettier は取り急ぎアンインストールし Biome に置き換えて運用しています。ただ Prettier を使っている時は[prettier-plugin-packagejson](https://www.npmjs.com/package/prettier-plugin-packagejson)というプラグインを好んで使っていましたが、これは Biome ではサポートされていません。好みの問題でありそこまで大きな問題ではないので、ここについては気にしていません。
-
-また、Markdown や CSS などサポートされていない言語もまだまだ多いです。これらのファイルをフォーマットしたい時は、 Prettier の VSCode 拡張でフォーマットする形でお茶を濁しています。
+Prettier は取り急ぎアンインストールし Biome に置き換えて運用できていますが、Markdown や CSS などサポートされていない言語もまだまだ多いです。これらのファイルをフォーマットしたい時は、 Prettier の VSCode 拡張でフォーマットする形でお茶を濁しています。
 
 ESLint については利用したいルールがまだ Biome に移植されていないことも多いので、現状は併用する形で運用しています。Biome のアップデートに伴いルールが追加されていくため、それらを見つつ ESLint 側で無効化したりしています。
 
-ただ、上記で挙げた言語サポート、プラグイン機構、ルールの移植については、 Biome のロードマップで取り上げられています。
+上記で挙げた言語サポート・プラグイン機構・ルールの移植については、 全て Biome のロードマップで取り上げられています。
 
 https://biomejs.dev/blog/roadmap-2024/
 
