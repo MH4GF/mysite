@@ -44,6 +44,10 @@ Fixed 93 file(s) in 14ms
 Formatted 93 file(s) in 15ms
 ```
 
+まだ Experimental のルールですが、tailwindcss クラスのソートを行うルールがリリースされたため早速有効化したりもしています。
+
+https://github.com/MH4GF/mysite/pull/140
+
 細かいドキュメントの修正 PR も出したことがありました。
 
 https://github.com/biomejs/biome/pull/1272
@@ -52,11 +56,11 @@ https://github.com/biomejs/biome/pull/1272
 
 ESLint や Prettier を Biome 一つに置き換えられると理想ですが、自分のユースケースでは現状全てを代替することはできていません。
 
-Prettier は取り急ぎアンインストールし Biome に置き換えて運用しています。ただ Prettier を使っている時は[prettier-plugin-packagejson](https://www.npmjs.com/package/prettier-plugin-packagejson)というプラグインを好んで使っていましたが、これは Biome ではサポートされていません([issue は立っています](https://github.com/biomejs/biome/issues/1668))。好みの問題でありそこまで大きな問題ではないので、ここについては気にしていません。
+Prettier は取り急ぎアンインストールし Biome に置き換えて運用しています。ただ Prettier を使っている時は[prettier-plugin-packagejson](https://www.npmjs.com/package/prettier-plugin-packagejson)というプラグインを好んで使っていましたが、これは Biome ではサポートされていません。好みの問題でありそこまで大きな問題ではないので、ここについては気にしていません。
 
 また、Markdown や CSS などサポートされていない言語もまだまだ多いです。これらのファイルをフォーマットしたい時は、 Prettier の VSCode 拡張でフォーマットする形でお茶を濁しています。
 
-ESLint は利用したいルールがまだ Biome に移植されていないことも多いので、現状は併用する形で運用しています。Biome のアップデートに伴いルールが追加されていくため、それらを見つつ ESLint 側で無効化したりしています。
+ESLint については利用したいルールがまだ Biome に移植されていないことも多いので、現状は併用する形で運用しています。Biome のアップデートに伴いルールが追加されていくため、それらを見つつ ESLint 側で無効化したりしています。
 
 ただ、上記で挙げた言語サポート、プラグイン機構、ルールの移植については、 Biome のロードマップで取り上げられています。
 
