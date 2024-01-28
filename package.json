@@ -11,7 +11,7 @@
     "lint:biome": "biome check .",
     "lint": "run-s -c lint:*",
     "format:biome-format": "biome format . --write",
-    "format:biome-check": "biome check . --apply",
+    "format:biome-check": "biome check . --apply-unsafe",
     "format": "run-p -c format:*",
     "scaffold": "scaffdog generate"
   },
