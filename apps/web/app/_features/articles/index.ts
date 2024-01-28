@@ -12,3 +12,5 @@ export { tagList, tagsSchema } from "./type";
 export { tagLabelMap } from "./constants";
 /** @public */
 export { ArticleList } from "./ArticleList";
+/** @public */
+export { TableOfContents } from "./toc";
