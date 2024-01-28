@@ -31,6 +31,7 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
           <h2
             id={labelledBy}
             className="overflow-hidden text-ellipsis whitespace-nowrap font-bold text-base"
+            data-ignore-toc
           >
             {title}
           </h2>
