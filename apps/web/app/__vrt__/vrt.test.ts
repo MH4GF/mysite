@@ -1,6 +1,13 @@
 import type { Page, TestInfo } from "@playwright/test";
 import { test } from "@playwright/test";
 
+const waitForPageReady = async (page: Page) => {
+  await page.waitForLoadState("domcontentloaded");
+  await page.waitForLoadState("load");
+  await page.waitForLoadState("networkidle");
+  await page.evaluate(() => document.fonts.ready);
+};
+
 const screenshot = async (
   page: Page,
   testInfo: TestInfo,
@@ -8,11 +15,12 @@ const screenshot = async (
   colorMode: "light" | "dark",
 ) => {
   await page.goto(targetPage.path);
-  await page.waitForLoadState("networkidle");
 
   if (colorMode === "dark") {
     await page.getByRole("button", { name: "Toggle dark mode" }).click();
   }
+
+  await waitForPageReady(page);
 
   await page.screenshot({
     fullPage: true,
