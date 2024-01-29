@@ -12,7 +12,7 @@ import { unified } from "unified";
 
 import { UniversalLink } from "../../_components";
 
-import { Paragraph } from "./elements";
+import { Blockquote, Paragraph } from "./elements";
 
 const Link = (props: ComponentProps<typeof UniversalLink>) => {
   return <UniversalLink {...props} isEnabledUnderline />;
@@ -42,5 +42,6 @@ export const processor = unified()
     components: {
       p: Paragraph,
       a: Link,
+      blockquote: Blockquote,
     },
   });
