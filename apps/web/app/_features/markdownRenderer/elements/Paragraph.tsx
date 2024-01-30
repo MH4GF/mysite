@@ -31,5 +31,9 @@ export const Paragraph = ({ children }: Props) => {
   if (maybeUrl === null) return <p>{children}</p>;
 
   // TODO: RichLinkCardをelements以下に移動する
-  return <RichLinkCard url={maybeUrl} />;
+  return (
+    <div className="not-prose my-5">
+      <RichLinkCard url={maybeUrl} />
+    </div>
+  );
 };
