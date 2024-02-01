@@ -52,7 +52,7 @@ const targetPages: TargetPage[] = [
   },
   {
     name: "testing-markdown-renderer",
-    path: "/dev/testing-markdown-renderer",
+    path: "/articles/testing-markdown-renderer",
   },
 ];
 
