@@ -8,6 +8,7 @@ import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
+import { transformerNotationDiff } from "shikiji-transformers";
 import { unified } from "unified";
 
 import { UniversalLink } from "../../_components";
@@ -33,6 +34,7 @@ export const processor = unified()
   .use(rehypePrettyCode, {
     keepBackground: false,
     theme: "github-dark-dimmed",
+    transformers: [transformerNotationDiff()],
   })
   // @ts-expect-error ... rehypePrettyCode is not typed correctly
   .use(rehypeRaw)

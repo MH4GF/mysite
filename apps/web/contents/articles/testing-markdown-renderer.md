@@ -106,3 +106,12 @@ def hello
   puts "Hello, world!"
 end
 ```
+
+### Diff
+
+```js
+const hello = () => { // [!code --]
+const hello = () => { // [!code ++]
+  console.log("Hello, world!");
+};
+```
