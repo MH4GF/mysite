@@ -24,5 +24,11 @@ export const generateStaticParams = (): Params[] =>
 export const generateMetadata = ({ params }: Props): Metadata => {
   const article = getArticle(`/articles/${params.slug}`);
   const title = article?.title ?? "";
-  return { title, openGraph: { title }, twitter: { title } };
+  const description = article?.description ?? "";
+  return {
+    title,
+    description,
+    openGraph: { title, description },
+    twitter: { title, description },
+  };
 };
