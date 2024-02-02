@@ -1,5 +1,6 @@
 ---
 title: Kaigi on Rails 2022に参加・登壇しました
+description: Kaigi on Rails 2022 に参加し、「sassc-rails を利用している我々は、Sass の@import の非推奨化をどのように乗り越えていくか」というテーマで登壇しました。
 publishedAt: 2022-11-10
 tags:
   - dev

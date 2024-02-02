@@ -1,5 +1,6 @@
 ---
 title: GitHub CLIでよく使うコマンド
+description: GitHub CLI を便利に使っている。基本的に GitHub の操作の起点は CLI からにしていて、現時点での自身の利用コマンドをまとめてみる。
 publishedAt: 2022-6-19
 tags:
   - dev

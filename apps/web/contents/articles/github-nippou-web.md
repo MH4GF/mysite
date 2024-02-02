@@ -1,5 +1,6 @@
 ---
 title: github-nippou の Web 版を App Router + Go + Vercel で作った
+description: GitHub アカウントでログインし実行すると、その日の GitHub での活動をマークダウンのリスト形式で出力する Web サイトを作りました。
 publishedAt: 2023-12-07
 tags:
   - dev
