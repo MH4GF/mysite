@@ -32,7 +32,7 @@ export const processor = unified()
   })
   .use(rehypePrettyCode, {
     keepBackground: false,
-    theme: "catppuccin-frappe",
+    theme: "github-dark-dimmed",
   })
   // @ts-expect-error ... rehypePrettyCode is not typed correctly
   .use(rehypeRaw)
