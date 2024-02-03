@@ -5,6 +5,7 @@ export const Article = defineDocumentType(() => ({
   filePathPattern: "articles/*.md",
   fields: {
     title: { type: "string", required: true },
+    description: { type: "string", required: true },
     publishedAt: { type: "date", required: true },
     tags: {
       type: "list",

@@ -1,5 +1,6 @@
 ---
 title: Biomeの個人スポンサーになった
+description: Biome の個人スポンサーになりました。月 5 ドルの tier で支援しています。
 publishedAt: 2024-01-28
 tags:
   - dev

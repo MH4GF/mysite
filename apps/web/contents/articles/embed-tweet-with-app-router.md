@@ -1,5 +1,6 @@
 ---
 title: Next.js App Router製ブログサイトでのツイートの埋め込み
+description: このブログサイトでツイートの埋め込みをサポートしました。ツイートの埋め込みについてはウェブ上での情報量も多く枯れている内容かと思いきや、意外と考えることがあったため Next.js App Router での埋め込みについてまとめます。
 publishedAt: 2024-2-2
 tags:
   - dev
