@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "GraphQL成熟度モデルをROUTE06のtoBプロダクトに当てはめてみる",
+      "publishedAt": "2024/01/29",
+      "externalLink": true,
+      "href": "https://tech.route06.co.jp/entry/2024/01/29/120647",
+      "tags": ["route06-tech-blog"]
+    },
+    {
       "title": "@storybook/testing-libraryのconfigure()はpreview.jsで呼び出す",
       "publishedAt": "2024/01/11",
       "externalLink": true,
