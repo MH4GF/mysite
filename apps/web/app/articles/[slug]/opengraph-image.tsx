@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
 
+import { tagLabelMap } from "../../_features/articles/constants";
 import { getArticle } from "../../_features/articles/getArticle";
 
 export const runtime = "edge";
@@ -68,8 +69,18 @@ export default async function Image({ params }: Props) {
         alt="Background"
         tw="absolute inset-0"
       />
-      <div tw="w-full h-full p-12 text-6xl text-zinc-100 font-extrabold flex items-center justify-center">
-        {article.title}
+      <div tw="p-12 text-zinc-300 flex flex-col w-full h-full">
+        <h1 tw="text-6xl font-bold">{article.title}</h1>
+        <div tw="flex">
+          {article.tags.map((tag) => (
+            <span
+              tw="rounded-sm border border-zinc-300 px-2 py-1 mr-2 text-lg text-zinc-300"
+              key={tag}
+            >
+              {tagLabelMap[tag]}
+            </span>
+          ))}
+        </div>
       </div>
     </div>,
     {
