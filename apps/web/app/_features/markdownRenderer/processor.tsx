@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ComponentProps } from "react";
 import { createElement } from "react";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -17,6 +18,10 @@ import { Blockquote, Paragraph } from "./elements";
 
 const Link = (props: ComponentProps<typeof UniversalLink>) => {
   return <UniversalLink {...props} isEnabledUnderline />;
+};
+
+const Img = (props: ComponentProps<typeof Image>) => {
+  return <Image {...props} width="840" height="472" />;
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
@@ -45,5 +50,6 @@ export const processor = unified()
       p: Paragraph,
       a: Link,
       blockquote: Blockquote,
+      img: Img,
     },
   });
