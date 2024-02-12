@@ -15,9 +15,9 @@ export const size = {
 export const contentType = "image/png";
 
 // https://github.com/vercel/satori/blob/2e8dcb486f3dadeb6fc2e8790cb822a72893a21a/playground/pages/api/font.ts#L86-L111
-const fetchFont = async () => {
+const fetchFont = async (fontSource: string) => {
   const css = await (
-    await fetch("https://fonts.googleapis.com/css2?family=Inter:wght@900", {
+    await fetch(fontSource, {
       headers: {
         // Make sure it returns TTF.
         "User-Agent":
@@ -35,6 +35,39 @@ const fetchFont = async () => {
   return res.arrayBuffer();
 };
 
+const fontENSource = "https://fonts.googleapis.com/css2?family=Open+Sans:wght@700";
+const fontJPSource = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@700";
+
+type FontOptions = {
+  name: string;
+  data: ArrayBuffer;
+  style: "normal";
+  weight: 700;
+};
+
+const generateFonts = async (): Promise<FontOptions[] | null> => {
+  const [fontENData, fontJPData] = await Promise.all([
+    fetchFont(fontENSource),
+    fetchFont(fontJPSource),
+  ]);
+  if (!(fontENData && fontJPData)) return null;
+
+  return [
+    {
+      name: "Open Sans",
+      data: fontENData,
+      style: "normal",
+      weight: 700,
+    },
+    {
+      name: "IBM Plex Sans JP",
+      data: fontJPData,
+      style: "normal",
+      weight: 700,
+    },
+  ];
+};
+
 type Props = {
   params: {
     slug: string;
@@ -48,8 +81,8 @@ export default async function Image({ params }: Props) {
   const imageData = fetch(new URL("./_assets/og-image-base.jpg", import.meta.url)).then((res) =>
     res.arrayBuffer(),
   );
-  const fontData = await fetchFont();
-  if (!fontData) return new Response("Error", { status: 500 });
+  const fonts = await generateFonts();
+  if (!fonts) return new Response("Error", { status: 500 });
 
   return new ImageResponse(
     <div
@@ -70,11 +103,11 @@ export default async function Image({ params }: Props) {
         tw="absolute inset-0"
       />
       <div tw="p-12 text-zinc-300 flex flex-col w-full h-full">
-        <h1 tw="text-6xl font-bold">{article.title}</h1>
+        <h1 tw="text-6xl leading-normal font-bold">{article.title}</h1>
         <div tw="flex">
           {article.tags.map((tag) => (
             <span
-              tw="rounded-sm border border-zinc-300 px-2 py-1 mr-2 text-lg text-zinc-300"
+              tw="rounded-sm border border-zinc-500 px-2 py-1 mr-2 text-lg text-zinc-500"
               key={tag}
             >
               {tagLabelMap[tag]}
@@ -85,14 +118,7 @@ export default async function Image({ params }: Props) {
     </div>,
     {
       ...size,
-      fonts: [
-        {
-          name: "Inter",
-          data: fontData,
-          style: "normal",
-          weight: 700,
-        },
-      ],
+      fonts,
     },
   );
 }
