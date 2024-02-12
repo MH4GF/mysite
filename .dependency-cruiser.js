@@ -44,7 +44,7 @@ module.exports = {
       from: {
         pathNot: [
           ".next", // generated files
-        ]
+        ],
       },
       to: {
         dependencyTypes: ["core"],
