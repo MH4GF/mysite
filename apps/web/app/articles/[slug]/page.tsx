@@ -29,6 +29,6 @@ export const generateMetadata = ({ params }: Props): Metadata => {
     title,
     description,
     openGraph: { title, description },
-    twitter: { title, description },
+    twitter: { title, description, card: "summary_large_image" },
   };
 };
