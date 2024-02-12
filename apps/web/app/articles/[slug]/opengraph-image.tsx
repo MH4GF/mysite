@@ -13,6 +13,27 @@ export const size = {
 
 export const contentType = "image/png";
 
+// https://github.com/vercel/satori/blob/2e8dcb486f3dadeb6fc2e8790cb822a72893a21a/playground/pages/api/font.ts#L86-L111
+const fetchFont = async () => {
+  const css = await (
+    await fetch("https://fonts.googleapis.com/css2?family=Inter:wght@900", {
+      headers: {
+        // Make sure it returns TTF.
+        "User-Agent":
+          "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; de-at) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1",
+      },
+    })
+  ).text();
+
+  const resource = css.match(/src: url\((.+)\) format\('(opentype|truetype)'\)/);
+
+  if (!resource?.[1]) return null;
+
+  const res = await fetch(resource[1]);
+
+  return res.arrayBuffer();
+};
+
 type Props = {
   params: {
     slug: string;
@@ -26,9 +47,8 @@ export default async function Image({ params }: Props) {
   const imageData = fetch(new URL("./assets/og-image-base.png", import.meta.url)).then((res) =>
     res.arrayBuffer(),
   );
-  const fontData = fetch(new URL("./assets/Inter-Bold.ttf", import.meta.url)).then((res) =>
-    res.arrayBuffer(),
-  );
+  const fontData = await fetchFont();
+  if (!fontData) return new Response("Error", { status: 500 });
 
   return new ImageResponse(
     <div
@@ -57,7 +77,7 @@ export default async function Image({ params }: Props) {
       fonts: [
         {
           name: "Inter",
-          data: await fontData,
+          data: fontData,
           style: "normal",
           weight: 700,
         },
