@@ -28,7 +28,7 @@ https://github.com/masutaka/github-nippou
 
 機能は少ないですが、必要なものは揃っています。GitHub アカウントでログインし、Run ボタンを押すだけです。
 
-![screenshot](https://raw.githubusercontent.com/MH4GF/github-nippou-web/main/docs/screenshot.png)
+![screenshot](/images/github-nippou-web/1.png)
 
 本家 github-nippou と同様に、設定を記載した Gist ID を指定することで出力フォーマットのカスタマイズも可能です。
 
