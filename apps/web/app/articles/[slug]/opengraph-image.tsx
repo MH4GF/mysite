@@ -44,7 +44,7 @@ export default async function Image({ params }: Props) {
   const article = getArticle(`/articles/${params.slug}`);
   if (!article) return new Response("Not Found", { status: 404 });
 
-  const imageData = fetch(new URL("./_assets/og-image-base.png", import.meta.url)).then((res) =>
+  const imageData = fetch(new URL("./_assets/og-image-base.jpg", import.meta.url)).then((res) =>
     res.arrayBuffer(),
   );
   const fontData = await fetchFont();
