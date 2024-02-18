@@ -117,7 +117,7 @@ mdn/translated-content, biomejs/biome, kuma-ui/kuma-ui, masutaka/github-nippou, 
 
 2023 年は 19 件の記事を書きました。2022 年は 14 件なので微増しています。
 
-https://www.mh4gf.dev/articles
+https://mh4gf.dev/articles
 
 記事を書くことはかなりレバレッジの効く活動だと改めて感じています。自身のブランディングという側面ももちろんありますが、記事に起こす際に情報を整理する過程でより良い解決策が見つかることもあり、学習が大きく進むことを実感しています。  
 2024年は意識して記事の公開回数を増やしていきたいと思っています。
