@@ -30,27 +30,27 @@ https://www.bilibili.com/video/BV1oP411Y7Nr/
 
 ### 組み立て中の写真
 
-![](/images/tps40/6.JPG)
+![](/images/tps40/6.jpg)
 
 ボトムケース。これがかなり重い。
 
-![](/images/tps40/7.JPG)
+![](/images/tps40/7.jpg)
 
 六角形の溝にクッションシールを貼っていく
 
-![](/images/tps40/8.JPG)
+![](/images/tps40/8.jpg)
 
 おそらく「Titanium stonewash shrapnel」と呼ばれているもの。同梱されている IKEA の説明のような図ではこのパーツについての説明がされていて、PLANCK と DAISY でねじ止めする場所が違うので注意。
 
-TODO: 説明図を貼る
+![](/images/tps40/11.jpg)
 
 この図だけではなんのこっちゃとなるので、動画と見比べながら止めていく。
 
-![](/images/tps40/9.JPG)
+![](/images/tps40/9.jpg)
 
 溝に乗せたところ。TPS40 はカスタムキーボードでよくあるガスケットマウント方式とのことで、これは PCB を固定せず、クッションで沈み込ませることでタイピング時の底打ち感を抑えることができるとのこと。
 
-![](/images/tps40/10.JPG)
+![](/images/tps40/10.jpg)
 
 PCB やトッププレートを乗せたところ。
 
