@@ -7,6 +7,7 @@ export const Article = defineDocumentType(() => ({
     title: { type: "string", required: true },
     description: { type: "string", required: true },
     publishedAt: { type: "date", required: true },
+    headingImage: { type: "string", required: false },
     tags: {
       type: "list",
       of: {
