@@ -8,5 +8,6 @@ export const tagLabelMap: Record<TagEnum, string> = {
   note: "note",
   dev: "Dev",
   life: "Life",
+  gadget: "Gadget",
   "speaker-deck": "Speaker Deck",
 };
