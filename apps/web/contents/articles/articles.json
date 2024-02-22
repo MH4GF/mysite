@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "Playwright で一番小さく始める VRT と、次のステップの選択肢",
+      "href": "https://speakerdeck.com/mh4gf/playwright-de-fan-xiao-sakushi-meru-vrt-to-ci-nosutetupunoxuan-ze-zhi",
+      "externalLink": true,
+      "publishedAt": "2024/02/21",
+      "tags": ["speaker-deck"]
+    },
+    {
       "title": "GraphQL成熟度モデルをROUTE06のtoBプロダクトに当てはめてみる",
       "publishedAt": "2024/01/29",
       "externalLink": true,
