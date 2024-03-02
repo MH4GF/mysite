@@ -63,8 +63,8 @@ importers:
         specifier: 9.0.0
         version: 9.0.0
       rehype-pretty-code:
-        specifier: 0.12.3
-        version: 0.12.3(shikiji@0.9.17)
+        specifier: 0.13.0
+        version: 0.13.0(shiki@1.1.7)
       rehype-raw:
         specifier: 7.0.0
         version: 7.0.0
@@ -75,8 +75,8 @@ importers:
         specifier: 6.0.0
         version: 6.0.0
       remark-gfm:
-        specifier: 3.0.0
-        version: 3.0.0
+        specifier: 3.0.1
+        version: 3.0.1
       remark-parse:
         specifier: 10.0.2
         version: 10.0.2
@@ -96,7 +96,7 @@ importers:
         specifier: 4.25.0
         version: 4.25.0
       unified:
-        specifier: ^10.1.2
+        specifier: 10.1.2
         version: 10.1.2
       zod:
         specifier: 3.22.4
@@ -1737,6 +1737,10 @@ packages:
       type-fest: 3.13.1
     dev: true
 
+  /@shikijs/core@1.1.7:
+    resolution: {integrity: sha512-gTYLUIuD1UbZp/11qozD3fWpUTuMqPSf3svDMMrL0UmlGU7D9dPw/V1FonwAorCUJBltaaESxq90jrSjQyGixg==}
+    dev: false
+
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
@@ -1828,6 +1832,12 @@ packages:
 
   /@types/hast@3.0.3:
     resolution: {integrity: sha512-2fYGlaDy/qyLlhidX42wAH0KBi2TCjKMH8CHmBXgRlJ3Y+OXTiqsPQ6IWarZKwF1JoUcAJdPogv1d4b0COTpmQ==}
+    dependencies:
+      '@types/unist': 3.0.2
+    dev: false
+
+  /@types/hast@3.0.4:
+    resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
     dependencies:
       '@types/unist': 3.0.2
     dev: false
@@ -4447,7 +4457,7 @@ packages:
   /hast-util-to-string@3.0.0:
     resolution: {integrity: sha512-OGkAxX1Ua3cbcW6EJ5pT/tslVb90uViVkcJ4ZZIMW/R33DX/AkcJcRrPebPwJkHYwlDHXz4aIwvAAaAdtrACFA==}
     dependencies:
-      '@types/hast': 3.0.3
+      '@types/hast': 3.0.4
     dev: false
 
   /hast-util-whitespace@2.0.1:
@@ -6964,17 +6974,17 @@ packages:
       unified: 11.0.4
     dev: false
 
-  /rehype-pretty-code@0.12.3(shikiji@0.9.17):
-    resolution: {integrity: sha512-6NbIit8A3hLrkKBEbNs862jVnTLeIOM2AmM0VZ/MtyHb+OuNMeCa6UZSx6UG4zrobm5tY9efTwhih1exsGYsiw==}
+  /rehype-pretty-code@0.13.0(shiki@1.1.7):
+    resolution: {integrity: sha512-+22dz1StXlF7dlMyOySNaVxgcGhMI4BCxq0JxJJPWYGiKsI6cu5jyuIKGHXHvH18D8sv1rdKtvsY9UEfN3++SQ==}
     engines: {node: '>=18'}
     peerDependencies:
-      shikiji: ^0.7.0 || ^0.8.0 || ^0.9.0
+      shiki: ^1.0.0
     dependencies:
-      '@types/hast': 3.0.3
+      '@types/hast': 3.0.4
       hast-util-to-string: 3.0.0
       parse-numeric-range: 1.3.0
       rehype-parse: 9.0.0
-      shikiji: 0.9.17
+      shiki: 1.1.7
       unified: 11.0.4
       unist-util-visit: 5.0.0
     dev: false
@@ -7027,8 +7037,8 @@ packages:
       unified: 10.1.2
     dev: false
 
-  /remark-gfm@3.0.0:
-    resolution: {integrity: sha512-CXJw5h1iwUW6czFwi4tveoOSlsEZU44hcdNzUxC5uiNi7r/OQySf46AoEihM8/NwBbW1LcsnyGIsHBnbURFw2g==}
+  /remark-gfm@3.0.1:
+    resolution: {integrity: sha512-lEFDoi2PICJyNrACFOfDD3JlLkuSbOa5Wd8EPt06HUdptv8Gn0bxYTdbU/XXQ3swAPkEaGxxPN9cbnMHvVu1Ig==}
     dependencies:
       '@types/mdast': 3.0.11
       mdast-util-gfm: 2.0.2
@@ -7389,6 +7399,12 @@ packages:
       interpret: 1.4.0
       rechoir: 0.6.2
     dev: true
+
+  /shiki@1.1.7:
+    resolution: {integrity: sha512-9kUTMjZtcPH3i7vHunA6EraTPpPOITYTdA5uMrvsJRexktqP0s7P3s9HVK80b4pP42FRVe03D7fT3NmJv2yYhw==}
+    dependencies:
+      '@shikijs/core': 1.1.7
+    dev: false
 
   /shikiji-core@0.10.2:
     resolution: {integrity: sha512-9Of8HMlF96usXJHmCL3Gd0Fcf0EcyJUF9m8EoAKKd98mHXi0La2AZl1h6PegSFGtiYcBDK/fLuKbDa1l16r1fA==}
