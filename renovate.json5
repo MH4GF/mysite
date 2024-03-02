@@ -9,7 +9,8 @@
   "packageRules": [
     {
       "groupName": "unified",
-      "matchPackageNames": ["unified", "rehype", "remark"]
+      "matchPackageNames": ["unified"],
+      "matchPackagePrefixes": ["unified", "rehype", "remark"]
     },
     {
       "groupName": "playwright",
