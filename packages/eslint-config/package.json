@@ -6,9 +6,9 @@
     "./*": "./src/*.cjs"
   },
   "dependencies": {
-    "@mh4gf/eslint-config": "^0.5.2",
-    "eslint-config-next": "^14.0.0",
-    "eslint-import-resolver-typescript": "^3.5.5"
+    "@mh4gf/eslint-config": "0.5.2",
+    "eslint-config-next": "14.0.4",
+    "eslint-import-resolver-typescript": "3.6.1"
   },
   "packageManager": "pnpm@8.14.1"
 }
