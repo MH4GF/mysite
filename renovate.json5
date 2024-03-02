@@ -14,8 +14,16 @@
       "matchPackagePrefixes": ["unified", "rehype", "remark"]
     },
     {
-      "groupName": "playwright",
-      "matchPackageNames": ["@playwright/test", "mcr.microsoft.com/playwright"]
+      "groupName": "test",
+      "matchPackageNames": [
+        "@playwright/test",
+        "mcr.microsoft.com/playwright",
+        "lost-pixel",
+        "lost-pixel/lost-pixel",
+        "msw",
+        "vitest",
+        ""
+      ]
     }
   ]
 }
