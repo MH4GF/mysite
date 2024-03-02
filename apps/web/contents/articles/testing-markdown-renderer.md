@@ -1,3 +1,11 @@
+---
+title: (internal) Testing Markdown Renderer
+description: Test the markdown renderer
+publishedAt: 2000-1-1
+tags:
+  - dev
+---
+
 ## 見出し
 
 ```
@@ -98,4 +106,13 @@ const hello = () => {
 def hello
   puts "Hello, world!"
 end
+```
+
+### Diff
+
+```js
+const hello = () => { // [!code --]
+const hello = () => { // [!code ++]
+  console.log("Hello, world!");
+};
 ```

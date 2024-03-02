@@ -1,5 +1,6 @@
 ---
 title: 2023 年 7 月にできた OSS コントリビュート
+description: 2023 年 7 月にできた OSS コントリビュートをまとめます
 publishedAt: 2023-08-07
 tags:
   - dev

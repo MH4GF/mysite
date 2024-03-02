@@ -10,8 +10,55 @@ figcaption[data-rehype-pretty-code-title] {
   background-color: var(--tw-prose-pre-bg);
 }
 
-figure[data-rehype-pretty-code-figure] >
-figcaption[data-rehype-pretty-code-title] + pre {
+figure[data-rehype-pretty-code-figure]
+  > figcaption[data-rehype-pretty-code-title]
+  + pre {
   margin-top: 0;
   border-top-left-radius: 0;
+}
+
+figure[data-rehype-pretty-code-figure] {
+  pre {
+    padding: 0;
+  }
+
+  code {
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    padding-left: 1.75em;
+    padding-right: 1.75em;
+  }
+
+  pre.has-diff {
+    position: relative;
+  }
+
+  .diff {
+    margin: 0 -24px;
+    padding: 0 24px;
+  }
+
+  .diff::before {
+    position: absolute;
+    left: 10px;
+  }
+
+  .diff.remove {
+    background-color: rgba(244, 63, 94, 0.16);
+    opacity: 0.7;
+  }
+
+  .diff.remove::before {
+    content: "-";
+    color: #cb7676;
+  }
+
+  .diff.add {
+    background-color: rgba(16, 185, 129, 0.16);
+  }
+
+  .diff.add::before {
+    content: "+";
+    color: #3dd68c;
+  }
 }

@@ -12,7 +12,7 @@ interface Props {
 export const ArticleShareButton = ({ article }: Props) => {
   const shareData: ShareData = {
     title: article.title,
-    url: new URL(article.url, baseUrl).toString(),
+    url: new URL(article.href, baseUrl).toString(),
     text: article.title,
   };
 

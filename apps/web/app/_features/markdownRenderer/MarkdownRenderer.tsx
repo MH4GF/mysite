@@ -1,4 +1,6 @@
 import { processor } from "./processor";
+import "./styles/autoLinkHeadings.css";
+import "./styles/syntaxHighlighting.css";
 
 interface Props {
   raw: string;

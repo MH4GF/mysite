@@ -21,7 +21,7 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
   }
 
   return (
-    <section className="not-prose my-5 h-24 w-full" aria-labelledby={labelledBy}>
+    <section className="h-24 w-full" aria-labelledby={labelledBy}>
       <UniversalLink
         href={url as Route}
         className="grid h-full grid-flow-row-dense grid-cols-4 overflow-hidden rounded-sm border"
@@ -31,6 +31,7 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
           <h2
             id={labelledBy}
             className="overflow-hidden text-ellipsis whitespace-nowrap font-bold text-base"
+            data-ignore-toc
           >
             {title}
           </h2>

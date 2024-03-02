@@ -10,6 +10,7 @@ export const tagList = [
   "dev",
   "life",
   "speaker-deck",
+  "gadget",
 ] as const;
 
 export const tagsSchema = z.enum(tagList);
@@ -24,9 +25,7 @@ const articleMetaSchema = z.object({
   tags: z.array(tagsSchema),
 });
 
-export const articlesMetaSchema = z.object({
-  articles: z.array(articleMetaSchema),
-});
+export const articlesMetaSchema = z.array(articleMetaSchema);
 
 /**
  * NOTE: nextのRoute型をzodで定義できなさそうなので別で定義

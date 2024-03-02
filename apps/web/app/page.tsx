@@ -1,16 +1,26 @@
 import type { Metadata } from "next";
 
 import { MyAvatar, SocialLink, UniversalLink } from "./_components";
+import { RichLinkCard } from "./_features/richLinkCard";
 import { siteInfo } from "./_utils";
 
 export default function Page() {
   return (
-    <div className="grid gap-4 sm:gap-8">
+    <div className="mx-auto grid gap-4 sm:gap-8">
       <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-8">
         <MyAvatar />
         <h1 className="font-bold text-3xl sm:text-5xl">Hirotaka Miyagi</h1>
       </div>
-      <p>I'm a software engineer based in Tokyo, Japan.</p>
+      <p>
+        Hey, I am Hirotaka Miyagi, a software engineer based in Tokyo, Japan.
+        <br />I am interested in Web, Developer Experience, Doing photography, and Drinking beer 🍻.
+        <br />
+        and I work in{" "}
+        <UniversalLink href="https://route06.co.jp/" isEnabledUnderline>
+          ROUTE06, inc
+        </UniversalLink>{" "}
+        now.
+      </p>
       <div className="flex gap-2 sm:gap-4">
         <SocialLink kind="twitter" />
         <SocialLink kind="github" />
@@ -37,6 +47,23 @@ export default function Page() {
           </UniversalLink>
         </li>
       </ul>
+      <div className="grid gap-2">
+        <h2 className="font-bold">Popular Articles</h2>
+        <ul className="grid gap-4 sm:grid-cols-2">
+          <li>
+            <RichLinkCard url={"https://tech.route06.co.jp/entry/2023/08/08/115253"} />
+          </li>
+          <li>
+            <RichLinkCard url={"https://zenn.dev/mh4gf/articles/graphql-codegen-client-preset"} />
+          </li>
+          <li>
+            <RichLinkCard url={"https://zenn.dev/mh4gf/articles/d25ef1ff30b5a6"} />
+          </li>
+          <li>
+            <RichLinkCard url={"https://tech.timee.co.jp/entry/2022/09/29/110000"} />
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

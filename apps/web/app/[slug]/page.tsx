@@ -17,10 +17,11 @@ export default function Page({ params }: Props) {
   return <Content {...params} handleNotFound={notFound} />;
 }
 
-export const generateStaticParams = (): Params[] => allAbouts.map((about) => ({ slug: about.url }));
+export const generateStaticParams = (): Params[] =>
+  allAbouts.map((about) => ({ slug: about.href }));
 
 export const generateMetadata = ({ params }: Props): Metadata => {
-  const title = allAbouts.find((about) => about.url === params.slug)?.title ?? "";
+  const title = allAbouts.find((about) => about.href === params.slug)?.title ?? "";
 
   return { title, openGraph: { title }, twitter: { title } };
 };

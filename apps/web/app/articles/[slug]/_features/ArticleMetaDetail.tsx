@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { Time } from "@/app/_components";
 import { Tag } from "@/app/_features";
 import { format } from "@/app/_utils";
@@ -8,12 +10,22 @@ interface Props {
 }
 
 export const ArticleMetaDetail = ({
-  article: { publishedAt: _publishedAt, title, tags },
+  article: { publishedAt: _publishedAt, title, tags, headingImage },
 }: Props) => {
   const publishedAt = format(new Date(_publishedAt));
 
   return (
     <div>
+      {headingImage && (
+        <Image
+          src={headingImage}
+          alt="Heading Image"
+          width="1120"
+          height="630"
+          className="mb-8"
+          priority
+        />
+      )}
       <h2 className="font-extrabold text-2xl">{title}</h2>
       <div className="my-6 flex justify-between">
         <div className="flex gap-2">

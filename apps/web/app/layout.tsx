@@ -66,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ColorModeScript />
         <TwitterWidgets />
         <main className="dark:bg-gradient-to-tr dark:from-zinc-700 dark:via-zinc-900 dark:to-zinc-800 dark:text-zinc-100">
-          <div className="mx-auto flex min-h-screen max-w-2xl flex-col gap-8 px-4 sm:px-0">
+          <div className="mx-auto flex min-h-screen max-w-6xl flex-col gap-8 px-4">
             <Header />
             {children}
           </div>

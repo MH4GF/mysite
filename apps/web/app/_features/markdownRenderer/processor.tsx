@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ComponentProps } from "react";
 import { createElement } from "react";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -8,14 +9,19 @@ import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
+import { transformerNotationDiff } from "shikiji-transformers";
 import { unified } from "unified";
 
 import { UniversalLink } from "../../_components";
 
-import { Paragraph } from "./elements";
+import { Blockquote, Paragraph } from "./elements";
 
 const Link = (props: ComponentProps<typeof UniversalLink>) => {
   return <UniversalLink {...props} isEnabledUnderline />;
+};
+
+const Img = (props: ComponentProps<typeof Image>) => {
+  return <Image {...props} width="840" height="472" />;
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
@@ -32,7 +38,8 @@ export const processor = unified()
   })
   .use(rehypePrettyCode, {
     keepBackground: false,
-    theme: "catppuccin-frappe",
+    theme: "github-dark-dimmed",
+    transformers: [transformerNotationDiff()],
   })
   // @ts-expect-error ... rehypePrettyCode is not typed correctly
   .use(rehypeRaw)
@@ -42,5 +49,7 @@ export const processor = unified()
     components: {
       p: Paragraph,
       a: Link,
+      blockquote: Blockquote,
+      img: Img,
     },
   });
