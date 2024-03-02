@@ -1,6 +1,13 @@
 {
   "articles": [
     {
+      "title": "to B プロダクトで Vite + React Router を採用して半年後の感想",
+      "href": "https://speakerdeck.com/mh4gf/impressions-after-6-months-of-using-vite-plus-react-router-e448b113-96f4-479a-adea-7d003e5d3fda",
+      "externalLink": true,
+      "publishedAt": "2024/02/21",
+      "tags": ["speaker-deck"]
+    },
+    {
       "title": "Playwright で一番小さく始める VRT と、次のステップの選択肢",
       "href": "https://speakerdeck.com/mh4gf/playwright-de-fan-xiao-sakushi-meru-vrt-to-ci-nosutetupunoxuan-ze-zhi",
       "externalLink": true,
