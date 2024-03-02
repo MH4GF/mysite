@@ -16,16 +16,16 @@ jobs:
     permissions:
       contents: read
     container:
-      image: mcr.microsoft.com/playwright:v1.40.1-focal
+      image: mcr.microsoft.com/playwright:v1.40.1-focal@sha256:593fe73bf5c6de46675ce5e6cda04ad4c4b4119a58d556dba302f85eded23b94
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
         with:
           node-version-file: .node-version
           pnpm-version: "8.12.1"
       - run: pnpm i
       - run: pnpm --filter web test:vrt:screenshots
-      - uses: lost-pixel/lost-pixel@v3.12.1
+      - uses: lost-pixel/lost-pixel@69e19162ed55a3b4231f516ac78b5c63edd6ae76 # v3.12.1
         env:
           LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
