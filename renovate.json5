@@ -21,9 +21,9 @@
         "lost-pixel",
         "lost-pixel/lost-pixel",
         "msw",
-        "vitest",
-        ""
-      ]
+        "vitest"
+      ],
+      "automerge": true
     }
   ]
 }
