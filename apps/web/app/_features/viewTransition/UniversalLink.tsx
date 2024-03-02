@@ -4,7 +4,7 @@ import type { Route } from "next";
 import type { LinkProps } from "next/link";
 import NextLink from "next/link";
 
-import { Link } from "../_features/viewTransition";
+import { Link } from "./Link";
 
 const sameOriginPrefixes = [
   "/", // ルート相対パス

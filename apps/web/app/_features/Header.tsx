@@ -1,7 +1,7 @@
-import { UniversalLink } from "../_components";
-import { GitHubIcon } from "../_components/Icons";
+import { GitHubIcon } from "../_components";
 
 import { ColorModeToggle } from "./colorMode";
+import { UniversalLink } from "./viewTransition";
 
 const navigation = [{ name: "Articles", href: "/articles" }] as const;
 

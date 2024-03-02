@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
 
-import { tagLabelMap } from "../../_features/articles/constants";
-import { getArticle } from "../../_features/articles/getArticle";
+import { getArticle, tagLabelMap } from "../../_features";
 
 export const runtime = "edge";
 

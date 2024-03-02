@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-import { MyAvatar, SocialLink, UniversalLink } from "./_components";
-import { RichLinkCard } from "./_features/richLinkCard";
+import { MyAvatar } from "./_components";
+import { RichLinkCard, SocialLink, UniversalLink } from "./_features";
 import { siteInfo } from "./_utils";
 
 export default function Page() {

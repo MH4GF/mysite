@@ -1,5 +1,6 @@
-import { Time, UniversalLink } from "../../_components";
+import { Time } from "../../_components";
 import { format } from "../../_utils";
+import { UniversalLink } from "../viewTransition";
 
 import { Tag } from "./Tag";
 import type { ArticleMeta } from "./type";

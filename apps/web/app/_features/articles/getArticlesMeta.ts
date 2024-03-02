@@ -3,7 +3,8 @@ import { promises as fs } from "fs";
 import type { ArticleMeta, TagEnum } from "./type";
 import { articlesMetaSchema } from "./type";
 
-import { compareDesc, rootJoin } from "@/app/_utils";
+import { compareDesc } from "@/app/_utils";
+import { rootJoin } from "@/app/_utils/index.server";
 import { allArticles as internalArticles } from "contentlayer/generated";
 
 type Options = {

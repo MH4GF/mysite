@@ -12,7 +12,7 @@ import remarkRehype from "remark-rehype";
 import { transformerNotationDiff } from "shikiji-transformers";
 import { unified } from "unified";
 
-import { UniversalLink } from "../../_components";
+import { UniversalLink } from "../viewTransition";
 
 import { Blockquote, Paragraph } from "./elements";
 
