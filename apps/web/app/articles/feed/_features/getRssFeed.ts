@@ -1,6 +1,6 @@
 import RSS from "rss";
 
-import { getArticlesMeta } from "@/app/_features";
+import { getArticlesMeta } from "@/app/_features/articles/index.server";
 import { siteInfo } from "@/app/_utils";
 
 export const getRssFeed = async (): Promise<string> => {
