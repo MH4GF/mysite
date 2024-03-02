@@ -2,6 +2,7 @@ import type { UrlObject } from "url";
 
 import type { Route } from "next";
 import type { LinkProps } from "next/link";
+// eslint-disable-next-line import-access/jsdoc
 import NextLink from "next/link";
 
 import { Link } from "../_features/viewTransition";
