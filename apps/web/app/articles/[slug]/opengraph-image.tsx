@@ -1,7 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
 
-import { getArticle, tagLabelMap } from "../../_features";
+// biome-ignore lint/nursery/useImportRestrictions: VercelのEdge Functionのsizeを超えてしまうため直接指定 https://vercel.com/docs/functions/limitations#code-size-limit
+import { tagLabelMap } from "../../_features/articles/constants";
+// biome-ignore lint/nursery/useImportRestrictions: 同上
+import { getArticle } from "../../_features/articles/getArticle";
 
 export const runtime = "edge";
 
