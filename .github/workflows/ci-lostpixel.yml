@@ -16,7 +16,7 @@ jobs:
     permissions:
       contents: read
     container:
-      image: mcr.microsoft.com/playwright:v1.40.1-focal@sha256:593fe73bf5c6de46675ce5e6cda04ad4c4b4119a58d556dba302f85eded23b94
+      image: mcr.microsoft.com/playwright:v1.42.1-focal@sha256:0c44a93f50ae181849b83d0f71c18b45c400ff990df16c269a8fbdc2470cfeff
 
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
@@ -26,6 +26,6 @@ jobs:
           pnpm-version: "8.12.1"
       - run: pnpm i
       - run: pnpm --filter web test:vrt:screenshots
-      - uses: lost-pixel/lost-pixel@69e19162ed55a3b4231f516ac78b5c63edd6ae76 # v3.12.1
+      - uses: lost-pixel/lost-pixel@9b34e46400f3f0f6d84308da9f9920335f2486f6 # v3.15.1
         env:
           LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
