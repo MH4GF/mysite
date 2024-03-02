@@ -3,7 +3,8 @@
   "extends": [
     "config:js-app", // https://docs.renovatebot.com/presets-config/#configjs-app
     "docker:pinDigests", // https://docs.renovatebot.com/presets-docker/#dockerpindigests
-    "helpers:pinGitHubActionDigests" // https://docs.renovatebot.com/upgrade-best-practices/#extends-helperspingithubactiondigests
+    "helpers:pinGitHubActionDigests", // https://docs.renovatebot.com/upgrade-best-practices/#extends-helperspingithubactiondigests
+    "group:definitelyTyped" // https://docs.renovatebot.com/presets-group/#groupdefinitelytyped
   ],
   "timezone": "Asia/Tokyo",
   "packageRules": [
