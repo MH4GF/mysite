@@ -1,4 +1,4 @@
-import { UniversalLink } from "../../_components";
+import { UniversalLink } from "../viewTransition";
 
 import { tagLabelMap } from "./constants";
 import type { TagEnum } from "./type";

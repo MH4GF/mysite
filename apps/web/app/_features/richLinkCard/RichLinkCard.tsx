@@ -2,7 +2,7 @@
 import type { Route } from "next";
 import { useId } from "react";
 
-import { UniversalLink } from "../../_components";
+import { UniversalLink } from "../viewTransition";
 
 import type { OGPResult } from "./getOGP";
 import { getOGP } from "./getOGP";
