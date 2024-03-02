@@ -24,6 +24,18 @@
         "vitest"
       ],
       "automerge": true
+    },
+    {
+      "groupName": "tools",
+      "matchPackageNames": [
+        "@tsconfig/strictest",
+        "dependency-cruiser",
+        "eslint",
+        "turbo",
+        "typescript",
+        "pnpm"
+      ],
+      "automerge": true
     }
   ]
 }
