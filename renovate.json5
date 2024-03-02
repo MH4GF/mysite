@@ -33,7 +33,8 @@
         "eslint",
         "turbo",
         "typescript",
-        "pnpm"
+        "pnpm",
+        "npm-run-all2"
       ],
       "automerge": true
     }
