@@ -1,7 +1,6 @@
 "use client";
 
 import type { Route } from "next";
-// eslint-disable-next-line import-access/jsdoc
 import { usePathname, useRouter } from "next/navigation";
 import { useLayoutEffect, useRef } from "react";
 

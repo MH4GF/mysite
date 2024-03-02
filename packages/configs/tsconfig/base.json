@@ -4,10 +4,5 @@
   "compilerOptions": {
     "noEmit": true,
     "noPropertyAccessFromIndexSignature": false
-  },
-  "plugins": [
-    {
-      "name": "eslint-plugin-import-access"
-    }
-  ]
+  }
 }
