@@ -62,3 +62,12 @@ for (const targetPage of targetPages) {
   test(`${targetPage.name}-dark`, async ({ page }, testInfo) =>
     await screenshot(page, testInfo, targetPage, "dark"));
 }
+
+// Note: テーマの概念がないページは今のところopengraph-imageのみのため、一旦ここに記述
+test("opengraph-image", async ({ page }, testInfo) => {
+  const targetPage = {
+    name: "opengraph-image",
+    path: "/articles/embed-tweet-with-app-router/opengraph-image",
+  };
+  await screenshot(page, testInfo, targetPage, "light");
+});
