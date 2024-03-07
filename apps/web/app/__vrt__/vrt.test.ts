@@ -8,6 +8,8 @@ const waitForPageReady = async (page: Page) => {
   await page.evaluate(() => document.fonts.ready);
 };
 
+const sleep = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
+
 const screenshot = async (
   page: Page,
   testInfo: TestInfo,
@@ -21,6 +23,7 @@ const screenshot = async (
   }
 
   await waitForPageReady(page);
+  await sleep(1000);
 
   await page.screenshot({
     fullPage: true,
