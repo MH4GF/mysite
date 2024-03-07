@@ -21,8 +21,8 @@ export default function Page() {
         </UniversalLink>{" "}
         now.
       </p>
-      <div className="flex gap-2 sm:gap-4">
-        <SocialLink kind="twitter" />
+      <div className="flex items-center gap-2 sm:gap-4">
+        <SocialLink kind="x" />
         <SocialLink kind="github" />
       </div>
       <ul>

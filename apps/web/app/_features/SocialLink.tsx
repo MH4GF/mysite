@@ -1,21 +1,23 @@
 import type { Route } from "next";
 
 import type { IconComponent } from "../_components";
-import { GitHubIcon, TwitterIcon } from "../_components";
+import { GitHubIcon, XIcon } from "../_components";
 
 import { UniversalLink } from "./viewTransition";
 
-type SocialKind = "twitter" | "github";
-type Socials = Record<SocialKind, { Icon: IconComponent; url: string }>;
+type SocialKind = "x" | "github";
+type Socials = Record<SocialKind, { Icon: IconComponent; url: string; props: object }>;
 
 const socials: Socials = {
-  twitter: {
-    Icon: TwitterIcon,
-    url: "https://twitter.com/MH4GF",
+  x: {
+    Icon: XIcon,
+    url: "https://x.com/MH4GF",
+    props: { className: "h-4 w-4" },
   },
   github: {
     Icon: GitHubIcon,
     url: "https://github.com/MH4GF",
+    props: { className: "h-6 w-6" },
   },
 };
 
@@ -24,11 +26,11 @@ interface Props {
 }
 
 export const SocialLink = ({ kind }: Props) => {
-  const { Icon, url } = socials[kind];
+  const { Icon, url, props } = socials[kind];
 
   return (
     <UniversalLink className="group -m-1 p-1" href={url as Route}>
-      <Icon />
+      <Icon {...props} />
     </UniversalLink>
   );
 };
