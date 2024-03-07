@@ -21,7 +21,7 @@
     "dependency-cruiser": "16.2.3",
     "eslint": "8.57.0",
     "lost-pixel": "3.15.1",
-    "npm-run-all2": "5.0.2",
+    "npm-run-all2": "6.1.2",
     "scaffdog": "3.0.0",
     "turbo": "1.12.4"
   },
