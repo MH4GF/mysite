@@ -3,8 +3,7 @@
   "extends": [
     "config:js-app", // https://docs.renovatebot.com/presets-config/#configjs-app
     "docker:pinDigests", // https://docs.renovatebot.com/presets-docker/#dockerpindigests
-    "helpers:pinGitHubActionDigests", // https://docs.renovatebot.com/upgrade-best-practices/#extends-helperspingithubactiondigests
-    "group:definitelyTyped" // https://docs.renovatebot.com/presets-group/#groupdefinitelytyped
+    "helpers:pinGitHubActionDigests" // https://docs.renovatebot.com/upgrade-best-practices/#extends-helperspingithubactiondigests
   ],
   "timezone": "Asia/Tokyo",
   "packageRules": [
@@ -37,6 +36,16 @@
         "npm-run-all2",
         "peter-evans/find-comment",
         "peter-evans/create-or-update-comment"
+      ],
+      "automerge": true
+    },
+    // group:definitelyTyped にautomergeを追加 https://docs.renovatebot.com/presets-group/#groupdefinitelytyped
+    {
+      "packageRules": [
+        {
+          "groupName": "definitelyTyped",
+          "matchPackagePrefixes": ["@types/"]
+        }
       ],
       "automerge": true
     }
