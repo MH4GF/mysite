@@ -1,9 +1,9 @@
 import type { ComponentProps } from "react";
 
-const Icon = (props: ComponentProps<"svg">) => {
+const Icon = ({ className, ...props }: ComponentProps<"svg">) => {
   return (
     <svg
-      className="h-6 w-6 fill-zinc-500 transition dark:fill-zinc-400 dark:group-hover:fill-zinc-300 group-hover:fill-zinc-600"
+      className={`fill-zinc-500 transition dark:fill-zinc-400 dark:group-hover:fill-zinc-300 group-hover:fill-zinc-600 ${className}`}
       {...props}
     />
   );
