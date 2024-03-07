@@ -43,22 +43,16 @@
     },
     // group:definitelyTyped にautomergeを追加 https://docs.renovatebot.com/presets-group/#groupdefinitelytyped
     {
-      "packageRules": [
-        {
-          "groupName": "definitelyTyped",
-          "matchPackagePrefixes": ["@types/"]
-        }
-      ],
+      "groupName": "definitelyTyped",
+      "matchPackagePrefixes": ["@types/"],
       // tscが通れば自動マージで良い
       "automerge": true
     },
     {
-      "packageRules": {
-        "groupName": "tailwindcss",
-        "matchPackageNames": ["tailwindcss", "@tailwindcss/typography"],
-        // VRTが通れば自動マージで良い
-        "automerge": true
-      }
+      "groupName": "tailwindcss",
+      "matchPackageNames": ["tailwindcss", "@tailwindcss/typography"],
+      // VRTが通れば自動マージで良い
+      "automerge": true
     }
   ]
 }
