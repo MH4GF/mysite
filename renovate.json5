@@ -3,8 +3,7 @@
   "extends": [
     "config:js-app", // https://docs.renovatebot.com/presets-config/#configjs-app
     "docker:pinDigests", // https://docs.renovatebot.com/presets-docker/#dockerpindigests
-    "helpers:pinGitHubActionDigests", // https://docs.renovatebot.com/upgrade-best-practices/#extends-helperspingithubactiondigests
-    "group:definitelyTyped" // https://docs.renovatebot.com/presets-group/#groupdefinitelytyped
+    "helpers:pinGitHubActionDigests" // https://docs.renovatebot.com/upgrade-best-practices/#extends-helperspingithubactiondigests
   ],
   "timezone": "Asia/Tokyo",
   "packageRules": [
@@ -23,6 +22,7 @@
         "msw",
         "vitest"
       ],
+      // テストが通れば自動マージで良い
       "automerge": true
     },
     {
@@ -38,7 +38,27 @@
         "peter-evans/find-comment",
         "peter-evans/create-or-update-comment"
       ],
+      // 本番影響がないのでCIが通れば自動マージで良い
       "automerge": true
+    },
+    // group:definitelyTyped にautomergeを追加 https://docs.renovatebot.com/presets-group/#groupdefinitelytyped
+    {
+      "packageRules": [
+        {
+          "groupName": "definitelyTyped",
+          "matchPackagePrefixes": ["@types/"]
+        }
+      ],
+      // tscが通れば自動マージで良い
+      "automerge": true
+    },
+    {
+      "packageRules": {
+        "groupName": "tailwindcss",
+        "matchPackageNames": ["tailwindcss", "@tailwindcss/typography"],
+        // VRTが通れば自動マージで良い
+        "automerge": true
+      }
     }
   ]
 }
