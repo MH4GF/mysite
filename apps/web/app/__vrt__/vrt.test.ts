@@ -1,5 +1,6 @@
+import AxeBuilder from "@axe-core/playwright";
 import type { Page, TestInfo } from "@playwright/test";
-import { test } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 
 const waitForPageReady = async (page: Page) => {
   await page.waitForLoadState("domcontentloaded");
@@ -11,6 +12,11 @@ const waitForPageReady = async (page: Page) => {
 const maskFlakyElements = async (page: Page, selectors: string[]) => {
   const selector = selectors.join(", ");
   await page.addStyleTag({ content: `${selector} { opacity: 0; }` });
+};
+
+const testA11y = async (page: Page) => {
+  const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+  expect(accessibilityScanResults.violations).toEqual([]);
 };
 
 const screenshot = async (
@@ -29,6 +35,7 @@ const screenshot = async (
     `[data-testid="rich-link-card"] img`, // リンクカードの画像は外部サービスに依存しFlakyなため除外
   ]);
   await waitForPageReady(page);
+  await testA11y(page);
 
   await page.screenshot({
     fullPage: true,
