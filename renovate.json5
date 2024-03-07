@@ -48,6 +48,13 @@
         }
       ],
       "automerge": true
+    },
+    {
+      "packageRules": {
+        "groupName": "tailwindcss",
+        "matchPackageNames": ["tailwindcss", "@tailwindcss/typography"],
+        "automerge": true
+      }
     }
   ]
 }
