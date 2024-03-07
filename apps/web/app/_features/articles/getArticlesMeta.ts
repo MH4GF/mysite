@@ -1,22 +1,14 @@
-import { promises as fs } from "fs";
-
-import type { ArticleMeta, TagEnum } from "./type";
-import { articlesMetaSchema } from "./type";
+import { externalArticles } from "./data";
+import { type ArticleMeta, type TagEnum, articlesMetaSchema } from "./type";
 
 import { compareDesc } from "@/app/_utils";
-import { rootJoin } from "@/app/_utils/index.server";
 import { allArticles as internalArticles } from "contentlayer/generated";
 
 type Options = {
   tag?: TagEnum | undefined;
 };
 
-export const getArticlesMeta = async ({ tag }: Options): Promise<ArticleMeta[]> => {
-  const metadataPath = rootJoin("contents/articles/articles.json");
-
-  const file = await fs.readFile(metadataPath, "utf8");
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-  const externalArticles = JSON.parse(file).articles as ArticleMeta[];
+export const getArticlesMeta = ({ tag }: Options): ArticleMeta[] => {
   const articlesMeta = articlesMetaSchema.parse([
     ...internalArticles,
     ...externalArticles,
