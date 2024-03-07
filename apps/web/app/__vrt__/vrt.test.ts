@@ -8,8 +8,6 @@ const waitForPageReady = async (page: Page) => {
   await page.evaluate(() => document.fonts.ready);
 };
 
-const sleep = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
-
 const maskFlakyElements = async (page: Page, selectors: string[]) => {
   const selector = selectors.join(", ");
   await page.addStyleTag({ content: `${selector} { opacity: 0; }` });
@@ -31,7 +29,6 @@ const screenshot = async (
     `[data-testid="rich-link-card"] img`, // リンクカードの画像は外部サービスに依存しFlakyなため除外
   ]);
   await waitForPageReady(page);
-  await sleep(1000);
 
   await page.screenshot({
     fullPage: true,
