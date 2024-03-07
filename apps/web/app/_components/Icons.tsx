@@ -1,9 +1,9 @@
 import type { ComponentProps } from "react";
 
-const Icon = (props: ComponentProps<"svg">) => {
+const Icon = ({ className, ...props }: ComponentProps<"svg">) => {
   return (
     <svg
-      className="h-6 w-6 fill-zinc-500 transition dark:fill-zinc-400 dark:group-hover:fill-zinc-300 group-hover:fill-zinc-600"
+      className={`fill-zinc-500 transition dark:fill-zinc-400 dark:group-hover:fill-zinc-300 group-hover:fill-zinc-600 ${className}`}
       {...props}
     />
   );
@@ -47,10 +47,10 @@ export const MoonIcon: IconComponent = (props) => {
   );
 };
 
-export const TwitterIcon: IconComponent = (props) => {
+export const XIcon: IconComponent = (props) => {
   return (
-    <Icon viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path d="M20.055 7.983c.011.174.011.347.011.523 0 5.338-3.92 11.494-11.09 11.494v-.003A10.755 10.755 0 0 1 3 18.186c.308.038.618.057.928.058a7.655 7.655 0 0 0 4.841-1.733c-1.668-.032-3.13-1.16-3.642-2.805a3.753 3.753 0 0 0 1.76-.07C5.07 13.256 3.76 11.6 3.76 9.676v-.05a3.77 3.77 0 0 0 1.77.505C3.816 8.945 3.288 6.583 4.322 4.737c1.98 2.524 4.9 4.058 8.034 4.22a4.137 4.137 0 0 1 1.128-3.86A3.807 3.807 0 0 1 19 5.274a7.657 7.657 0 0 0 2.475-.98c-.29.934-.9 1.729-1.713 2.233A7.54 7.54 0 0 0 22 5.89a8.084 8.084 0 0 1-1.945 2.093Z" />
+    <Icon viewBox="0 0 1200 1227" {...props}>
+      <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
     </Icon>
   );
 };
@@ -67,14 +67,13 @@ export const GitHubIcon: IconComponent = (props) => {
   );
 };
 
-export const RssIcon: IconComponent = (props) => {
+export const RssIcon: IconComponent = ({ className, ...props }) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth="1.5"
-      stroke="currentColor"
+      className={`stroke-zinc-500 transition dark:stroke-zinc-400 dark:hover:stroke-zinc-300 hover:stroke-zinc-600 ${className}`}
       {...props}
     >
       <title>RSS</title>

@@ -7,3 +7,4 @@ export * from "./markdownRenderer";
 export * from "./richLinkCard";
 export * from "./viewTransition";
 export * from "./SocialLink";
+export * from "./share";

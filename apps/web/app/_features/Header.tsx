@@ -20,7 +20,7 @@ export const Header = () => {
               </UniversalLink>
             ))}
             <UniversalLink href="https://github.com/MH4GF/mysite" className="group">
-              <GitHubIcon />
+              <GitHubIcon className="h-6 w-6" />
             </UniversalLink>
             <ColorModeToggle />
           </div>
