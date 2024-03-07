@@ -6,8 +6,8 @@ type Props = {
   tag?: TagEnum;
 };
 
-export const ArticleList = async ({ tag }: Props): Promise<JSX.Element> => {
-  const articlesMeta = await getArticlesMeta({ tag });
+export const ArticleList = ({ tag }: Props): JSX.Element => {
+  const articlesMeta = getArticlesMeta({ tag });
 
   return (
     <div className="grid gap-12">

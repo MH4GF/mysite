@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { tagLabelMap, tagList, tagsSchema } from "../../../_features";
-import { ArticleList } from "../../../_features/articles/index.server";
+import { ArticleList, tagLabelMap, tagList, tagsSchema } from "../../../_features";
 
 interface Params {
   tag: string;
