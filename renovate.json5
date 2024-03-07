@@ -15,6 +15,7 @@
     {
       "groupName": "test",
       "matchPackageNames": [
+        "@axe-core/playwright",
         "@playwright/test",
         "mcr.microsoft.com/playwright",
         "lost-pixel",

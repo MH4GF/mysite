@@ -102,6 +102,9 @@ importers:
         specifier: 3.22.4
         version: 3.22.4
     devDependencies:
+      '@axe-core/playwright':
+        specifier: 4.8.5
+        version: 4.8.5(playwright-core@1.42.1)
       '@playwright/test':
         specifier: 1.42.1
         version: 1.42.1
@@ -181,6 +184,15 @@ packages:
   /@alloc/quick-lru@5.2.0:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
+
+  /@axe-core/playwright@4.8.5(playwright-core@1.42.1):
+    resolution: {integrity: sha512-GFdXXAEn9uk0Vyzgl2eEP+VwvgGzas0YSnacoJ/0U237G83zWZ1PhbP/RDymm0cqevoA+xRjMo+ONzh9Q711nw==}
+    peerDependencies:
+      playwright-core: '>= 1.0.0'
+    dependencies:
+      axe-core: 4.8.4
+      playwright-core: 1.42.1
+    dev: true
 
   /@babel/runtime@7.22.3:
     resolution: {integrity: sha512-XsDuspWKLUsxwCp6r7EhsExHtYfbe5oAGQ19kqngTdCPUoPQzOPdUbD/pB9PJiwb2ptYKQDjSJT3R6dC+EPqfQ==}
@@ -2385,6 +2397,11 @@ packages:
     resolution: {integrity: sha512-zIURGIS1E1Q4pcrMjp+nnEh+16G56eG/MUllJH8yEvw7asDo7Ac9uhC9KIH5jzpITueEZolfYglnCGIuSBz39g==}
     engines: {node: '>=4'}
     dev: false
+
+  /axe-core@4.8.4:
+    resolution: {integrity: sha512-CZLSKisu/bhJ2awW4kJndluz2HLZYIHh5Uy1+ZwDRkJi69811xgIXXfdU9HSLX0Th+ILrHj8qfL/5wzamsFtQg==}
+    engines: {node: '>=4'}
+    dev: true
 
   /axios@1.6.5:
     resolution: {integrity: sha512-Ii012v05KEVuUoFWmMW/UQv9aRIc3ZwkWDcM+h5Il8izZCtRVpDUfwpoFf7eOtajT3QiGR4yDUx7lPqHJULgbg==}
