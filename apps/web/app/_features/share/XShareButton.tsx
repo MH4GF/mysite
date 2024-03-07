@@ -2,8 +2,8 @@ import type { Route } from "next";
 import type { FC } from "react";
 import { useMemo } from "react";
 
-import { UniversalLink } from "..";
 import { XIcon } from "../../_components";
+import { UniversalLink } from "../viewTransition";
 
 type Props = {
   url: string;
