@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-import { HatenaBookmarkButton, HatenaBookmarkScript } from "@/app/_features";
+import { HatenaBookmarkButton, HatenaBookmarkScript, XShareButton } from "@/app/_features";
 import { baseUrl } from "@/app/_utils";
 import type { Article } from "contentlayer/generated";
 
@@ -24,6 +24,7 @@ export const ArticleShareButton = ({ article }: Props) => {
     <div className="flex gap-2">
       <HatenaBookmarkScript />
       <HatenaBookmarkButton url={url} />
+      <XShareButton url={url} text={article.title} />
       <Share shareData={shareData} />
     </div>
   );
