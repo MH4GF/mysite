@@ -75,14 +75,13 @@ export const GitHubIcon: IconComponent = (props) => {
   );
 };
 
-export const RssIcon: IconComponent = (props) => {
+export const RssIcon: IconComponent = ({ className, ...props }) => {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth="1.5"
-      stroke="currentColor"
+      className={`stroke-zinc-500 transition dark:stroke-zinc-400 dark:hover:stroke-zinc-300 hover:stroke-zinc-600 ${className}`}
       {...props}
     >
       <title>RSS</title>
