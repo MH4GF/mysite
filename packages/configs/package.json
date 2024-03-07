@@ -8,10 +8,10 @@
   },
   "dependencies": {
     "@mh4gf/configs": "0.3.0",
-    "@tailwindcss/typography": "0.5.9",
+    "@tailwindcss/typography": "0.5.10",
     "@tsconfig/next": "2.0.1",
     "@tsconfig/strictest": "2.0.3",
-    "tailwindcss": "3.4.0"
+    "tailwindcss": "3.4.1"
   },
   "packageManager": "pnpm@8.15.4"
 }
