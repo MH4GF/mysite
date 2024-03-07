@@ -34,7 +34,9 @@
         "turbo",
         "typescript",
         "pnpm",
-        "npm-run-all2"
+        "npm-run-all2",
+        "peter-evans/find-comment",
+        "peter-evans/create-or-update-comment"
       ],
       "automerge": true
     }
