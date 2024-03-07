@@ -10,6 +10,11 @@ const waitForPageReady = async (page: Page) => {
 
 const sleep = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
 
+const maskFlakyElements = async (page: Page, selectors: string[]) => {
+  const selector = selectors.join(", ");
+  await page.addStyleTag({ content: `${selector} { opacity: 0; }` });
+};
+
 const screenshot = async (
   page: Page,
   testInfo: TestInfo,
@@ -22,6 +27,9 @@ const screenshot = async (
     await page.getByRole("button", { name: "Toggle dark mode" }).click();
   }
 
+  await maskFlakyElements(page, [
+    `[data-testid="rich-link-card"] img`, // リンクカードの画像は外部サービスに依存しFlakyなため除外
+  ]);
   await waitForPageReady(page);
   await sleep(1000);
 
