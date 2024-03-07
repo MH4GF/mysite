@@ -1,20 +1,30 @@
 import dynamic from "next/dynamic";
 
+import { HatenaBookmarkButton, HatenaBookmarkScript } from "@/app/_features";
 import { baseUrl } from "@/app/_utils";
 import type { Article } from "contentlayer/generated";
 
-const Share = dynamic(() => import("@/app/_features/share/Share"), { ssr: false });
+const Share = dynamic(() => import("@/app/_features/share/Share"), {
+  ssr: false,
+});
 
 interface Props {
   article: Article;
 }
 
 export const ArticleShareButton = ({ article }: Props) => {
+  const url = new URL(article.href, baseUrl).toString();
   const shareData: ShareData = {
     title: article.title,
-    url: new URL(article.href, baseUrl).toString(),
+    url,
     text: article.title,
   };
 
-  return <Share shareData={shareData} />;
+  return (
+    <div className="flex gap-2">
+      <HatenaBookmarkScript />
+      <HatenaBookmarkButton url={url} />
+      <Share shareData={shareData} />
+    </div>
+  );
 };
