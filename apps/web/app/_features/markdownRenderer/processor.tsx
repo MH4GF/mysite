@@ -24,6 +24,11 @@ const Img = (props: ComponentProps<typeof Image>) => {
   return <Image {...props} width="840" height="472" />;
 };
 
+const Pre = (props: ComponentProps<"pre">) => {
+  // biome-ignore lint/a11y/noNoninteractiveTabindex: コードブロックは横スクロールが必要なため、tabIndexを付与しキーボードによる操作を可能にする
+  return <pre tabIndex={0} {...props} />;
+};
+
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
 export const processor = unified()
   .use(remarkParse)
@@ -52,5 +57,6 @@ export const processor = unified()
       a: Link,
       blockquote: Blockquote,
       img: Img,
+      pre: Pre,
     },
   });
