@@ -8,6 +8,13 @@ const config: Config = {
     "\\.tsx?$": "@markuplint/jsx-parser",
   },
   extends: ["markuplint:recommended"],
+  rules: {
+    "invalid-attr": {
+      options: {
+        allowAttrs: ["tw"],
+      },
+    },
+  },
 };
 
 export default config;
