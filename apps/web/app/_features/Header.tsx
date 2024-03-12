@@ -19,7 +19,11 @@ export const Header = () => {
                 {item.name}
               </UniversalLink>
             ))}
-            <UniversalLink href="https://github.com/MH4GF/mysite" className="group">
+            <UniversalLink
+              href="https://github.com/MH4GF/mysite"
+              className="group"
+              aria-label="GitHub repository for this site"
+            >
               <GitHubIcon className="h-6 w-6" />
             </UniversalLink>
             <ColorModeToggle />

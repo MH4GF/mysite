@@ -13,5 +13,10 @@ export const Content = ({ slug, handleNotFound }: Props): JSX.Element => {
     return <></>;
   }
 
-  return <MarkdownRenderer raw={about.body.raw} />;
+  return (
+    <>
+      <h1 className="font-bold text-4xl">{about.title}</h1>
+      <MarkdownRenderer raw={about.body.raw} />
+    </>
+  );
 };

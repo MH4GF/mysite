@@ -1,5 +1,6 @@
+import AxeBuilder from "@axe-core/playwright";
 import type { Page, TestInfo } from "@playwright/test";
-import { test } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 
 const waitForPageReady = async (page: Page) => {
   await page.waitForLoadState("domcontentloaded");
@@ -13,23 +14,28 @@ const maskFlakyElements = async (page: Page, selectors: string[]) => {
   await page.addStyleTag({ content: `${selector} { opacity: 0; }` });
 };
 
+const testA11y = async (page: Page) => {
+  const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+  expect(accessibilityScanResults.violations).toEqual([]);
+};
+
+const setup = async (page: Page, targetPage: TargetPage, colorMode: "light" | "dark") => {
+  await page.goto(targetPage.path);
+  if (colorMode === "dark") {
+    await page.getByRole("button", { name: "Toggle dark mode" }).click();
+  }
+  await maskFlakyElements(page, [
+    `[data-testid="rich-link-card"] img`, // リンクカードの画像は外部サービスに依存しFlakyなため除外
+  ]);
+  await waitForPageReady(page);
+};
+
 const screenshot = async (
   page: Page,
   testInfo: TestInfo,
   targetPage: TargetPage,
   colorMode: "light" | "dark",
 ) => {
-  await page.goto(targetPage.path);
-
-  if (colorMode === "dark") {
-    await page.getByRole("button", { name: "Toggle dark mode" }).click();
-  }
-
-  await maskFlakyElements(page, [
-    `[data-testid="rich-link-card"] img`, // リンクカードの画像は外部サービスに依存しFlakyなため除外
-  ]);
-  await waitForPageReady(page);
-
   await page.screenshot({
     fullPage: true,
     path: `app/__vrt__/screenshots/${targetPage.name}-${testInfo.project.name}-${colorMode}.png`,
@@ -65,10 +71,14 @@ const targetPages: TargetPage[] = [
 ];
 
 for (const targetPage of targetPages) {
-  test(`${targetPage.name}-light`, async ({ page }, testInfo) =>
-    await screenshot(page, testInfo, targetPage, "light"));
-  test(`${targetPage.name}-dark`, async ({ page }, testInfo) =>
-    await screenshot(page, testInfo, targetPage, "dark"));
+  test(`${targetPage.name}-light`, async ({ page }, testInfo) => {
+    await setup(page, targetPage, "light");
+    await Promise.all([testA11y(page), screenshot(page, testInfo, targetPage, "light")]);
+  });
+  test(`${targetPage.name}-dark`, async ({ page }, testInfo) => {
+    await setup(page, targetPage, "dark");
+    await Promise.all([testA11y(page), screenshot(page, testInfo, targetPage, "dark")]);
+  });
 }
 
 // Note: テーマの概念がないページは今のところopengraph-imageのみのため、一旦ここに記述

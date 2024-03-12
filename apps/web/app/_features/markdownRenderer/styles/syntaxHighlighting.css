@@ -44,8 +44,7 @@ figure[data-rehype-pretty-code-figure] {
   }
 
   .diff.remove {
-    background-color: rgba(244, 63, 94, 0.16);
-    opacity: 0.7;
+    background-color: rgba(244, 63, 94, 0.08);
   }
 
   .diff.remove::before {
@@ -54,7 +53,7 @@ figure[data-rehype-pretty-code-figure] {
   }
 
   .diff.add {
-    background-color: rgba(16, 185, 129, 0.16);
+    background-color: rgba(16, 185, 129, 0.09);
   }
 
   .diff.add::before {

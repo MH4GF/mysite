@@ -2,8 +2,6 @@
 title: 取扱説明書
 ---
 
-# 取扱説明書
-
 ref: https://github.com/konifar/about-me/blob/main/readme/取扱説明書.md
 
 ## 働く時間と場所

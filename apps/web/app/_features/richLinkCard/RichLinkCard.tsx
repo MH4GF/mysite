@@ -11,6 +11,7 @@ type RichLinkCardInnerProps = OGPResult;
 
 const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardInnerProps) => {
   const labelledBy = useId();
+  const imageAlt = `${new URL(url).hostname} thumbnail image`;
 
   if (title === "") {
     return (
@@ -45,7 +46,7 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
             height="100%"
             className="col-span-1 h-full w-full object-cover"
             src={imageSrc}
-            alt={title}
+            alt={imageAlt}
           />
         )}
       </UniversalLink>

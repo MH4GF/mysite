@@ -26,7 +26,7 @@ export const ArticleMetaDetail = ({
           priority
         />
       )}
-      <h2 className="font-extrabold text-2xl">{title}</h2>
+      <h1 className="font-extrabold text-2xl">{title}</h1>
       <div className="my-6 flex justify-between">
         <div className="flex gap-2">
           {tags.map((tag) => (
