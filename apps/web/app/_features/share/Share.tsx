@@ -6,7 +6,6 @@ const isShareSupported = typeof navigator === "object" && navigator?.share !== u
 
 const ShareIcon = ({ className }: { className: string }) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
     strokeWidth={1.5}

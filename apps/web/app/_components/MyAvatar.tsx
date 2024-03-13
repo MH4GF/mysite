@@ -6,7 +6,7 @@ export const MyAvatar = () => {
   return (
     <Image
       src={externalLinks.avatar}
-      alt="MH4GF's user image"
+      alt="user image"
       width="150"
       height="150"
       className="inline-block rounded-full"
