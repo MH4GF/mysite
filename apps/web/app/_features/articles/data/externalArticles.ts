@@ -7,6 +7,13 @@ type RawArticleMeta = Omit<ArticleMeta, "publishedAt" | "href"> & {
 
 export const externalArticles: RawArticleMeta[] = [
   {
+    title: "urqlのDocument Cachingを安全に運用する",
+    publishedAt: "2024/03/13",
+    externalLink: true,
+    href: "https://tech.route06.co.jp/entry/2024/03/13/134852",
+    tags: ["route06-tech-blog"],
+  },
+  {
     title: "to B プロダクトで Vite + React Router を採用して半年後の感想",
     href: "https://speakerdeck.com/mh4gf/impressions-after-6-months-of-using-vite-plus-react-router-e448b113-96f4-479a-adea-7d003e5d3fda",
     externalLink: true,
