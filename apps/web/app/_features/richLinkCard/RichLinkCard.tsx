@@ -42,8 +42,8 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
         </div>
         {imageSrc !== "" && (
           <img
-            width="100%"
-            height="100%"
+            width="300"
+            height="200"
             className="col-span-1 h-full w-full object-cover"
             src={imageSrc}
             alt={imageAlt}
