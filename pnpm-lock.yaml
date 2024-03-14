@@ -70,7 +70,7 @@ importers:
         version: 7.0.0
       rehype-react:
         specifier: 7.2.0
-        version: 7.2.0(@types/react@18.2.65)
+        version: 7.2.0(@types/react@18.2.66)
       rehype-slug:
         specifier: 6.0.0
         version: 6.0.0
@@ -127,8 +127,8 @@ importers:
         specifier: 20.11.27
         version: 20.11.27
       '@types/react':
-        specifier: 18.2.65
-        version: 18.2.65
+        specifier: 18.2.66
+        version: 18.2.66
       '@types/react-dom':
         specifier: 18.2.22
         version: 18.2.22
@@ -2174,11 +2174,11 @@ packages:
   /@types/react-dom@18.2.22:
     resolution: {integrity: sha512-fHkBXPeNtfvri6gdsMYyW+dW7RXFo6Ad09nLFK0VQWR7yGLai/Cyvyj696gbwYvBnhGtevUG9cET0pmUbMtoPQ==}
     dependencies:
-      '@types/react': 18.2.65
+      '@types/react': 18.2.66
     dev: true
 
-  /@types/react@18.2.65:
-    resolution: {integrity: sha512-98TsY0aW4jqx/3RqsUXwMDZSWR1Z4CUlJNue8ueS2/wcxZOsz4xmW1X8ieaWVRHcmmQM3R8xVA4XWB3dJnWwDQ==}
+  /@types/react@18.2.66:
+    resolution: {integrity: sha512-OYTmMI4UigXeFMF/j4uv0lBBEbongSgptPrHBxqME44h9+yNov+oL6Z3ocJKo0WyXR84sQUNeyIp9MRfckvZpg==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
@@ -7624,14 +7624,14 @@ packages:
       vfile: 6.0.1
     dev: false
 
-  /rehype-react@7.2.0(@types/react@18.2.65):
+  /rehype-react@7.2.0(@types/react@18.2.66):
     resolution: {integrity: sha512-MHYyCHka+3TtzBMKtcuvVOBAbI1HrfoYA+XH9m7/rlrQQATCPwtJnPdkxKKcIGF8vc9mxqQja9r9f+FHItQeWg==}
     peerDependencies:
       '@types/react': '>=17'
     dependencies:
       '@mapbox/hast-util-table-cell-style': 0.2.0
       '@types/hast': 2.3.4
-      '@types/react': 18.2.65
+      '@types/react': 18.2.66
       hast-to-hyperscript: 10.0.3
       hast-util-whitespace: 2.0.1
       unified: 10.1.2
