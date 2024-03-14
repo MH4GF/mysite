@@ -22,7 +22,7 @@ const testA11y = async (page: Page) => {
 const setup = async (page: Page, targetPage: TargetPage, colorMode: "light" | "dark") => {
   await page.goto(targetPage.path);
   if (colorMode === "dark") {
-    await page.getByRole("button", { name: "Toggle dark mode" }).click();
+    await page.getByRole("button", { name: "テーマ切り替え" }).click();
   }
   await maskFlakyElements(page, [
     `[data-testid="rich-link-card"] img`, // リンクカードの画像は外部サービスに依存しFlakyなため除外

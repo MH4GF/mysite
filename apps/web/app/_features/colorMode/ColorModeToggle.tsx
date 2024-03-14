@@ -28,7 +28,7 @@ export const ColorModeToggle = () => {
   return (
     <button
       type="button"
-      aria-label="Toggle dark mode"
+      aria-label="テーマ切り替え"
       className="group rounded-sm bg-white/90 px-3 py-2 ring-1 ring-zinc-900/5 backdrop-blur-[8px] transition duration-150 ease-in-out dark:bg-zinc-800/90 dark:hover:ring-white/20 dark:ring-white/10"
       onClick={toggleMode}
     >

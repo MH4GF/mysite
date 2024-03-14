@@ -11,7 +11,7 @@ type RichLinkCardInnerProps = OGPResult;
 
 const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardInnerProps) => {
   const labelledBy = useId();
-  const imageAlt = `${new URL(url).hostname} thumbnail image`;
+  const imageAlt = `${new URL(url).hostname} のサムネイル画像`;
 
   if (title === "") {
     return (

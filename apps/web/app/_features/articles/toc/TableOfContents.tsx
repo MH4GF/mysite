@@ -17,5 +17,5 @@ export const TableOfContents = () => {
     return () => tocbot.destroy();
   }, []);
 
-  return <nav id="toc" className="text-sm text-zinc-500" />;
+  return <nav id="toc" className="text-sm text-zinc-500" aria-label="目次" />;
 };

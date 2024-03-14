@@ -8,7 +8,7 @@ const navigation = [{ name: "Articles", href: "/articles" }] as const;
 export const Header = () => {
   return (
     <header>
-      <nav className="mx-auto flex items-center justify-between py-6" aria-label="Global">
+      <nav className="mx-auto flex items-center justify-between py-6" aria-label="ヘッダー">
         <div className="flex w-full items-center justify-between gap-12">
           <UniversalLink href="/" className="-m-1.5 p-1.5">
             mh4gf.dev
@@ -22,7 +22,7 @@ export const Header = () => {
             <UniversalLink
               href="https://github.com/MH4GF/mysite"
               className="group"
-              aria-label="GitHub repository for this site"
+              aria-label="このサイトのGitHubリポジトリ"
             >
               <GitHubIcon className="h-6 w-6" />
             </UniversalLink>

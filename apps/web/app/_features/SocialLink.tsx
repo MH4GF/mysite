@@ -13,13 +13,13 @@ const socials: Socials = {
     Icon: XIcon,
     url: "https://x.com/MH4GF",
     props: { className: "h-4 w-4" },
-    alt: "X profile",
+    alt: "X プロフィール",
   },
   github: {
     Icon: GitHubIcon,
     url: "https://github.com/MH4GF",
     props: { className: "h-6 w-6" },
-    alt: "GitHub profile",
+    alt: "GitHub プロフィール",
   },
 };
 

@@ -25,7 +25,7 @@ export const XShareButton: FC<Props> = ({ url, text }) => {
       isExternal
       isEnabledUnderline
       className="inline-flex items-center rounded-sm border border-zinc-200 p-3 text-sm text-zinc-600 transition-colors duration-300 dark:border-zinc-700 dark:hover:border-zinc-500 hover:border-zinc-500 dark:hover:text-zinc-300 dark:text-zinc-400 hover:text-zinc-800"
-      aria-label="Share on X"
+      aria-label="Xでシェア"
     >
       <XIcon className="h-4 w-4" />
     </UniversalLink>
