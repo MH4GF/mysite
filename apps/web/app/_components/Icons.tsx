@@ -89,7 +89,7 @@ export const RssIcon: IconComponent = ({ className, ...props }) => {
 export const ExternalLinkIcon: IconComponent = (props) => {
   return (
     <svg
-      className="ml-1 inline-block h-6 w-6"
+      className="mb-[-3px] ml-1 inline-block h-5 w-auto align-baseline"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
