@@ -10,7 +10,7 @@ export const Header = () => {
     <header>
       <nav
         className="mx-auto flex w-full items-center justify-between gap-12 py-6"
-        aria-label="ヘッダー"
+        aria-label="グローバルナビゲーション"
       >
         <UniversalLink href="/" className="-m-1.5 p-1.5">
           mh4gf.dev
