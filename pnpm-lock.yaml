@@ -138,6 +138,9 @@ importers:
       autoprefixer:
         specifier: 10.4.18
         version: 10.4.18(postcss@8.4.35)
+      axe-html-reporter:
+        specifier: 2.2.3
+        version: 2.2.3(axe-core@4.8.4)
       markuplint:
         specifier: 4.3.0
         version: 4.3.0(typescript@5.3.3)
@@ -2703,6 +2706,17 @@ packages:
   /axe-core@4.8.4:
     resolution: {integrity: sha512-CZLSKisu/bhJ2awW4kJndluz2HLZYIHh5Uy1+ZwDRkJi69811xgIXXfdU9HSLX0Th+ILrHj8qfL/5wzamsFtQg==}
     engines: {node: '>=4'}
+    dev: true
+
+  /axe-html-reporter@2.2.3(axe-core@4.8.4):
+    resolution: {integrity: sha512-io8aCEt4fJvv43W+33n3zEa8rdplH5Ti2v5fOnth3GBKLhLHarNs7jj46xGfpnGnpaNrz23/tXPHC3HbwTzwwA==}
+    engines: {node: '>=8.9.0'}
+    peerDependencies:
+      axe-core: '>=3'
+    dependencies:
+      axe-core: 4.8.4
+      mustache: 4.2.0
+      rimraf: 3.0.2
     dev: true
 
   /axios@1.6.5:

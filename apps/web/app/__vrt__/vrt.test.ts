@@ -1,6 +1,9 @@
+import fs from "fs";
+
 import AxeBuilder from "@axe-core/playwright";
 import type { Page, TestInfo } from "@playwright/test";
 import { expect, test } from "@playwright/test";
+import { createHtmlReport } from "axe-html-reporter";
 
 const waitForPageReady = async (page: Page) => {
   await page.waitForLoadState("domcontentloaded");
@@ -14,8 +17,20 @@ const maskFlakyElements = async (page: Page, selectors: string[]) => {
   await page.addStyleTag({ content: `${selector} { opacity: 0; }` });
 };
 
-const testA11y = async (page: Page) => {
+const testA11y = async (page: Page, testName: string) => {
   const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+  const reportHTML = createHtmlReport({
+    results: accessibilityScanResults,
+    options: {
+      projectKey: testName,
+      doNotCreateReportFile: true,
+    },
+  });
+  if (!fs.existsSync("axe-html-report")) {
+    fs.mkdirSync("axe-html-report");
+  }
+  fs.writeFileSync(`axe-html-report/${testName}.html`, reportHTML);
+
   expect(accessibilityScanResults.violations).toEqual([]);
 };
 
@@ -79,11 +94,11 @@ const targetPages: TargetPage[] = [
 for (const targetPage of targetPages) {
   test(`${targetPage.name}-light`, async ({ page }, testInfo) => {
     const { testName } = await setup(page, testInfo, targetPage, "light");
-    await Promise.all([testA11y(page), screenshot(page, testName)]);
+    await Promise.all([testA11y(page, testName), screenshot(page, testName)]);
   });
   test(`${targetPage.name}-dark`, async ({ page }, testInfo) => {
     const { testName } = await setup(page, testInfo, targetPage, "dark");
-    await Promise.all([testA11y(page), screenshot(page, testName)]);
+    await Promise.all([testA11y(page, testName), screenshot(page, testName)]);
   });
 }
 
