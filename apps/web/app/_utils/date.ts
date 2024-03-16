@@ -21,5 +21,5 @@ export const format = (date: Date): string => {
   const formattedMonth = month < 10 ? `0${month}` : `${month}`;
   const formattedDay = day < 10 ? `0${day}` : `${day}`;
 
-  return `${year}/${formattedMonth}/${formattedDay}`;
+  return `${year}-${formattedMonth}-${formattedDay}`;
 };
