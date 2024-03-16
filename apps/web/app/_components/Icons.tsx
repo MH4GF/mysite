@@ -95,7 +95,7 @@ export const ExternalLinkIcon: IconComponent = (props) => {
       viewBox="0 0 24 24"
       {...props}
     >
-      <title>External Link</title>
+      <title>新しいタブで開く</title>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"

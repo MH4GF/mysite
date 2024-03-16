@@ -39,7 +39,7 @@ export const processor = unified()
     behavior: "append",
     properties: {
       className: ["heading-anchor"],
-      "aria-label": "Permalink for this section",
+      "aria-label": "このセクションへのリンク",
     },
   })
   .use(rehypePrettyCode, {

@@ -19,7 +19,7 @@ export const ArticleMetaDetail = ({
       {headingImage && (
         <Image
           src={headingImage}
-          alt="Heading Image"
+          alt="ヘッダー画像"
           width="1120"
           height="630"
           className="mb-8"

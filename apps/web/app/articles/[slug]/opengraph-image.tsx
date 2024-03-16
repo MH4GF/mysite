@@ -8,7 +8,7 @@ import { getArticle } from "../../_features/articles/getArticle";
 
 export const runtime = "edge";
 
-export const alt = "Article Title";
+export const alt = "記事タイトル";
 export const size = {
   width: 1200,
   height: 630,
@@ -101,7 +101,7 @@ export default async function Image({ params }: Props) {
         width={size.width}
         height={size.height}
         src={(await imageData) as unknown as string}
-        alt="Background"
+        alt="背景"
         tw="absolute inset-0"
       />
       <div tw="p-12 text-zinc-300 flex flex-col w-full h-full">

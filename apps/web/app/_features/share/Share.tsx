@@ -12,7 +12,7 @@ const ShareIcon = ({ className }: { className: string }) => (
     stroke="currentColor"
     className={className}
   >
-    <title>Share</title>
+    <title>シェア</title>
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
