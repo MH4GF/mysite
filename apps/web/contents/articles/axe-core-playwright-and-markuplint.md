@@ -6,7 +6,7 @@ tags:
   - dev
 ---
 
-Web アクセシビリティに興味があったので、まず機械的なチェックツールから学んで知識を増やそうということで [@axe-core/playwright](https://www.npmjs.com/package/@axe-core/playwright) と [markuplint](https://github.com/markuplint/markuplint) を導入してみました。
+Web アクセシビリティに興味があったので、まず機械的なチェックツールから学んで知識を増やそうということでこのサイトに [@axe-core/playwright](https://www.npmjs.com/package/@axe-core/playwright) と [markuplint](https://github.com/markuplint/markuplint) を導入してみました。
 
 ## @axe-core/playwright のセットアップ
 
