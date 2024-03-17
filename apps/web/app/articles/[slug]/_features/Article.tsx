@@ -1,7 +1,7 @@
 import { ArticleMetaDetail } from "./ArticleMetaDetail";
 import { ArticleShareButton } from "./ArticleShareButton";
 
-import { MarkdownRenderer, TableOfContents, getArticle } from "@/app/_features";
+import { MarkdownRenderer, TableOfContents, UniversalLink, getArticle } from "@/app/_features";
 
 interface Props {
   slug: string;
@@ -31,6 +31,15 @@ export const Article = ({ slug, handleNotFound }: Props) => {
         </div>
       </div>
       <ArticleShareButton article={article} />
+      <div className="mt-4">
+        <UniversalLink
+          href="/articles"
+          isEnabledUnderline
+          className="text-zinc-700 dark:text-zinc-300"
+        >
+          ← All Articles
+        </UniversalLink>
+      </div>
     </div>
   );
 };
