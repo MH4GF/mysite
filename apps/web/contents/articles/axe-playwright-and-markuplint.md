@@ -18,7 +18,7 @@ pnpm add -D @axe-core/playwright
 
 このサイトの場合 VRT として Playwright を動かしているテストがあるので([過去資料](https://speakerdeck.com/mh4gf/playwright-de-fan-xiao-sakushi-meru-vrt-to-ci-nosutetupunoxuan-ze-zhi))、そのプロセスに同居する形で axe を実行することにしました。
 
-```ts
+```ts title="e2e.test.ts"
 import AxeBuilder from "@axe-core/playwright"; // [!code ++]
 import type { Page, TestInfo } from "@playwright/test";
 
@@ -86,7 +86,7 @@ pnpm add -D markuplint @markuplint/jsx-parser @markuplint/react-spec
 
 設定ファイルの入力中の補完が欲しいので、.markuplintrc ファイルを `.markuplintrc.ts` に変換して TypeScript で書けるようにします。
 
-```ts
+```ts title=".markuplintrc.ts"
 import type { Config } from "@markuplint/ml-config";
 
 const config: Config = {
@@ -110,7 +110,7 @@ pnpm add -D @markuplint/ml-config
 
 package.json の scripts に以下を追加し、実行できるようにします。
 
-```json
+```json title="package.json"
 "lint:markuplint": "markuplint \"**/*.tsx\"",
 ```
 
@@ -169,7 +169,7 @@ const text = "コードブロックです";
 
 axe-playwright でのテストは、以下のように指摘が 0 で空配列かどうかで検証することになります。
 
-```ts
+```ts title="e2e.test.ts"
 const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
 expect(accessibilityScanResults.violations).toEqual([]);
 ```
@@ -184,7 +184,7 @@ pnpm add -D axe-html-reporter
 
 axe によるテストの途中で、axe-html-reporter のレポート作成を挟みます。
 
-```ts
+```ts title="e2e.test.ts"
 import { createHtmlReport } from "axe-html-reporter"; // [!code ++]
 
 const testA11y = async (page: Page) => {
