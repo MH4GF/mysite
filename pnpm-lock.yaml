@@ -145,8 +145,8 @@ importers:
         specifier: 4.3.0
         version: 4.3.0(typescript@5.3.3)
       msw:
-        specifier: 2.2.5
-        version: 2.2.5(typescript@5.3.3)
+        specifier: 2.2.6
+        version: 2.2.6(typescript@5.3.3)
       postcss:
         specifier: 8.4.35
         version: 8.4.35
@@ -6662,8 +6662,8 @@ packages:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
     dev: false
 
-  /msw@2.2.5(typescript@5.3.3):
-    resolution: {integrity: sha512-9JTDvKTc7Weu8iF0JQeW3+ispwR12rJyHgqncoTBdQZ4L41Acm09i8CViY2c2ULaVTFhhorDwECR27QiXpPw5g==}
+  /msw@2.2.6(typescript@5.3.3):
+    resolution: {integrity: sha512-c33yy8/ahOqvE/OGy0rz4CZx9/EZAiYq8PLAGSW3pU5fje2MAd7yiBr2o6D5bRJtkJ9j4ekGtDS3Fj61Sp9zSQ==}
     engines: {node: '>=18'}
     hasBin: true
     requiresBuild: true
