@@ -8,7 +8,7 @@ tags:
 
 Web アクセシビリティに興味があったので、まず機械的なチェックツールから学んで知識を増やそうということで [@axe-core/playwright](https://www.npmjs.com/package/@axe-core/playwright) と [markuplint](https://github.com/markuplint/markuplint) を導入してみました。
 
-## axe-playwright のセットアップ
+## @axe-core/playwright のセットアップ
 
 既に Playwright が導入されている状況を想定し進めます。まず[@axe-core/playwright ](https://www.npmjs.com/package/@axe-core/playwright)をインストールします。
 
@@ -141,7 +141,7 @@ axe-playwright と markuplint それぞれで指摘が出たため、その指�
 
 ### 横スクロール可能なコードブロックに tabindex="0"を設定した
 
-指摘を受けて悩んだ事例を1つ紹介します。axe からの以下のような指摘を受けました。  
+指摘を受けて悩んだ事例を 1 つ紹介します。axe からの以下のような指摘を受けました。  
 `Ensure elements that have scrollable content are accessible by keyboard.`(id: [scrollable-region-focusable](https://dequeuniversity.com/rules/axe/4.8/scrollable-region-focusable?application=playwright))  
 スクロール可能なコンテンツはキーボードでのアクセスができるようにするべきというもので、これは以下のような記事内のコードブロックで指摘されていました。
 
@@ -198,7 +198,7 @@ const testA11y = async (page: Page) => {
 
 このように設定することで、以下のように HTML で見やすいレポートが生成されます。
 
-![axe-html-reporterの出力HTML](/images/axe-playwright-and-markuplint/1.png)
+![axe-html-reporterの出力HTML](/images/axe-core-playwright-and-markuplint/1.png)
 
 ## 参考資料
 
