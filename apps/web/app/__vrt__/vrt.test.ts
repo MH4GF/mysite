@@ -1,6 +1,9 @@
+import fs from "fs";
+
 import AxeBuilder from "@axe-core/playwright";
 import type { Page, TestInfo } from "@playwright/test";
 import { expect, test } from "@playwright/test";
+import { createHtmlReport } from "axe-html-reporter";
 
 const waitForPageReady = async (page: Page) => {
   await page.waitForLoadState("domcontentloaded");
@@ -14,12 +17,32 @@ const maskFlakyElements = async (page: Page, selectors: string[]) => {
   await page.addStyleTag({ content: `${selector} { opacity: 0; }` });
 };
 
-const testA11y = async (page: Page) => {
+const testA11y = async (page: Page, testName: string) => {
   const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+  const reportHTML = createHtmlReport({
+    results: accessibilityScanResults,
+    options: {
+      projectKey: testName,
+      doNotCreateReportFile: true,
+    },
+  });
+  if (!fs.existsSync("axe-html-report")) {
+    fs.mkdirSync("axe-html-report");
+  }
+  fs.writeFileSync(`axe-html-report/${testName}.html`, reportHTML);
+
   expect(accessibilityScanResults.violations).toEqual([]);
 };
 
-const setup = async (page: Page, targetPage: TargetPage, colorMode: "light" | "dark") => {
+const formatTestName = (testInfo: TestInfo, targetPage: TargetPage, colorMode: "light" | "dark") =>
+  `${targetPage.name}-${testInfo.project.name}-${colorMode}`;
+
+const setup = async (
+  page: Page,
+  testInfo: TestInfo,
+  targetPage: TargetPage,
+  colorMode: "light" | "dark",
+) => {
   await page.goto(targetPage.path);
   if (colorMode === "dark") {
     await page.getByRole("button", { name: "テーマ切り替え" }).click();
@@ -28,17 +51,15 @@ const setup = async (page: Page, targetPage: TargetPage, colorMode: "light" | "d
     `[data-testid="rich-link-card"] img`, // リンクカードの画像は外部サービスに依存しFlakyなため除外
   ]);
   await waitForPageReady(page);
+  const testName = formatTestName(testInfo, targetPage, colorMode);
+
+  return { testName };
 };
 
-const screenshot = async (
-  page: Page,
-  testInfo: TestInfo,
-  targetPage: TargetPage,
-  colorMode: "light" | "dark",
-) => {
+const screenshot = async (page: Page, testName: string) => {
   await page.screenshot({
     fullPage: true,
-    path: `app/__vrt__/screenshots/${targetPage.name}-${testInfo.project.name}-${colorMode}.png`,
+    path: `app/__vrt__/screenshots/${testName}.png`,
   });
 };
 
@@ -72,12 +93,12 @@ const targetPages: TargetPage[] = [
 
 for (const targetPage of targetPages) {
   test(`${targetPage.name}-light`, async ({ page }, testInfo) => {
-    await setup(page, targetPage, "light");
-    await Promise.all([testA11y(page), screenshot(page, testInfo, targetPage, "light")]);
+    const { testName } = await setup(page, testInfo, targetPage, "light");
+    await Promise.all([testA11y(page, testName), screenshot(page, testName)]);
   });
   test(`${targetPage.name}-dark`, async ({ page }, testInfo) => {
-    await setup(page, targetPage, "dark");
-    await Promise.all([testA11y(page), screenshot(page, testInfo, targetPage, "dark")]);
+    const { testName } = await setup(page, testInfo, targetPage, "dark");
+    await Promise.all([testA11y(page, testName), screenshot(page, testName)]);
   });
 }
 
@@ -87,5 +108,6 @@ test("opengraph-image", async ({ page }, testInfo) => {
     name: "opengraph-image",
     path: "/articles/embed-tweet-with-app-router/opengraph-image",
   };
-  await screenshot(page, testInfo, targetPage, "light");
+  const testName = formatTestName(testInfo, targetPage, "light");
+  await screenshot(page, testName);
 });
