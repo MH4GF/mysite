@@ -10,4 +10,5 @@ export const tagLabelMap: Record<TagEnum, string> = {
   life: "Life",
   gadget: "Gadget",
   "speaker-deck": "Speaker Deck",
+  "desk-setup": "Desk Setup",
 };
