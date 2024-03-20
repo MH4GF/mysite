@@ -1,7 +1,7 @@
 ---
 title: ワークチェアを手放し、ステッパーとスツールに移行した
 description: ワークチェアを手放し、ステッパーとスツールだけで作業している。
-publishedAt: 2024-03-18
+publishedAt: 2024-03-20
 headingImage: /images/stepper-and-stool/2.webp
 tags:
   - life
