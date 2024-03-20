@@ -6,6 +6,7 @@ headingImage: /images/tps40/4.jpg
 tags:
   - life
   - gadget
+  - desk-setup
 ---
 
 TPS40 というカスタムキーボードのキットを組み立てたので、そのビルドログを書く。
