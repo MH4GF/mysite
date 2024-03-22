@@ -55,7 +55,7 @@
     "axe-html-reporter": "2.2.3",
     "markuplint": "4.3.0",
     "msw": "2.2.10",
-    "postcss": "8.4.35",
+    "postcss": "8.4.38",
     "tailwindcss": "3.4.1",
     "typescript": "5.3.3",
     "vitest": "1.4.0"
