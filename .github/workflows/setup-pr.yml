@@ -13,6 +13,6 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
-      - uses: MH4GF/dependency-cruiser-report-action@d5c79a9a5d7693f036ce53eb1b136276cce76a35 # v2.4.1
+      - uses: MH4GF/dependency-cruiser-report-action@2a2b37774bfe0b6749ee2bb589161865772fc172 # v2.4.2
         with:
           package-manager: pnpm
