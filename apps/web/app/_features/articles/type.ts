@@ -12,6 +12,7 @@ export const tagList = [
   "speaker-deck",
   "gadget",
   "desk-setup",
+  "graphql",
 ] as const;
 
 export const tagsSchema = z.enum(tagList);

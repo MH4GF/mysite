@@ -10,7 +10,7 @@ const articles: Omit<RawArticleMeta, "externalLink">[] = [
     title: "urqlのDocument Cachingを安全に運用する",
     publishedAt: "2024/03/13",
     href: "https://tech.route06.co.jp/entry/2024/03/13/134852",
-    tags: ["route06-tech-blog"],
+    tags: ["route06-tech-blog", "graphql"],
   },
   {
     title: "to B プロダクトで Vite + React Router を採用して半年後の感想",
@@ -28,7 +28,7 @@ const articles: Omit<RawArticleMeta, "externalLink">[] = [
     title: "GraphQL成熟度モデルをROUTE06のtoBプロダクトに当てはめてみる",
     publishedAt: "2024/01/29",
     href: "https://tech.route06.co.jp/entry/2024/01/29/120647",
-    tags: ["route06-tech-blog"],
+    tags: ["route06-tech-blog", "graphql"],
   },
   {
     title: "@storybook/testing-libraryのconfigure()はpreview.jsで呼び出す",
@@ -76,7 +76,7 @@ const articles: Omit<RawArticleMeta, "externalLink">[] = [
     title: "Plainのフロントエンドにおける技術選定(2023年8月版)",
     href: "https://tech.route06.co.jp/entry/2023/08/08/115253",
     publishedAt: "2023/08/08",
-    tags: ["route06-tech-blog"],
+    tags: ["route06-tech-blog", "graphql"],
   },
   {
     title: "StoryBook v7.0 へのアップデートで非推奨になった型",
@@ -100,31 +100,31 @@ const articles: Omit<RawArticleMeta, "externalLink">[] = [
     title: "GraphQL Code Generator v3 Roadmapで推されているclient-presetを紹介する",
     href: "https://zenn.dev/mh4gf/articles/graphql-codegen-client-preset",
     publishedAt: "2023/1/26",
-    tags: ["zenn"],
+    tags: ["zenn", "graphql"],
   },
   {
     title: "graphql-codegenとzodのz.brandでCustom ScalarのNominal Typingを実現する例",
     href: "https://zenn.dev/mh4gf/articles/nominal-typing-with-graphql-codegen-and-zod",
     publishedAt: "2023/1/10",
-    tags: ["zenn"],
+    tags: ["zenn", "graphql"],
   },
   {
     title: "graphql-rubyで入力値の柔軟なバリデーションを実現する@constraint directiveを導入する",
     publishedAt: "2023/1/5",
     href: "https://zenn.dev/mh4gf/articles/graphql-ruby-constraint-directive",
-    tags: ["zenn"],
+    tags: ["zenn", "graphql"],
   },
   {
     title: "Next.js上のGraphQLクライアントから秘匿情報を安全に扱いつつAPIリクエストを行う",
     publishedAt: "2022/12/10",
     href: "https://zenn.dev/mh4gf/articles/urql-client-working-with-credential-in-nextjs",
-    tags: ["zenn"],
+    tags: ["zenn", "graphql"],
   },
   {
     title: "Rails+Next.jsでGraphQLを導入する時に考えたこと",
     publishedAt: "2022/9/29",
     href: "https://tech.timee.co.jp/entry/2022/09/29/110000",
-    tags: ["timee-product-team-blog"],
+    tags: ["timee-product-team-blog", "graphql"],
   },
   {
     title: "GitHub Apps / GitHub Actionsを使って別のリポジトリにファイルをコピーするPRを作成する",
@@ -142,7 +142,7 @@ const articles: Omit<RawArticleMeta, "externalLink">[] = [
     title: "graphql-rubyで、queryだけのリクエストの場合リードレプリカに接続する",
     publishedAt: "2022/7/18",
     href: "https://zenn.dev/mh4gf/articles/f3c606fce193f8",
-    tags: ["zenn"],
+    tags: ["zenn", "graphql"],
   },
   {
     title: "ActiveModelSerializersを利用しているRailsプロジェクトでgraphql-rubyを導入・共存させる",
