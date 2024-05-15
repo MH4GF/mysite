@@ -21,7 +21,7 @@ const Link = (props: ComponentProps<typeof UniversalLink>) => {
 };
 
 const Img = (props: ComponentProps<typeof Image>) => {
-  return <Image {...props} width="840" height="472" />;
+  return <Image width="840" height="472" {...props} />;
 };
 
 const Pre = (props: ComponentProps<"pre">) => {
