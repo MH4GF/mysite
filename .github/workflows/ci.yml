@@ -16,7 +16,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+      - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
         with:
           node-version-file: .node-version
@@ -29,7 +29,7 @@ jobs:
     container:
       image: mcr.microsoft.com/playwright:v1.42.1-focal@sha256:0c44a93f50ae181849b83d0f71c18b45c400ff990df16c269a8fbdc2470cfeff
     steps:
-      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+      - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
         with:
           node-version-file: .node-version
