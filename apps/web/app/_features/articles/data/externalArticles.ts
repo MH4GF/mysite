@@ -7,6 +7,12 @@ type RawArticleMeta = Omit<ArticleMeta, "publishedAt" | "href"> & {
 
 const articles: Omit<RawArticleMeta, "externalLink">[] = [
   {
+    title: "AWS Amplify Auth v6へのマイグレーションで対応した破壊的変更",
+    publishedAt: "2024/04/08",
+    href: "https://tech.route06.co.jp/entry/2024/04/08/122004",
+    tags: ["route06-tech-blog"],
+  },
+  {
     title: "urqlのDocument Cachingを安全に運用する",
     publishedAt: "2024/03/13",
     href: "https://tech.route06.co.jp/entry/2024/03/13/134852",
