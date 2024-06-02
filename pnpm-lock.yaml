@@ -115,8 +115,8 @@ importers:
         specifier: 4.2.0
         version: 4.2.0
       '@markuplint/react-spec':
-        specifier: 4.1.0
-        version: 4.1.0
+        specifier: 4.5.3
+        version: 4.5.3
       '@playwright/test':
         specifier: 1.44.1
         version: 1.44.1
@@ -523,7 +523,7 @@ packages:
       esbuild: '*'
     dependencies:
       '@types/resolve': 1.20.6
-      debug: 4.3.4
+      debug: 4.3.5
       esbuild: 0.21.4
       escape-string-regexp: 4.0.0
       resolve: 1.22.8
@@ -963,7 +963,7 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
       ajv: 6.12.6
-      debug: 4.3.4
+      debug: 4.3.5
       espree: 9.6.1
       globals: 13.24.0
       ignore: 5.3.1
@@ -1006,7 +1006,7 @@ packages:
     engines: {node: '>=10.10.0'}
     dependencies:
       '@humanwhocodes/object-schema': 2.0.2
-      debug: 4.3.4
+      debug: 4.3.5
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -1196,6 +1196,10 @@ packages:
     resolution: {integrity: sha512-7ZrgvUyPQ4YmUor+Iv/aHcnEVtktN88TNvmDNokLzMZlBxc5alpoCPAv3cJvU4t+dAgW+1P6SnZ2hVGaJkep6A==}
     dev: true
 
+  /@markuplint/ml-ast@4.4.0:
+    resolution: {integrity: sha512-CnBChr2N7BL21STm3Fr77h6GA2QMiMAR1P+Eh4JiWywz79TMmrutwrOOKkKPBM6V0NI2pAG8G8mR+92IPjp6eQ==}
+    dev: true
+
   /@markuplint/ml-config@4.2.0:
     resolution: {integrity: sha512-wGUEsptelMc7KdNmy2A/oCFbmQWDH7C7EGmOPrMepZhJdedidj8j0zF+/kPhGhcy4ScdTX/zQuHOdqB/S7+Wrg==}
     dependencies:
@@ -1243,6 +1247,18 @@ packages:
       - supports-color
     dev: true
 
+  /@markuplint/ml-spec@4.6.1:
+    resolution: {integrity: sha512-5sNFc0JfmcYG4Bdvf0bQ4OCD4kjrM5kiML+yi7b8PK4VLcmKL5fkTemko30k80CqQ1vuZE1ekdBvI5tvGKgtKw==}
+    dependencies:
+      '@markuplint/ml-ast': 4.4.0
+      '@markuplint/types': 4.5.1
+      dom-accessibility-api: 0.6.3
+      is-plain-object: 5.0.0
+      type-fest: 4.18.3
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@markuplint/parser-utils@4.2.0:
     resolution: {integrity: sha512-Dc8P9uq6CTScvgmeouvwF6drTNOiHvudvDOEmkz0JS+MiA0rR5uOhST2zlNCTKxScwOYc+LSpYwFz5zoHQ+03Q==}
     dependencies:
@@ -1258,10 +1274,10 @@ packages:
       - supports-color
     dev: true
 
-  /@markuplint/react-spec@4.1.0:
-    resolution: {integrity: sha512-zCEbDa07LysXrWYhkTjVtKGhjJ87RMJhxRD3Y352qT9o2DwMPUD3iM6U/vTBqKbiK4f/GA7GZpQRaud3d/KrGQ==}
+  /@markuplint/react-spec@4.5.3:
+    resolution: {integrity: sha512-HF9bi7eOXc11uTjo4jvT1LRuxqJBiLp/iTTlTognEG4HmmdTycXUL9vZ0/qepUb1dgBmx1e43NQBK3CLLUq89Q==}
     dependencies:
-      '@markuplint/ml-spec': 4.1.0
+      '@markuplint/ml-spec': 4.6.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1303,6 +1319,12 @@ packages:
       html-entities: 2.5.2
     dev: true
 
+  /@markuplint/shared@4.4.1:
+    resolution: {integrity: sha512-yog5u59pihJ/jc41se/Nbl+EOg5qd+MWMYWZQzcXmeaY5mvEm0G0dtHhD1CzL0Tzhv6XHERehR7SaWpBhpcItg==}
+    dependencies:
+      html-entities: 2.5.2
+    dev: true
+
   /@markuplint/types@4.0.2:
     resolution: {integrity: sha512-Us/OPFOzqsIWLPY9KVhIYk55INo1k8JYggL/6Hk5XhjEGVKdoR2hfn4iDPnkFS3RrClr3mw9ClNwCozC19KGaA==}
     dependencies:
@@ -1311,9 +1333,26 @@ packages:
       '@types/whatwg-mimetype': 3.0.2
       bcp-47: 2.1.0
       css-tree: 2.3.1
-      debug: 4.3.4
+      debug: 4.3.5
       leven: 4.0.0
       type-fest: 4.10.3
+      whatwg-mimetype: 4.0.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@markuplint/types@4.5.1:
+    resolution: {integrity: sha512-7STM8Ey/G5Tz20QYs4ZSwdP5may/kfCbpOGIvkF7BC3G0yPip58GgWGcT38x2e4zsTO6iYp+5VM9Mfhp6mM7tQ==}
+    dependencies:
+      '@markuplint/shared': 4.4.1
+      '@types/css-tree': 2.3.7
+      '@types/debug': 4.1.12
+      '@types/whatwg-mimetype': 3.0.2
+      bcp-47: 2.1.0
+      css-tree: 2.3.1
+      debug: 4.3.4
+      leven: 4.0.0
+      type-fest: 4.18.3
       whatwg-mimetype: 4.0.0
     transitivePeerDependencies:
       - supports-color
@@ -2084,11 +2123,6 @@ packages:
     dependencies:
       '@types/ms': 0.7.31
 
-  /@types/debug@4.1.8:
-    resolution: {integrity: sha512-/vPO1EPOs306Cvhwv7KfVfYvOJqA/S/AXjaHQiJboCZzcNDb+TIJFN9/2C9DZ//ijSKWioNyUxD792QmDJ+HKQ==}
-    dependencies:
-      '@types/ms': 0.7.31
-
   /@types/estree-jsx@1.0.3:
     resolution: {integrity: sha512-pvQ+TKeRHeiUGRhvYwRrQ/ISnohKkSJR14fT2yqyZ4e9K5vqc7hrtY2Y1Dw0ZwAzQ6DQsxsaCUuSIIi8v0Cq6w==}
     dependencies:
@@ -2319,7 +2353,7 @@ packages:
     dependencies:
       '@typescript-eslint/typescript-estree': 6.16.0(typescript@5.4.5)
       '@typescript-eslint/utils': 6.16.0(eslint@8.57.0)(typescript@5.4.5)
-      debug: 4.3.4
+      debug: 4.3.5
       eslint: 8.57.0
       ts-api-utils: 1.0.3(typescript@5.4.5)
       typescript: 5.4.5
@@ -2348,7 +2382,7 @@ packages:
     dependencies:
       '@typescript-eslint/types': 6.16.0
       '@typescript-eslint/visitor-keys': 6.16.0
-      debug: 4.3.4
+      debug: 4.3.5
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.3
@@ -3393,7 +3427,6 @@ packages:
         optional: true
     dependencies:
       ms: 2.1.2
-    dev: false
 
   /decode-named-character-reference@1.0.2:
     resolution: {integrity: sha512-O8x12RzrUF8xyVcY0KJowWsmaJxQbmy0/EtnNtHRpsOcT7dFk5W598coHqBVpmWo1oQQfsCqfCmkZN5DJrZVdg==}
@@ -6858,8 +6891,8 @@ packages:
   /micromark@3.2.0:
     resolution: {integrity: sha512-uD66tJj54JLYq0De10AhWycZWGQNUvDI55xPgk2sQM5kn1JYlhbCMTtEeT27+vAhW2FBQxLlOmS3pmA7/2z4aA==}
     dependencies:
-      '@types/debug': 4.1.8
-      debug: 4.3.4
+      '@types/debug': 4.1.12
+      debug: 4.3.5
       decode-named-character-reference: 1.0.2
       micromark-core-commonmark: 1.1.0
       micromark-factory-space: 1.1.0
@@ -9056,6 +9089,11 @@ packages:
 
   /type-fest@4.10.3:
     resolution: {integrity: sha512-JLXyjizi072smKGGcZiAJDCNweT8J+AuRxmPZ1aG7TERg4ijx9REl8CNhbr36RV4qXqL1gO1FF9HL8OkVmmrsA==}
+    engines: {node: '>=16'}
+    dev: true
+
+  /type-fest@4.18.3:
+    resolution: {integrity: sha512-Q08/0IrpvM+NMY9PA2rti9Jb+JejTddwmwmVQGskAlhtcrw1wsRzoR6ode6mR+OAabNa75w/dxedSUY2mlphaQ==}
     engines: {node: '>=16'}
     dev: true
 
