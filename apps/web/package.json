@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "4.8.5",
-    "@markuplint/jsx-parser": "4.3.0",
+    "@markuplint/jsx-parser": "4.7.3",
     "@markuplint/ml-config": "4.2.0",
     "@markuplint/react-spec": "4.1.0",
     "@playwright/test": "1.44.1",
