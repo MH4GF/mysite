@@ -9,7 +9,7 @@
   "dependencies": {
     "@mh4gf/configs": "0.3.0",
     "@tsconfig/next": "2.0.3",
-    "@tsconfig/strictest": "2.0.3"
+    "@tsconfig/strictest": "2.0.5"
   },
-  "packageManager": "pnpm@8.15.4"
+  "packageManager": "pnpm@8.15.8"
 }
