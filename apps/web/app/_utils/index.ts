@@ -1,2 +1,2 @@
-export { externalLinks, siteInfo, baseUrl } from "./constants";
+export { siteInfo, baseUrl } from "./constants";
 export { compareDesc, format } from "./date";
