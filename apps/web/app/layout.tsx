@@ -70,10 +70,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className={inter.variable} suppressHydrationWarning>
-      <body className="dark:bg-zinc-800">
+      <body className="dark:bg-zinc-900 dark:text-zinc-100">
         <ColorModeScript />
         <TwitterWidgets />
-        <main className="dark:bg-gradient-to-tr dark:from-zinc-700 dark:via-zinc-900 dark:to-zinc-800 dark:text-zinc-100">
+        <main>
           <Header />
           <div className="mx-auto flex min-h-screen max-w-6xl flex-col gap-8 px-4">{children}</div>
           <ScrollToTopButton />
