@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { MyAvatar } from "./_components";
-import { RichLinkCard, SocialLink, UniversalLink } from "./_features";
+import { RichLinkCard, UniversalLink } from "./_features";
 import { siteInfo } from "./_utils";
 
 export default function Page() {
@@ -21,10 +21,6 @@ export default function Page() {
         </UniversalLink>{" "}
         now.
       </p>
-      <div className="flex items-center gap-2 sm:gap-4">
-        <SocialLink kind="x" />
-        <SocialLink kind="github" />
-      </div>
       <ul>
         <li>
           <UniversalLink href="/readme" isEnabledUnderline>
