@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { ComponentProps } from "react";
-import { createElement } from "react";
+import { Fragment, jsx, jsxs } from "react/jsx-runtime";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeRaw from "rehype-raw";
@@ -29,7 +29,6 @@ const Pre = (props: ComponentProps<"pre">) => {
   return <pre tabIndex={0} {...props} />;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
 export const processor = unified()
   .use(remarkParse)
   .use(remarkGfm)
@@ -42,16 +41,18 @@ export const processor = unified()
       "aria-label": "このセクションへのリンク",
     },
   })
+  // @ts-expect-error ... rehypePrettyCode is not typed correctly
   .use(rehypePrettyCode, {
     keepBackground: false,
     theme: "github-dark-dimmed",
     transformers: [transformerNotationDiff()],
   })
-  // @ts-expect-error ... rehypePrettyCode is not typed correctly
   .use(rehypeRaw)
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+  // @ts-expect-error ... rehypeReact is not typed correctly
   .use(rehypeReact, {
-    createElement,
+    Fragment,
+    jsx,
+    jsxs,
     components: {
       p: Paragraph,
       a: Link,

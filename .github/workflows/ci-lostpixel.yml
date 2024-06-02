@@ -16,7 +16,7 @@ jobs:
     permissions:
       contents: read
     container:
-      image: mcr.microsoft.com/playwright:v1.42.1-focal@sha256:0c44a93f50ae181849b83d0f71c18b45c400ff990df16c269a8fbdc2470cfeff
+      image: mcr.microsoft.com/playwright:v1.44.1-focal@sha256:c3210c026e79dafc6d706f039b3fe9e547f0e76eda5d29aba218f702806b4364
 
     steps:
       - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4

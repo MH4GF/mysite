@@ -9,8 +9,20 @@
   "packageRules": [
     {
       "groupName": "unified",
-      "matchPackageNames": ["unified"],
-      "matchPackagePrefixes": ["unified", "rehype", "remark"]
+      "matchPackageNames": [
+        "unified",
+        "rehype-autolink-headings",
+        "rehype-parse",
+        "rehype-pretty-code",
+        "rehype-raw",
+        "rehype-react",
+        "rehype-slug",
+        "remark-gfm",
+        "remark-parse",
+        "remark-rehype",
+        "shikiji",
+        "shikiji-transformers"
+      ]
     },
     {
       "groupName": "test",
