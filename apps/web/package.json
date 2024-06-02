@@ -41,7 +41,7 @@
     "zod": "3.22.4"
   },
   "devDependencies": {
-    "@axe-core/playwright": "4.8.5",
+    "@axe-core/playwright": "4.9.1",
     "@markuplint/jsx-parser": "4.7.3",
     "@markuplint/ml-config": "4.7.0",
     "@markuplint/react-spec": "4.5.3",
@@ -55,11 +55,11 @@
     "autoprefixer": "10.4.19",
     "axe-html-reporter": "2.2.3",
     "markuplint": "4.9.0",
-    "msw": "2.2.10",
+    "msw": "2.3.1",
     "postcss": "8.4.35",
     "tailwindcss": "3.4.3",
     "typescript": "5.4.5",
-    "vitest": "1.4.0"
+    "vitest": "1.6.0"
   },
   "nextBundleAnalysis": {
     "budget": 358400,
