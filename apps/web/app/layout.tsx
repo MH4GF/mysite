@@ -1,7 +1,7 @@
 import { GoogleTagManager } from "@next/third-parties/google";
-import "@project/configs/tailwindcss/global.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import "./globals.css";
 
 import { Footer } from "./_components";
 import { ColorModeScript, Header, ScrollToTopButton, TwitterWidgets } from "./_features";
