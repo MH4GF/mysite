@@ -20,7 +20,7 @@ export const ScrollToTopButton = () => {
       type="button"
       className={`${
         isVisible ? "opacity-75" : "opacity-0"
-      } fixed bottom-2 right-2 h-10 w-10 rounded-sm p-2 text-zinc-400 transition duration-300 hover:bg-zinc-500 hover:text-zinc-300 hover:dark:bg-zinc-700`}
+      } fixed right-2 bottom-2 h-10 w-10 rounded-sm p-2 text-zinc-400 transition duration-300 hover:bg-zinc-500 hover:dark:bg-zinc-700 hover:text-zinc-300`}
       onClick={handleClick}
     >
       ↑
