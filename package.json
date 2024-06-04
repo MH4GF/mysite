@@ -16,7 +16,7 @@
     "scaffold": "scaffdog generate"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.5.3-nightly.24fcf19",
+    "@biomejs/biome": "1.8.0",
     "@project/configs": "workspace:^*",
     "dependency-cruiser": "16.3.2",
     "eslint": "8.57.0",
