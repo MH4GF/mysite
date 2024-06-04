@@ -73,7 +73,7 @@ export const RssIcon: IconComponent = ({ className, ...props }) => {
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth="1.5"
-      className={`stroke-zinc-500 transition dark:stroke-zinc-400 dark:hover:stroke-zinc-300 hover:stroke-zinc-600 ${className}`}
+      className={`stroke-zinc-500 transition dark:hover:stroke-zinc-300 dark:stroke-zinc-400 hover:stroke-zinc-600 ${className}`}
       {...props}
     >
       <title>RSS</title>

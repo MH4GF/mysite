@@ -1,4 +1,4 @@
-import type { UrlObject } from "url";
+import type { UrlObject } from "node:url";
 
 import type { Route } from "next";
 import type { LinkProps } from "next/link";
