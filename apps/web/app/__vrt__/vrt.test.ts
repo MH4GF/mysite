@@ -1,3 +1,4 @@
+// biome-ignore lint/correctness/noNodejsModules: テストファイルのため
 import fs from "node:fs";
 
 import AxeBuilder from "@axe-core/playwright";
@@ -19,7 +20,7 @@ const maskFlakyElements = async (page: Page, selectors: string[]) => {
 
 const testA11y = async (page: Page, testName: string) => {
   const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
-  const reportHTML = createHtmlReport({
+  const reportHtml = createHtmlReport({
     results: accessibilityScanResults,
     options: {
       projectKey: testName,
@@ -29,7 +30,7 @@ const testA11y = async (page: Page, testName: string) => {
   if (!fs.existsSync("axe-html-report")) {
     fs.mkdirSync("axe-html-report");
   }
-  fs.writeFileSync(`axe-html-report/${testName}.html`, reportHTML);
+  fs.writeFileSync(`axe-html-report/${testName}.html`, reportHtml);
 
   expect(accessibilityScanResults.violations).toEqual([]);
 };

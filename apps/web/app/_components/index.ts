@@ -1,5 +1,5 @@
-export { MoonIcon, SunIcon, RssIcon } from "./Icons";
+export { MoonIcon, SunIcon, RssIcon } from "./icons";
 export { MyAvatar } from "./MyAvatar";
 export { Footer } from "./Footer";
 export { Time } from "./Time";
-export * from "./Icons";
+export * from "./icons";

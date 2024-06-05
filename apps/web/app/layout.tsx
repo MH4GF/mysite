@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import type { ReactNode } from "react";
+
 import { Footer } from "./_components";
 import { ColorModeScript, Header, ScrollToTopButton, TwitterWidgets } from "./_features";
 import { baseUrl, siteInfo } from "./_utils";
@@ -66,7 +68,7 @@ const inter = Inter({
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <html lang="ja" className={inter.variable} suppressHydrationWarning>

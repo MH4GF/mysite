@@ -13,7 +13,9 @@ interface Props {
 
 export default function Page({ params: { tag: _tag } }: Props) {
   const parsed = tagsSchema.safeParse(_tag);
-  if (!parsed.success) notFound();
+  if (!parsed.success) {
+    notFound();
+  }
   const tag = parsed.data;
   const label = tagLabelMap[tag];
 

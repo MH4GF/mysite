@@ -6,6 +6,7 @@ import { useLayoutEffect, useRef } from "react";
 
 const safeStartViewTransition = (callback: () => Promise<void> | void) => {
   if (!document.startViewTransition) {
+    // biome-ignore lint/complexity/noVoid: Promiseの場合があるためvoidを返す
     return void callback();
   }
   document.startViewTransition(callback);

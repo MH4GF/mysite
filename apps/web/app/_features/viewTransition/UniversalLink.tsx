@@ -1,10 +1,9 @@
-import type { UrlObject } from "node:url";
-
-import type { Route } from "next";
 import type { LinkProps } from "next/link";
 import NextLink from "next/link";
 
 import { Link } from "./Link";
+
+type Href<T extends string = string> = LinkProps<T>["href"];
 
 const sameOriginPrefixes = [
   "/", // ルート相対パス
@@ -13,7 +12,7 @@ const sameOriginPrefixes = [
 
 const baseOrigin = new URL(`https://${process.env.VERCEL_URL}` || "http://localhost:3000").origin;
 
-const isSameOrigin = <T extends string = string>(_href: Route<T> | UrlObject) => {
+const isSameOrigin = <T extends string = string>(_href: Href<T>) => {
   // eslint-disable-next-line @typescript-eslint/no-base-to-string
   const href = _href.toString();
   if (sameOriginPrefixes.some((prefix) => href.startsWith(prefix))) {

@@ -5,6 +5,7 @@
 import type { Route } from "next";
 import type { LinkProps } from "next/link";
 import NextLink from "next/link";
+import type { MouseEvent } from "react";
 
 import { useViewTransitionRouter } from "./useViewTransitionRouter";
 
@@ -22,8 +23,10 @@ export function Link<T extends string = string>({ children, href, ...props }: Li
     );
   }
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (e.ctrlKey || e.metaKey) return;
+  const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>) => {
+    if (e.ctrlKey || e.metaKey) {
+      return;
+    }
 
     e.preventDefault();
 

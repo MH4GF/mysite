@@ -1,9 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
 
-// biome-ignore lint/nursery/useImportRestrictions: VercelのEdge Functionのsizeを超えてしまうため直接指定 https://vercel.com/docs/functions/limitations#code-size-limit
 import { tagLabelMap } from "../../_features/articles/constants";
-// biome-ignore lint/nursery/useImportRestrictions: 同上
 import { getArticle } from "../../_features/articles/getArticle";
 
 export const runtime = "edge";
@@ -30,15 +28,17 @@ const fetchFont = async (fontSource: string) => {
 
   const resource = css.match(/src: url\((.+)\) format\('(opentype|truetype)'\)/);
 
-  if (!resource?.[1]) return null;
+  if (!resource?.[1]) {
+    return null;
+  }
 
   const res = await fetch(resource[1]);
 
   return res.arrayBuffer();
 };
 
-const fontENSource = "https://fonts.googleapis.com/css2?family=Open+Sans:wght@700";
-const fontJPSource = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@700";
+const fontEnSource = "https://fonts.googleapis.com/css2?family=Open+Sans:wght@700";
+const fontJpSource = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@700";
 
 type FontOptions = {
   name: string;
@@ -48,22 +48,24 @@ type FontOptions = {
 };
 
 const generateFonts = async (): Promise<FontOptions[] | null> => {
-  const [fontENData, fontJPData] = await Promise.all([
-    fetchFont(fontENSource),
-    fetchFont(fontJPSource),
+  const [fontEnData, fontJpData] = await Promise.all([
+    fetchFont(fontEnSource),
+    fetchFont(fontJpSource),
   ]);
-  if (!(fontENData && fontJPData)) return null;
+  if (!(fontEnData && fontJpData)) {
+    return null;
+  }
 
   return [
     {
       name: "Open Sans",
-      data: fontENData,
+      data: fontEnData,
       style: "normal",
       weight: 700,
     },
     {
       name: "IBM Plex Sans JP",
-      data: fontJPData,
+      data: fontJpData,
       style: "normal",
       weight: 700,
     },
@@ -78,13 +80,17 @@ type Props = {
 
 export default async function Image({ params }: Props) {
   const article = getArticle(`/articles/${params.slug}`);
-  if (!article) return new Response("Not Found", { status: 404 });
+  if (!article) {
+    return new Response("Not Found", { status: 404 });
+  }
 
   const imageData = fetch(new URL("./_assets/og-image-base.jpg", import.meta.url)).then((res) =>
     res.arrayBuffer(),
   );
   const fonts = await generateFonts();
-  if (!fonts) return new Response("Error", { status: 500 });
+  if (!fonts) {
+    return new Response("Error", { status: 500 });
+  }
 
   return new ImageResponse(
     <div
