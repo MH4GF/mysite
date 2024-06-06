@@ -36,7 +36,7 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
           >
             {title}
           </h2>
-          <p className="overflow-hidden text-ellipsis whitespace-nowrap text-xs text-zinc-500">
+          <p className="overflow-hidden text-ellipsis whitespace-nowrap text-xs text-zinc-500 dark:text-zinc-400">
             {description}
           </p>
         </div>
