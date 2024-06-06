@@ -27,7 +27,9 @@ interface Props {
 
 const Share = ({ shareData }: Props) => {
   const handleClick = useCallback(() => {
-    if (!isShareSupported) return;
+    if (!isShareSupported) {
+      return;
+    }
 
     navigator.share(shareData).catch(console.error);
   }, [shareData]);

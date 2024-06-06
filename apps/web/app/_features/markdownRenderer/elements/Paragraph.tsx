@@ -17,18 +17,24 @@ const urlSchema = z.string().url();
  */
 const maybeSingleUrl = (_children: ReactNode): string | null => {
   const children = Children.toArray(_children);
-  if (!(children.length === 1 && isValidElement(children[0]))) return null;
+  if (!(children.length === 1 && isValidElement(children[0]))) {
+    return null;
+  }
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
   const urlChildren = Children.toArray(children[0].props?.children ?? []);
 
-  if (urlChildren.length !== 1) return null;
+  if (urlChildren.length !== 1) {
+    return null;
+  }
   const parsed = urlSchema.safeParse(urlChildren[0]);
   return parsed.success ? parsed.data : null;
 };
 
 export const Paragraph = ({ children }: Props) => {
   const maybeUrl = maybeSingleUrl(children);
-  if (maybeUrl === null) return <p>{children}</p>;
+  if (maybeUrl === null) {
+    return <p>{children}</p>;
+  }
 
   // TODO: RichLinkCardをelements以下に移動する
   return (
