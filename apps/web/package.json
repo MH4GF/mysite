@@ -57,7 +57,7 @@
     "markuplint": "4.9.0",
     "msw": "2.3.1",
     "postcss": "8.4.35",
-    "tailwindcss": "3.4.3",
+    "tailwindcss": "3.4.4",
     "typescript": "5.4.5",
     "vitest": "1.6.0"
   },
