@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { MyAvatar } from "./_components";
-import { RichLinkCard, SocialLink, UniversalLink } from "./_features";
+import { SocialLink, UniversalLink } from "./_features";
 import { siteInfo } from "./_utils";
 
 export default function Page() {
@@ -47,23 +47,6 @@ export default function Page() {
           </UniversalLink>
         </li>
       </ul>
-      <div className="grid gap-2">
-        <h2 className="font-bold">Popular Articles</h2>
-        <ul className="grid gap-4 sm:grid-cols-2">
-          <li>
-            <RichLinkCard url={"https://tech.route06.co.jp/entry/2023/08/08/115253"} />
-          </li>
-          <li>
-            <RichLinkCard url={"https://zenn.dev/mh4gf/articles/graphql-codegen-client-preset"} />
-          </li>
-          <li>
-            <RichLinkCard url={"https://zenn.dev/mh4gf/articles/d25ef1ff30b5a6"} />
-          </li>
-          <li>
-            <RichLinkCard url={"https://tech.timee.co.jp/entry/2022/09/29/110000"} />
-          </li>
-        </ul>
-      </div>
     </div>
   );
 }
