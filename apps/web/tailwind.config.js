@@ -6,6 +6,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        sub: colors.zinc[400],
+      },
       /**
        * Tailwind UIはInterの利用を推奨しており、Next.jsでの統合を設定している
        * @see: https://nextjs.org/docs/app/building-your-application/optimizing/fonts#with-tailwind-css

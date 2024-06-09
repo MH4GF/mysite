@@ -1,56 +1,176 @@
-import type { Metadata } from "next";
-
+import type { ComponentProps } from "react";
 import { MyAvatar } from "./_components";
-import { SocialLink, UniversalLink } from "./_features";
-import { siteInfo } from "./_utils";
+import { UniversalLink } from "./_features";
+import { WorkExperience } from "./_features/top";
+
+const findMeOn: {
+  sns: string;
+  url: ComponentProps<typeof UniversalLink>["href"];
+  name: string;
+}[] = [
+  {
+    sns: "X",
+    url: "https://x.com/mh4gf",
+    name: "@MH4GF",
+  },
+  {
+    sns: "GitHub",
+    url: "https://github.com/MH4GF",
+    name: "@MH4GF",
+  },
+  {
+    sns: "Zenn",
+    url: "https://zenn.dev/mh4gf",
+    name: "@MH4GF",
+  },
+  {
+    sns: "sizu.me",
+    url: "https://sizu.me/mh4gf",
+    name: "@MH4GF",
+  },
+];
+
+const workExperiences: ComponentProps<typeof WorkExperience>[] = [
+  {
+    period: "Current - 2022",
+    company: {
+      name: "ROUTE06, Inc.",
+      url: "https://route06.co.jp/",
+      position: (
+        <>
+          Software Engineer, Tech Lead
+          <br />
+          React, GraphQL, Rails, AWS
+        </>
+      ),
+    },
+  },
+  {
+    period: "2022 - 2021",
+    company: {
+      name: "Bit Journey, Inc.",
+      url: "https://bitjourney.com/",
+      position: (
+        <>
+          Software Engineer (Freelance)
+          <br />
+          React, GraphQL, Rails
+        </>
+      ),
+    },
+  },
+  {
+    period: "2022",
+    company: {
+      name: "DXER, Inc.",
+      url: "https://dxer.co.jp/",
+      position: (
+        <>
+          Software Engineer (Freelance)
+          <br />
+          React, Go, GraphQL
+        </>
+      ),
+    },
+  },
+  {
+    period: "2021 - 2020",
+    company: {
+      name: "ResortWorx, Inc.",
+      url: "https://resortworx.jp/",
+      position: (
+        <>
+          Software Engineer (Freelance)
+          <br />
+          Vue, Rails, AWS
+        </>
+      ),
+    },
+  },
+  {
+    period: "2021 - 2018",
+    company: {
+      name: "Timee, Inc.",
+      url: "https://timee.co.jp/",
+      position: (
+        <>
+          Backend Engineer
+          <br />
+          Rails, AWS
+        </>
+      ),
+    },
+  },
+];
 
 export default function Page() {
   return (
-    <div className="mx-auto grid gap-4 sm:gap-8">
-      <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-8">
-        <MyAvatar />
-        <h1 className="font-bold text-3xl sm:text-5xl">Hirotaka Miyagi</h1>
+    <div>
+      <div className="flex flex-col gap-4 mb-40">
+        <div className="flex gap-2 items-center">
+          <MyAvatar />
+          <h1 className="">MH4GF / Hirokata Miyagi</h1>
+        </div>
+        <p className="text-sm text-sub">
+          Software Engineer at ROUTE06, inc.
+          <br />
+          Tokyo, Japan
+        </p>
       </div>
-      <p>
-        Hey, I am Hirotaka Miyagi, a software engineer based in Tokyo, Japan.
-        <br />I am interested in Web, Developer Experience, Doing photography, and Drinking beer 🍻.
-        <br />
-        and I work in{" "}
-        <UniversalLink href="https://route06.co.jp/" isEnabledUnderline>
-          ROUTE06, inc
-        </UniversalLink>{" "}
-        now.
-      </p>
-      <div className="flex items-center gap-2 sm:gap-4">
-        <SocialLink kind="x" />
-        <SocialLink kind="github" />
+
+      <div className="flex flex-col gap-20">
+        <div className="flex flex-col gap-1">
+          <h2>What I can do</h2>
+          <p>
+            Web Frontend (React, Next.js) / Backend (Ruby on Rails, Go) / GraphQL / Cloud (AWS,
+            Terraform)
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-1">
+            <h2>
+              <UniversalLink href="/articles" isEnabledUnderline>
+                All Writing
+              </UniversalLink>
+            </h2>
+            <p className="text-sm text-sub">Write about what I learned today or my daily life.</p>
+          </div>
+          <div className="flex flex-col gap-1">
+            <h2>
+              <UniversalLink href="/behavior" isEnabledUnderline>
+                好む振る舞い
+              </UniversalLink>
+            </h2>
+            <p className="text-sm text-sub">
+              チームで心地よく働くために意識していることをまとめています。
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-6">
+          <h2>Work Experience</h2>
+          <div className="flex">
+            {workExperiences.map((workExperience) => (
+              <WorkExperience key={workExperience.period} {...workExperience} />
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-6">
+          <h2>Find me on</h2>
+          <div className="flex flex-col gap-2 w-56">
+            {findMeOn.map(({ sns, url, name }) => (
+              <p key={sns} className="inline-flex justify-between">
+                <span className="text-sub">{sns}</span>
+                <UniversalLink href={url} isEnabledUnderline>
+                  {name}
+                </UniversalLink>
+              </p>
+            ))}
+          </div>
+        </div>
       </div>
-      <ul>
-        <li>
-          <UniversalLink href="/readme" isEnabledUnderline>
-            📝 取扱説明書
-          </UniversalLink>
-        </li>
-        <li>
-          <UniversalLink href="/behavior" isEnabledUnderline>
-            🚲 好む振る舞い
-          </UniversalLink>
-        </li>
-        <li>
-          <UniversalLink href="/thinking-in-career" isEnabledUnderline>
-            ⛰️ キャリアの指向性(脳内メモ)
-          </UniversalLink>
-        </li>
-        <li>
-          <UniversalLink href="/resume" isEnabledUnderline>
-            👋 Resume
-          </UniversalLink>
-        </li>
-      </ul>
     </div>
   );
 }
-
-export const metadata: Metadata = {
-  title: `About | ${siteInfo.siteName}`,
-};
