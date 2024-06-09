@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-import { RssIcon } from "../_components";
-import { ArticleList, UniversalLink } from "../_features";
+import { RssIcon } from "../../_components";
+import { ArticleList, UniversalLink } from "../../_features";
 
 export default function Page() {
   return (
