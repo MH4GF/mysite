@@ -25,7 +25,7 @@ export const WorkExperience: FC<Props> = ({ period, company, className }) => {
       </div>
       <div className="flex items-center gap-1">
         <div className="rounded-full w-[5px] h-[5px] bg-zinc-400" />
-        <div className="h-px w-80 bg-zinc-500" />
+        <div className="h-px w-[80vw] md:w-80 bg-zinc-500" />
       </div>
     </li>
   );

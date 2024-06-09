@@ -105,8 +105,8 @@ const workExperiences: ComponentProps<typeof WorkExperience>[] = [
 
 export default function Page() {
   return (
-    <main className="max-w-3xl mx-auto py-32">
-      <div className="flex flex-col gap-4 mb-72">
+    <main className="max-w-3xl mx-auto py-16 md:py-32 px-4 md:px-0">
+      <div className="flex flex-col gap-4 mb-40 md:mb-72">
         <div className="flex gap-2 items-center">
           <MyAvatar />
           <h1 className="">MH4GF / Hirokata Miyagi</h1>
@@ -119,7 +119,7 @@ export default function Page() {
       </div>
 
       <div className="flex flex-col gap-20">
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-4">
           <h2>What I can do</h2>
           <p>
             Web Frontend (React, Next.js) / Backend (Ruby on Rails, Go) / GraphQL / Cloud (AWS,
@@ -127,27 +127,28 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4">
+          <h2>About</h2>
           <div className="flex flex-col gap-1">
-            <h2>
+            <h3>
               <UniversalLink href="/articles" isEnabledUnderline>
                 All Writing
               </UniversalLink>
-            </h2>
+            </h3>
             <p className="text-sm text-sub">Write about what I learned today or my daily life.</p>
           </div>
           <div className="flex flex-col gap-1">
-            <h2 className="cursor-not-allowed	">Media (in preparation)</h2>
+            <h3 className="cursor-not-allowed	">Media (in preparation)</h3>
             <p className="text-sm text-sub">Talking at events, podcasts, etc...</p>
           </div>
           <div className="flex flex-col gap-1">
-            <h2>
+            <h3>
               <UniversalLink href="/behavior" isEnabledUnderline>
                 好む振る舞い
               </UniversalLink>
-            </h2>
+            </h3>
             <p className="text-sm text-sub">
-              チームで心地よく働くために意識していることをまとめています。
+              チームで心地よく働くために、意識していることをまとめています。
             </p>
           </div>
         </div>
@@ -165,7 +166,7 @@ export default function Page() {
           </ul>
         </div>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4">
           <h2>Find me on</h2>
           <div className="flex flex-col gap-2 w-56">
             {findMeOn.map(({ service: sns, url, name }) => (
