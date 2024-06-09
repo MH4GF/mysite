@@ -4,29 +4,29 @@ import { UniversalLink } from "./_features";
 import { WorkExperience } from "./_features/top";
 
 const findMeOn: {
-  sns: string;
+  service: string;
   url: ComponentProps<typeof UniversalLink>["href"];
   name: string;
 }[] = [
   {
-    sns: "X",
+    service: "X",
     url: "https://x.com/mh4gf",
     name: "@MH4GF",
   },
   {
-    sns: "GitHub",
+    service: "GitHub",
     url: "https://github.com/MH4GF",
     name: "@MH4GF",
   },
   {
-    sns: "Zenn",
+    service: "Zenn",
     url: "https://zenn.dev/mh4gf",
-    name: "@MH4GF",
+    name: "@mh4gf",
   },
   {
-    sns: "sizu.me",
+    service: "sizu.me",
     url: "https://sizu.me/mh4gf",
-    name: "@MH4GF",
+    name: "@mh4gf",
   },
 ];
 
@@ -105,8 +105,8 @@ const workExperiences: ComponentProps<typeof WorkExperience>[] = [
 
 export default function Page() {
   return (
-    <div>
-      <div className="flex flex-col gap-4 mb-40">
+    <main className="max-w-3xl mx-auto py-32">
+      <div className="flex flex-col gap-4 mb-72">
         <div className="flex gap-2 items-center">
           <MyAvatar />
           <h1 className="">MH4GF / Hirokata Miyagi</h1>
@@ -137,6 +137,10 @@ export default function Page() {
             <p className="text-sm text-sub">Write about what I learned today or my daily life.</p>
           </div>
           <div className="flex flex-col gap-1">
+            <h2 className="cursor-not-allowed	">Media (in preparation)</h2>
+            <p className="text-sm text-sub">Talking at events, podcasts, etc...</p>
+          </div>
+          <div className="flex flex-col gap-1">
             <h2>
               <UniversalLink href="/behavior" isEnabledUnderline>
                 好む振る舞い
@@ -150,17 +154,21 @@ export default function Page() {
 
         <div className="flex flex-col gap-6">
           <h2>Work Experience</h2>
-          <div className="flex">
+          <ul className="flex gap-1 snap-x snap-mandatory overflow-x-scroll pb-4 scrollbar-thin">
             {workExperiences.map((workExperience) => (
-              <WorkExperience key={workExperience.period} {...workExperience} />
+              <WorkExperience
+                key={workExperience.period}
+                {...workExperience}
+                className="snap-start"
+              />
             ))}
-          </div>
+          </ul>
         </div>
 
         <div className="flex flex-col gap-6">
           <h2>Find me on</h2>
           <div className="flex flex-col gap-2 w-56">
-            {findMeOn.map(({ sns, url, name }) => (
+            {findMeOn.map(({ service: sns, url, name }) => (
               <p key={sns} className="inline-flex justify-between">
                 <span className="text-sub">{sns}</span>
                 <UniversalLink href={url} isEnabledUnderline>
@@ -171,6 +179,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

@@ -1,3 +1,4 @@
+const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
 
 /** @type {import('tailwindcss').Config} */
@@ -46,5 +47,14 @@ module.exports = {
       }),
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        ".scrollbar-thin": {
+          scrollbarWidth: "thin",
+        },
+      });
+    }),
+  ],
 };

@@ -8,11 +8,12 @@ type Props = {
     url: ComponentProps<typeof UniversalLink>["href"];
     position: ReactNode;
   };
+  className?: string;
 };
 
-export const WorkExperience: FC<Props> = ({ period, company }) => {
+export const WorkExperience: FC<Props> = ({ period, company, className }) => {
   return (
-    <div className="flex flex-col gap-8">
+    <li className={`${className} flex flex-col gap-8`}>
       <div className="flex flex-col gap-1">
         <p className="text-xs text-sub">{period}</p>
         <p>
@@ -22,10 +23,10 @@ export const WorkExperience: FC<Props> = ({ period, company }) => {
         </p>
         <p className="text-xs text-sub">{company.position}</p>
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center gap-1">
         <div className="rounded-full w-[5px] h-[5px] bg-zinc-400" />
         <div className="h-px w-80 bg-zinc-500" />
       </div>
-    </div>
+    </li>
   );
 };
