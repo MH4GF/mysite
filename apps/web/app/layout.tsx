@@ -71,7 +71,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className={inter.variable} suppressHydrationWarning>
-      <body className="dark:bg-zinc-900 dark:text-zinc-200">
+      <body className="bg-background text-foreground-main">
         <ColorModeScript />
         <TwitterWidgets />
         {children}

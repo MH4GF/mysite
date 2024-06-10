@@ -8,6 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "foreground-main": "var(--color-foreground-main)",
+        "foreground-sub": "var(--color-foreground-sub)",
+        background: "var(--color-background)",
         sub: colors.zinc[400],
       },
       /**

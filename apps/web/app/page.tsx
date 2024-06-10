@@ -38,7 +38,7 @@ export default function Page() {
           <MyAvatar />
           <h1 className="">MH4GF / Hirokata Miyagi</h1>
         </div>
-        <p className="text-sm text-sub">
+        <p className="text-sm text-foreground-sub">
           Software Engineer at ROUTE06, inc.
           <br />
           Tokyo, Japan
@@ -62,11 +62,13 @@ export default function Page() {
                 All Writing
               </UniversalLink>
             </h3>
-            <p className="text-sm text-sub">Write about what I learned today or my daily life.</p>
+            <p className="text-sm text-foreground-sub">
+              Write about what I learned today or my daily life.
+            </p>
           </div>
           <div className="flex flex-col gap-1">
             <h3 className="cursor-not-allowed	">Media (in preparation)</h3>
-            <p className="text-sm text-sub">Talking at events, podcasts, etc...</p>
+            <p className="text-sm text-foreground-sub">Talking at events, podcasts, etc...</p>
           </div>
           <div className="flex flex-col gap-1">
             <h3>
@@ -74,7 +76,7 @@ export default function Page() {
                 好む振る舞い
               </UniversalLink>
             </h3>
-            <p className="text-sm text-sub">
+            <p className="text-sm text-foreground-sub">
               チームで心地よく働くために、意識していることをまとめています。
             </p>
           </div>
@@ -87,7 +89,7 @@ export default function Page() {
           <div className="flex flex-col gap-2 w-56">
             {findMeOn.map(({ service: sns, url, name }) => (
               <p key={sns} className="inline-flex justify-between">
-                <span className="text-sub">{sns}</span>
+                <span className="text-foreground-sub">{sns}</span>
                 <UniversalLink href={url} isEnabledUnderline>
                   {name}
                 </UniversalLink>
