@@ -5,8 +5,7 @@ import "./globals.css";
 
 import type { ReactNode } from "react";
 
-import { Footer } from "./_components";
-import { ColorModeScript, Header, ScrollToTopButton, TwitterWidgets } from "./_features";
+import { ColorModeScript, TwitterWidgets } from "./_features";
 import { baseUrl, siteInfo } from "./_utils";
 
 const { siteName, description, url, twitter } = siteInfo;
@@ -72,15 +71,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className={inter.variable} suppressHydrationWarning>
-      <body className="dark:bg-zinc-900 dark:text-zinc-200">
+      <body className="bg-background text-foreground-main">
         <ColorModeScript />
         <TwitterWidgets />
-        <main>
-          <Header />
-          <div className="mx-auto flex min-h-screen max-w-6xl flex-col gap-8 px-4">{children}</div>
-          <ScrollToTopButton />
-          <Footer className="mt-8" />
-        </main>
+        {children}
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""} />
       </body>
     </html>

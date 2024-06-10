@@ -1,3 +1,4 @@
+const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
 
 /** @type {import('tailwindcss').Config} */
@@ -6,6 +7,12 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        "foreground-main": "var(--color-foreground-main)",
+        "foreground-sub": "var(--color-foreground-sub)",
+        background: "var(--color-background)",
+        sub: colors.zinc[400],
+      },
       /**
        * Tailwind UIはInterの利用を推奨しており、Next.jsでの統合を設定している
        * @see: https://nextjs.org/docs/app/building-your-application/optimizing/fonts#with-tailwind-css
@@ -43,5 +50,14 @@ module.exports = {
       }),
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        ".scrollbar-thin": {
+          scrollbarWidth: "thin",
+        },
+      });
+    }),
+  ],
 };

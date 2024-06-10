@@ -7,8 +7,8 @@ export const MyAvatar = () => {
     <Image
       src={avatar}
       alt="MH4GFのプロフィール画像"
-      width="150"
-      height="150"
+      width="32"
+      height="32"
       placeholder="blur"
       className="inline-block rounded-full"
       priority

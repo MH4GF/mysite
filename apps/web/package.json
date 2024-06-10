@@ -8,7 +8,7 @@
     "lint": "run-s lint:*",
     "lint:next": "next lint",
     "lint:tsc": "tsc",
-    "lint:markuplint": "markuplint \"**/*.tsx\"",
+    "lint:markuplint": "markuplint --problem-only \"**/*.tsx\"",
     "start": "next start",
     "test": "run-s test:*",
     "test:playwright": "playwright test",

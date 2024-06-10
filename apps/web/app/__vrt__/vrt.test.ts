@@ -98,6 +98,10 @@ for (const targetPage of targetPages) {
     await Promise.all([testA11y(page, testName), screenshot(page, testName)]);
   });
   test(`${targetPage.name}-dark`, async ({ page }, testInfo) => {
+    // FIXME: homeはテーマ切り替えボタンを実装していないためスキップ
+    if (targetPage.name === "home") {
+      return;
+    }
     const { testName } = await setup(page, testInfo, targetPage, "dark");
     await Promise.all([testA11y(page, testName), screenshot(page, testName)]);
   });

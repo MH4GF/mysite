@@ -6,4 +6,16 @@
   :is(.dark .dark\:prose-invert) {
     --mysite-code-bg: var(--mysite-invert-code-bg);
   }
+
+  :root {
+    --color-foreground-main: rgb(24 24 27); /* zinc/900 */
+    --color-foreground-sub: rgb(108 108 112); /* zinc/500 */
+    --color-background: rgb(255 255 255); /* white */
+  }
+
+  .dark {
+    --color-foreground-main: rgb(228 228 231); /* zinc/200 */
+    --color-foreground-sub: rgb(161 161 170); /* zinc/400 */
+    --color-background: rgb(24 24 27); /* zinc/900 */
+  }
 }
