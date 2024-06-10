@@ -1,7 +1,7 @@
 import type { ComponentProps } from "react";
 import { MyAvatar } from "./_components";
 import { UniversalLink } from "./_features";
-import { WorkExperience } from "./_features/top";
+import { WorkExperienceList } from "./_features/top";
 
 const findMeOn: {
   service: string;
@@ -27,79 +27,6 @@ const findMeOn: {
     service: "sizu.me",
     url: "https://sizu.me/mh4gf",
     name: "@mh4gf",
-  },
-];
-
-const workExperiences: ComponentProps<typeof WorkExperience>[] = [
-  {
-    period: "Current - 2022",
-    company: {
-      name: "ROUTE06, Inc.",
-      url: "https://route06.co.jp/",
-      position: (
-        <>
-          Software Engineer, Tech Lead
-          <br />
-          React, GraphQL, Rails, AWS
-        </>
-      ),
-    },
-  },
-  {
-    period: "2022 - 2021",
-    company: {
-      name: "Bit Journey, Inc.",
-      url: "https://bitjourney.com/",
-      position: (
-        <>
-          Software Engineer (Freelance)
-          <br />
-          React, GraphQL, Rails
-        </>
-      ),
-    },
-  },
-  {
-    period: "2022",
-    company: {
-      name: "DXER, Inc.",
-      url: "https://dxer.co.jp/",
-      position: (
-        <>
-          Software Engineer (Freelance)
-          <br />
-          React, Go, GraphQL
-        </>
-      ),
-    },
-  },
-  {
-    period: "2021 - 2020",
-    company: {
-      name: "ResortWorx, Inc.",
-      url: "https://resortworx.jp/",
-      position: (
-        <>
-          Software Engineer (Freelance)
-          <br />
-          Vue, Rails, AWS
-        </>
-      ),
-    },
-  },
-  {
-    period: "2021 - 2018",
-    company: {
-      name: "Timee, Inc.",
-      url: "https://timee.co.jp/",
-      position: (
-        <>
-          Backend Engineer
-          <br />
-          Rails, AWS
-        </>
-      ),
-    },
   },
 ];
 
@@ -153,18 +80,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-6">
-          <h2>Work Experience</h2>
-          <ul className="flex gap-1 snap-x snap-mandatory overflow-x-scroll pb-4 scrollbar-thin">
-            {workExperiences.map((workExperience) => (
-              <WorkExperience
-                key={workExperience.period}
-                {...workExperience}
-                className="snap-start"
-              />
-            ))}
-          </ul>
-        </div>
+        <WorkExperienceList />
 
         <div className="flex flex-col gap-4">
           <h2>Find me on</h2>
