@@ -2,6 +2,7 @@ import type { ComponentProps } from "react";
 import { MyAvatar } from "./_components";
 import { UniversalLink } from "./_features";
 import { WorkExperienceList } from "./_features/top";
+import { Command } from "./_features/command";
 
 const findMeOn: {
   service: string;
@@ -98,6 +99,7 @@ export default function Page() {
           </div>
         </div>
       </div>
+      <Command />
     </main>
   );
 }
