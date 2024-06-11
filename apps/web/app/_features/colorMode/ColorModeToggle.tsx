@@ -1,29 +1,10 @@
 "use client";
 
 import { MoonIcon, SunIcon } from "@/app/_components";
+import { useColorMode } from "./useColorMode";
 
 export const ColorModeToggle = () => {
-  function disableTransitionsTemporarily() {
-    document.documentElement.classList.add("[&_*]:!transition-none");
-    window.setTimeout(() => {
-      document.documentElement.classList.remove("[&_*]:!transition-none");
-    }, 0);
-  }
-
-  function toggleMode() {
-    disableTransitionsTemporarily();
-
-    const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const isSystemDarkMode = darkModeMediaQuery.matches;
-    const isDarkMode = document.documentElement.classList.toggle("dark");
-
-    if (isDarkMode === isSystemDarkMode) {
-      // biome-ignore lint/performance/noDelete: <explanation>
-      delete window.localStorage.isDarkMode;
-    } else {
-      window.localStorage.isDarkMode = isDarkMode;
-    }
-  }
+  const { toggleMode } = useColorMode();
 
   return (
     <button
