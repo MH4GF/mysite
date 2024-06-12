@@ -1,6 +1,6 @@
 import { CommandItem } from "@/app/_components/ui/command";
-import { SunMoon } from "lucide-react";
 import { useColorMode } from "@/app/_features/colorMode";
+import { SunMoon } from "lucide-react";
 
 export const ColorTheme = () => {
   const { toggleMode, currentMode } = useColorMode();

@@ -1,8 +1,8 @@
 import type { ComponentProps } from "react";
 import { MyAvatar } from "./_components";
 import { UniversalLink } from "./_features";
-import { WorkExperienceList } from "./_features/top";
 import { Command } from "./_features/command";
+import { WorkExperienceList } from "./_features/top";
 
 const findMeOn: {
   service: string;

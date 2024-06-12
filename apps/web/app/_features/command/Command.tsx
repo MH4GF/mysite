@@ -8,8 +8,8 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/app/_components/ui/command";
+import { useEffect, useState } from "react";
 import { CommandTrigger } from "./CommandTrigger";
-import { useState, useEffect } from "react";
 import { ColorTheme } from "./items/ColorTheme";
 
 export function Command() {

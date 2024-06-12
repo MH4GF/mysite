@@ -1,10 +1,10 @@
-'use client'
-import { useState, useEffect } from 'react';
+"use client";
+import { useEffect, useState } from "react";
 
-type ColorMode = 'light' | 'dark';
+type ColorMode = "light" | "dark";
 
 export const useColorMode = () => {
-  const [currentMode, setCurrentMode] = useState<ColorMode>('light');
+  const [currentMode, setCurrentMode] = useState<ColorMode>("light");
 
   useEffect(() => {
     const updateMode = () => {
@@ -14,10 +14,10 @@ export const useColorMode = () => {
     updateMode();
 
     const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    darkModeMediaQuery.addEventListener('change', updateMode);
+    darkModeMediaQuery.addEventListener("change", updateMode);
 
     return () => {
-      darkModeMediaQuery.removeEventListener('change', updateMode);
+      darkModeMediaQuery.removeEventListener("change", updateMode);
     };
   }, []);
 

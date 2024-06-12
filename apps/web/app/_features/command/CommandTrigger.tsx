@@ -1,5 +1,5 @@
-import type { FC } from "react";
 import { Command } from "lucide-react";
+import type { FC } from "react";
 
 type Props = {
   onClick: () => void;
