@@ -1,16 +1,12 @@
 "use client";
 
-import { Calculator, CreditCard, Settings, Smile, User } from "lucide-react";
-
 import {
   CommandDialog,
   CommandEmpty,
   CommandGroup,
   CommandInput,
-  CommandItem,
   CommandList,
   CommandSeparator,
-  CommandShortcut,
 } from "@/app/_components/ui/command";
 import { CommandTrigger } from "./CommandTrigger";
 import { useState, useEffect } from "react";
@@ -40,34 +36,16 @@ export function Command() {
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Suggestions">
             <ColorTheme />
-            <CommandItem>
-              <Smile className="mr-2 h-4 w-4" />
-              <span>Search Emoji</span>
-            </CommandItem>
-            <CommandItem>
-              <Calculator className="mr-2 h-4 w-4" />
-              <span>Calculator</span>
-            </CommandItem>
-          </CommandGroup>
-          <CommandSeparator />
-          <CommandGroup heading="Settings">
-            <CommandItem>
-              <User className="mr-2 h-4 w-4" />
-              <span>Profile</span>
-              <CommandShortcut>⌘P</CommandShortcut>
-            </CommandItem>
-            <CommandItem>
-              <CreditCard className="mr-2 h-4 w-4" />
-              <span>Billing</span>
-              <CommandShortcut>⌘B</CommandShortcut>
-            </CommandItem>
-            <CommandItem>
-              <Settings className="mr-2 h-4 w-4" />
-              <span>Settings</span>
-              <CommandShortcut>⌘S</CommandShortcut>
-            </CommandItem>
           </CommandGroup>
         </CommandList>
+        <CommandSeparator />
+        <div className="flex justify-end text-xs px-2 py-3 text-muted-foreground gap-2">
+          <span>Actions</span>
+          <span className="inline-flex gap-1">
+            <kbd className="px-1 bg-muted rounded-sm">⌘</kbd>
+            <kbd className="px-1 bg-muted rounded-sm">K</kbd>
+          </span>
+        </div>
       </CommandDialog>
     </>
   );
