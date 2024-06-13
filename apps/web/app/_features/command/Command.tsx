@@ -8,9 +8,11 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/app/_components/ui/command";
+import { PenLine } from "lucide-react";
 import { useEffect, useState } from "react";
+import { CommandFooter } from "./CommandFooter";
 import { CommandTrigger } from "./CommandTrigger";
-import { ColorTheme } from "./items/ColorTheme";
+import { ColorTheme, CommandLinkItem } from "./items";
 
 export function Command() {
   const [open, setOpen] = useState(false);
@@ -37,15 +39,20 @@ export function Command() {
           <CommandGroup heading="Suggestions">
             <ColorTheme />
           </CommandGroup>
+          <CommandSeparator />
+          <CommandGroup heading="Contents">
+            <CommandLinkItem href="/articles">
+              <PenLine className="mr-2 h-4 w-4" />
+              <span>All Writing</span>
+            </CommandLinkItem>
+            <CommandLinkItem href="/behavior">
+              <PenLine className="mr-2 h-4 w-4" />
+              <span>好む振る舞い</span>
+            </CommandLinkItem>
+          </CommandGroup>
         </CommandList>
         <CommandSeparator />
-        <div className="flex justify-end text-xs px-2 py-3 text-muted-foreground gap-2">
-          <span>Actions</span>
-          <span className="inline-flex gap-1">
-            <kbd className="px-1 bg-muted rounded-sm">⌘</kbd>
-            <kbd className="px-1 bg-muted rounded-sm">K</kbd>
-          </span>
-        </div>
+        <CommandFooter />
       </CommandDialog>
     </>
   );
