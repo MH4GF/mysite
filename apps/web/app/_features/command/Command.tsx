@@ -8,10 +8,11 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/app/_components/ui/command";
+import { PenLine } from "lucide-react";
 import { useEffect, useState } from "react";
-import { CommandTrigger } from "./CommandTrigger";
-import { ColorTheme } from "./items/ColorTheme";
 import { CommandFooter } from "./CommandFooter";
+import { CommandTrigger } from "./CommandTrigger";
+import { ColorTheme, CommandLinkItem } from "./items";
 
 export function Command() {
   const [open, setOpen] = useState(false);
@@ -37,6 +38,17 @@ export function Command() {
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Suggestions">
             <ColorTheme />
+          </CommandGroup>
+          <CommandSeparator />
+          <CommandGroup heading="Contents">
+            <CommandLinkItem href="/articles">
+              <PenLine className="mr-2 h-4 w-4" />
+              <span>All Writing</span>
+            </CommandLinkItem>
+            <CommandLinkItem href="/behavior">
+              <PenLine className="mr-2 h-4 w-4" />
+              <span>好む振る舞い</span>
+            </CommandLinkItem>
           </CommandGroup>
         </CommandList>
         <CommandSeparator />
