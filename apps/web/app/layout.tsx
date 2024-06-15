@@ -6,6 +6,7 @@ import "./globals.css";
 import type { ReactNode } from "react";
 
 import { ColorModeScript, TwitterWidgets } from "./_features";
+import { Command } from "./_features/command";
 import { baseUrl, siteInfo } from "./_utils";
 
 const { siteName, description, url, twitter } = siteInfo;
@@ -75,6 +76,7 @@ export default function RootLayout({
         <ColorModeScript />
         <TwitterWidgets />
         {children}
+        <Command />
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""} />
       </body>
     </html>

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import type { ComponentProps } from "react";
 import { MyAvatar } from "./_components";
 import { UniversalLink } from "./_features";
-import { Command } from "./_features/command";
 import { WorkExperienceList } from "./_features/top";
 import { siteInfo } from "./_utils";
 
@@ -101,7 +100,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <Command />
     </main>
   );
 }
