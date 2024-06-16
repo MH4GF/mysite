@@ -6,17 +6,25 @@ import { type ComponentProps, useCallback } from "react";
 
 type Props<T extends string = string> = ComponentProps<typeof CommandItem> & {
   href: Route<T>;
+  onOpenChange(open: boolean): void;
 };
 
-export function CommandLinkItem<T extends string = string>({ href, children, ...props }: Props<T>) {
+export function CommandLinkItem<T extends string = string>({
+  href,
+  children,
+  onOpenChange,
+  ...props
+}: Props<T>) {
   const router = useViewTransitionRouter();
+  const close = useCallback(() => onOpenChange(false), [onOpenChange]);
   const handleSelect = useCallback(() => {
     router.push(href);
-  }, [router, href]);
+    close();
+  }, [router, href, close]);
 
   return (
-    <CommandItem {...props} onSelect={handleSelect} className="[cmdk-item]:p-0">
-      <Link tabIndex={-1} href={href} className="flex w-full">
+    <CommandItem {...props} onSelect={handleSelect}>
+      <Link tabIndex={-1} href={href} onClick={close} className="flex">
         {children}
       </Link>
     </CommandItem>

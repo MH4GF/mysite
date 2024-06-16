@@ -41,11 +41,11 @@ export function Command() {
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading="Contents">
-            <CommandLinkItem href="/articles">
+            <CommandLinkItem href="/articles" onOpenChange={setOpen}>
               <PenLine className="mr-2 h-4 w-4" />
               <span>All Writing</span>
             </CommandLinkItem>
-            <CommandLinkItem href="/behavior">
+            <CommandLinkItem href="/behavior" onOpenChange={setOpen}>
               <PenLine className="mr-2 h-4 w-4" />
               <span>好む振る舞い</span>
             </CommandLinkItem>
