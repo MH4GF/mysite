@@ -24,6 +24,7 @@ export function Link<T extends string = string>({ children, href, ...props }: Li
   }
 
   const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>) => {
+    e.stopPropagation();
     if (e.ctrlKey || e.metaKey) {
       return;
     }

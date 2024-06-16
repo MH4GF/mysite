@@ -13,6 +13,7 @@ export const tagList = [
   "gadget",
   "desk-setup",
   "graphql",
+  "findy-tools",
 ] as const;
 
 export const tagsSchema = z.enum(tagList);

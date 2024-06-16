@@ -7,6 +7,25 @@ type RawArticleMeta = Omit<ArticleMeta, "publishedAt" | "href"> & {
 
 const articles: Omit<RawArticleMeta, "externalLink">[] = [
   {
+    title:
+      "Playwright - 高速なフィードバックにより0→1フェーズでも生産性に大きく寄与するE2Eテストツール",
+    publishedAt: "2024/06/12",
+    href: "https://findy-tools.io/products/playwright/33/109",
+    tags: ["findy-tools"],
+  },
+  {
+    title: "モノレポでマージキューと必須ステータスチェックを運用するためのTips",
+    publishedAt: "2024/06/12",
+    href: "https://tech.route06.co.jp/entry/2024/06/12/121511",
+    tags: ["route06-tech-blog"],
+  },
+  {
+    title: "valtioに依存するReactコンポーネントをStorybookで表示する",
+    publishedAt: "2024/06/05",
+    href: "https://zenn.dev/route06/articles/valtio-with-storybook",
+    tags: ["zenn"],
+  },
+  {
     title: "AWS Amplify Auth v6へのマイグレーションで対応した破壊的変更",
     publishedAt: "2024/04/08",
     href: "https://tech.route06.co.jp/entry/2024/04/08/122004",
