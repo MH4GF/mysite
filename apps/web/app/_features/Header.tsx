@@ -1,5 +1,3 @@
-import { GitHubIcon } from "../_components";
-
 import { UniversalLink } from "./viewTransition";
 
 const navigation = [{ name: "Articles", href: "/articles" }] as const;
@@ -20,13 +18,6 @@ export const Header = () => {
               {item.name}
             </UniversalLink>
           ))}
-          <UniversalLink
-            href="https://github.com/MH4GF/mysite"
-            className="group"
-            aria-label="このサイトのGitHubリポジトリ"
-          >
-            <GitHubIcon className="h-6 w-6" />
-          </UniversalLink>
         </div>
       </nav>
     </header>
