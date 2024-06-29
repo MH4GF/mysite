@@ -45,7 +45,7 @@
     "tailwindcss-animate": "1.0.7",
     "tocbot": "4.25.0",
     "unified": "11.0.5",
-    "zod": "3.22.4"
+    "zod": "3.23.8"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.9.1",
