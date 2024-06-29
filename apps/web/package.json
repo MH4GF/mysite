@@ -49,9 +49,9 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "4.9.1",
-    "@markuplint/jsx-parser": "4.7.3",
-    "@markuplint/ml-config": "4.7.0",
-    "@markuplint/react-spec": "4.5.3",
+    "@markuplint/jsx-parser": "4.7.5",
+    "@markuplint/ml-config": "4.7.2",
+    "@markuplint/react-spec": "4.5.5",
     "@mh4gf/eslint-config": "0.5.2",
     "@playwright/test": "1.44.1",
     "@project/configs": "workspace:^*",
@@ -63,11 +63,11 @@
     "axe-html-reporter": "2.2.3",
     "eslint-config-next": "14.2.3",
     "eslint-import-resolver-typescript": "3.6.1",
-    "markuplint": "4.9.0",
+    "markuplint": "4.9.2",
     "msw": "2.3.1",
     "postcss": "8.4.38",
     "tailwindcss": "3.4.4",
-    "typescript": "5.4.5",
+    "typescript": "5.5.2",
     "vitest": "1.6.0"
   },
   "nextBundleAnalysis": {
