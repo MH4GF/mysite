@@ -50,10 +50,15 @@
         "npm-run-all2",
         "peter-evans/find-comment",
         "peter-evans/create-or-update-comment",
+        "actions/upload-artifact",
+        "actions/checkout",
+        "mh4gf/dependency-cruiser-report-action",
         "@markuplint/jsx-parser",
         "@markuplint/ml-config",
         "@markuplint/react-spec",
-        "markuplint"
+        "markuplint",
+        "@biomejs/biome",
+        "node"
       ],
       // 本番影響がないのでCIが通れば自動マージで良い
       "automerge": true
@@ -67,7 +72,7 @@
     },
     {
       "groupName": "tailwindcss",
-      "matchPackageNames": ["tailwindcss", "@tailwindcss/typography"],
+      "matchPackageNames": ["tailwindcss", "@tailwindcss/typography", "postcss"],
       // VRTが通れば自動マージで良い
       "automerge": true
     }
