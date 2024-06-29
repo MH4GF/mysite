@@ -13,7 +13,7 @@ interface SvgProps {
   className?: string;
 }
 
-export type IconComponent = (props: SvgProps) => JSX.Element;
+type IconComponent = (props: SvgProps) => JSX.Element;
 
 export const XIcon: IconComponent = (props) => {
   return (
