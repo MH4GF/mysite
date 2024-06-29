@@ -1,6 +1,5 @@
 import { GitHubIcon } from "../_components";
 
-import { ColorModeToggle } from "./colorMode";
 import { UniversalLink } from "./viewTransition";
 
 const navigation = [{ name: "Articles", href: "/articles" }] as const;
@@ -28,7 +27,6 @@ export const Header = () => {
           >
             <GitHubIcon className="h-6 w-6" />
           </UniversalLink>
-          <ColorModeToggle />
         </div>
       </nav>
     </header>
