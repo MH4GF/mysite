@@ -1,7 +1,5 @@
 import { UniversalLink } from "./viewTransition";
 
-const navigation = [{ name: "Articles", href: "/articles" }] as const;
-
 export const Header = () => {
   return (
     <header className="sticky top-0 h-24 bg-gradient-to-b from-white to-transparent dark:from-zinc-900">
@@ -12,13 +10,6 @@ export const Header = () => {
         <UniversalLink href="/" className="-m-1.5 p-1.5">
           mh4gf.dev
         </UniversalLink>
-        <div className="flex items-center gap-6">
-          {navigation.map((item) => (
-            <UniversalLink href={item.href} key={item.name}>
-              {item.name}
-            </UniversalLink>
-          ))}
-        </div>
       </nav>
     </header>
   );
