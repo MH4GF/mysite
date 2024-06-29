@@ -1,5 +1,6 @@
 "use client";
 
+import { GitHubIcon } from "@/app/_components";
 import {
   CommandDialog,
   CommandEmpty,
@@ -48,6 +49,10 @@ export function Command() {
             <CommandLinkItem href="/behavior" onOpenChange={setOpen}>
               <PenLine className="mr-2 h-4 w-4" />
               <span>好む振る舞い</span>
+            </CommandLinkItem>
+            <CommandLinkItem href="/behavior" onOpenChange={setOpen}>
+              <GitHubIcon className="mr-2 h-4 w-4 fill-current" />
+              <span>Source of this site</span>
             </CommandLinkItem>
           </CommandGroup>
         </CommandList>

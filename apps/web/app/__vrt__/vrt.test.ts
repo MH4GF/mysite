@@ -46,7 +46,9 @@ const setup = async (
 ) => {
   await page.goto(targetPage.path);
   if (colorMode === "dark") {
-    await page.getByRole("button", { name: "テーマ切り替え" }).click();
+    await page.getByRole("button", { name: "Open command palette" }).click();
+    await page.getByRole("option", { name: "Change to Dark Mode" }).click();
+    await page.getByRole("button", { name: "Close" }).click();
   }
   await maskFlakyElements(page, [
     `[data-testid="rich-link-card"] img`, // リンクカードの画像は外部サービスに依存しFlakyなため除外
@@ -69,43 +71,36 @@ interface TargetPage {
   path: string;
 }
 
-const targetPages: TargetPage[] = [
-  {
-    name: "home",
-    path: "/",
-  },
-  {
-    name: "behavior",
-    path: "/behavior",
-  },
-  {
-    name: "articles",
-    path: "/articles",
-  },
-  {
-    name: "article-2022-summary",
-    path: "/articles/2022-summary",
-  },
-  {
+const run = async (page: Page, testInfo: TestInfo, targetPage: TargetPage) => {
+  const { testName: lightTestName } = await setup(page, testInfo, targetPage, "light");
+  await Promise.all([testA11y(page, lightTestName), screenshot(page, lightTestName)]);
+
+  const { testName: darkTestName } = await setup(page, testInfo, targetPage, "dark");
+  await Promise.all([testA11y(page, darkTestName), screenshot(page, darkTestName)]);
+};
+
+test("home", async ({ page }, testInfo) => {
+  await run(page, testInfo, { name: "home", path: "/" });
+});
+
+test("behavior", async ({ page }, testInfo) => {
+  await run(page, testInfo, { name: "behavior", path: "/behavior" });
+});
+
+test("articles", async ({ page }, testInfo) => {
+  await run(page, testInfo, { name: "articles", path: "/articles" });
+});
+
+test("article-2022-summary", async ({ page }, testInfo) => {
+  await run(page, testInfo, { name: "article-2022-summary", path: "/articles/2022-summary" });
+});
+
+test("testing-markdown-renderer", async ({ page }, testInfo) => {
+  await run(page, testInfo, {
     name: "testing-markdown-renderer",
     path: "/articles/testing-markdown-renderer",
-  },
-];
-
-for (const targetPage of targetPages) {
-  test(`${targetPage.name}-light`, async ({ page }, testInfo) => {
-    const { testName } = await setup(page, testInfo, targetPage, "light");
-    await Promise.all([testA11y(page, testName), screenshot(page, testName)]);
   });
-  test(`${targetPage.name}-dark`, async ({ page }, testInfo) => {
-    // FIXME: homeはテーマ切り替えボタンを実装していないためスキップ
-    if (targetPage.name === "home") {
-      return;
-    }
-    const { testName } = await setup(page, testInfo, targetPage, "dark");
-    await Promise.all([testA11y(page, testName), screenshot(page, testName)]);
-  });
-}
+});
 
 // Note: テーマの概念がないページは今のところopengraph-imageのみのため、一旦ここに記述
 test("opengraph-image", async ({ page }, testInfo) => {

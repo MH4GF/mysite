@@ -1,4 +1,4 @@
-export { MoonIcon, SunIcon, RssIcon } from "./icons";
+export { RssIcon } from "./icons";
 export { MyAvatar } from "./MyAvatar";
 export { Footer } from "./Footer";
 export { Time } from "./Time";
