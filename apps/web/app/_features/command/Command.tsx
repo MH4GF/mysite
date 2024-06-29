@@ -1,5 +1,6 @@
 "use client";
 
+import { GitHubIcon } from "@/app/_components";
 import {
   CommandDialog,
   CommandEmpty,
@@ -13,7 +14,6 @@ import { useEffect, useState } from "react";
 import { CommandFooter } from "./CommandFooter";
 import { CommandTrigger } from "./CommandTrigger";
 import { ColorTheme, CommandLinkItem } from "./items";
-import { GitHubIcon } from "@/app/_components";
 
 export function Command() {
   const [open, setOpen] = useState(false);
