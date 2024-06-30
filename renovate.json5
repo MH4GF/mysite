@@ -58,7 +58,8 @@
         "@markuplint/react-spec",
         "markuplint",
         "@biomejs/biome",
-        "node"
+        "node",
+        "scaffdog"
       ],
       // 本番影響がないのでCIが通れば自動マージで良い
       "automerge": true
@@ -71,8 +72,15 @@
       "automerge": true
     },
     {
-      "groupName": "tailwindcss",
-      "matchPackageNames": ["tailwindcss", "@tailwindcss/typography", "postcss"],
+      "groupName": "vrt",
+      "matchPackageNames": [
+        "tailwindcss",
+        "@tailwindcss/typography",
+        "postcss",
+        "zod",
+        "lucide-react",
+        "@radix-ui/react-dialog"
+      ],
       // VRTが通れば自動マージで良い
       "automerge": true
     }
