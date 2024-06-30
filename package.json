@@ -11,7 +11,7 @@
     "lint:biome": "biome check .",
     "lint": "run-s -c lint:*",
     "fmt:biome-check": "biome check . --write --unsafe",
-    "fmt": "run-p -c format:*",
+    "fmt": "run-p -c fmt:*",
     "scaffold": "scaffdog generate"
   },
   "devDependencies": {
