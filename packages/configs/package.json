@@ -11,5 +11,5 @@
     "@tsconfig/next": "2.0.3",
     "@tsconfig/strictest": "2.0.5"
   },
-  "packageManager": "pnpm@8.15.8"
+  "packageManager": "pnpm@9.4.0"
 }
