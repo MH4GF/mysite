@@ -21,7 +21,6 @@ jobs:
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
-      - run: pnpm i
       - run: pnpm --filter web test:vrt:screenshots
       - uses: lost-pixel/lost-pixel@e3c935b461073034e8a2e2a773f8b07abf0ee858 # v3.17.0
         env:
