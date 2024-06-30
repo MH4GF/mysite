@@ -117,8 +117,8 @@ importers:
         specifier: 1.0.7
         version: 1.0.7(tailwindcss@3.4.4)
       tocbot:
-        specifier: 4.25.0
-        version: 4.25.0
+        specifier: 4.28.2
+        version: 4.28.2
       unified:
         specifier: 11.0.5
         version: 11.0.5
@@ -9375,8 +9375,8 @@ packages:
     dependencies:
       is-number: 7.0.0
 
-  /tocbot@4.25.0:
-    resolution: {integrity: sha512-kE5wyCQJ40hqUaRVkyQ4z5+4juzYsv/eK+aqD97N62YH0TxFhzJvo22RUQQZdO3YnXAk42ZOfOpjVdy+Z0YokA==}
+  /tocbot@4.28.2:
+    resolution: {integrity: sha512-/MaSa9xI6mIo84IxqqliSCtPlH0oy7sLcY9s26qPMyH/2CxtZ2vNAXYlIdEQ7kjAkCQnc0rbLygf//F5c663oQ==}
     dev: false
 
   /toml@3.0.0:
