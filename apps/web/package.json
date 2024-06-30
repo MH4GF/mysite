@@ -16,7 +16,7 @@
     "test:vrt:screenshots": "playwright test --config app/__vrt__/playwright.config.ts"
   },
   "dependencies": {
-    "@next/third-parties": "14.2.3",
+    "@next/third-parties": "14.2.4",
     "@radix-ui/react-dialog": "1.0.5",
     "@tailwindcss/typography": "0.5.13",
     "cheerio": "1.0.0-rc.12",
@@ -25,7 +25,7 @@
     "cmdk": "1.0.0",
     "contentlayer": "0.3.4",
     "lucide-react": "0.381.0",
-    "next": "14.2.3",
+    "next": "14.2.4",
     "next-contentlayer": "0.3.4",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -61,7 +61,7 @@
     "@types/rss": "0.0.32",
     "autoprefixer": "10.4.19",
     "axe-html-reporter": "2.2.3",
-    "eslint-config-next": "14.2.3",
+    "eslint-config-next": "14.2.4",
     "eslint-import-resolver-typescript": "3.6.1",
     "markuplint": "4.9.2",
     "msw": "2.3.1",
