@@ -2,7 +2,7 @@
   "name": "mysite",
   "private": true,
   "scripts": {
-    "lint:depcruise": "depcruise --config .dependency-cruiser.js apps",
+    "lint:depcruise": "depcruise --config .dependency-cruiser.js .",
     "lint:biome": "biome check .",
     "lint:next": "next lint",
     "lint:tsc": "tsc",
