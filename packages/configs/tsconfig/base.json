@@ -1,8 +1,0 @@
-{
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@mh4gf/configs/tsconfig/base.json",
-  "compilerOptions": {
-    "noEmit": true,
-    "noPropertyAccessFromIndexSignature": false
-  }
-}

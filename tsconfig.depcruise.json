@@ -1,5 +1,5 @@
 {
-  "extends": "@project/configs/tsconfig/base.json",
+  "extends": "@mh4gf/configs/tsconfig/base.json",
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
