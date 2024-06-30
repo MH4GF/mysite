@@ -12,6 +12,7 @@
     "fmt": "run-p -c fmt:*",
     "scaffold": "scaffdog generate",
     "build": "next build",
+    "build:contentlayer": "contentlayer build",
     "dev": "next dev",
     "start": "next start",
     "test": "run-s test:*",
