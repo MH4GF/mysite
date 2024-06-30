@@ -3,7 +3,6 @@ const { withContentlayer } = require("next-contentlayer");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ["@project/ui", "@project/configs"],
   experimental: {
     typedRoutes: true,
   },
