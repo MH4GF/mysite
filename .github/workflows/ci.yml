@@ -18,9 +18,6 @@ jobs:
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
-        with:
-          node-version-file: .node-version
-          pnpm-version: "8.14.1"
       - run: pnpm i
       - run: pnpm lint
 
@@ -31,9 +28,6 @@ jobs:
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
-        with:
-          node-version-file: .node-version
-          pnpm-version: "8.14.1"
       - run: pnpm i
       - run: pnpm test
       - uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4
