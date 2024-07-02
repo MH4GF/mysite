@@ -33,4 +33,4 @@ jobs:
         if: failure()
         with:
           name: test-results
-          path: apps/web/test-results/
+          path: test-results/

@@ -15,7 +15,7 @@
     "build:contentlayer": "contentlayer build",
     "dev": "next dev",
     "start": "next start",
-    "test": "run-s test:*",
+    "test": "run-s test:playwright test:vitest",
     "test:playwright": "playwright test",
     "test:vitest": "vitest",
     "test:vrt:screenshots": "playwright test --config app/__vrt__/playwright.config.ts"
