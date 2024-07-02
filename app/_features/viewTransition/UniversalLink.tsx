@@ -1,6 +1,6 @@
-import type { LinkProps } from "next/link";
 import NextLink from "next/link";
 
+import type { LinkProps } from "./Link";
 import { Link } from "./Link";
 
 type Href<T extends string = string> = LinkProps<T>["href"];

@@ -29,12 +29,16 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# turbo
-.turbo
-
 # vercel
 .vercel
 
 tsconfig.tsbuildinfo
 
 .pnpm-store
+
+/test-results/
+/playwright-report/
+/playwright/.cache/
+app/__vrt__/screenshots/
+.contentlayer
+axe-html-report/

@@ -2,17 +2,20 @@
 
 "use client";
 
-import type { Route } from "next";
-import type { LinkProps } from "next/link";
+import type { LinkProps as NextLinkProps } from "next/link";
 import NextLink from "next/link";
-import type { MouseEvent } from "react";
+import type { ComponentProps, MouseEvent } from "react";
 
+import type { Route } from "next";
 import { useViewTransitionRouter } from "./useViewTransitionRouter";
 
 const isSamePage = (href: string) => href.startsWith("#");
 
 // biome-ignore lint/suspicious/noEmptyBlockStatements: 意図的に空としている
 const noop = () => {};
+
+export type LinkProps<T extends string = string> = NextLinkProps<T> &
+  Omit<ComponentProps<"a">, keyof NextLinkProps<T>>;
 
 export function Link<T extends string = string>({
   children,
@@ -39,7 +42,7 @@ export function Link<T extends string = string>({
 
     e.preventDefault();
 
-    router.push<Route>(href.toString() as Route);
+    router.push(href.toString() as Route);
     onClick?.(e);
   };
 

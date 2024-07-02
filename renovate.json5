@@ -44,7 +44,6 @@
         "@tsconfig/strictest",
         "dependency-cruiser",
         "eslint",
-        "turbo",
         "typescript",
         "pnpm",
         "npm-run-all2",
