@@ -32,6 +32,8 @@ module.exports = {
           "(^|/)(babel|webpack)\\.config\\.(js|cjs|mjs|ts|json)$", // other configs
           "packages/eslint-config/src/base.cjs", // eslintのextendsで使う
           "postcss.config.js", // postcssの設定ファイル
+          "lostpixel.config.ts", // lostpixelの設定ファイル
+          ".scaffdog/config.js", // scaffdogの設定ファイル
         ],
       },
       to: {},
@@ -262,7 +264,7 @@ module.exports = {
        defaults to './tsconfig.json'.
      */
     tsConfig: {
-      fileName: "./tsconfig.depcruise.json",
+      fileName: "./tsconfig.json",
     },
 
     /* Webpack configuration to use to get resolve options from.
