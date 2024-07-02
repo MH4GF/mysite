@@ -30,8 +30,8 @@ dependencies:
     specifier: 0.3.4
     version: 0.3.4(esbuild@0.21.5)
   lucide-react:
-    specifier: 0.399.0
-    version: 0.399.0(react@18.3.1)
+    specifier: 0.400.0
+    version: 0.400.0(react@18.3.1)
   next:
     specifier: 14.2.4
     version: 14.2.4(@opentelemetry/api@1.9.0)(@playwright/test@1.45.0)(react-dom@18.3.1)(react@18.3.1)
@@ -6710,8 +6710,8 @@ packages:
       es5-ext: 0.10.64
     dev: true
 
-  /lucide-react@0.399.0(react@18.3.1):
-    resolution: {integrity: sha512-UyTNa3djBISdzL2UktgCrESXexQXaDQWi/WsDkbw6fBFfHlapajR58WoR+gxQ4laxfEyiHmoFrEIM3V+5XOVQg==}
+  /lucide-react@0.400.0(react@18.3.1):
+    resolution: {integrity: sha512-rpp7pFHh3Xd93KHixNgB0SqThMHpYNzsGUu69UaQbSZ75Q/J3m5t6EhKyMT3m4w2WOxmJ2mY0tD3vebnXqQryQ==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
     dependencies:
