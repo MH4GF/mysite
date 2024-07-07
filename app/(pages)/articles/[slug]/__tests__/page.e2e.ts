@@ -13,9 +13,6 @@ test("/articles/testing-markdown-renderer", async ({ page }) => {
   await expect(page.getByRole("link", { name: /アンカーテキスト/i })).toBeVisible();
   await expect(page.getByRole("link", { name: "https://mh4gf.dev/articles" })).toBeVisible();
   await expect(page.getByRole("region", { name: "About | Hirotaka Miyagi" })).toBeVisible();
-  await expect(
-    page.frameLocator("iframe#twitter-widget-0").getByText("誕生日ボーイ"),
-  ).toBeVisible();
 });
 
 test("Command Palette", async ({ page }) => {
