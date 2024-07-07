@@ -18,8 +18,7 @@ export default function Page({ params }: Props) {
   return <Article {...params} handleNotFound={notFound} />;
 }
 
-export const generateStaticParams = (): Params[] =>
-  allArticles.map((article) => ({ slug: article._raw.flattenedPath }));
+export const generateStaticParams = (): Params[] => allArticles.map(({ slug }) => ({ slug }));
 
 export const generateMetadata = ({ params }: Props): Metadata => {
   const article = getArticle(`/articles/${params.slug}`);

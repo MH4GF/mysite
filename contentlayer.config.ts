@@ -29,6 +29,13 @@ export const Article = defineDocumentType(() => ({
   },
   computedFields: {
     href: { type: "string", resolve: (article) => `/${article._raw.flattenedPath}` },
+    slug: {
+      type: "string",
+      resolve: (article) => {
+        const segments = article._raw.flattenedPath.split("/");
+        return segments[segments.length - 1];
+      },
+    },
     externalLink: { type: "boolean", resolve: () => false },
   },
 }));
