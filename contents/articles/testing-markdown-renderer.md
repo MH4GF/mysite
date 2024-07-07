@@ -77,19 +77,6 @@ _イタリック_
 ~~打ち消し線~~
 `code`
 
-## ツイート埋め込み
-
-<blockquote class="twitter-tweet">
-  <p lang="ja" dir="ltr">
-    誕生日ボーイ 
-    <a href="https://t.co/j5aZPs1O1J">pic.twitter.com/j5aZPs1O1J</a>
-  </p>
-  Hirotaka Miyagi (@MH4GF) 
-  <a href="https://twitter.com/MH4GF/status/1717172182798000500?ref_src=twsrc%5Etfw">
-    October 25, 2023
-  </a>
-</blockquote>
-
 ## コードブロック
 
 ### タイトルあり
