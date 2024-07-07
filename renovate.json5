@@ -43,7 +43,6 @@
       "matchPackageNames": [
         "@tsconfig/strictest",
         "dependency-cruiser",
-        "eslint",
         "typescript",
         "pnpm",
         "npm-run-all2",
