@@ -29,6 +29,7 @@
       "matchPackageNames": [
         "@axe-core/playwright",
         "@playwright/test",
+        "playwright-core",
         "mcr.microsoft.com/playwright",
         "lost-pixel",
         "lost-pixel/lost-pixel",
