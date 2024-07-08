@@ -33,8 +33,8 @@ importers:
         specifier: 0.3.4
         version: 0.3.4(esbuild@0.19.11)
       lucide-react:
-        specifier: 0.401.0
-        version: 0.401.0(react@18.3.1)
+        specifier: 0.402.0
+        version: 0.402.0(react@18.3.1)
       next:
         specifier: 14.2.4
         version: 14.2.4(@opentelemetry/api@1.9.0)(@playwright/test@1.45.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3625,8 +3625,8 @@ packages:
   lru-queue@0.1.0:
     resolution: {integrity: sha512-BpdYkt9EvGl8OfWHDQPISVpcl5xZthb+XPsbELj5AQXxIC8IriDZIQYjBJPEm5rS420sjZ0TLEzRcq5KdBhYrQ==}
 
-  lucide-react@0.401.0:
-    resolution: {integrity: sha512-4HijVZoWBe8BfLNbXyLH8ZZI4XUj/YeGWaHHjEe0/49L5Qw4pVA+HvZrvJH8ekNxz2nLvoDlfsJVOBNgBs9Bug==}
+  lucide-react@0.402.0:
+    resolution: {integrity: sha512-V2ModWMXzoZbQy4dhVUY4snrOplw+DwH0tsr8SLf8N0+irwO5okFcMS4eFHrXHttt24sLFZP3IJQo832o3fUWQ==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
@@ -9427,7 +9427,7 @@ snapshots:
     dependencies:
       es5-ext: 0.10.64
 
-  lucide-react@0.401.0(react@18.3.1):
+  lucide-react@0.402.0(react@18.3.1):
     dependencies:
       react: 18.3.1
 
