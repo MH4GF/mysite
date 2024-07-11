@@ -26,6 +26,7 @@ module.exports = {
         orphan: true,
         pathNot: [
           ".next", // generated files
+          "public/search", // generated files
           "(^|/)\\.[^/]+\\.(js|cjs|mjs|ts|json)$", // dot files
           "\\.d\\.ts$", // TypeScript declaration files
           "(^|/)tsconfig\\.json$", // TypeScript config
@@ -117,6 +118,9 @@ module.exports = {
       },
       to: {
         couldNotResolve: true,
+        pathNot: [
+          "pagefind.js", // generated files
+        ],
       },
     },
     {

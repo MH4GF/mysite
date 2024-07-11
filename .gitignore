@@ -42,3 +42,6 @@ tsconfig.tsbuildinfo
 app/__vrt__/screenshots/
 .contentlayer
 axe-html-report/
+
+# pagefind
+public/search
