@@ -11,6 +11,7 @@ import {
 import { PenLine } from "lucide-react";
 import { useEffect, useState } from "react";
 import { CommandFooter } from "./CommandFooter";
+import { CommandProvider } from "./CommandProvider";
 import { CommandTrigger } from "./CommandTrigger";
 import { ColorTheme, CommandLinkItem, SearchGroup } from "./items";
 
@@ -30,7 +31,7 @@ export function Command() {
   }, []);
 
   return (
-    <>
+    <CommandProvider onOpenChange={setOpen}>
       <CommandTrigger onClick={() => setOpen(true)} />
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
@@ -40,24 +41,24 @@ export function Command() {
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading="Contents">
-            <CommandLinkItem href="/articles" onOpenChange={setOpen}>
+            <CommandLinkItem href="/articles">
               <PenLine className="mr-2 h-4 w-4" />
               <span>All Writing</span>
             </CommandLinkItem>
-            <CommandLinkItem href="/behavior" onOpenChange={setOpen}>
+            <CommandLinkItem href="/behavior">
               <PenLine className="mr-2 h-4 w-4" />
               <span>好む振る舞い</span>
             </CommandLinkItem>
-            <CommandLinkItem href="/behavior" onOpenChange={setOpen}>
+            <CommandLinkItem href="/behavior">
               <GitHubIcon className="mr-2 h-4 w-4 fill-current" />
               <span>Source of this site</span>
             </CommandLinkItem>
           </CommandGroup>
-          <SearchGroup onOpenChange={setOpen} />
+          <SearchGroup />
         </CommandList>
         <CommandSeparator />
         <CommandFooter />
       </CommandDialog>
-    </>
+    </CommandProvider>
   );
 }

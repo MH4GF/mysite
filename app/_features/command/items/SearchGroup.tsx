@@ -52,14 +52,11 @@ const formatUrl = (url: string): string => {
   return url.replace(/\/server\/app\/articles\/(.*)\.html/, "/articles/$1");
 };
 
-const SearchResultItem: FC<{ result: Result; onOpenChange: (open: boolean) => void }> = ({
-  result,
-  onOpenChange,
-}) => {
+const SearchResultItem: FC<{ result: Result }> = ({ result }) => {
   const data = use(getData(result));
 
   return (
-    <CommandLinkItem href={formatUrl(data.url) as Route} onOpenChange={onOpenChange}>
+    <CommandLinkItem href={formatUrl(data.url) as Route}>
       <SunMoon className="mr-2 h-4 w-4" />
       <span>{data.meta.title}</span>
     </CommandLinkItem>
@@ -74,13 +71,13 @@ const search = cache(async (query: string): Promise<Result[]> => {
   return (await window.pagefind.search(query)).results;
 });
 
-const SearchResultItems: FC<{ onOpenChange: (open: boolean) => void }> = ({ onOpenChange }) => {
+const SearchResultItems = () => {
   const query = useCommandState((state) => state.search);
   const results = use(search(query));
 
   return results.map((result) => (
     <Suspense key={result.id} fallback={<LoadingItem />}>
-      <SearchResultItem result={result} onOpenChange={onOpenChange} />
+      <SearchResultItem result={result} />
     </Suspense>
   ));
 };
@@ -94,11 +91,11 @@ const LoadingItem = () => {
   );
 };
 
-export const SearchGroup: FC<{ onOpenChange: (open: boolean) => void }> = ({ onOpenChange }) => {
+export const SearchGroup = () => {
   return (
     <CommandGroup heading="Search" forceMount>
       <Suspense fallback={<LoadingItem />}>
-        <SearchResultItems onOpenChange={onOpenChange} />
+        <SearchResultItems />
       </Suspense>
     </CommandGroup>
   );
