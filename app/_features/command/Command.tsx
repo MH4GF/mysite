@@ -3,7 +3,6 @@
 import { GitHubIcon } from "@/app/_components";
 import {
   CommandDialog,
-  CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandList,
@@ -13,7 +12,7 @@ import { PenLine } from "lucide-react";
 import { useEffect, useState } from "react";
 import { CommandFooter } from "./CommandFooter";
 import { CommandTrigger } from "./CommandTrigger";
-import { ColorTheme, CommandLinkItem } from "./items";
+import { ColorTheme, CommandLinkItem, SearchGroup } from "./items";
 
 export function Command() {
   const [open, setOpen] = useState(false);
@@ -36,7 +35,6 @@ export function Command() {
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Suggestions">
             <ColorTheme />
           </CommandGroup>
@@ -55,6 +53,7 @@ export function Command() {
               <span>Source of this site</span>
             </CommandLinkItem>
           </CommandGroup>
+          <SearchGroup onOpenChange={setOpen} />
         </CommandList>
         <CommandSeparator />
         <CommandFooter />
