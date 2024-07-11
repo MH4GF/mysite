@@ -133,6 +133,8 @@ const CommandShortcut = ({ className, ...props }: HTMLAttributes<HTMLSpanElement
 };
 CommandShortcut.displayName = "CommandShortcut";
 
+const CommandLoading = CommandPrimitive.Loading;
+
 export {
   Command,
   CommandDialog,
@@ -143,4 +145,5 @@ export {
   CommandItem,
   CommandShortcut,
   CommandSeparator,
+  CommandLoading,
 };
