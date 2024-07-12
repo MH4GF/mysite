@@ -57,8 +57,8 @@ const SearchResultItem: FC<{ result: Result }> = ({ result }) => {
 
   return (
     <CommandLinkItem href={formatUrl(data.url) as Route}>
-      <PenLine className="mr-2 h-4 w-4" />
-      <span>{data.meta.title}</span>
+      <PenLine className="mr-2 h-4 w-4 flex-none" />
+      <span className="truncate">{data.meta.title}</span>
     </CommandLinkItem>
   );
 };

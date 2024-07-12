@@ -20,7 +20,7 @@ export function CommandLinkItem<T extends string = string>({ href, children, ...
 
   return (
     <CommandItem {...props} onSelect={handleSelect}>
-      <Link tabIndex={-1} href={href} onClick={close} className="flex">
+      <Link tabIndex={-1} href={href} onClick={close} className="flex w-full">
         {children}
       </Link>
     </CommandItem>
