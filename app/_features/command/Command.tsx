@@ -49,7 +49,7 @@ export function Command() {
               <PenLine className="mr-2 h-4 w-4" />
               <span>好む振る舞い</span>
             </CommandLinkItem>
-            <CommandLinkItem href="/behavior">
+            <CommandLinkItem href="https://github.com/MH4GF/mysite">
               <GitHubIcon className="mr-2 h-4 w-4 fill-current" />
               <span>Source of this site</span>
             </CommandLinkItem>
