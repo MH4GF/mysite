@@ -1,6 +1,6 @@
 import { CommandGroup, CommandItem } from "@/app/_components/ui/command";
 import { useCommandState } from "cmdk";
-import { SunMoon } from "lucide-react";
+import { PenLine } from "lucide-react";
 import type { Route } from "next";
 import type { FC } from "react";
 import { Suspense, cache, use } from "react";
@@ -57,7 +57,7 @@ const SearchResultItem: FC<{ result: Result }> = ({ result }) => {
 
   return (
     <CommandLinkItem href={formatUrl(data.url) as Route}>
-      <SunMoon className="mr-2 h-4 w-4" />
+      <PenLine className="mr-2 h-4 w-4" />
       <span>{data.meta.title}</span>
     </CommandLinkItem>
   );
@@ -85,7 +85,7 @@ const SearchResultItems = () => {
 const LoadingItem = () => {
   return (
     <CommandItem>
-      <SunMoon className="mr-2 h-4 w-4" />
+      <PenLine className="mr-2 h-4 w-4" />
       <span>Loading...</span>
     </CommandItem>
   );
