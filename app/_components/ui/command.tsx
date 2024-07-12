@@ -123,6 +123,21 @@ const CommandItem = forwardRef<
 
 CommandItem.displayName = CommandPrimitive.Item.displayName;
 
+const CommandLoading = forwardRef<
+  ElementRef<typeof CommandPrimitive.Loading>,
+  ComponentPropsWithoutRef<typeof CommandPrimitive.Loading>
+>(({ className, ...props }, ref) => (
+  <CommandPrimitive.Loading
+    ref={ref}
+    className={cn(
+      "[&>div]:w-full [&>div]:flex [&>div]:items-center relative cursor-wait select-none  rounded-sm px-2 py-3 text-sm outline-none data-[disabled=true]:pointer-events-none data-[selected=true]:bg-accent data-[selected=true]:text-accent-foreground data-[disabled=true]:opacity-50 transition-colors",
+      className,
+    )}
+    {...props}
+  />
+));
+CommandLoading.displayName = CommandPrimitive.Loading.displayName;
+
 const CommandShortcut = ({ className, ...props }: HTMLAttributes<HTMLSpanElement>) => {
   return (
     <span
@@ -132,8 +147,6 @@ const CommandShortcut = ({ className, ...props }: HTMLAttributes<HTMLSpanElement
   );
 };
 CommandShortcut.displayName = "CommandShortcut";
-
-const CommandLoading = CommandPrimitive.Loading;
 
 export {
   Command,

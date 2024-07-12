@@ -1,4 +1,4 @@
-import { CommandGroup, CommandItem } from "@/app/_components/ui/command";
+import { CommandGroup, CommandLoading } from "@/app/_components/ui/command";
 import { useCommandState } from "cmdk";
 import { PenLine } from "lucide-react";
 import type { Route } from "next";
@@ -84,17 +84,25 @@ const SearchResultItems = () => {
 
 const LoadingItem = () => {
   return (
-    <CommandItem>
-      <PenLine className="mr-2 h-4 w-4" />
-      <span>Loading...</span>
-    </CommandItem>
+    <CommandLoading>
+      <PenLine className="mr-2 h-5 w-5" />
+      <span className="animate-pulse bg-muted w-full h-5 rounded-sm" />
+    </CommandLoading>
   );
 };
 
 export const SearchGroup = () => {
   return (
     <CommandGroup heading="Search" forceMount>
-      <Suspense fallback={<LoadingItem />}>
+      <Suspense
+        fallback={
+          <>
+            <LoadingItem />
+            <LoadingItem />
+            <LoadingItem />
+          </>
+        }
+      >
         <SearchResultItems />
       </Suspense>
     </CommandGroup>
