@@ -41,7 +41,7 @@
     "axe-html-reporter": "2.2.3",
     "dependency-cruiser": "16.3.6",
     "eslint": "8.57.0",
-    "eslint-config-next": "14.2.4",
+    "eslint-config-next": "14.2.5",
     "eslint-import-resolver-typescript": "3.6.1",
     "lost-pixel": "3.17.0",
     "markuplint": "4.9.2",
@@ -55,7 +55,7 @@
     "vitest": "2.0.2"
   },
   "dependencies": {
-    "@next/third-parties": "14.2.4",
+    "@next/third-parties": "14.2.5",
     "@radix-ui/react-dialog": "1.1.1",
     "@tailwindcss/typography": "0.5.13",
     "cheerio": "1.0.0-rc.12",
@@ -64,7 +64,7 @@
     "cmdk": "1.0.0",
     "contentlayer": "0.3.4",
     "lucide-react": "0.408.0",
-    "next": "14.2.4",
+    "next": "14.2.5",
     "next-contentlayer": "0.3.4",
     "react": "18.3.1",
     "react-dom": "18.3.1",
