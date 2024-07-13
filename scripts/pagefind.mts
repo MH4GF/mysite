@@ -1,4 +1,5 @@
 import { createIndex } from "pagefind";
+import { externalArticles } from "../app/_features/articles/data/externalArticles";
 
 async function main() {
   const { index } = await createIndex({});
@@ -10,6 +11,18 @@ async function main() {
   await index.addDirectory({
     path: ".next",
   });
+
+  for (const article of externalArticles) {
+    await index.addCustomRecord({
+      url: article.href,
+      content: article.title,
+      meta: {
+        title: article.title,
+        externalLink: "true",
+      },
+      language: "ja",
+    });
+  }
 
   await index.writeFiles({
     outputPath: "public/search",
