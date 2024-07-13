@@ -51,7 +51,7 @@ export function Command() {
             </CommandLinkItem>
             <CommandLinkItem href="https://github.com/MH4GF/mysite">
               <GitHubIcon className="mr-2 h-4 w-4 fill-current" />
-              <span>Source of this site</span>
+              <span>Source of this site - MH4GF/mysite</span>
             </CommandLinkItem>
           </CommandGroup>
           <SearchGroup />
