@@ -7,6 +7,12 @@ type RawArticleMeta = Omit<ArticleMeta, "publishedAt" | "href"> & {
 
 const articles: Omit<RawArticleMeta, "externalLink">[] = [
   {
+    title: "チュートリアル: Yjs, valtio, React で実現する共同編集アプリケーション",
+    publishedAt: "2024/07/03",
+    href: "https://tech.route06.co.jp/entry/2024/07/03/154219",
+    tags: ["route06-tech-blog"],
+  },
+  {
     title:
       "Playwright - 高速なフィードバックにより0→1フェーズでも生産性に大きく寄与するE2Eテストツール",
     publishedAt: "2024/06/12",
