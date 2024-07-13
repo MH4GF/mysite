@@ -1,6 +1,6 @@
 import { CommandEmpty, CommandGroup, CommandLoading } from "@/app/_components/ui/command";
 import { useCommandState } from "cmdk";
-import { PenLine } from "lucide-react";
+import { ExternalLink, PenLine } from "lucide-react";
 import type { Route } from "next";
 import type { FC } from "react";
 import { Suspense, cache, use } from "react";
@@ -10,6 +10,7 @@ type Data = {
   url: string;
   meta: {
     title: string;
+    externalLink?: "true";
   };
   excerpt: string;
 };
@@ -54,10 +55,11 @@ const formatUrl = (url: string): string => {
 
 const SearchResultItem: FC<{ result: Result }> = ({ result }) => {
   const data = use(getData(result));
+  const Icon = data.meta.externalLink === "true" ? ExternalLink : PenLine;
 
   return (
     <CommandLinkItem href={formatUrl(data.url) as Route}>
-      <PenLine className="mr-2 h-4 w-4 flex-none" />
+      <Icon className="mr-2 h-4 w-4 flex-none" />
       <span className="truncate">{data.meta.title}</span>
     </CommandLinkItem>
   );
