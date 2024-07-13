@@ -1,4 +1,4 @@
-import { CommandGroup, CommandLoading } from "@/app/_components/ui/command";
+import { CommandEmpty, CommandGroup, CommandLoading } from "@/app/_components/ui/command";
 import { useCommandState } from "cmdk";
 import { PenLine } from "lucide-react";
 import type { Route } from "next";
@@ -74,6 +74,10 @@ const search = cache(async (query: string): Promise<Result[]> => {
 const SearchResultItems = () => {
   const query = useCommandState((state) => state.search);
   const results = use(search(query));
+
+  if (results.length === 0) {
+    return <CommandEmpty>No results found for "{query}"</CommandEmpty>;
+  }
 
   return results.map((result) => (
     <Suspense key={result.id} fallback={<LoadingItem />}>
