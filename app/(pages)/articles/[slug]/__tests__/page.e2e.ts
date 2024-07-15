@@ -42,4 +42,14 @@ test.describe("Command Palette", () => {
     await expect(page.getByRole("dialog")).not.toBeVisible();
     await expect(page.getByRole("heading", { name: "Articles RSS" })).toBeVisible();
   });
+
+  test("search internal articles", async ({ page }) => {
+    await setup(page, "/");
+    await page.getByRole("button", { name: "Open command palette" }).click();
+    await page.getByPlaceholder("Type a command or search...").fill("testing markdown renderer");
+
+    await expect(
+      page.getByRole("link", { name: "(internal) Testing Markdown Renderer" }),
+    ).toBeVisible();
+  });
 });
