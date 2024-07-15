@@ -15,10 +15,9 @@ test("/articles/testing-markdown-renderer", async ({ page }) => {
   await expect(page.getByRole("region", { name: "About | Hirotaka Miyagi" })).toBeVisible();
 });
 
-test("Command Palette", async ({ page }) => {
-  await setup(page, "/");
-
-  await test.step("Open and close with mouse", async () => {
+test.describe("Command Palette", () => {
+  test("Open and close with mouse", async ({ page }) => {
+    await setup(page, "/");
     await page.getByRole("button", { name: "Open command palette" }).click();
     await expect(page.getByRole("dialog")).toBeVisible();
 
@@ -26,7 +25,8 @@ test("Command Palette", async ({ page }) => {
     await expect(page.getByRole("dialog")).not.toBeVisible();
   });
 
-  await test.step("Open and close with keyboard", async () => {
+  test("Open and close with keyboard", async ({ page }) => {
+    await setup(page, "/");
     await page.locator("body").press("ControlOrMeta+k");
     await expect(page.getByRole("dialog")).toBeVisible();
 
@@ -34,7 +34,8 @@ test("Command Palette", async ({ page }) => {
     await expect(page.getByRole("dialog")).not.toBeVisible();
   });
 
-  await test.step("Navigate to All Writing", async () => {
+  test("Navigate to All Writing", async ({ page }) => {
+    await setup(page, "/");
     await page.getByRole("button", { name: "Open command palette" }).click();
     await page.getByRole("link", { name: "All Writing" }).click();
 
