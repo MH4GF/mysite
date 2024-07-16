@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@next/third-parties':
         specifier: 14.2.5
-        version: 14.2.5(next@14.2.5(@opentelemetry/api@1.9.0)(@playwright/test@1.45.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+        version: 14.2.5(next@14.2.5(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-dialog':
         specifier: 1.1.1
         version: 1.1.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -40,10 +40,10 @@ importers:
         version: 0.408.0(react@18.3.1)
       next:
         specifier: 14.2.5
-        version: 14.2.5(@opentelemetry/api@1.9.0)(@playwright/test@1.45.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 14.2.5(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-contentlayer:
         specifier: 0.3.4
-        version: 0.3.4(contentlayer@0.3.4(esbuild@0.19.11))(esbuild@0.19.11)(next@14.2.5(@opentelemetry/api@1.9.0)(@playwright/test@1.45.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 0.3.4(contentlayer@0.3.4(esbuild@0.19.11))(esbuild@0.19.11)(next@14.2.5(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -104,7 +104,7 @@ importers:
     devDependencies:
       '@axe-core/playwright':
         specifier: 4.9.1
-        version: 4.9.1(playwright-core@1.45.1)
+        version: 4.9.1(playwright-core@1.45.2)
       '@biomejs/biome':
         specifier: 1.8.3
         version: 1.8.3
@@ -124,8 +124,8 @@ importers:
         specifier: 0.5.2
         version: 0.5.2(eslint@8.57.0)(typescript@5.5.3)
       '@playwright/test':
-        specifier: 1.45.1
-        version: 1.45.1
+        specifier: 1.45.2
+        version: 1.45.2
       '@tsconfig/next':
         specifier: 2.0.3
         version: 2.0.3
@@ -164,7 +164,7 @@ importers:
         version: 3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.3))(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       lost-pixel:
         specifier: 3.17.0
-        version: 3.17.0(@types/node@20.14.10)(playwright-core@1.45.1)(typescript@5.5.3)
+        version: 3.17.0(@types/node@20.14.10)(playwright-core@1.45.2)(typescript@5.5.3)
       markuplint:
         specifier: 4.9.2
         version: 4.9.2(typescript@5.5.3)
@@ -1038,8 +1038,8 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@playwright/test@1.45.1':
-    resolution: {integrity: sha512-Wo1bWTzQvGA7LyKGIZc8nFSTFf2TkthGIFBR+QVNilvwouGzFd4PYukZe3rvf5PSqjHi1+1NyKSDZKcQWETzaA==}
+  '@playwright/test@1.45.2':
+    resolution: {integrity: sha512-JxG9eq92ET75EbVi3s+4sYbcG7q72ECeZNbdBlaMkGcNbiDQ4cAi8U2QP5oKkOx+1gpaiL1LDStmzCaEM1Z6fQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -4370,13 +4370,13 @@ packages:
     resolution: {integrity: sha512-o8mkY4E/+LNUf6LzX96ht6k6CEDi65k9G2rjMtBe9Oo+VPKSvl+0GKHuH/AlG+GA5LPG/i5hrekkxUc3s2HU+Q==}
     hasBin: true
 
-  playwright-core@1.45.1:
-    resolution: {integrity: sha512-LF4CUUtrUu2TCpDw4mcrAIuYrEjVDfT1cHbJMfwnE2+1b8PZcFzPNgvZCvq2JfQ4aTjRCCHw5EJ2tmr2NSzdPg==}
+  playwright-core@1.45.2:
+    resolution: {integrity: sha512-ha175tAWb0dTK0X4orvBIqi3jGEt701SMxMhyujxNrgd8K0Uy5wMSwwcQHtyB4om7INUkfndx02XnQ2p6dvLDw==}
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright@1.45.1:
-    resolution: {integrity: sha512-Hjrgae4kpSQBr98nhCj3IScxVeVUixqj+5oyif8TdIn2opTCPEzqAqNMeK42i3cWDCVu9MI+ZsGWw+gVR4ISBg==}
+  playwright@1.45.2:
+    resolution: {integrity: sha512-ReywF2t/0teRvNBpfIgh5e4wnrI/8Su8ssdo5XsQKpjxJj+jspm00jSoz9BTg91TT0c9HRjXO7LBNVrgYj9X0g==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -5549,10 +5549,10 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@axe-core/playwright@4.9.1(playwright-core@1.45.1)':
+  '@axe-core/playwright@4.9.1(playwright-core@1.45.2)':
     dependencies:
       axe-core: 4.9.1
-      playwright-core: 1.45.1
+      playwright-core: 1.45.2
 
   '@babel/code-frame@7.24.7':
     dependencies:
@@ -6274,9 +6274,9 @@ snapshots:
   '@next/swc-win32-x64-msvc@14.2.5':
     optional: true
 
-  '@next/third-parties@14.2.5(next@14.2.5(@opentelemetry/api@1.9.0)(@playwright/test@1.45.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
+  '@next/third-parties@14.2.5(next@14.2.5(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
     dependencies:
-      next: 14.2.5(@opentelemetry/api@1.9.0)(@playwright/test@1.45.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next: 14.2.5(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       third-party-capital: 1.0.20
 
@@ -6438,9 +6438,9 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@playwright/test@1.45.1':
+  '@playwright/test@1.45.2':
     dependencies:
-      playwright: 1.45.1
+      playwright: 1.45.2
 
   '@pnpm/config.env-replace@1.1.0': {}
 
@@ -9394,7 +9394,7 @@ snapshots:
     dependencies:
       js-tokens: 4.0.0
 
-  lost-pixel@3.17.0(@types/node@20.14.10)(playwright-core@1.45.1)(typescript@5.5.3):
+  lost-pixel@3.17.0(@types/node@20.14.10)(playwright-core@1.45.2)(typescript@5.5.3):
     dependencies:
       '@types/xml2js': 0.4.14
       async: 3.2.5
@@ -9409,7 +9409,7 @@ snapshots:
       lodash.kebabcase: 4.1.1
       odiff-bin: 2.6.1
       pixelmatch: 5.3.0
-      playwright-core: 1.45.1
+      playwright-core: 1.45.2
       pngjs: 7.0.0
       posthog-node: 3.5.0
       serve-handler: 6.1.5
@@ -10289,12 +10289,12 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next-contentlayer@0.3.4(contentlayer@0.3.4(esbuild@0.19.11))(esbuild@0.19.11)(next@14.2.5(@opentelemetry/api@1.9.0)(@playwright/test@1.45.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  next-contentlayer@0.3.4(contentlayer@0.3.4(esbuild@0.19.11))(esbuild@0.19.11)(next@14.2.5(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@contentlayer/core': 0.3.4(esbuild@0.19.11)
       '@contentlayer/utils': 0.3.4
       contentlayer: 0.3.4(esbuild@0.19.11)
-      next: 14.2.5(@opentelemetry/api@1.9.0)(@playwright/test@1.45.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next: 14.2.5(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
@@ -10305,7 +10305,7 @@ snapshots:
 
   next-tick@1.1.0: {}
 
-  next@14.2.5(@opentelemetry/api@1.9.0)(@playwright/test@1.45.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  next@14.2.5(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@next/env': 14.2.5
       '@swc/helpers': 0.5.5
@@ -10327,7 +10327,7 @@ snapshots:
       '@next/swc-win32-ia32-msvc': 14.2.5
       '@next/swc-win32-x64-msvc': 14.2.5
       '@opentelemetry/api': 1.9.0
-      '@playwright/test': 1.45.1
+      '@playwright/test': 1.45.2
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
@@ -10605,11 +10605,11 @@ snapshots:
     dependencies:
       pngjs: 6.0.0
 
-  playwright-core@1.45.1: {}
+  playwright-core@1.45.2: {}
 
-  playwright@1.45.1:
+  playwright@1.45.2:
     dependencies:
-      playwright-core: 1.45.1
+      playwright-core: 1.45.2
     optionalDependencies:
       fsevents: 2.3.2
 
