@@ -24,7 +24,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: mcr.microsoft.com/playwright:v1.45.1-focal@sha256:3be818bbddb7c59a6631a4155853dac87020d47028c6b30dd8b8753b8d885dd8
+      image: mcr.microsoft.com/playwright:v1.45.2-focal@sha256:4b06530b9647eea5c66118923abd7ecf29a42caaad888632807aee1da0b9756a
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
