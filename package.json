@@ -50,7 +50,7 @@
     "pagefind": "1.1.0",
     "postcss": "8.4.39",
     "scaffdog": "4.0.0",
-    "tailwindcss": "3.4.4",
+    "tailwindcss": "3.4.5",
     "tsx": "4.16.2",
     "typescript": "5.5.3",
     "vitest": "2.0.3"
