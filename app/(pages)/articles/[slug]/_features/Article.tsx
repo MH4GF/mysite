@@ -17,7 +17,7 @@ export const Article = ({ slug, handleNotFound }: Props) => {
   }
 
   return (
-    <div>
+    <div data-pagefind-body>
       <ArticleMetaDetail article={article} />
       <div className="my-12 h-px bg-zinc-300 dark:bg-zinc-600" />
       <div className="flex max-w-6xl flex-row-reverse gap-8">

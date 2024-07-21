@@ -1,5 +1,5 @@
 import { CommandItem } from "@/app/_components/ui/command";
-import { Link } from "@/app/_features/viewTransition/Link";
+import { UniversalLink } from "@/app/_features/viewTransition";
 import { useViewTransitionRouter } from "@/app/_features/viewTransition/useViewTransitionRouter";
 import type { Route } from "next";
 import { type ComponentProps, useCallback } from "react";
@@ -20,9 +20,9 @@ export function CommandLinkItem<T extends string = string>({ href, children, ...
 
   return (
     <CommandItem {...props} onSelect={handleSelect}>
-      <Link tabIndex={-1} href={href} onClick={close} className="flex w-full">
+      <UniversalLink tabIndex={-1} href={href} onClick={close} className="flex w-full">
         {children}
-      </Link>
+      </UniversalLink>
     </CommandItem>
   );
 }

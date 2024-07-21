@@ -9,9 +9,5 @@ interface Props {
 export const MarkdownRenderer = async ({ raw }: Props): Promise<JSX.Element> => {
   const { result } = await processor.process(raw);
 
-  return (
-    <article data-pagefind-body className="prose prose-zinc dark:prose-invert">
-      {result}
-    </article>
-  );
+  return <article className="prose prose-zinc dark:prose-invert">{result}</article>;
 };
