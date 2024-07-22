@@ -1,4 +1,3 @@
-import type { Route } from "next";
 import { z } from "zod";
 
 export const tagList = [
@@ -30,12 +29,4 @@ const articleMetaSchema = z.object({
 
 export const articlesMetaSchema = z.array(articleMetaSchema);
 
-/**
- * NOTE: nextのRoute型をzodで定義できなさそうなので別で定義
- */
-export type ArticleMeta<T extends string = string> = Omit<
-  z.infer<typeof articleMetaSchema>,
-  "href"
-> & {
-  href: Route<T>;
-};
+export type ArticleMeta = z.infer<typeof articleMetaSchema>;

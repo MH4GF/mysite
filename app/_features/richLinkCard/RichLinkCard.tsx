@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import type { Route } from "next";
 import { useId } from "react";
 
 import { UniversalLink } from "../viewTransition";
@@ -15,7 +14,7 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
 
   if (title === "") {
     return (
-      <UniversalLink href={url as Route} isEnabledUnderline>
+      <UniversalLink href={url} isEnabledUnderline>
         {url}
       </UniversalLink>
     );
@@ -24,7 +23,7 @@ const RichLinkCardInner = ({ url, title, description, imageSrc }: RichLinkCardIn
   return (
     <section className="h-24 w-full" aria-labelledby={labelledBy} data-testid="rich-link-card">
       <UniversalLink
-        href={url as Route}
+        href={url}
         className="grid h-full grid-flow-row-dense grid-cols-4 overflow-hidden rounded-sm border"
         isEnabledUnderline
       >

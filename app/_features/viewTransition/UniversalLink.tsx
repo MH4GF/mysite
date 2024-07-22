@@ -3,7 +3,7 @@ import NextLink from "next/link";
 import type { LinkProps } from "./Link";
 import { Link } from "./Link";
 
-type Href<T extends string = string> = LinkProps<T>["href"];
+type Href = LinkProps["href"];
 
 const sameOriginPrefixes = [
   "/", // ルート相対パス
@@ -12,7 +12,7 @@ const sameOriginPrefixes = [
 
 const baseOrigin = new URL(`https://${process.env.VERCEL_URL}` || "http://localhost:3000").origin;
 
-const isSameOrigin = <T extends string = string>(_href: Href<T>) => {
+const isSameOrigin = (_href: Href) => {
   // eslint-disable-next-line @typescript-eslint/no-base-to-string
   const href = _href.toString();
   if (sameOriginPrefixes.some((prefix) => href.startsWith(prefix))) {
@@ -32,20 +32,20 @@ const isSameOrigin = <T extends string = string>(_href: Href<T>) => {
 const animatedUnderline =
   "no-underline transition-colors duration-300 border-b border-solid border-zinc-200 hover:border-zinc-500 dark:border-zinc-700 dark:hover:border-zinc-500";
 
-type Props<T extends string = string> = LinkProps<T> & {
+type Props = LinkProps & {
   isExternal?: boolean;
   isEnabledUnderline?: boolean;
 };
 
-export function UniversalLink<T extends string = string>({
+export function UniversalLink({
   isExternal,
   isEnabledUnderline = false,
   className: _className,
   ...props
-}: Props<T>) {
+}: Props) {
   const className = `${_className || ""} ${isEnabledUnderline ? animatedUnderline : ""}`;
 
-  if (isExternal || !isSameOrigin<T>(props.href)) {
+  if (isExternal || !isSameOrigin(props.href)) {
     return <NextLink target="_blank" rel="noreferrer" className={className} {...props} />;
   }
 
