@@ -37,7 +37,30 @@ test.describe("Command Palette", () => {
   test("Navigate to All Writing", async ({ page }) => {
     await setup(page, "/");
     await page.getByRole("button", { name: "Open command palette" }).click();
-    await page.getByRole("link", { name: "All Writing" }).click();
+    await page.getByRole("option", { name: "All Writing" }).click();
+
+    await expect(page.getByRole("dialog")).not.toBeVisible();
+    await expect(page.getByRole("heading", { name: "Articles RSS" })).toBeVisible();
+  });
+
+  test("Navigate to `Source of this site` on another tab", async ({ page }) => {
+    await setup(page, "/");
+    await page.getByRole("button", { name: "Open command palette" }).click();
+
+    const otherPagePromise = page.waitForEvent("popup");
+    await page.getByRole("option", { name: "Source of this site - MH4GF/" }).click();
+    const otherPage = await otherPagePromise;
+
+    await expect(otherPage.getByText("MH4GF / mysite Public")).toBeVisible();
+    await expect(page.getByRole("dialog")).not.toBeVisible();
+  });
+
+  test.skip("Navigate to All Writing with Enter key", async ({ page }) => {
+    await setup(page, "/");
+    await page.locator("body").press("ControlOrMeta+k");
+    await page.keyboard.press("ArrowDown");
+    await page.keyboard.press("ArrowDown");
+    await page.keyboard.press("Enter");
 
     await expect(page.getByRole("dialog")).not.toBeVisible();
     await expect(page.getByRole("heading", { name: "Articles RSS" })).toBeVisible();
