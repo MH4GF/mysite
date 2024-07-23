@@ -27,6 +27,9 @@
       "performance": {
         "noBarrelFile": "off",
         "noReExportAll": "off"
+      },
+      "suspicious": {
+        "noSkippedTests": "off"
       }
     }
   },
