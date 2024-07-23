@@ -1,4 +1,6 @@
 import react from "@vitejs/plugin-react";
+// biome-ignore lint/correctness/noNodejsModules: 設定ファイルのため
+import path from "node:path";
 import { defineWorkspace } from "vitest/config";
 
 export default defineWorkspace([
@@ -19,6 +21,9 @@ export default defineWorkspace([
         name: "chromium",
         provider: "playwright",
         providerOptions: {},
+      },
+      alias: {
+        "@": path.resolve(__dirname),
       },
     },
   },

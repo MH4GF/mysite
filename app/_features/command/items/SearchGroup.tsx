@@ -37,7 +37,7 @@ void (async () => {
       window.pagefind = await import(
         // @ts-expect-error pagefind.js generated after build
         // eslint-disable-next-line import/no-unresolved
-        /* webpackIgnore: true */ "/search/pagefind.js"
+        /* webpackIgnore: true */ "/search/pagefind.js?url"
       );
     } catch {
       window.pagefind = { search: () => Promise.resolve({ results: [] }) };
