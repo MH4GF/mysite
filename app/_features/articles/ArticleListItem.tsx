@@ -5,15 +5,15 @@ import { UniversalLink } from "../viewTransition";
 import { Tag } from "./Tag";
 import type { ArticleMeta } from "./type";
 
-type Props<T extends string> = ArticleMeta<T>;
+type Props = ArticleMeta;
 
-export const ArticleListItem = <T extends string>({
+export const ArticleListItem = ({
   title,
   href,
   externalLink,
   publishedAt: _publishedAt,
   tags,
-}: Props<T>) => {
+}: Props) => {
   const publishedAt = format(_publishedAt);
 
   return (

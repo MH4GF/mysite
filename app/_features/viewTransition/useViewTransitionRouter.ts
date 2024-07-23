@@ -1,6 +1,5 @@
 "use client";
 
-import type { Route } from "next";
 import { usePathname, useRouter } from "next/navigation";
 import { useLayoutEffect, useRef } from "react";
 
@@ -30,7 +29,7 @@ export const useViewTransitionRouter = (): ReturnType<typeof useRouter> => {
 
   return {
     ...router,
-    push: (href: Route) => {
+    push: (href: string) => {
       safeStartViewTransition(
         () =>
           new Promise((resolve, reject) => {

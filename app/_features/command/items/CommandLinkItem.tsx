@@ -1,15 +1,14 @@
 import { CommandItem } from "@/app/_components/ui/command";
 import { UniversalLink } from "@/app/_features/viewTransition";
 import { useViewTransitionRouter } from "@/app/_features/viewTransition/useViewTransitionRouter";
-import type { Route } from "next";
 import { type ComponentProps, useCallback } from "react";
 import { useCommandContext } from "../CommandProvider";
 
-type Props<T extends string = string> = ComponentProps<typeof CommandItem> & {
-  href: Route<T>;
+type Props = ComponentProps<typeof CommandItem> & {
+  href: string;
 };
 
-export function CommandLinkItem<T extends string = string>({ href, children, ...props }: Props<T>) {
+export function CommandLinkItem({ href, children, ...props }: Props) {
   const router = useViewTransitionRouter();
   const { onOpenChange } = useCommandContext();
   const close = useCallback(() => onOpenChange(false), [onOpenChange]);

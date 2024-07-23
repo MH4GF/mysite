@@ -1,8 +1,7 @@
 import type { ArticleMeta } from "../type";
 
-type RawArticleMeta = Omit<ArticleMeta, "publishedAt" | "href"> & {
+type RawArticleMeta = Omit<ArticleMeta, "publishedAt"> & {
   publishedAt: string;
-  href: string;
 };
 
 const articles: Omit<RawArticleMeta, "externalLink">[] = [

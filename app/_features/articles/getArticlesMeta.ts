@@ -9,10 +9,7 @@ type Options = {
 };
 
 export const getArticlesMeta = ({ tag }: Options): ArticleMeta[] => {
-  const articlesMeta = articlesMetaSchema.parse([
-    ...internalArticles,
-    ...externalArticles,
-  ]) as ArticleMeta[];
+  const articlesMeta = articlesMetaSchema.parse([...internalArticles, ...externalArticles]);
   const sorted = articlesMeta.sort((a, b) => compareDesc(a.publishedAt, b.publishedAt));
 
   if (tag !== undefined) {
