@@ -4,7 +4,7 @@
 
 import type { LinkProps as NextLinkProps } from "next/link";
 import NextLink from "next/link";
-import type { ComponentProps, MouseEvent } from "react";
+import { type ComponentProps, type MouseEvent, forwardRef } from "react";
 
 import { useViewTransitionRouter } from "./useViewTransitionRouter";
 
@@ -15,13 +15,16 @@ const noop = () => {};
 
 export type LinkProps = NextLinkProps & Omit<ComponentProps<"a">, keyof NextLinkProps>;
 
-export function Link({ children, href, onClick, ...props }: LinkProps) {
+export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
+  { children, href, onClick, ...props },
+  ref,
+) {
   const router = useViewTransitionRouter();
 
   // 同一ページ内での遷移の場合はトランジションを追加すると不安定なため、単純にNextLinkで遷移する
   if (isSamePage(href.toString())) {
     return (
-      <NextLink {...props} href={href} onClick={onClick ?? noop}>
+      <NextLink {...props} href={href} onClick={onClick ?? noop} ref={ref}>
         {children}
       </NextLink>
     );
@@ -40,8 +43,8 @@ export function Link({ children, href, onClick, ...props }: LinkProps) {
   };
 
   return (
-    <NextLink {...props} href={href} onClick={handleLinkClick}>
+    <NextLink {...props} href={href} onClick={handleLinkClick} ref={ref}>
       {children}
     </NextLink>
   );
-}
+});

@@ -1,5 +1,6 @@
 import NextLink from "next/link";
 
+import { forwardRef } from "react";
 import type { LinkProps } from "./Link";
 import { Link } from "./Link";
 
@@ -37,17 +38,16 @@ type Props = LinkProps & {
   isEnabledUnderline?: boolean;
 };
 
-export function UniversalLink({
-  isExternal,
-  isEnabledUnderline = false,
-  className: _className,
-  ...props
-}: Props) {
-  const className = `${_className || ""} ${isEnabledUnderline ? animatedUnderline : ""}`;
+export const UniversalLink = forwardRef<HTMLAnchorElement, Props>(
+  ({ isExternal, isEnabledUnderline = false, className: _className, ...props }: Props, ref) => {
+    const className = `${_className || ""} ${isEnabledUnderline ? animatedUnderline : ""}`;
 
-  if (isExternal || !isSameOrigin(props.href)) {
-    return <NextLink target="_blank" rel="noreferrer" className={className} {...props} />;
-  }
+    if (isExternal || !isSameOrigin(props.href)) {
+      return (
+        <NextLink target="_blank" rel="noreferrer" className={className} {...props} ref={ref} />
+      );
+    }
 
-  return <Link className={className} {...props} />;
-}
+    return <Link className={className} {...props} ref={ref} />;
+  },
+);
