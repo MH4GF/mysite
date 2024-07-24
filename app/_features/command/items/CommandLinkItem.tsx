@@ -1,6 +1,8 @@
 import { CommandItem } from "@/app/_components/ui/command";
-import { UniversalLink } from "@/app/_features/viewTransition";
-import { type ComponentProps, useCallback } from "react";
+import { UniversalLink, isSameOrigin } from "@/app/_features/viewTransition";
+import { useCallback, useRef } from "react";
+import type { ComponentProps } from "react";
+import { useViewTransitionRouter } from "../../viewTransition/useViewTransitionRouter";
 import { useCommandContext } from "../CommandProvider";
 
 type Props = ComponentProps<typeof CommandItem> & {
@@ -10,16 +12,17 @@ type Props = ComponentProps<typeof CommandItem> & {
 export function CommandLinkItem({ href, children, ...props }: Props) {
   const { onOpenChange } = useCommandContext();
   const close = useCallback(() => onOpenChange(false), [onOpenChange]);
+  const linkRef = useRef<HTMLAnchorElement>(null);
+  const router = useViewTransitionRouter();
 
-  // TODO: キーボード操作時の処理を実装
-  // const handleSelect = useCallback(() => {
-  //   router.push(href);
-  //   close();
-  // }, [router, href, close]);
+  const handleKeydown = useCallback(() => {
+    isSameOrigin(href) ? router.push(href) : window.open(href, "_blank");
+    close();
+  }, [router, href, close]);
 
   return (
-    <CommandItem {...props} asChild>
-      <UniversalLink href={href} onClick={close}>
+    <CommandItem {...props} onSelect={handleKeydown} asChild>
+      <UniversalLink ref={linkRef} href={href} onClick={close}>
         {children}
       </UniversalLink>
     </CommandItem>

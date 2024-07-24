@@ -55,14 +55,28 @@ test.describe("Command Palette", () => {
     await expect(page.getByRole("dialog")).not.toBeVisible();
   });
 
-  test.skip("Navigate to All Writing with Enter key", async ({ page }) => {
+  test("Navigate to All Writing with Enter key", async ({ page }) => {
     await setup(page, "/");
     await page.locator("body").press("ControlOrMeta+k");
-    await page.keyboard.press("ArrowDown");
     await page.keyboard.press("ArrowDown");
     await page.keyboard.press("Enter");
 
     await expect(page.getByRole("dialog")).not.toBeVisible();
     await expect(page.getByRole("heading", { name: "Articles RSS" })).toBeVisible();
+  });
+
+  test("Navigate to `Source of this site` with Enter key", async ({ page }) => {
+    await setup(page, "/");
+    await page.locator("body").press("ControlOrMeta+k");
+
+    const otherPagePromise = page.waitForEvent("popup");
+    await page.keyboard.press("ArrowDown");
+    await page.keyboard.press("ArrowDown");
+    await page.keyboard.press("ArrowDown");
+    await page.keyboard.press("Enter");
+    const otherPage = await otherPagePromise;
+
+    await expect(otherPage.getByText("MH4GF / mysite Public")).toBeVisible();
+    await expect(page.getByRole("dialog")).not.toBeVisible();
   });
 });
