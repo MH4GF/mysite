@@ -50,7 +50,7 @@
     "pagefind": "1.1.0",
     "postcss": "8.4.40",
     "scaffdog": "4.0.0",
-    "tailwindcss": "3.4.6",
+    "tailwindcss": "3.4.7",
     "tsx": "4.16.2",
     "typescript": "5.5.4",
     "vitest": "2.0.4"
@@ -65,7 +65,7 @@
     "clsx": "2.1.1",
     "cmdk": "1.0.0",
     "contentlayer": "0.3.4",
-    "lucide-react": "0.414.0",
+    "lucide-react": "0.416.0",
     "next": "14.2.5",
     "next-contentlayer": "0.3.4",
     "react": "18.3.1",
