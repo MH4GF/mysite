@@ -20,7 +20,7 @@ export const Article = ({ slug, handleNotFound }: Props) => {
     <div data-pagefind-body>
       <ArticleMetaDetail article={article} />
       <div className="my-12 h-px bg-zinc-300 dark:bg-zinc-600" />
-      <div className="flex max-w-6xl flex-row-reverse gap-8">
+      <div className="flex max-w-6xl flex-row-reverse gap-8 mb-8">
         <div className="hidden w-1/4 pt-5 lg:block">
           <div className="sticky top-24">
             <TableOfContents />
