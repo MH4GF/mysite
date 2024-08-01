@@ -22,6 +22,6 @@ jobs:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
       - run: pnpm test:vrt:screenshots
-      - uses: lost-pixel/lost-pixel@e3c935b461073034e8a2e2a773f8b07abf0ee858 # v3.17.0
+      - uses: lost-pixel/lost-pixel@6c30db12013deca27ce30e7cce32b4fc2aee6f49 # v3.18.0
         env:
           LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
