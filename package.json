@@ -43,7 +43,7 @@
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.5",
     "eslint-import-resolver-typescript": "3.6.1",
-    "lost-pixel": "3.18.0",
+    "lost-pixel": "3.18.1",
     "markuplint": "4.9.2",
     "msw": "2.3.5",
     "npm-run-all2": "6.2.2",
