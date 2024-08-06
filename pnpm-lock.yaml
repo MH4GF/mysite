@@ -163,8 +163,8 @@ importers:
         specifier: 3.6.1
         version: 3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       lost-pixel:
-        specifier: 3.18.1
-        version: 3.18.1(@types/node@20.14.14)(playwright-core@1.46.0)(typescript@5.5.4)
+        specifier: 3.18.2
+        version: 3.18.2(@types/node@20.14.14)(playwright-core@1.46.0)(typescript@5.5.4)
       markuplint:
         specifier: 4.9.2
         version: 4.9.2(typescript@5.5.4)
@@ -3633,8 +3633,8 @@ packages:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
     hasBin: true
 
-  lost-pixel@3.18.1:
-    resolution: {integrity: sha512-sNxkFiOGwhckEyZ8r3TrmCtLFw123/8jTd5TriLzWezuwMeBjM8Y+HP864KqWcLw8cdrFDojDcZv0H2LJe75Jg==}
+  lost-pixel@3.18.2:
+    resolution: {integrity: sha512-6TQWUY1sCSDvCheYuuevaDBfu8aZTPYiNA4lxmiKqVMVwKFEKlI6XxMFGGh6VCmJ4hyhPX+GeTp16PYfy5TWyA==}
     engines: {node: '>=18'}
     hasBin: true
     peerDependencies:
@@ -9426,7 +9426,7 @@ snapshots:
     dependencies:
       js-tokens: 4.0.0
 
-  lost-pixel@3.18.1(@types/node@20.14.14)(playwright-core@1.46.0)(typescript@5.5.4):
+  lost-pixel@3.18.2(@types/node@20.14.14)(playwright-core@1.46.0)(typescript@5.5.4):
     dependencies:
       '@types/xml2js': 0.4.14
       async: 3.2.5
