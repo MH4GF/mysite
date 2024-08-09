@@ -93,8 +93,8 @@ importers:
         specifier: 1.0.7
         version: 1.0.7(tailwindcss@3.4.9(ts-node@10.9.2(@types/node@20.14.14)(typescript@5.5.4)))
       tocbot:
-        specifier: 4.28.2
-        version: 4.28.2
+        specifier: 4.29.0
+        version: 4.29.0
       unified:
         specifier: 11.0.5
         version: 11.0.5
@@ -5105,8 +5105,8 @@ packages:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
 
-  tocbot@4.28.2:
-    resolution: {integrity: sha512-/MaSa9xI6mIo84IxqqliSCtPlH0oy7sLcY9s26qPMyH/2CxtZ2vNAXYlIdEQ7kjAkCQnc0rbLygf//F5c663oQ==}
+  tocbot@4.29.0:
+    resolution: {integrity: sha512-E+8+lceJpWHJYKq+qFHbi+gmFdXZeOAliHFdgiIAUo68cr8ClReXAx7h9e3TcDM0kw9PSnBn3GAZEpRmRLZ93g==}
 
   toml@3.0.0:
     resolution: {integrity: sha512-y/mWCZinnvxjTKYhJ+pYxwD0mRLVvOtdS2Awbgxln6iEnt4rk0yBxeSBHkGJcPucRiG0e55mwWp+g/05rsrd6w==}
@@ -11503,7 +11503,7 @@ snapshots:
     dependencies:
       is-number: 7.0.0
 
-  tocbot@4.28.2: {}
+  tocbot@4.29.0: {}
 
   toml@3.0.0: {}
 
