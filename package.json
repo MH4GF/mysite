@@ -30,7 +30,7 @@
     "@markuplint/react-spec": "4.5.5",
     "@mh4gf/configs": "0.3.0",
     "@mh4gf/eslint-config": "0.5.2",
-    "@playwright/test": "1.46.0",
+    "@playwright/test": "1.46.1",
     "@tsconfig/next": "2.0.3",
     "@tsconfig/strictest": "2.0.5",
     "@types/node": "20.14.15",
