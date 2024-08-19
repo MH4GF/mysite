@@ -23,7 +23,7 @@
     "test:vrt:screenshots": "playwright test --config app/__vrt__/playwright.config.ts"
   },
   "devDependencies": {
-    "@axe-core/playwright": "4.9.1",
+    "@axe-core/playwright": "4.10.0",
     "@biomejs/biome": "1.8.3",
     "@markuplint/jsx-parser": "4.7.5",
     "@markuplint/ml-config": "4.7.2",
