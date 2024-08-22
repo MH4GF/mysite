@@ -148,8 +148,8 @@ importers:
         specifier: 10.4.20
         version: 10.4.20(postcss@8.4.41)
       axe-html-reporter:
-        specifier: 2.2.7
-        version: 2.2.7(axe-core@4.10.0)
+        specifier: 2.2.10
+        version: 2.2.10(axe-core@4.10.0)
       dependency-cruiser:
         specifier: 16.4.0
         version: 16.4.0
@@ -2103,8 +2103,8 @@ packages:
     resolution: {integrity: sha512-QbUdXJVTpvUTHU7871ppZkdOLBeGUKBQWHkHrvN2V9IQWGMt61zf3B45BtzjxEJzYuj0JBjBZP/hmYS/R9pmAw==}
     engines: {node: '>=4'}
 
-  axe-html-reporter@2.2.7:
-    resolution: {integrity: sha512-Cdq4M3WG/CxSW1f1l+Cd8/G0WUYJt0JU2NTihFtznD8wOJz4pvE9TETO9eZAKBzRb/C2vCuMlji8vuzJ34puvQ==}
+  axe-html-reporter@2.2.10:
+    resolution: {integrity: sha512-ziPkwSKlw3jIIxLwbE67fzXtzKbf05IRk/VjTmX6TdGsHNKwzoGAH0HYD9PXYxn3ARf6EggdratWsJWV17CCYg==}
     engines: {node: '>=8.9.0'}
     peerDependencies:
       axe-core: '>=3'
@@ -7616,7 +7616,7 @@ snapshots:
 
   axe-core@4.9.1: {}
 
-  axe-html-reporter@2.2.7(axe-core@4.10.0):
+  axe-html-reporter@2.2.10(axe-core@4.10.0):
     dependencies:
       axe-core: 4.10.0
       mustache: 4.2.0
