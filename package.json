@@ -38,7 +38,7 @@
     "@types/react-dom": "18.3.0",
     "@types/rss": "0.0.32",
     "autoprefixer": "10.4.20",
-    "axe-html-reporter": "2.2.7",
+    "axe-html-reporter": "2.2.10",
     "dependency-cruiser": "16.4.0",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.5",
