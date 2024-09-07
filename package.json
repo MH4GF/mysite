@@ -45,7 +45,7 @@
     "eslint-import-resolver-typescript": "3.6.1",
     "lost-pixel": "3.18.2",
     "markuplint": "4.9.3",
-    "msw": "2.4.2",
+    "msw": "2.4.3",
     "npm-run-all2": "6.2.2",
     "pagefind": "1.1.0",
     "postcss": "8.4.45",
