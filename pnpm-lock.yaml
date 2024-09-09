@@ -169,8 +169,8 @@ importers:
         specifier: 4.9.3
         version: 4.9.3(typescript@5.5.4)
       msw:
-        specifier: 2.4.3
-        version: 2.4.3(typescript@5.5.4)
+        specifier: 2.4.4
+        version: 2.4.4(typescript@5.5.4)
       npm-run-all2:
         specifier: 6.2.2
         version: 6.2.2
@@ -944,8 +944,8 @@ packages:
     peerDependencies:
       prettier: ^2
 
-  '@mswjs/interceptors@0.29.1':
-    resolution: {integrity: sha512-3rDakgJZ77+RiQUuSK69t1F0m8BQKA8Vh5DCS5V0DWvNY67zob2JhhQrhCO0AKLGINTRSFd1tBaHcJTkhefoSw==}
+  '@mswjs/interceptors@0.35.0':
+    resolution: {integrity: sha512-f5cHyIvm4m4g1I5x9EH1etGx0puaU0OaX2szqGRVBVgUC6aMASlOI5hbpe7tJ9l4/VWjCUu5OMraCazLZGI24A==}
     engines: {node: '>=18'}
 
   '@next/env@14.2.5':
@@ -4230,8 +4230,8 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  msw@2.4.3:
-    resolution: {integrity: sha512-PXK3wOQHwDtz6JYVyAVlQtzrLr6bOAJxggw5UHm3CId79+W7238aNBD1zJVkFY53o/DMacuIfgesW2nv9yCO3Q==}
+  msw@2.4.4:
+    resolution: {integrity: sha512-iuM0qGs4YmgYCLH+xqb07w2e/e4fYmsx3+WHVlIOUA34TW1sw+wRpNmOlXnLDkw/T7233Jnm6t+aNf4v2E3e2Q==}
     engines: {node: '>=18'}
     hasBin: true
     peerDependencies:
@@ -4419,6 +4419,9 @@ packages:
 
   outvariant@1.4.2:
     resolution: {integrity: sha512-Ou3dJ6bA/UJ5GVHxah4LnqDwZRwAmWxrG3wtrHrbGnP4RnLCtA64A4F+ae7Y8ww660JaddSoArUR5HjipWSHAQ==}
+
+  outvariant@1.4.3:
+    resolution: {integrity: sha512-+Sl2UErvtsoajRDKCE5/dBz4DIvHXQQnAxtQTF04OJxY0+DyZXSo5P5Bb7XYWOh81syohlYL24hbDwxedPUJCA==}
 
   p-cancelable@3.0.0:
     resolution: {integrity: sha512-mlVgR3PGuzlo0MmTdk4cXqXWlwQDLnONTAg6sm62XkMJEiRxN3GL3SffkYvqwonbkJBcrI7Uvv5Zh9yjvn2iUw==}
@@ -6522,13 +6525,13 @@ snapshots:
       prettier: 2.8.8
       prettier-plugin-packagejson: 2.5.0(prettier@2.8.8)
 
-  '@mswjs/interceptors@0.29.1':
+  '@mswjs/interceptors@0.35.0':
     dependencies:
       '@open-draft/deferred-promise': 2.2.0
       '@open-draft/logger': 0.3.0
       '@open-draft/until': 2.1.0
       is-node-process: 1.2.0
-      outvariant: 1.4.2
+      outvariant: 1.4.3
       strict-event-emitter: 0.5.1
 
   '@next/env@14.2.5': {}
@@ -6587,7 +6590,7 @@ snapshots:
   '@open-draft/logger@0.3.0':
     dependencies:
       is-node-process: 1.2.0
-      outvariant: 1.4.2
+      outvariant: 1.4.3
 
   '@open-draft/until@2.1.0': {}
 
@@ -10616,13 +10619,13 @@ snapshots:
 
   ms@2.1.3: {}
 
-  msw@2.4.3(typescript@5.5.4):
+  msw@2.4.4(typescript@5.5.4):
     dependencies:
       '@bundled-es-modules/cookie': 2.0.0
       '@bundled-es-modules/statuses': 1.0.1
       '@bundled-es-modules/tough-cookie': 0.1.6
       '@inquirer/confirm': 3.1.11
-      '@mswjs/interceptors': 0.29.1
+      '@mswjs/interceptors': 0.35.0
       '@open-draft/until': 2.1.0
       '@types/cookie': 0.6.0
       '@types/statuses': 2.0.5
@@ -10842,6 +10845,8 @@ snapshots:
   os-tmpdir@1.0.2: {}
 
   outvariant@1.4.2: {}
+
+  outvariant@1.4.3: {}
 
   p-cancelable@3.0.0: {}
 
