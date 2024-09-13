@@ -45,7 +45,7 @@
     "eslint-import-resolver-typescript": "3.6.1",
     "lost-pixel": "3.18.2",
     "markuplint": "4.9.3",
-    "msw": "2.4.5",
+    "msw": "2.4.6",
     "npm-run-all2": "6.2.2",
     "pagefind": "1.1.0",
     "postcss": "8.4.45",
@@ -53,7 +53,7 @@
     "tailwindcss": "3.4.11",
     "tsx": "4.17.0",
     "typescript": "5.5.4",
-    "vitest": "2.1.0"
+    "vitest": "2.1.1"
   },
   "dependencies": {
     "@next/third-parties": "14.2.5",
