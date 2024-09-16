@@ -14,6 +14,8 @@ export const size = {
 
 export const contentType = "image/png";
 
+const FONT_URL_REGEX = /src: url\((.+)\) format\('(opentype|truetype)'\)/;
+
 // https://github.com/vercel/satori/blob/2e8dcb486f3dadeb6fc2e8790cb822a72893a21a/playground/pages/api/font.ts#L86-L111
 const fetchFont = async (fontSource: string) => {
   const css = await (
@@ -26,7 +28,7 @@ const fetchFont = async (fontSource: string) => {
     })
   ).text();
 
-  const resource = css.match(/src: url\((.+)\) format\('(opentype|truetype)'\)/);
+  const resource = css.match(FONT_URL_REGEX);
 
   if (!resource?.[1]) {
     return null;
