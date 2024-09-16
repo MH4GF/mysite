@@ -10,9 +10,7 @@ figcaption[data-rehype-pretty-code-title] {
   background-color: var(--tw-prose-pre-bg);
 }
 
-figure[data-rehype-pretty-code-figure]
-  > figcaption[data-rehype-pretty-code-title]
-  + pre {
+figure[data-rehype-pretty-code-figure] > figcaption[data-rehype-pretty-code-title] + pre {
   margin-top: 0;
   border-top-left-radius: 0;
 }

@@ -1,11 +1,11 @@
 .is-active-link {
-  @apply text-zinc-700 dark:text-zinc-200 font-bold
+  @apply text-zinc-700 dark:text-zinc-200 font-bold;
 }
 
 .toc-list-item {
-  @apply py-1
+  @apply py-1;
 }
 
 .toc-list .toc-list {
-  @apply ml-4
+  @apply ml-4;
 }
