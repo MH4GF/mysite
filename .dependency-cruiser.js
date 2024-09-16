@@ -34,7 +34,6 @@ module.exports = {
           "packages/eslint-config/src/base.cjs", // eslintのextendsで使う
           "postcss.config.js", // postcssの設定ファイル
           "lostpixel.config.ts", // lostpixelの設定ファイル
-          ".scaffdog/config.js", // scaffdogの設定ファイル
         ],
       },
       to: {},

@@ -57,8 +57,7 @@
         "@markuplint/react-spec",
         "markuplint",
         "@biomejs/biome",
-        "node",
-        "scaffdog"
+        "node"
       ],
       // 本番影響がないのでCIが通れば自動マージで良い
       "automerge": true
