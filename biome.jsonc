@@ -31,6 +31,9 @@
       "suspicious": {
         "noSkippedTests": "off",
         "noReactSpecificProps": "off" // Because this rule is for non-React projects
+      },
+      "correctness": {
+        "useImportExtensions": "off" // Because this project use Next.js (commonjs)
       }
     }
   },
