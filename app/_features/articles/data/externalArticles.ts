@@ -6,6 +6,12 @@ type RawArticleMeta = Omit<ArticleMeta, "publishedAt"> & {
 
 const articles: Omit<RawArticleMeta, "externalLink">[] = [
   {
+    title: "jscodeshift + OpenAI API でソースコード内の日本語文字列を一括で翻訳する",
+    publishedAt: "2024/08/20",
+    href: "https://tech.route06.co.jp/entry/2024/08/20/121720",
+    tags: ["route06-tech-blog"],
+  },
+  {
     title: "チュートリアル: Yjs, valtio, React で実現する共同編集アプリケーション",
     publishedAt: "2024/07/03",
     href: "https://tech.route06.co.jp/entry/2024/07/03/154219",
