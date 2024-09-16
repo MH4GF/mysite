@@ -42,7 +42,7 @@
     "dependency-cruiser": "16.4.1",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.11",
-    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-import-resolver-typescript": "3.6.3",
     "lost-pixel": "3.18.2",
     "markuplint": "4.9.3",
     "msw": "2.4.7",
