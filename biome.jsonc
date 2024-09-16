@@ -29,7 +29,8 @@
         "noReExportAll": "off"
       },
       "suspicious": {
-        "noSkippedTests": "off"
+        "noSkippedTests": "off",
+        "noReactSpecificProps": "off" // Because this rule is for non-React projects
       }
     }
   },
