@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "4.10.0",
-    "@biomejs/biome": "1.8.3",
+    "@biomejs/biome": "1.9.1",
     "@markuplint/jsx-parser": "4.7.6",
     "@markuplint/ml-config": "4.7.3",
     "@markuplint/react-spec": "4.5.6",
@@ -46,13 +46,13 @@
     "lost-pixel": "3.18.2",
     "markuplint": "4.9.3",
     "msw": "2.4.7",
-    "npm-run-all2": "6.2.2",
+    "npm-run-all2": "6.2.3",
     "pagefind": "1.1.0",
     "postcss": "8.4.47",
-    "scaffdog": "4.0.0",
+    "scaffdog": "4.1.0",
     "tailwindcss": "3.4.11",
     "tsx": "4.17.0",
-    "typescript": "5.5.4",
+    "typescript": "5.6.2",
     "vitest": "2.1.1"
   },
   "dependencies": {
