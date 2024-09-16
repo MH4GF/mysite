@@ -1,12 +1,12 @@
 "use client";
 import { useEffect } from "react";
-import tocbot from "tocbot";
+import { destroy, init } from "tocbot";
 
 import "./TableOfContents.css";
 
 export const TableOfContents = () => {
   useEffect(() => {
-    tocbot.init({
+    init({
       tocSelector: "#toc",
       contentSelector: ".prose",
       headingSelector: "h1, h2, h3, h4",
@@ -14,7 +14,7 @@ export const TableOfContents = () => {
       listClass: "toc-list",
     });
 
-    return () => tocbot.destroy();
+    return () => destroy();
   }, []);
 
   return <nav id="toc" className="text-sm text-zinc-500 dark:text-zinc-400" aria-label="目次" />;
