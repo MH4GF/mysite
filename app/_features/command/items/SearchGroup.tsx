@@ -45,11 +45,13 @@ void (async () => {
   }
 })();
 
+const URL_REGEX = /\/server\/app\/articles\/(.*)\.html/;
+
 const getData = cache(async (result: Result) => result.data());
 const formatUrl = (url: string): string => {
   // /server/app/articles/kaigi-on-rails-2022.html
   // /articles/kaigi-on-rails-2022 にしたい
-  return url.replace(/\/server\/app\/articles\/(.*)\.html/, "/articles/$1");
+  return url.replace(URL_REGEX, "/articles/$1");
 };
 
 const SearchResultItem: FC<{ result: Result }> = ({ result }) => {

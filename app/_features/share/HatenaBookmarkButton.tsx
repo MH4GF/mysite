@@ -1,7 +1,8 @@
 import Image from "next/image";
 import type { FC } from "react";
 
-const removeProtocol = (url: string) => url.replace(/^https?:\/\//, "");
+const PROTOCOL_REGEX = /^https?:\/\//;
+const removeProtocol = (url: string) => url.replace(PROTOCOL_REGEX, "");
 
 type Props = {
   url: string;
