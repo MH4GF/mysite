@@ -1,7 +1,8 @@
+import { MarkdownToToc } from "@/app/_features/articles/toc";
 import { ArticleMetaDetail } from "./ArticleMetaDetail";
 import { ArticleShareButton } from "./ArticleShareButton";
 
-import { MarkdownRenderer, TableOfContents, UniversalLink, getArticle } from "@/app/_features";
+import { MarkdownRenderer, UniversalLink, getArticle } from "@/app/_features";
 
 interface Props {
   slug: string;
@@ -23,7 +24,7 @@ export const Article = ({ slug, handleNotFound }: Props) => {
       <div className="flex max-w-6xl flex-row-reverse gap-8 mb-8">
         <div className="hidden w-1/4 pt-5 lg:block">
           <div className="sticky top-24">
-            <TableOfContents />
+            <MarkdownToToc raw={article.body.raw} />
           </div>
         </div>
         <div className="w-full lg:w-3/4">
