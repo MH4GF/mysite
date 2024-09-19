@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "4.10.0",
-    "@biomejs/biome": "1.9.1",
+    "@biomejs/biome": "1.9.2",
     "@markuplint/jsx-parser": "4.7.6",
     "@markuplint/ml-config": "4.7.3",
     "@markuplint/react-spec": "4.5.6",
