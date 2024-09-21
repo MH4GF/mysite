@@ -1,6 +1,5 @@
 import { MarkdownToToc } from "@/app/_features/articles/toc";
 import { ArticleMetaDetail } from "./ArticleMetaDetail";
-import { ArticleShareButton } from "./ArticleShareButton";
 
 import { MarkdownRenderer, UniversalLink, getArticle } from "@/app/_features";
 
@@ -31,7 +30,6 @@ export const Article = ({ slug, handleNotFound }: Props) => {
           <MarkdownRenderer raw={article.body.raw} />
         </div>
       </div>
-      <ArticleShareButton article={article} />
       <div className="mt-4">
         <UniversalLink
           href="/articles"
