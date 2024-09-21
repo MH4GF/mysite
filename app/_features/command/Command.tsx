@@ -14,6 +14,7 @@ import { CommandFooter } from "./CommandFooter";
 import { CommandProvider } from "./CommandProvider";
 import { CommandTrigger } from "./CommandTrigger";
 import { ColorTheme, CommandLinkItem, SearchGroup } from "./items";
+import { ShareToX } from "./items/ShareToX";
 
 export function Command() {
   const [open, setOpen] = useState(false);
@@ -38,6 +39,7 @@ export function Command() {
         <CommandList>
           <CommandGroup heading="Suggestions">
             <ColorTheme />
+            <ShareToX />
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading="Contents">

@@ -1,13 +1,4 @@
-import type { ComponentProps, JSX } from "react";
-
-const Icon = ({ className, ...props }: ComponentProps<"svg">) => {
-  return (
-    <svg
-      className={`fill-zinc-500 transition dark:fill-zinc-400 dark:group-hover:fill-zinc-300 group-hover:fill-zinc-600 ${className}`}
-      {...props}
-    />
-  );
-};
+import type { JSX } from "react";
 
 interface SvgProps {
   className?: string;
@@ -17,9 +8,10 @@ type IconComponent = (props: SvgProps) => JSX.Element;
 
 export const XIcon: IconComponent = (props) => {
   return (
-    <Icon viewBox="0 0 1200 1227" {...props}>
+    <svg viewBox="0 0 1200 1227" {...props}>
+      <title>X</title>
       <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
-    </Icon>
+    </svg>
   );
 };
 
