@@ -38,7 +38,7 @@
     "@types/rss": "0.0.32",
     "autoprefixer": "10.4.20",
     "axe-html-reporter": "2.2.11",
-    "dependency-cruiser": "16.4.1",
+    "dependency-cruiser": "16.4.2",
     "eslint": "8.57.1",
     "eslint-config-next": "14.2.13",
     "eslint-import-resolver-typescript": "3.6.3",
