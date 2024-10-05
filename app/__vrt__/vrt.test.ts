@@ -91,8 +91,11 @@ test("articles", async ({ page }, testInfo) => {
   await run(page, testInfo, { name: "articles", path: "/articles" });
 });
 
-test("article-2022-summary", async ({ page }, testInfo) => {
-  await run(page, testInfo, { name: "article-2022-summary", path: "/articles/2022-summary" });
+test("2024-development-wordpress-theme", async ({ page }, testInfo) => {
+  await run(page, testInfo, {
+    name: "2024-development-wordpress-theme",
+    path: "/articles/2024-development-wordpress-theme",
+  });
 });
 
 test("testing-markdown-renderer", async ({ page }, testInfo) => {
