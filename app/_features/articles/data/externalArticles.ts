@@ -6,7 +6,8 @@ type RawArticleMeta = Omit<ArticleMeta, "publishedAt"> & {
 
 const articles: Omit<RawArticleMeta, "externalLink">[] = [
   {
-    title: "Valibot Schema Driven UI - ユーザーがノーコードで自由に UI を組み立てられるエディタを Next.js と Valibot で構築する",
+    title:
+      "Valibot Schema Driven UI - ユーザーがノーコードで自由に UI を組み立てられるエディタを Next.js と Valibot で構築する",
     publishedAt: "2024/09/26",
     href: "https://tech.route06.co.jp/entry/2024/09/26/122250",
     tags: ["route06-tech-blog"],
