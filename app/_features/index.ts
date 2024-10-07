@@ -6,4 +6,3 @@ export * from "./scrollToTop";
 export * from "./markdownRenderer";
 export * from "./richLinkCard";
 export * from "./viewTransition";
-export * from "./share";
