@@ -40,7 +40,7 @@
     "axe-html-reporter": "2.2.11",
     "dependency-cruiser": "16.4.2",
     "eslint": "8.57.1",
-    "eslint-config-next": "14.2.13",
+    "eslint-config-next": "14.2.16",
     "eslint-import-resolver-typescript": "3.6.3",
     "lost-pixel": "3.18.2",
     "markuplint": "4.9.4",
@@ -54,7 +54,7 @@
     "vitest": "2.1.1"
   },
   "dependencies": {
-    "@next/third-parties": "14.2.13",
+    "@next/third-parties": "14.2.16",
     "@radix-ui/react-dialog": "1.1.1",
     "@radix-ui/react-visually-hidden": "1.1.0",
     "@tailwindcss/typography": "0.5.15",
@@ -64,7 +64,7 @@
     "cmdk": "1.0.0",
     "contentlayer": "0.3.4",
     "lucide-react": "0.445.0",
-    "next": "14.2.13",
+    "next": "14.2.16",
     "next-contentlayer": "0.3.4",
     "react": "18.3.1",
     "react-dom": "18.3.1",
