@@ -29,7 +29,7 @@
     "@markuplint/react-spec": "4.5.7",
     "@mh4gf/configs": "0.3.0",
     "@mh4gf/eslint-config": "0.5.2",
-    "@playwright/test": "1.47.2",
+    "@playwright/test": "1.48.2",
     "@tsconfig/next": "2.0.3",
     "@tsconfig/strictest": "2.0.5",
     "@types/node": "20.16.5",
@@ -42,16 +42,16 @@
     "eslint": "8.57.1",
     "eslint-config-next": "14.2.16",
     "eslint-import-resolver-typescript": "3.6.3",
-    "lost-pixel": "3.18.2",
+    "lost-pixel": "3.21.0",
     "markuplint": "4.9.4",
-    "msw": "2.4.9",
+    "msw": "2.6.0",
     "npm-run-all2": "6.2.3",
     "pagefind": "1.1.1",
     "postcss": "8.4.47",
     "tailwindcss": "3.4.13",
     "tsx": "4.19.2",
     "typescript": "5.6.2",
-    "vitest": "2.1.1"
+    "vitest": "2.1.4"
   },
   "dependencies": {
     "@next/third-parties": "14.2.16",
