@@ -1,6 +1,6 @@
 ---
 title: GitHub Scheduled ReminderによるCI失敗時の通知
-description:
+description: CI失敗時の通知を設定する方法
 publishedAt: 2024-05-15
 tags:
   - dev
