@@ -1,5 +1,5 @@
 on:
-  push:
+  deployment_status:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -10,7 +10,23 @@ env:
   TURBO_TEAM: ${{ vars.TURBO_TEAM }}
 
 jobs:
+  setup-job:
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      BASE_REF_BRANCH: ${{ steps.branch-name.outputs.BASE_REF_BRANCH }}
+    steps:
+      - id: branch-name
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BASE_REF_BRANCH=$(gh api -H "Accept: application/vnd.github+json" /repos/${{ github.repository_owner }}/${{ github.event.repository.name }}/commits/${{ github.sha }}/branches-where-head | jq -r '.[].name')
+          echo "BASE_REF_BRANCH=$BASE_REF_BRANCH" >> $GITHUB_OUTPUT
+
   vrt:
+    if: github.event.deployment_status.state == 'success'
+    needs: setup-job
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
@@ -22,6 +38,9 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
       - run: pnpm test:vrt:screenshots
+        env:
+          BASE_URL: ${{ github.event.deployment_status.environment_url }}
       - uses: lost-pixel/lost-pixel@bb5b78addcd5978cb5499ee6af8240f0da00f21c # v3.21.0
         env:
           LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
+          COMMIT_REF_NAME: ${{ needs.setup-job.outputs.BASE_REF_BRANCH }}
