@@ -8,10 +8,14 @@ interface Params {
 }
 
 interface Props {
-  params: Params;
+  params: Promise<Params>;
 }
 
-export default function Page({ params: { tag: _tag } }: Props) {
+export default async function Page(props: Props) {
+  const params = await props.params;
+
+  const { tag: _tag } = params;
+
   const parsed = tagsSchema.safeParse(_tag);
   if (!parsed.success) {
     notFound();
@@ -33,7 +37,8 @@ export const generateStaticParams = (): Params[] => {
   return tagList.map((tag) => ({ tag }));
 };
 
-export const generateMetadata = ({ params }: Props): Metadata => {
+export const generateMetadata = async (props: Props): Promise<Metadata> => {
+  const params = await props.params;
   const tag = tagsSchema.parse(params.tag);
   const label = tagLabelMap[tag];
   const title = `Articles - ${label}`;

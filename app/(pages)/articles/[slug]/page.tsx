@@ -11,16 +11,18 @@ interface Params {
 }
 
 interface Props {
-  params: Params;
+  params: Promise<Params>;
 }
 
-export default function Page({ params }: Props) {
+export default async function Page(props: Props) {
+  const params = await props.params;
   return <Article {...params} handleNotFound={notFound} />;
 }
 
 export const generateStaticParams = (): Params[] => allArticles.map(({ slug }) => ({ slug }));
 
-export const generateMetadata = ({ params }: Props): Metadata => {
+export const generateMetadata = async (props: Props): Promise<Metadata> => {
+  const params = await props.params;
   const article = getArticle(`/articles/${params.slug}`);
   const title = article?.title ?? "";
   const description = article?.description ?? "";
