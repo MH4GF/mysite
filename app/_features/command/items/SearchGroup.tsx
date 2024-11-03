@@ -2,7 +2,7 @@ import { CommandEmpty, CommandGroup, CommandLoading } from "@/app/_components/ui
 import { useCommandState } from "cmdk";
 import { ExternalLink, PenLine } from "lucide-react";
 import type { FC } from "react";
-import { Suspense, cache, use } from "react";
+import { useEffect, useState } from "react";
 import { CommandLinkItem } from "./CommandLinkItem";
 
 type Data = {
@@ -47,46 +47,85 @@ void (async () => {
 
 const URL_REGEX = /\/server\/app\/articles\/(.*)\.html/;
 
-const getData = cache(async (result: Result) => result.data());
 const formatUrl = (url: string): string => {
   // /server/app/articles/kaigi-on-rails-2022.html
   // /articles/kaigi-on-rails-2022 にしたい
   return url.replace(URL_REGEX, "/articles/$1");
 };
 
+const useData = (result: Result) => {
+  const [data, setData] = useState<Data | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true);
+    result.data().then(setData).catch(console.error);
+    setIsLoading(false);
+  }, [result]);
+
+  return { data, isLoading };
+};
+
 const SearchResultItem: FC<{ result: Result }> = ({ result }) => {
-  const data = use(getData(result));
-  const Icon = data.meta.externalLink === "true" ? ExternalLink : PenLine;
+  const { data, isLoading } = useData(result);
+  const Icon = data?.meta.externalLink === "true" ? ExternalLink : PenLine;
+
+  if (isLoading) {
+    return <LoadingItem />;
+  }
+
+  if (data === null) {
+    return null;
+  }
 
   return (
     <CommandLinkItem href={formatUrl(data.url)}>
       <Icon className="mr-2 h-4 w-4 flex-none" />
-      <span className="truncate">{data.meta.title}</span>
+      <span className="truncate">{data?.meta.title}</span>
     </CommandLinkItem>
   );
 };
 
-const search = cache(async (query: string): Promise<Result[]> => {
+const search = async (query: string): Promise<Result[]> => {
   if (!window.pagefind) {
     return [];
   }
 
   return (await window.pagefind.search(query)).results;
-});
+};
+
+const useSearch = (query: string) => {
+  const [results, setResults] = useState<Result[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true);
+    search(query).then(setResults).catch(console.error);
+    setIsLoading(false);
+  }, [query]);
+
+  return { results, isLoading };
+};
 
 const SearchResultItems = () => {
   const query = useCommandState((state) => state.search) as string;
-  const results = use(search(query));
+  const { results, isLoading } = useSearch(query);
+
+  if (isLoading) {
+    return (
+      <>
+        <LoadingItem />
+        <LoadingItem />
+        <LoadingItem />
+      </>
+    );
+  }
 
   if (results.length === 0) {
     return <CommandEmpty>No results found for "{query}"</CommandEmpty>;
   }
 
-  return results.map((result) => (
-    <Suspense key={result.id} fallback={<LoadingItem />}>
-      <SearchResultItem result={result} />
-    </Suspense>
-  ));
+  return results.map((result) => <SearchResultItem key={result.id} result={result} />);
 };
 
 const LoadingItem = () => {
@@ -101,17 +140,7 @@ const LoadingItem = () => {
 export const SearchGroup = () => {
   return (
     <CommandGroup heading="Search" forceMount>
-      <Suspense
-        fallback={
-          <>
-            <LoadingItem />
-            <LoadingItem />
-            <LoadingItem />
-          </>
-        }
-      >
-        <SearchResultItems />
-      </Suspense>
+      <SearchResultItems />
     </CommandGroup>
   );
 };

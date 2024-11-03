@@ -1,3 +1,5 @@
+"use client";
+
 import dynamic from "next/dynamic";
 
 import { HatenaBookmarkButton, HatenaBookmarkScript, XShareButton } from "@/app/_features";

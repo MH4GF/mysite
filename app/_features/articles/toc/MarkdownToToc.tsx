@@ -9,6 +9,7 @@ function compiler(this: Processor) {
   this.compiler = () => "";
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
 const processor = unified().use(remarkParse).use(remarkFlexibleToc).use(compiler);
 
 interface TocListProps {
@@ -53,7 +54,9 @@ type Props = {
 };
 
 export const MarkdownToToc: FC<Props> = async ({ raw }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
   const { data } = await processor.process(raw);
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   const toc = data.toc as TocItem[];
 
   return (

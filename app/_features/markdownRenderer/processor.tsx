@@ -29,11 +29,15 @@ const Pre = (props: ComponentProps<"pre">) => {
   return <pre tabIndex={0} {...props} />;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
 export const processor = unified()
   .use(remarkParse)
   .use(remarkGfm)
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   .use(remarkRehype, { allowDangerousHtml: true })
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   .use(rehypeSlug)
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   .use(rehypeAutolinkHeadings, {
     behavior: "append",
     properties: {
@@ -41,14 +45,15 @@ export const processor = unified()
       "aria-label": "このセクションへのリンク",
     },
   })
-  // @ts-expect-error ... rehypePrettyCode is not typed correctly
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   .use(rehypePrettyCode, {
     keepBackground: false,
     theme: "github-dark-dimmed",
     transformers: [transformerNotationDiff()],
   })
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   .use(rehypeRaw)
-  // @ts-expect-error ... rehypeReact is not typed correctly
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   .use(rehypeReact, {
     Fragment,
     jsx,

@@ -33,14 +33,14 @@
     "@tsconfig/next": "2.0.3",
     "@tsconfig/strictest": "2.0.5",
     "@types/node": "20.17.6",
-    "@types/react": "18.3.12",
-    "@types/react-dom": "18.3.1",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "@types/rss": "0.0.32",
     "autoprefixer": "10.4.20",
     "axe-html-reporter": "2.2.11",
     "dependency-cruiser": "16.5.0",
     "eslint": "8.57.1",
-    "eslint-config-next": "14.2.16",
+    "eslint-config-next": "15.0.2",
     "eslint-import-resolver-typescript": "3.6.3",
     "lost-pixel": "3.21.0",
     "markuplint": "4.11.2",
@@ -54,7 +54,7 @@
     "vitest": "2.1.4"
   },
   "dependencies": {
-    "@next/third-parties": "14.2.16",
+    "@next/third-parties": "15.0.2",
     "@radix-ui/react-dialog": "1.1.2",
     "@radix-ui/react-visually-hidden": "1.1.0",
     "@tailwindcss/typography": "0.5.15",
@@ -63,11 +63,11 @@
     "clsx": "2.1.1",
     "cmdk": "1.0.3",
     "contentlayer": "0.3.4",
-    "lucide-react": "0.454.0",
-    "next": "14.2.16",
+    "lucide-react": "0.445.0",
+    "next": "15.0.2",
     "next-contentlayer": "0.3.4",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "19.0.0-rc-02c0e824-20241028",
+    "react-dom": "19.0.0-rc-02c0e824-20241028",
     "rehype-autolink-headings": "7.1.0",
     "rehype-parse": "9.0.1",
     "rehype-pretty-code": "0.14.0",
@@ -86,5 +86,11 @@
     "unified": "11.0.5",
     "zod": "3.23.8"
   },
-  "packageManager": "pnpm@9.12.3"
+  "packageManager": "pnpm@9.12.3",
+  "pnpm": {
+    "overrides": {
+      "@types/react": "npm:types-react@19.0.0-rc.1",
+      "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+    }
+  }
 }

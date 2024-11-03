@@ -10,17 +10,19 @@ interface Params {
 }
 
 interface Props {
-  params: Params;
+  params: Promise<Params>;
 }
 
-export default function Page({ params }: Props) {
+export default async function Page(props: Props) {
+  const params = await props.params;
   return <Content {...params} handleNotFound={notFound} />;
 }
 
 export const generateStaticParams = (): Params[] =>
   allAbouts.map((about) => ({ slug: about.href }));
 
-export const generateMetadata = ({ params }: Props): Metadata => {
+export const generateMetadata = async (props: Props): Promise<Metadata> => {
+  const params = await props.params;
   const title = allAbouts.find((about) => about.href === params.slug)?.title ?? "";
 
   return { title, openGraph: { title }, twitter: { title } };
