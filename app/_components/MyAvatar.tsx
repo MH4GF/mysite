@@ -13,7 +13,6 @@ export const MyAvatar = () => {
           alt="MH4GF profile picture"
           width="32"
           height="32"
-          placeholder="blur"
           className="inline-block rounded-full"
           priority
         />
