@@ -19,7 +19,7 @@ jobs:
       image: mcr.microsoft.com/playwright:v1.48.2-focal@sha256:c37bcb50b237e975f3fe80013ab1b3958946db1b24aba39b52be8b3123b8a3df
 
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
       - run: pnpm test:vrt:screenshots
       - uses: lost-pixel/lost-pixel@bb5b78addcd5978cb5499ee6af8240f0da00f21c # v3.21.0
