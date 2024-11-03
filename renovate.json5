@@ -56,8 +56,7 @@
         "@markuplint/ml-config",
         "@markuplint/react-spec",
         "markuplint",
-        "@biomejs/biome",
-        "node"
+        "@biomejs/biome"
       ],
       // 本番影響がないのでCIが通れば自動マージで良い
       "automerge": true
