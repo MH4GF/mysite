@@ -1,13 +1,18 @@
 {
   "extends": ["@mh4gf/configs/tsconfig/base.json", "@tsconfig/next/tsconfig.json"],
   "compilerOptions": {
-    "plugins": [{ "name": "next" }],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "baseUrl": "./",
     "paths": {
       "@/*": ["*"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
-    "noPropertyAccessFromIndexSignature": false
+    "noPropertyAccessFromIndexSignature": false,
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
