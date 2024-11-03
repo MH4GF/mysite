@@ -82,6 +82,14 @@
       ],
       // VRTが通れば自動マージで良い
       "automerge": true
+    },
+    {
+      "groupName": "e2e",
+      "matchPackageNames": [
+        "tsx" // 全文検索で利用
+      ],
+      // E2Eが通れば自動マージで良い
+      "automerge": true
     }
   ]
 }
