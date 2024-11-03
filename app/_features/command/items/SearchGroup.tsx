@@ -75,7 +75,7 @@ const search = cache(async (query: string): Promise<Result[]> => {
 });
 
 const SearchResultItems = () => {
-  const query = useCommandState((state) => state.search);
+  const query = useCommandState((state) => state.search) as string;
   const results = use(search(query));
 
   if (results.length === 0) {
