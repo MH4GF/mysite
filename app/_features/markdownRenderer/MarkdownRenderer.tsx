@@ -2,6 +2,8 @@ import { processor } from "./processor";
 import "./styles/autoLinkHeadings.css";
 import "./styles/syntaxHighlighting.css";
 
+import type { JSX } from "react";
+
 interface Props {
   raw: string;
 }

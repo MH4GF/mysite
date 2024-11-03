@@ -2,6 +2,8 @@ import { ArticleListItem } from "./ArticleListItem";
 import { getArticlesMeta } from "./getArticlesMeta";
 import type { TagEnum } from "./type";
 
+import type { JSX } from "react";
+
 type Props = {
   tag?: TagEnum;
 };

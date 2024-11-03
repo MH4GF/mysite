@@ -1,6 +1,8 @@
 import { MarkdownRenderer } from "@/app/_features";
 import { allAbouts } from "contentlayer/generated";
 
+import type { JSX } from "react";
+
 interface Props {
   slug: string;
   handleNotFound: () => void;
