@@ -1,3 +1,5 @@
+name: ci-e2e
+
 on:
   deployment_status:
 
@@ -24,7 +26,7 @@ jobs:
           BASE_REF_BRANCH=$(gh api -H "Accept: application/vnd.github+json" /repos/${{ github.repository_owner }}/${{ github.event.repository.name }}/commits/${{ github.sha }}/branches-where-head | jq -r '.[].name')
           echo "BASE_REF_BRANCH=$BASE_REF_BRANCH" >> $GITHUB_OUTPUT
 
-  vrt:
+  e2e:
     if: github.event.deployment_status.state == 'success'
     needs: setup-job
     runs-on: ubuntu-latest
