@@ -1,24 +1,13 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["./node_modules/@mh4gf/configs/biome/index.jsonc"],
   "files": {
     "ignore": [".contentlayer"]
-  },
-  "organizeImports": {
-    "enabled": true
   },
   "linter": {
     "enabled": true,
     "rules": {
-      "all": true,
       "style": {
-        "noImplicitBoolean": "off",
-        "useNamingConvention": "off",
-        "useFilenamingConvention": {
-          "level": "error",
-          "options": {
-            "strictCase": false
-          }
-        },
         "noDefaultExport": "off"
       },
       "performance": {
@@ -33,13 +22,10 @@
       }
     }
   },
-  "formatter": {
-    "indentStyle": "space",
-    "lineWidth": 100
-  },
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git",
-    "useIgnoreFile": true
+  "javascript": {
+    "formatter": {
+      "semicolons": "always",
+      "quoteStyle": "double"
+    }
   }
 }
