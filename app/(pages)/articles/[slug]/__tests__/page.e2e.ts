@@ -59,6 +59,7 @@ test.describe("Command Palette", () => {
     await setup(page, "/");
     await page.locator("body").press("ControlOrMeta+k");
     await page.keyboard.press("ArrowDown");
+    await page.keyboard.press("ArrowDown");
     await page.keyboard.press("Enter");
 
     await expect(page.getByRole("dialog")).not.toBeVisible();
@@ -70,6 +71,7 @@ test.describe("Command Palette", () => {
     await page.locator("body").press("ControlOrMeta+k");
 
     const otherPagePromise = page.waitForEvent("popup");
+    await page.keyboard.press("ArrowDown");
     await page.keyboard.press("ArrowDown");
     await page.keyboard.press("ArrowDown");
     await page.keyboard.press("ArrowDown");

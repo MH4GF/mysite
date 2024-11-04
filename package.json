@@ -16,10 +16,9 @@
     "postbuild": "pnpm run build:pagefind",
     "dev": "next dev",
     "start": "next start",
-    "test": "run-s test:playwright test:vitest",
+    "test": "run-p test:*",
     "test:playwright": "playwright test",
-    "test:vitest": "vitest",
-    "test:vrt:screenshots": "playwright test --config app/__vrt__/playwright.config.ts"
+    "test:vitest": "vitest run"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.10.0",
