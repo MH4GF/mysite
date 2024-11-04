@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import { setupServer } from "msw/node";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 

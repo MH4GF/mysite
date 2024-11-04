@@ -16,7 +16,11 @@ export function CommandLinkItem({ href, children, ...props }: Props) {
   const router = useViewTransitionRouter();
 
   const handleKeydown = useCallback(() => {
-    isSameOrigin(href) ? router.push(href) : window.open(href, "_blank");
+    if (isSameOrigin(href)) {
+      router.push(href);
+    } else {
+      window.open(href, "_blank");
+    }
     close();
   }, [router, href, close]);
 

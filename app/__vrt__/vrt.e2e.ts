@@ -1,7 +1,7 @@
 // biome-ignore lint/correctness/noNodejsModules: テストファイルのため
 import fs from "node:fs";
 
-import AxeBuilder from "@axe-core/playwright";
+import { AxeBuilder } from "@axe-core/playwright";
 import type { Page, TestInfo } from "@playwright/test";
 import { expect, test } from "@playwright/test";
 import { createHtmlReport } from "axe-html-reporter";
