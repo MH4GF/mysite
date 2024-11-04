@@ -28,9 +28,4 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@main
-      - run: pnpm test
-      - uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882 # v4
-        if: failure()
-        with:
-          name: test-results
-          path: test-results/
+      - run: pnpm test:vitest
