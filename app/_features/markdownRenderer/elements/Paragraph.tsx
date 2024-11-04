@@ -20,7 +20,7 @@ const maybeSingleUrl = (_children: ReactNode): string | null => {
   if (!(children.length === 1 && isValidElement(children[0]))) {
     return null;
   }
-  // @ts-expect-error ... FIXME
+  // @ts-expect-error ...  FIXME
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   const urlChildren = Children.toArray(children[0].props?.children ?? []);
 

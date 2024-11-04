@@ -5,7 +5,9 @@ const sameOriginPrefixes = [
   "#", // 同一ページ内リンク
 ] as const;
 
-const baseOrigin = new URL(`https://${process.env.VERCEL_URL}` || "http://localhost:3000").origin;
+const baseOrigin = new URL(
+  process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000",
+).origin;
 
 type Href = LinkProps["href"];
 
