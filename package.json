@@ -30,10 +30,10 @@
     "@markuplint/ml-config": "4.8.4",
     "@markuplint/react-spec": "4.5.12",
     "@mh4gf/configs": "0.3.0",
-    "@mh4gf/eslint-config": "0.5.2",
     "@playwright/test": "1.48.2",
     "@tsconfig/next": "2.0.3",
     "@tsconfig/strictest": "2.0.5",
+    "@types/eslint__js": "8.42.3",
     "@types/node": "20.17.6",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
@@ -44,6 +44,7 @@
     "eslint": "9.14.0",
     "eslint-config-next": "15.0.2",
     "eslint-import-resolver-typescript": "3.6.3",
+    "eslint-plugin-unused-imports": "4.1.4",
     "globals": "15.11.0",
     "lost-pixel": "3.21.0",
     "markuplint": "4.11.2",
@@ -54,6 +55,7 @@
     "tailwindcss": "3.4.14",
     "tsx": "4.19.2",
     "typescript": "5.6.3",
+    "typescript-eslint": "8.12.2",
     "vitest": "2.1.4"
   },
   "dependencies": {

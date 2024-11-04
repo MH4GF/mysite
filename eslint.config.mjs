@@ -1,10 +1,10 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { fixupConfigRules } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import unusedImports from "eslint-plugin-unused-imports";
-import globals from "globals";
+import tseslint from "typescript-eslint";
+import importPlugin from "eslint-plugin-import";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -15,105 +15,13 @@ const compat = new FlatCompat({
 });
 
 export default [
-  ...compat.extends("plugin:@next/next/recommended"),
-  {
-    languageOptions: {
-      ecmaVersion: 5,
-      sourceType: "script",
-
-      parserOptions: {
-        project: "./tsconfig.json",
-      },
-    },
-
-    settings: {
-      "import/resolver": {
-        typescript: {},
-      },
-    },
-
-    rules: {
-      "@typescript-eslint/dot-notation": "off",
-      "@typescript-eslint/no-empty-interface": "off",
-      "import/order": "off",
-    },
-  },
   ...compat.extends("eslint:recommended"),
-  {
-    languageOptions: {
-      globals: {
-        ...globals.node,
-      },
-    },
-  },
-  ...fixupConfigRules(compat.extends("plugin:import/recommended")).map((config) => ({
-    ...config,
-    files: ["**/*.{,c,m}{j,t}s{,x}"],
-  })),
-  {
-    files: ["**/*.{,c,m}{j,t}s{,x}"],
-
-    rules: {
-      "import/order": [
-        "error",
-        {
-          "newlines-between": "always",
-          groups: ["builtin", "external", "parent", "sibling", "index"],
-
-          alphabetize: {
-            order: "asc",
-            caseInsensitive: true,
-          },
-        },
-      ],
-    },
-  },
-  ...compat
-    .extends(
-      "plugin:@typescript-eslint/recommended",
-      "plugin:@typescript-eslint/recommended-requiring-type-checking",
-      "plugin:@typescript-eslint/strict",
-    )
-    .map((config) => ({
-      ...config,
-      files: ["**/*.ts{,x}"],
-    })),
+  ...tseslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.strict,
   {
     files: ["**/*.ts{,x}"],
-
-    plugins: {
-      "unused-imports": unusedImports,
-    },
-
-    languageOptions: {
-      ecmaVersion: 5,
-      sourceType: "script",
-
-      parserOptions: {
-        project: "./tsconfig.json",
-      },
-    },
-
-    settings: {
-      "import/resolver": {
-        typescript: {},
-      },
-    },
-
     rules: {
       "@typescript-eslint/no-unused-vars": "off",
-      "unused-imports/no-unused-imports": "error",
-
-      "unused-imports/no-unused-vars": [
-        "warn",
-        {
-          vars: "all",
-          varsIgnorePattern: "^_",
-          args: "after-used",
-          argsIgnorePattern: "^_",
-        },
-      ],
-
       "@typescript-eslint/naming-convention": [
         "error",
         {
@@ -141,8 +49,59 @@ export default [
           format: null,
         },
       ],
-
       "@typescript-eslint/consistent-type-imports": ["error"],
+    },
+  },
+  {
+    plugins: {
+      "unused-imports": unusedImports,
+    },
+    rules: {
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": [
+        "warn",
+        {
+          vars: "all",
+          varsIgnorePattern: "^_",
+          args: "after-used",
+          argsIgnorePattern: "^_",
+        },
+      ],
+    },
+  },
+  {
+    files: ["**/*.{,c,m}{j,t}s{,x}"],
+    ...importPlugin.flatConfigs.recommended,
+    rules: {
+      "import/order": [
+        "error",
+        {
+          "newlines-between": "always",
+          groups: ["builtin", "external", "parent", "sibling", "index"],
+
+          alphabetize: {
+            order: "asc",
+            caseInsensitive: true,
+          },
+        },
+      ],
+    },
+  },
+  ...compat.extends("plugin:@next/next/recommended"),
+  {
+    languageOptions: {
+      ecmaVersion: 5,
+      sourceType: "script",
+
+      parserOptions: {
+        project: "./tsconfig.json",
+      },
+    },
+
+    rules: {
+      "@typescript-eslint/dot-notation": "off",
+      "@typescript-eslint/no-empty-interface": "off",
+      "import/order": "off",
     },
   },
 ];
