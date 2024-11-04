@@ -36,6 +36,7 @@ void (async () => {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       window.pagefind = await import(
         // @ts-expect-error pagefind.js generated after build
+        // eslint-disable-next-line import/no-unresolved
         /* webpackIgnore: true */ "/search/pagefind.js"
       );
     } catch {
