@@ -15,7 +15,7 @@ const compat = new FlatCompat({
 });
 
 export default [
-  ...compat.extends("eslint:recommended"),
+  js.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.strict,
   {
