@@ -1,18 +1,10 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
+import importPlugin from "eslint-plugin-import";
 import unusedImports from "eslint-plugin-unused-imports";
 import tseslint from "typescript-eslint";
-import importPlugin from "eslint-plugin-import";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
+import eslintPluginNext from "@next/eslint-plugin-next";
+import eslintPluginReact from "eslint-plugin-react";
+import eslintPluginReactHooks from "eslint-plugin-react-hooks";
 
 export default [
   js.configs.recommended,
@@ -87,7 +79,22 @@ export default [
       ],
     },
   },
-  ...compat.extends("plugin:@next/next/recommended"),
+  // ...compat.extends("plugin:@next/next/recommended"),
+  {
+    ...eslintPluginReact.configs.flat.recommended,
+    ...eslintPluginReact.configs.flat["jsx-runtime"],
+    plugins: {
+      "react-hooks": eslintPluginReactHooks,
+      "@next/next": eslintPluginNext,
+    },
+    rules: {
+      ...eslintPluginReact.configs["jsx-runtime"].rules,
+      ...eslintPluginReactHooks.configs.recommended.rules,
+      ...eslintPluginNext.configs.recommended.rules,
+      ...eslintPluginNext.configs["core-web-vitals"].rules,
+      "@next/next/no-img-element": "error",
+    },
+  },
   {
     languageOptions: {
       ecmaVersion: 5,
