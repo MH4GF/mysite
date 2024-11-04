@@ -23,6 +23,8 @@
   "devDependencies": {
     "@axe-core/playwright": "4.10.0",
     "@biomejs/biome": "1.9.4",
+    "@eslint/eslintrc": "3.1.0",
+    "@eslint/js": "9.14.0",
     "@markuplint/jsx-parser": "4.7.12",
     "@markuplint/ml-config": "4.8.4",
     "@markuplint/react-spec": "4.5.12",
