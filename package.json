@@ -27,7 +27,7 @@
     "@markuplint/ml-config": "4.8.4",
     "@markuplint/react-spec": "4.5.12",
     "@mh4gf/configs": "0.3.0",
-    "@mh4gf/eslint-config": "0.5.2",
+    "@mh4gf/eslint-config": "0.6.1",
     "@playwright/test": "1.48.2",
     "@tsconfig/next": "2.0.3",
     "@tsconfig/strictest": "2.0.5",
