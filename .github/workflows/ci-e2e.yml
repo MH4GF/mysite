@@ -42,7 +42,7 @@ jobs:
       - run: pnpm test:playwright
         env:
           BASE_URL: ${{ github.event.deployment_status.environment_url }}
-      - uses: lost-pixel/lost-pixel@bb5b78addcd5978cb5499ee6af8240f0da00f21c # v3.21.0
+      - uses: lost-pixel/lost-pixel@41055d71dea42eb5fa5c27dabd2a90722f376e33 # v3.22.0
         env:
           LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
           COMMIT_REF_NAME: ${{ needs.setup-job.outputs.BASE_REF_BRANCH }}

@@ -44,7 +44,7 @@
     "eslint-config-next": "15.0.2",
     "eslint-plugin-react": "7.37.2",
     "eslint-plugin-react-hooks": "5.0.0",
-    "lost-pixel": "3.21.0",
+    "lost-pixel": "3.22.0",
     "markuplint": "4.11.2",
     "msw": "2.6.4",
     "npm-run-all2": "7.0.1",
