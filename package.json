@@ -29,7 +29,7 @@
     "@mh4gf/configs": "0.4.1",
     "@mh4gf/eslint-config": "0.6.1",
     "@next/eslint-plugin-next": "15.0.3",
-    "@playwright/test": "1.48.2",
+    "@playwright/test": "1.49.1",
     "@tsconfig/next": "2.0.3",
     "@tsconfig/strictest": "2.0.5",
     "@types/eslint__js": "8.42.3",
@@ -46,14 +46,14 @@
     "eslint-plugin-react-hooks": "5.0.0",
     "lost-pixel": "3.22.0",
     "markuplint": "4.11.4",
-    "msw": "2.6.5",
+    "msw": "2.6.8",
     "npm-run-all2": "7.0.1",
     "pagefind": "1.2.0",
     "postcss": "8.4.49",
     "tailwindcss": "3.4.16",
     "tsx": "4.19.2",
     "typescript": "5.7.2",
-    "vitest": "2.1.5"
+    "vitest": "2.1.8"
   },
   "dependencies": {
     "@next/third-parties": "15.0.3",
