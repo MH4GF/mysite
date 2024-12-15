@@ -6,11 +6,26 @@ import type { Page, TestInfo } from "@playwright/test";
 import { expect, test } from "@playwright/test";
 import { createHtmlReport } from "axe-html-reporter";
 
+const waitForBlurEnterContent = async (page: Page) => {
+  await page.evaluate(() => {
+    return new Promise<void>((resolve) => {
+      const animationContainers = document.querySelectorAll(".blur-enter-content");
+      if (animationContainers.length === 0) {
+        resolve();
+        return;
+      }
+
+      setTimeout(() => resolve(), 2000);
+    });
+  });
+};
+
 const waitForPageReady = async (page: Page) => {
   await page.waitForLoadState("domcontentloaded");
   await page.waitForLoadState("load");
   await page.waitForLoadState("networkidle");
   await page.evaluate(() => document.fonts.ready);
+  await waitForBlurEnterContent(page);
 };
 
 const maskFlakyElements = async (page: Page, selectors: string[]) => {
