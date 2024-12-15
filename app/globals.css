@@ -89,3 +89,88 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer base {
+  @keyframes blur-enter {
+    0% {
+      filter: blur(4px);
+      opacity: 0;
+    }
+
+    to {
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .blur-enter-content > * {
+      --enter-stage: 0;
+      --enter-step: 200ms;
+      --enter-initial: 0ms;
+      animation: blur-enter 0.8s both 1;
+      animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step));
+    }
+
+    .blur-enter-content > *:nth-child(1) {
+      --enter-stage: 1;
+    }
+    .blur-enter-content > *:nth-child(2) {
+      --enter-stage: 2;
+    }
+    .blur-enter-content > *:nth-child(3) {
+      --enter-stage: 3;
+    }
+    .blur-enter-content > *:nth-child(4) {
+      --enter-stage: 4;
+    }
+    .blur-enter-content > *:nth-child(5) {
+      --enter-stage: 5;
+    }
+    .blur-enter-content > *:nth-child(6) {
+      --enter-stage: 6;
+    }
+    .blur-enter-content > *:nth-child(7) {
+      --enter-stage: 7;
+    }
+    .blur-enter-content > *:nth-child(8) {
+      --enter-stage: 8;
+    }
+    .blur-enter-content > *:nth-child(9) {
+      --enter-stage: 9;
+    }
+    .blur-enter-content > *:nth-child(10) {
+      --enter-stage: 10;
+    }
+    .blur-enter-content > *:nth-child(11) {
+      --enter-stage: 11;
+    }
+    .blur-enter-content > *:nth-child(12) {
+      --enter-stage: 12;
+    }
+    .blur-enter-content > *:nth-child(13) {
+      --enter-stage: 13;
+    }
+    .blur-enter-content > *:nth-child(14) {
+      --enter-stage: 14;
+    }
+    .blur-enter-content > *:nth-child(15) {
+      --enter-stage: 15;
+    }
+    .blur-enter-content > *:nth-child(16) {
+      --enter-stage: 16;
+    }
+    .blur-enter-content > *:nth-child(17) {
+      --enter-stage: 17;
+    }
+    .blur-enter-content > *:nth-child(18) {
+      --enter-stage: 18;
+    }
+    .blur-enter-content > *:nth-child(19) {
+      --enter-stage: 19;
+    }
+    .blur-enter-content > *:nth-child(20) {
+      --enter-stage: 20;
+    }
+  }
+}

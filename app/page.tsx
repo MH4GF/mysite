@@ -34,11 +34,11 @@ const findMeOn: {
 
 export default function Page() {
   return (
-    <main className="max-w-3xl mx-auto py-16 md:py-32 px-4 md:px-0">
+    <main className="max-w-3xl mx-auto py-16 md:py-32 px-4 md:px-0 blur-enter-content">
       <div className="flex flex-col gap-4 mb-40 md:mb-72">
         <div className="flex gap-2 items-center">
           <MyAvatar />
-          <h1 className="">MH4GF / Hirokata Miyagi</h1>
+          <h1>MH4GF / Hirokata Miyagi</h1>
         </div>
         <p className="text-sm text-foreground-sub">
           Software Engineer at ROUTE06, inc.
@@ -47,7 +47,7 @@ export default function Page() {
         </p>
       </div>
 
-      <div className="flex flex-col gap-20">
+      <div className="flex flex-col gap-20 blur-enter-content">
         <div className="flex flex-col gap-4">
           <h2>What I can do</h2>
           <p>
