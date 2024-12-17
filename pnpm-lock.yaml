@@ -23,7 +23,7 @@ importers:
         version: 1.1.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(types-react-dom@19.0.0)(types-react@19.0.0-rc.1)
       '@tailwindcss/typography':
         specifier: 0.5.15
-        version: 0.5.15(tailwindcss@3.4.16(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2)))
+        version: 0.5.15(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2)))
       cheerio:
         specifier: 1.0.0
         version: 1.0.0
@@ -98,7 +98,7 @@ importers:
         version: 2.5.5
       tailwindcss-animate:
         specifier: 1.0.7
-        version: 1.0.7(tailwindcss@3.4.16(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2)))
+        version: 1.0.7(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2)))
       unified:
         specifier: 11.0.5
         version: 11.0.5
@@ -194,8 +194,8 @@ importers:
         specifier: 8.4.49
         version: 8.4.49
       tailwindcss:
-        specifier: 3.4.16
-        version: 3.4.16(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))
+        specifier: 3.4.17
+        version: 3.4.17(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))
       tsx:
         specifier: 4.19.2
         version: 4.19.2
@@ -4746,8 +4746,8 @@ packages:
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
 
-  tailwindcss@3.4.16:
-    resolution: {integrity: sha512-TI4Cyx7gDiZ6r44ewaJmt0o6BrMCT5aK5e0rmJ/G9Xq3w7CX/5VXl/zIPEJZFUK5VEqwByyhqNPycPlvcK4ZNw==}
+  tailwindcss@3.4.17:
+    resolution: {integrity: sha512-w33E2aCvSDP0tW9RZuNXadXlkHXqFzSkQew/aIa2i/Sj8fThxwovwlXHSPXTbAHwEIhBFXAedUhP2tueAKP8Og==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -6576,13 +6576,13 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@tailwindcss/typography@0.5.15(tailwindcss@3.4.16(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2)))':
+  '@tailwindcss/typography@0.5.15(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2)))':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.4.16(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))
+      tailwindcss: 3.4.17(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))
 
   '@tsconfig/next@2.0.3': {}
 
@@ -10643,11 +10643,11 @@ snapshots:
 
   tailwind-merge@2.5.5: {}
 
-  tailwindcss-animate@1.0.7(tailwindcss@3.4.16(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))):
+  tailwindcss-animate@1.0.7(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))):
     dependencies:
-      tailwindcss: 3.4.16(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))
+      tailwindcss: 3.4.17(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2))
 
-  tailwindcss@3.4.16(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2)):
+  tailwindcss@3.4.17(ts-node@10.9.2(@types/node@20.17.10)(typescript@5.7.2)):
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
