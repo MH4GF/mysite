@@ -31,8 +31,8 @@ export const ArticleMetaDetail: FC<Props> = ({
       <div className="mt-6 md:mt-8 flex justify-center items-center gap-3 md:gap-6 flex-col md:flex-row">
         <span className="flex gap-2 items-center">
           <MyAvatar />
-          <span className="text-left">
-            <span>Hirokata Miyagi</span>
+          <span className="text-left inline-flex flex-col gap-1">
+            <span>Hirotaka Miyagi</span>
             <span className="text-xs text-foreground-sub">Software Engineer</span>
           </span>
         </span>
