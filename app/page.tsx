@@ -38,7 +38,7 @@ export default function Page() {
       <div className="flex flex-col gap-4 mb-40 md:mb-72">
         <div className="flex gap-2 items-center">
           <MyAvatar />
-          <h1>MH4GF / Hirokata Miyagi</h1>
+          <h1>MH4GF / Hirotaka Miyagi</h1>
         </div>
         <p className="text-sm text-foreground-sub">
           Software Engineer at ROUTE06, inc.

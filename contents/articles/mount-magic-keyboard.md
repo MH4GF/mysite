@@ -5,6 +5,7 @@ publishedAt: 2024-08-25
 headingImage: /images/mount-magic-keyboard/1.jpg
 tags:
   - gadget
+  - desk-setup
 ---
 
 デスク裏に Apple Magic Keyboard をマウントした。  
