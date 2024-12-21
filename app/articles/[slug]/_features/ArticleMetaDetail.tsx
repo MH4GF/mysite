@@ -28,7 +28,7 @@ export const ArticleMetaDetail: FC<Props> = ({
         />
       )}
       <h1 className="mt-12 md:mt-24 text-xl">{title}</h1>
-      <div className="mt-6 md:mt-8 flex justify-center items-center gap-3 md:gap-6 flex-col md:flex-row">
+      <div className="mt-6 md:mt-8 flex justify-center items-center gap-4 flex-col md:flex-row">
         <span className="flex gap-2 items-center">
           <MyAvatar />
           <span className="text-left inline-flex flex-col gap-1">
@@ -36,11 +36,13 @@ export const ArticleMetaDetail: FC<Props> = ({
             <span className="text-xs text-foreground-sub">Software Engineer</span>
           </span>
         </span>
-        <span className="text-foreground-sub hidden md:block">・</span>
-        <div className="flex gap-2">
-          <Time dateTime={publishedAt}>{publishedAt}</Time>
-          <span className="text-foreground-sub">・</span>
-          <span className="text-sm text-foreground-sub">5 min read</span>
+        <span className="hidden md:block bg-foreground-sub w-1 h-1 rounded-full" />
+        <div className="flex gap-4">
+          <Time dateTime={publishedAt} className="leading-none">
+            {publishedAt}
+          </Time>
+          <span className="bg-foreground-sub w-1 h-1 rounded-full m-auto" />
+          <span className="text-sm text-foreground-sub leading-none">5 min read</span>
         </div>
       </div>
       <div className="mt-4 md:mt-8 flex justify-center gap-2">
