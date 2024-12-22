@@ -8,7 +8,8 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/app/_components/ui/command";
-import { PenLine } from "lucide-react";
+import { PenLine, UserRound } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { CommandFooter } from "./CommandFooter";
 import { CommandProvider } from "./CommandProvider";
@@ -18,6 +19,7 @@ import { ShareToX } from "./items/ShareToX";
 
 export function Command() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -43,6 +45,12 @@ export function Command() {
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading="Contents">
+            {pathname !== "/" && (
+              <CommandLinkItem href="/">
+                <UserRound className="mr-2 h-4 w-4" />
+                <span>About me</span>
+              </CommandLinkItem>
+            )}
             <CommandLinkItem href="/articles">
               <PenLine className="mr-2 h-4 w-4" />
               <span>All Writing</span>
