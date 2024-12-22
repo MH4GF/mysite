@@ -1,8 +1,8 @@
-import { ExternalLinkIcon, Time } from "../../_components";
+import { MoveUpRight } from "lucide-react";
+import { Time } from "../../_components";
 import { format } from "../../_utils";
 import { UniversalLink } from "../viewTransition";
 
-import { Tag } from "./Tag";
 import type { ArticleMeta } from "./type";
 
 type Props = ArticleMeta;
@@ -12,26 +12,22 @@ export const ArticleListItem = ({
   href,
   externalLink,
   publishedAt: _publishedAt,
-  tags,
 }: Props) => {
   const publishedAt = format(_publishedAt);
 
   return (
-    <article className="grid gap-4">
-      <h2 className="text-xl">
-        <UniversalLink href={href} isExternal={externalLink} isEnabledUnderline>
+    <article className="flex gap-2 items-center justify-between">
+      <h2 className="text-base font-normal">
+        <UniversalLink href={href} isExternal={externalLink} isEnabledHoveredUnderline>
           {title}
-          {externalLink && <ExternalLinkIcon />}
+          {externalLink && (
+            <MoveUpRight className="mb-[-3px] ml-0.5 inline-block h-4 w-auto align-top text-zinc-500 dark:text-zinc-400" />
+          )}
         </UniversalLink>
       </h2>
-      <div className="flex justify-between">
-        <div className="flex gap-2">
-          {tags.map((tag) => (
-            <Tag key={tag} tag={tag} />
-          ))}
-        </div>
-        <Time dateTime={publishedAt}>{publishedAt}</Time>
-      </div>
+      <Time dateTime={publishedAt} className="shrink-0">
+        {publishedAt}
+      </Time>
     </article>
   );
 };
