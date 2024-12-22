@@ -40,7 +40,7 @@ test.describe("Command Palette", () => {
     await page.getByRole("option", { name: "All Writing" }).click();
 
     await expect(page.getByRole("dialog")).not.toBeVisible();
-    await expect(page.getByRole("heading", { name: "Articles RSS" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "All Writing" })).toBeVisible();
   });
 
   test("Navigate to `Source of this site` on another tab", async ({ page }) => {
@@ -63,7 +63,7 @@ test.describe("Command Palette", () => {
     await page.keyboard.press("Enter");
 
     await expect(page.getByRole("dialog")).not.toBeVisible();
-    await expect(page.getByRole("heading", { name: "Articles RSS" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "All Writing" })).toBeVisible();
   });
 
   test("Navigate to `Source of this site` with Enter key", async ({ page }) => {
