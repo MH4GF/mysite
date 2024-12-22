@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 import { MyAvatar, Time } from "@/app/_components";
-import { Tag } from "@/app/_features";
 import { format } from "@/app/_utils";
 import type { Article } from "contentlayer/generated";
 import type { FC } from "react";
@@ -11,7 +10,7 @@ interface Props {
 }
 
 export const ArticleMetaDetail: FC<Props> = ({
-  article: { headingImage, title, publishedAt: _publishedAt, tags },
+  article: { headingImage, title, publishedAt: _publishedAt },
 }) => {
   const publishedAt = format(new Date(_publishedAt));
 
@@ -44,11 +43,6 @@ export const ArticleMetaDetail: FC<Props> = ({
           <span className="bg-foreground-sub w-1 h-1 rounded-full m-auto" />
           <span className="text-sm text-foreground-sub leading-none">5 min read</span>
         </div>
-      </div>
-      <div className="mt-4 md:mt-8 flex justify-center gap-2">
-        {tags.map((tag) => (
-          <Tag key={tag} tag={tag} />
-        ))}
       </div>
     </div>
   );
