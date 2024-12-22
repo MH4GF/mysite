@@ -8,14 +8,27 @@ import { isSameOrigin } from "./isSameOrigin";
 const animatedUnderline =
   "no-underline transition-colors duration-300 border-b border-solid border-zinc-200 hover:border-zinc-500 dark:border-zinc-700 dark:hover:border-zinc-500";
 
+const hoveredUnderline =
+  "no-underline hover:border-b hover:border-solid hover:border-zinc-200 dark:hover:border-zinc-700";
+
 type Props = LinkProps & {
   isExternal?: boolean;
   isEnabledUnderline?: boolean;
+  isEnabledHoveredUnderline?: boolean;
 };
 
 export const UniversalLink = forwardRef<HTMLAnchorElement, Props>(
-  ({ isExternal, isEnabledUnderline = false, className: _className, ...props }: Props, ref) => {
-    const className = `${_className || ""} ${isEnabledUnderline ? animatedUnderline : ""}`;
+  (
+    {
+      isExternal,
+      isEnabledUnderline = false,
+      isEnabledHoveredUnderline = false,
+      className: _className,
+      ...props
+    }: Props,
+    ref,
+  ) => {
+    const className = `${_className || ""} ${isEnabledUnderline ? animatedUnderline : isEnabledHoveredUnderline ? hoveredUnderline : ""}`;
 
     if (isExternal || !isSameOrigin(props.href)) {
       return (
