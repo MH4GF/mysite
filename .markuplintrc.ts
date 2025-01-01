@@ -1,6 +1,4 @@
-import type { Config } from "@markuplint/ml-config";
-
-const config: Config = {
+const config = {
   specs: {
     "\\.tsx?$": "@markuplint/react-spec",
   },
