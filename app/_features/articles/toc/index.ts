@@ -1,1 +1,0 @@
-export { MarkdownToToc } from "./MarkdownToToc";

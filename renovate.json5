@@ -46,14 +46,12 @@
         "dependency-cruiser",
         "typescript",
         "pnpm",
-        "npm-run-all2",
         "peter-evans/find-comment",
         "peter-evans/create-or-update-comment",
         "actions/upload-artifact",
         "actions/checkout",
         "mh4gf/dependency-cruiser-report-action",
         "@markuplint/jsx-parser",
-        "@markuplint/ml-config",
         "@markuplint/react-spec",
         "markuplint",
         "@biomejs/biome",
@@ -79,8 +77,7 @@
         "lucide-react",
         "@radix-ui/react-dialog",
         "@radix-ui/react-visually-hidden",
-        "tailwind-merge",
-        "class-variance-authority"
+        "tailwind-merge"
       ],
       // VRTが通れば自動マージで良い
       "automerge": true
