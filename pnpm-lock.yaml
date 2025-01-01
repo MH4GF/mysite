@@ -27,9 +27,6 @@ importers:
       cheerio:
         specifier: 1.0.0
         version: 1.0.0
-      class-variance-authority:
-        specifier: 0.7.1
-        version: 0.7.1
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -57,9 +54,6 @@ importers:
       rehype-autolink-headings:
         specifier: 7.1.0
         version: 7.1.0
-      rehype-parse:
-        specifier: 9.0.1
-        version: 9.0.1
       rehype-pretty-code:
         specifier: 0.14.0
         version: 0.14.0(shiki@1.17.7)
@@ -84,9 +78,6 @@ importers:
       rss:
         specifier: 1.2.2
         version: 1.2.2
-      shikiji:
-        specifier: 0.10.2
-        version: 0.10.2
       shikiji-transformers:
         specifier: 0.10.2
         version: 0.10.2
@@ -2162,9 +2153,6 @@ packages:
   chrono-node@2.7.7:
     resolution: {integrity: sha512-p3S7gotuTPu5oqhRL2p1fLwQXGgdQaRTtWR3e8Di9P1Pa9mzkK5DWR5AWBieMUh2ZdOnPgrK+zCrbbtyuA+D/Q==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-
-  class-variance-authority@0.7.1:
-    resolution: {integrity: sha512-Ka+9Trutv7G8M6WT6SeiRWz792K5qEqIGEGzXKhAE6xOWAY6pPH8U+9IY3oCMv6kqTmLsv7Xh/2w2RigkePMsg==}
 
   clean-stack@2.2.0:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
@@ -7330,10 +7318,6 @@ snapshots:
   chrono-node@2.7.7:
     dependencies:
       dayjs: 1.11.11
-
-  class-variance-authority@0.7.1:
-    dependencies:
-      clsx: 2.1.1
 
   clean-stack@2.2.0: {}
 
