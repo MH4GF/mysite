@@ -1,0 +1,5 @@
+{
+  "entry": [".markuplintrc.ts", ".dependency-cruiser.js", "contentlayer.config.ts"],
+  "ignore": ["/search/pagefind.js"],
+  "ignoreDependencies": ["@markuplint/jsx-parser", "@markuplint/react-spec"]
+}
