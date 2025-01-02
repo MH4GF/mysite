@@ -30,7 +30,7 @@ jobs:
     permissions:
       contents: read
     container:
-      image: mcr.microsoft.com/playwright:v1.48.2-focal@sha256:c37bcb50b237e975f3fe80013ab1b3958946db1b24aba39b52be8b3123b8a3df
+      image: mcr.microsoft.com/playwright:v1.49.1-noble
 
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
