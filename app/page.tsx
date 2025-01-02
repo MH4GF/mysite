@@ -1,36 +1,8 @@
 import type { Metadata } from "next";
-import type { ComponentProps } from "react";
 import { MyAvatar } from "./_components";
 import { UniversalLink } from "./_features";
 import { WorkExperienceList } from "./_features/top";
-import { siteInfo } from "./_utils";
-
-const findMeOn: {
-  service: string;
-  url: ComponentProps<typeof UniversalLink>["href"];
-  name: string;
-}[] = [
-  {
-    service: "X",
-    url: "https://x.com/mh4gf",
-    name: "@MH4GF",
-  },
-  {
-    service: "GitHub",
-    url: "https://github.com/MH4GF",
-    name: "@MH4GF",
-  },
-  {
-    service: "Zenn",
-    url: "https://zenn.dev/mh4gf",
-    name: "@mh4gf",
-  },
-  {
-    service: "sizu.me",
-    url: "https://sizu.me/mh4gf",
-    name: "@mh4gf",
-  },
-];
+import { me, siteInfo } from "./_utils";
 
 export default function Page() {
   return (
@@ -38,22 +10,17 @@ export default function Page() {
       <div className="flex flex-col gap-4 mb-40 md:mb-72">
         <div className="flex gap-2 items-center">
           <MyAvatar />
-          <h1>MH4GF / Hirotaka Miyagi</h1>
+          <h1>{me.name}</h1>
         </div>
-        <p className="text-sm text-foreground-sub">
-          Software Engineer at ROUTE06, inc.
-          <br />
-          Tokyo, Japan
+        <p className="text-sm text-foreground-sub whitespace-pre-wrap">
+          {me.description.join("\n")}
         </p>
       </div>
 
       <div className="flex flex-col gap-20 blur-enter-content">
         <div className="flex flex-col gap-4">
           <h2>What I can do</h2>
-          <p>
-            Web Frontend (React, Next.js) / Backend (Ruby on Rails, Go) / GraphQL / Cloud (AWS,
-            Terraform)
-          </p>
+          <p>{me.whatICanDo}</p>
         </div>
 
         <div className="flex flex-col gap-4">
@@ -89,7 +56,7 @@ export default function Page() {
         <div className="flex flex-col gap-4">
           <h2>Find me on</h2>
           <div className="flex flex-col gap-2 w-56">
-            {findMeOn.map(({ service: sns, url, name }) => (
+            {me.findMeOn.map(({ service: sns, url, name }) => (
               <p key={sns} className="inline-flex justify-between">
                 <span className="text-foreground-sub">{sns}</span>
                 <UniversalLink href={url} isEnabledUnderline>
