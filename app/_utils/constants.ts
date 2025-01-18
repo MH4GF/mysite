@@ -81,7 +81,6 @@ const findMeOn: FindMeOn[] = [
 
 type Me = {
   name: string;
-  description: string[];
   whatICanDo: string;
   workExperiences: WorkExperience[];
   findMeOn: {
@@ -93,7 +92,6 @@ type Me = {
 
 export const me: Me = {
   name: "MH4GF / Hirotaka Miyagi / 宮城広隆",
-  description: ["Software Engineer at ROUTE06, inc.", "Tokyo, Japan"],
   whatICanDo:
     "Web Frontend (React, Next.js) / Backend (Ruby on Rails, Go) / GraphQL / Cloud (AWS, Terraform)",
   workExperiences,

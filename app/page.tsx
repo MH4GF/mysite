@@ -13,7 +13,13 @@ export default function Page() {
           <h1>{me.name}</h1>
         </div>
         <p className="text-sm text-foreground-sub whitespace-pre-wrap">
-          {me.description.join("\n")}
+          Building{" "}
+          <UniversalLink href="https://liambx.com" isEnabledUnderline>
+            Liam ERD
+          </UniversalLink>
+          , Software Engineer at ROUTE06, inc.
+          <br />
+          Tokyo, Japan
         </p>
       </div>
 
