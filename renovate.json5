@@ -54,6 +54,9 @@
         "@markuplint/jsx-parser",
         "@markuplint/react-spec",
         "markuplint",
+        "knip",
+        "eslint",
+        "eslint-plugin-react",
         "@biomejs/biome",
         "@mh4gf/eslint-config"
       ],
