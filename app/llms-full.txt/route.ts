@@ -13,7 +13,8 @@ function formatMarkdown(content: string): string {
 
 const content = `# ${me.name}
 
-> ${me.description.join(" ")}
+> Building [Liam ERD](https://liambx.com), Software Engineer at ROUTE06, inc.
+> Tokyo, Japan
 
 ## What I can do
 ${me.whatICanDo}
