@@ -23,7 +23,7 @@ importers:
         version: 1.1.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(types-react-dom@19.0.0)(types-react@19.0.0-rc.1)
       '@tailwindcss/typography':
         specifier: 0.5.16
-        version: 0.5.16(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@20.17.14)(typescript@5.7.3)))
+        version: 0.5.16(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@20.17.15)(typescript@5.7.3)))
       cheerio:
         specifier: 1.0.0
         version: 1.0.0
@@ -86,7 +86,7 @@ importers:
         version: 2.6.0
       tailwindcss-animate:
         specifier: 1.0.7
-        version: 1.0.7(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@20.17.14)(typescript@5.7.3)))
+        version: 1.0.7(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@20.17.15)(typescript@5.7.3)))
       unified:
         specifier: 11.0.5
         version: 11.0.5
@@ -125,8 +125,8 @@ importers:
         specifier: 2.0.5
         version: 2.0.5
       '@types/node':
-        specifier: 20.17.14
-        version: 20.17.14
+        specifier: 20.17.15
+        version: 20.17.15
       '@types/react':
         specifier: npm:types-react@19.0.0-rc.1
         version: types-react@19.0.0-rc.1
@@ -156,16 +156,16 @@ importers:
         version: 5.1.0(eslint@9.18.0(jiti@2.4.2))
       knip:
         specifier: 5.43.1
-        version: 5.43.1(@types/node@20.17.14)(typescript@5.7.3)
+        version: 5.43.1(@types/node@20.17.15)(typescript@5.7.3)
       lost-pixel:
         specifier: 3.22.0
-        version: 3.22.0(@types/node@20.17.14)(playwright-core@1.49.1)(typescript@5.7.3)
+        version: 3.22.0(@types/node@20.17.15)(playwright-core@1.49.1)(typescript@5.7.3)
       markuplint:
         specifier: 4.11.4
         version: 4.11.4(typescript@5.7.3)
       msw:
         specifier: 2.7.0
-        version: 2.7.0(@types/node@20.17.14)(typescript@5.7.3)
+        version: 2.7.0(@types/node@20.17.15)(typescript@5.7.3)
       pagefind:
         specifier: 1.3.0
         version: 1.3.0
@@ -174,7 +174,7 @@ importers:
         version: 8.5.1
       tailwindcss:
         specifier: 3.4.17
-        version: 3.4.17(ts-node@10.9.2(@types/node@20.17.14)(typescript@5.7.3))
+        version: 3.4.17(ts-node@10.9.2(@types/node@20.17.15)(typescript@5.7.3))
       tsx:
         specifier: 4.19.2
         version: 4.19.2
@@ -183,7 +183,7 @@ importers:
         version: 5.7.3
       vitest:
         specifier: 3.0.3
-        version: 3.0.3(@types/node@20.17.14)(msw@2.7.0(@types/node@20.17.14)(typescript@5.7.3))
+        version: 3.0.3(@types/node@20.17.15)(msw@2.7.0(@types/node@20.17.15)(typescript@5.7.3))
 
 packages:
 
@@ -1735,8 +1735,8 @@ packages:
   '@types/mustache@4.2.5':
     resolution: {integrity: sha512-PLwiVvTBg59tGFL/8VpcGvqOu3L4OuveNvPi0EYbWchRdEVP++yRUXJPFl+CApKEq13017/4Nf7aQ5lTtHUNsA==}
 
-  '@types/node@20.17.14':
-    resolution: {integrity: sha512-w6qdYetNL5KRBiSClK/KWai+2IMEJuAj+EujKCumalFOwXtvOXaEan9AuwcRID2IcOIAWSIfR495hBtgKlx2zg==}
+  '@types/node@20.17.15':
+    resolution: {integrity: sha512-ymrDMpEhuYz7PXTItXhY0ZDBDZT/RgsmFM9rBiRLOSVX1HKJhhrLXuLY00fHsFsugYT1wZU3IC4dleUUC22UDQ==}
 
   '@types/parse5@6.0.3':
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
@@ -5917,16 +5917,16 @@ snapshots:
   '@img/sharp-win32-x64@0.33.5':
     optional: true
 
-  '@inquirer/confirm@5.0.1(@types/node@20.17.14)':
+  '@inquirer/confirm@5.0.1(@types/node@20.17.15)':
     dependencies:
-      '@inquirer/core': 10.0.1(@types/node@20.17.14)
-      '@inquirer/type': 3.0.0(@types/node@20.17.14)
-      '@types/node': 20.17.14
+      '@inquirer/core': 10.0.1(@types/node@20.17.15)
+      '@inquirer/type': 3.0.0(@types/node@20.17.15)
+      '@types/node': 20.17.15
 
-  '@inquirer/core@10.0.1(@types/node@20.17.14)':
+  '@inquirer/core@10.0.1(@types/node@20.17.15)':
     dependencies:
       '@inquirer/figures': 1.0.7
-      '@inquirer/type': 3.0.0(@types/node@20.17.14)
+      '@inquirer/type': 3.0.0(@types/node@20.17.15)
       ansi-escapes: 4.3.2
       cli-width: 4.1.0
       mute-stream: 2.0.0
@@ -5939,9 +5939,9 @@ snapshots:
 
   '@inquirer/figures@1.0.7': {}
 
-  '@inquirer/type@3.0.0(@types/node@20.17.14)':
+  '@inquirer/type@3.0.0(@types/node@20.17.15)':
     dependencies:
-      '@types/node': 20.17.14
+      '@types/node': 20.17.15
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -6700,13 +6700,13 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@tailwindcss/typography@0.5.16(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@20.17.14)(typescript@5.7.3)))':
+  '@tailwindcss/typography@0.5.16(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@20.17.15)(typescript@5.7.3)))':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.4.17(ts-node@10.9.2(@types/node@20.17.14)(typescript@5.7.3))
+      tailwindcss: 3.4.17(ts-node@10.9.2(@types/node@20.17.15)(typescript@5.7.3))
 
   '@tsconfig/next@2.0.3': {}
 
@@ -6766,7 +6766,7 @@ snapshots:
 
   '@types/mustache@4.2.5': {}
 
-  '@types/node@20.17.14':
+  '@types/node@20.17.15':
     dependencies:
       undici-types: 6.19.6
 
@@ -6792,7 +6792,7 @@ snapshots:
 
   '@types/xml2js@0.4.14':
     dependencies:
-      '@types/node': 20.17.14
+      '@types/node': 20.17.15
 
   '@typescript-eslint/eslint-plugin@8.19.0(@typescript-eslint/parser@8.19.0(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)':
     dependencies:
@@ -6902,14 +6902,14 @@ snapshots:
       chai: 5.1.2
       tinyrainbow: 2.0.0
 
-  '@vitest/mocker@3.0.3(msw@2.7.0(@types/node@20.17.14)(typescript@5.7.3))(vite@5.3.2(@types/node@20.17.14))':
+  '@vitest/mocker@3.0.3(msw@2.7.0(@types/node@20.17.15)(typescript@5.7.3))(vite@5.3.2(@types/node@20.17.15))':
     dependencies:
       '@vitest/spy': 3.0.3
       estree-walker: 3.0.3
       magic-string: 0.30.17
     optionalDependencies:
-      msw: 2.7.0(@types/node@20.17.14)(typescript@5.7.3)
-      vite: 5.3.2(@types/node@20.17.14)
+      msw: 2.7.0(@types/node@20.17.15)(typescript@5.7.3)
+      vite: 5.3.2(@types/node@20.17.15)
 
   '@vitest/pretty-format@3.0.3':
     dependencies:
@@ -8995,11 +8995,11 @@ snapshots:
 
   kleur@4.1.5: {}
 
-  knip@5.43.1(@types/node@20.17.14)(typescript@5.7.3):
+  knip@5.43.1(@types/node@20.17.15)(typescript@5.7.3):
     dependencies:
       '@nodelib/fs.walk': 3.0.1
       '@snyk/github-codeowners': 1.1.0
-      '@types/node': 20.17.14
+      '@types/node': 20.17.15
       easy-table: 1.2.0
       enhanced-resolve: 5.18.0
       fast-glob: 3.3.3
@@ -9057,7 +9057,7 @@ snapshots:
     dependencies:
       js-tokens: 4.0.0
 
-  lost-pixel@3.22.0(@types/node@20.17.14)(playwright-core@1.49.1)(typescript@5.7.3):
+  lost-pixel@3.22.0(@types/node@20.17.15)(playwright-core@1.49.1)(typescript@5.7.3):
     dependencies:
       '@types/xml2js': 0.4.14
       async: 3.2.6
@@ -9077,7 +9077,7 @@ snapshots:
       posthog-node: 3.5.0
       serve-handler: 6.1.6
       shelljs: 0.8.5
-      ts-node: 10.9.2(@types/node@20.17.14)(typescript@5.7.3)
+      ts-node: 10.9.2(@types/node@20.17.15)(typescript@5.7.3)
       xml2js: 0.6.2
       yargs: 17.7.2
       zod: 3.23.8
@@ -9901,12 +9901,12 @@ snapshots:
 
   ms@2.1.3: {}
 
-  msw@2.7.0(@types/node@20.17.14)(typescript@5.7.3):
+  msw@2.7.0(@types/node@20.17.15)(typescript@5.7.3):
     dependencies:
       '@bundled-es-modules/cookie': 2.0.1
       '@bundled-es-modules/statuses': 1.0.1
       '@bundled-es-modules/tough-cookie': 0.1.6
-      '@inquirer/confirm': 5.0.1(@types/node@20.17.14)
+      '@inquirer/confirm': 5.0.1(@types/node@20.17.15)
       '@mswjs/interceptors': 0.37.0
       '@open-draft/deferred-promise': 2.2.0
       '@open-draft/until': 2.1.0
@@ -10253,13 +10253,13 @@ snapshots:
       camelcase-css: 2.0.1
       postcss: 8.5.1
 
-  postcss-load-config@4.0.2(postcss@8.5.1)(ts-node@10.9.2(@types/node@20.17.14)(typescript@5.7.3)):
+  postcss-load-config@4.0.2(postcss@8.5.1)(ts-node@10.9.2(@types/node@20.17.15)(typescript@5.7.3)):
     dependencies:
       lilconfig: 3.1.3
       yaml: 2.4.5
     optionalDependencies:
       postcss: 8.5.1
-      ts-node: 10.9.2(@types/node@20.17.14)(typescript@5.7.3)
+      ts-node: 10.9.2(@types/node@20.17.15)(typescript@5.7.3)
 
   postcss-nested@6.2.0(postcss@8.5.1):
     dependencies:
@@ -10333,7 +10333,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 20.17.14
+      '@types/node': 20.17.15
       long: 5.2.3
 
   proxy-from-env@1.1.0: {}
@@ -10944,11 +10944,11 @@ snapshots:
 
   tailwind-merge@2.6.0: {}
 
-  tailwindcss-animate@1.0.7(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@20.17.14)(typescript@5.7.3))):
+  tailwindcss-animate@1.0.7(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@20.17.15)(typescript@5.7.3))):
     dependencies:
-      tailwindcss: 3.4.17(ts-node@10.9.2(@types/node@20.17.14)(typescript@5.7.3))
+      tailwindcss: 3.4.17(ts-node@10.9.2(@types/node@20.17.15)(typescript@5.7.3))
 
-  tailwindcss@3.4.17(ts-node@10.9.2(@types/node@20.17.14)(typescript@5.7.3)):
+  tailwindcss@3.4.17(ts-node@10.9.2(@types/node@20.17.15)(typescript@5.7.3)):
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -10967,7 +10967,7 @@ snapshots:
       postcss: 8.5.1
       postcss-import: 15.1.0(postcss@8.5.1)
       postcss-js: 4.0.1(postcss@8.5.1)
-      postcss-load-config: 4.0.2(postcss@8.5.1)(ts-node@10.9.2(@types/node@20.17.14)(typescript@5.7.3))
+      postcss-load-config: 4.0.2(postcss@8.5.1)(ts-node@10.9.2(@types/node@20.17.15)(typescript@5.7.3))
       postcss-nested: 6.2.0(postcss@8.5.1)
       postcss-selector-parser: 6.1.2
       resolve: 1.22.8
@@ -11027,14 +11027,14 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  ts-node@10.9.2(@types/node@20.17.14)(typescript@5.7.3):
+  ts-node@10.9.2(@types/node@20.17.15)(typescript@5.7.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.17.14
+      '@types/node': 20.17.15
       acorn: 8.14.0
       acorn-walk: 8.3.4
       arg: 4.1.3
@@ -11361,13 +11361,13 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite-node@3.0.3(@types/node@20.17.14):
+  vite-node@3.0.3(@types/node@20.17.15):
     dependencies:
       cac: 6.7.14
       debug: 4.4.0
       es-module-lexer: 1.6.0
       pathe: 2.0.1
-      vite: 5.3.2(@types/node@20.17.14)
+      vite: 5.3.2(@types/node@20.17.15)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -11378,19 +11378,19 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.3.2(@types/node@20.17.14):
+  vite@5.3.2(@types/node@20.17.15):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.5.1
       rollup: 4.18.0
     optionalDependencies:
-      '@types/node': 20.17.14
+      '@types/node': 20.17.15
       fsevents: 2.3.3
 
-  vitest@3.0.3(@types/node@20.17.14)(msw@2.7.0(@types/node@20.17.14)(typescript@5.7.3)):
+  vitest@3.0.3(@types/node@20.17.15)(msw@2.7.0(@types/node@20.17.15)(typescript@5.7.3)):
     dependencies:
       '@vitest/expect': 3.0.3
-      '@vitest/mocker': 3.0.3(msw@2.7.0(@types/node@20.17.14)(typescript@5.7.3))(vite@5.3.2(@types/node@20.17.14))
+      '@vitest/mocker': 3.0.3(msw@2.7.0(@types/node@20.17.15)(typescript@5.7.3))(vite@5.3.2(@types/node@20.17.15))
       '@vitest/pretty-format': 3.0.3
       '@vitest/runner': 3.0.3
       '@vitest/snapshot': 3.0.3
@@ -11406,11 +11406,11 @@ snapshots:
       tinyexec: 0.3.2
       tinypool: 1.0.2
       tinyrainbow: 2.0.0
-      vite: 5.3.2(@types/node@20.17.14)
-      vite-node: 3.0.3(@types/node@20.17.14)
+      vite: 5.3.2(@types/node@20.17.15)
+      vite-node: 3.0.3(@types/node@20.17.15)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 20.17.14
+      '@types/node': 20.17.15
     transitivePeerDependencies:
       - less
       - lightningcss
