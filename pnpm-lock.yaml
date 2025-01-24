@@ -155,8 +155,8 @@ importers:
         specifier: 5.1.0
         version: 5.1.0(eslint@9.18.0(jiti@2.4.2))
       knip:
-        specifier: 5.43.1
-        version: 5.43.1(@types/node@20.17.16)(typescript@5.7.3)
+        specifier: 5.43.2
+        version: 5.43.2(@types/node@20.17.16)(typescript@5.7.3)
       lost-pixel:
         specifier: 3.22.0
         version: 3.22.0(@types/node@20.17.16)(playwright-core@1.49.1)(typescript@5.7.3)
@@ -3488,8 +3488,8 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
-  knip@5.43.1:
-    resolution: {integrity: sha512-U910KCyDnQPvXqcIqCRa5y3x9Uww8PcKttyyGb9KSH4uiXCSB/iWMDcbgEFNAqMkJS8S9wAAIWrCOXew5B4dSg==}
+  knip@5.43.2:
+    resolution: {integrity: sha512-e5l88Kx2QTJ2spRrqnE1V2J6AapwNgHs9lwJuaYr3n5ajeDXf8Wi3C+y3BBFhP6gAUW8J6yvrIxx+tjElhWLyg==}
     engines: {node: '>=18.18.0'}
     hasBin: true
     peerDependencies:
@@ -3531,6 +3531,7 @@ packages:
 
   lodash.get@4.4.2:
     resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
+    deprecated: This package is deprecated. Use the optional chaining (?.) operator instead.
 
   lodash.isplainobject@4.0.6:
     resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
@@ -8998,7 +8999,7 @@ snapshots:
 
   kleur@4.1.5: {}
 
-  knip@5.43.1(@types/node@20.17.16)(typescript@5.7.3):
+  knip@5.43.2(@types/node@20.17.16)(typescript@5.7.3):
     dependencies:
       '@nodelib/fs.walk': 3.0.1
       '@snyk/github-codeowners': 1.1.0
