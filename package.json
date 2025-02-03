@@ -29,7 +29,7 @@
     "@mh4gf/configs": "0.4.1",
     "@mh4gf/eslint-config": "0.6.3",
     "@next/eslint-plugin-next": "15.1.4",
-    "@playwright/test": "1.49.1",
+    "@playwright/test": "1.50.1",
     "@tsconfig/next": "2.0.3",
     "@tsconfig/strictest": "2.0.5",
     "@types/node": "20.17.16",
@@ -51,7 +51,7 @@
     "tailwindcss": "3.4.17",
     "tsx": "4.19.2",
     "typescript": "5.7.3",
-    "vitest": "3.0.4"
+    "vitest": "3.0.5"
   },
   "dependencies": {
     "@next/third-parties": "15.1.4",
