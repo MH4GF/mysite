@@ -155,8 +155,8 @@ importers:
         specifier: 5.1.0
         version: 5.1.0(eslint@9.20.1(jiti@2.4.2))
       knip:
-        specifier: 5.44.2
-        version: 5.44.2(@types/node@20.17.19)(typescript@5.7.3)
+        specifier: 5.44.3
+        version: 5.44.3(@types/node@20.17.19)(typescript@5.7.3)
       lost-pixel:
         specifier: 3.22.0
         version: 3.22.0(@types/node@20.17.19)(playwright-core@1.49.1)(typescript@5.7.3)
@@ -3494,8 +3494,8 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
-  knip@5.44.2:
-    resolution: {integrity: sha512-FbNYckASiU73X61cKE8Uw3QuA+jJozrB8z8tDjbcCRqM9e3ji2+PT5sigSSm3IAVDpqWdhdgsIJVZ2B74Tiqrw==}
+  knip@5.44.3:
+    resolution: {integrity: sha512-uu6u3XMnix3jCB6EqOwU1VbNihct0LQxmS+oSzQ+vDOI1j4wsWuuN+7gUyAau9GQQjE+Zr2V5E36taEXm063rg==}
     engines: {node: '>=18.18.0'}
     hasBin: true
     peerDependencies:
@@ -9022,7 +9022,7 @@ snapshots:
 
   kleur@4.1.5: {}
 
-  knip@5.44.2(@types/node@20.17.19)(typescript@5.7.3):
+  knip@5.44.3(@types/node@20.17.19)(typescript@5.7.3):
     dependencies:
       '@nodelib/fs.walk': 3.0.1
       '@snyk/github-codeowners': 1.1.0
