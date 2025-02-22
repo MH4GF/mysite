@@ -39,7 +39,7 @@
     "autoprefixer": "10.4.20",
     "axe-html-reporter": "2.2.11",
     "dependency-cruiser": "16.10.0",
-    "eslint": "9.20.1",
+    "eslint": "9.21.0",
     "eslint-plugin-react": "7.37.4",
     "eslint-plugin-react-hooks": "5.1.0",
     "knip": "5.44.4",
