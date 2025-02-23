@@ -26,7 +26,7 @@
     "@biomejs/biome": "1.9.4",
     "@markuplint/jsx-parser": "4.7.16",
     "@markuplint/react-spec": "4.5.16",
-    "@mh4gf/configs": "0.4.1",
+    "@mh4gf/configs": "0.4.5",
     "@mh4gf/eslint-config": "0.6.8",
     "@next/eslint-plugin-next": "15.1.4",
     "@playwright/test": "1.49.1",
