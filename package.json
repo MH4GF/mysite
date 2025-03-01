@@ -32,7 +32,7 @@
     "@playwright/test": "1.49.1",
     "@tsconfig/next": "2.0.3",
     "@tsconfig/strictest": "2.0.5",
-    "@types/node": "20.17.21",
+    "@types/node": "20.17.22",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0",
     "@types/rss": "0.0.32",
