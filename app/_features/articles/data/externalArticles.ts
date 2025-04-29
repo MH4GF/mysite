@@ -6,6 +6,60 @@ type RawArticleMeta = Omit<ArticleMeta, "publishedAt"> & {
 
 const articles: Omit<RawArticleMeta, "externalLink">[] = [
   {
+    title: "チームの性質によって変わる ADR との向き合い方と、生成 AI 時代のこれから",
+    publishedAt: "2025/03/26",
+    href: "https://speakerdeck.com/mh4gf/how-to-deal-with-adr-depends-on-the-characteristics-of-the-team",
+    tags: ["speaker-deck"],
+  },
+  {
+    title: "Playwright でテストを書いててよかった！と思えた事例紹介",
+    publishedAt: "2025/01/23",
+    href: "https://speakerdeck.com/mh4gf/playwright-detesutowoshu-iteteyokatuta-tosi-etashi-li-shao-jie",
+    tags: ["speaker-deck"],
+  },
+  {
+    title: "Why Surrogate Keys Win: A Practical Guide to Database Key Selection",
+    publishedAt: "2024/11/08",
+    href: "https://liambx.com/blog/why-surrogate-keys-win",
+    tags: ["liam"],
+  },
+  {
+    title: "Getting Started with One-to-One Relationships in PostgreSQL",
+    publishedAt: "2024/11/11",
+    href: "https://liambx.com/blog/getting-started-with-one-to-one-relationships-in-postgresql",
+    tags: ["liam"],
+  },
+  {
+    title: "PostgreSQL Materialized Views: From Basics to Practical Examples in Mastodon",
+    publishedAt: "2024/11/13",
+    href: "https://liambx.com/blog/postgresql-materialized-views-from-basics-to-practical-examples-in-mastodon",
+    tags: ["liam"],
+  },
+  {
+    title: "Introducing Liam ERD",
+    publishedAt: "2025/01/16",
+    href: "https://liambx.com/blog/liam-erd-introduction",
+    tags: ["liam"],
+  },
+  {
+    title: "Announcing Liam ERD Integration with tbls",
+    publishedAt: "2025/01/27",
+    href: "https://liambx.com/blog/liam-erd-with-tbls",
+    tags: ["liam"],
+  },
+  {
+    title: "ER diagram viewable from mobile devices",
+    publishedAt: "2025/02/05",
+    href: "https://liambx.com/blog/liam-erd-mobile",
+    tags: ["liam"],
+  },
+  {
+    title: "Liam ERDで綺麗でインタラクティブなER図を自動生成する",
+    publishedAt: "2025/01/22",
+    href: "https://zenn.dev/route06/articles/liam-erd-introduction",
+    tags: ["zenn"],
+  },
+  {
     title:
       "Valibot Schema Driven UI - ユーザーがノーコードで自由に UI を組み立てられるエディタを Next.js と Valibot で構築する",
     publishedAt: "2024/09/26",
