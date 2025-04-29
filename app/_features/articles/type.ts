@@ -2,6 +2,7 @@ import { z } from "zod";
 
 export const tagList = [
   "route06-tech-blog",
+  "liam",
   "timee-product-team-blog",
   "zenn",
   "qiita",

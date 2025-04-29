@@ -13,4 +13,5 @@ export const tagLabelMap: Record<TagEnum, string> = {
   "desk-setup": "Desk Setup",
   graphql: "GraphQL",
   "findy-tools": "Findy Tools",
+  liam: "Liam",
 };
