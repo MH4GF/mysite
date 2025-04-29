@@ -55,14 +55,14 @@
   },
   "dependencies": {
     "@next/third-parties": "15.3.1",
-    "@radix-ui/react-dialog": "1.1.6",
-    "@radix-ui/react-visually-hidden": "1.1.2",
+    "@radix-ui/react-dialog": "1.1.11",
+    "@radix-ui/react-visually-hidden": "1.2.0",
     "@tailwindcss/typography": "0.5.16",
     "cheerio": "1.0.0",
     "clsx": "2.1.1",
     "cmdk": "1.0.4",
     "contentlayer": "0.3.4",
-    "lucide-react": "0.483.0",
+    "lucide-react": "0.503.0",
     "next": "15.1.4",
     "next-contentlayer": "0.3.4",
     "react": "19.0.0",
@@ -80,7 +80,7 @@
     "tailwind-merge": "2.6.0",
     "tailwindcss-animate": "1.0.7",
     "unified": "11.0.5",
-    "zod": "3.24.2"
+    "zod": "3.24.3"
   },
   "packageManager": "pnpm@10.10.0",
   "pnpm": {
