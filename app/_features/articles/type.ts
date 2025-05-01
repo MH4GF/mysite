@@ -3,12 +3,12 @@ import { z } from "zod";
 export const tagList = [
   "talks",
   "media",
-  "database",
   "nextjs",
   "react",
   "generative-ai",
   "typescript",
   "github",
+  "database",
   "ruby",
   "valibot",
   "liam",
