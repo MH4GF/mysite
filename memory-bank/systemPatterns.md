@@ -55,6 +55,10 @@ public/                     # Static assets
 3. **Command Menu Pattern**: Global menu for navigation and actions
 4. **View Transitions**: Smooth page transitions for improved UX
 5. **Consistent Typography**: Type scale using Tailwind's typography plugin
+6. **Navigation Patterns**:
+   - Tag-based navigation for content filtering
+   - Chip/badge UI elements for tag selection
+   - Consistent layout between related page types
 
 ## Implementation Patterns
 
@@ -84,6 +88,7 @@ public/                     # Static assets
    - Processing through Contentlayer
    - Rendering with React components
    - Enhancement with syntax highlighting and other features
+   - Tag-based browsing and filtering
 
 2. **Page Transition System**:
    - View Transitions API integration
