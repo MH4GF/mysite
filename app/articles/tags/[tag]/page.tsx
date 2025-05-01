@@ -21,15 +21,11 @@ export default async function Page(props: Props) {
     notFound();
   }
   const tag = parsed.data;
-  const label = tagLabelMap[tag];
 
   return (
-    <div className="grid gap-8">
-      <h1 className="flex items-center gap-2 font-bold text-3xl">
-        <span>Articles - {label}</span>
-      </h1>
+    <main className="max-w-3xl mx-auto py-16 md:py-32 px-4 md:px-0">
       <ArticleList tag={tag} />
-    </div>
+    </main>
   );
 }
 

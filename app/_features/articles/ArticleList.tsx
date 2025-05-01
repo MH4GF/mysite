@@ -1,4 +1,5 @@
 import { ArticleListItem } from "./ArticleListItem";
+import { tagLabelMap } from "./constants";
 import { getArticlesMeta } from "./getArticlesMeta";
 import type { TagEnum } from "./type";
 
@@ -13,7 +14,9 @@ export const ArticleList = ({ tag }: Props): JSX.Element => {
 
   return (
     <div className="blur-enter-content">
-      <h1 className="text-xl">All Writing</h1>
+      <h1 className="text-xl">
+        {tag ? tagLabelMap[tag] : "All Writing"}
+      </h1>
 
       <div className="mt-12 grid gap-6 blur-enter-content enter-step-80">
         {articlesMeta.map((article) => (
