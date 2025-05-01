@@ -21,7 +21,7 @@ export const Article = ({ slug, handleNotFound }: Props) => {
         isEnabledUnderline
         className="text-zinc-700 dark:text-zinc-300"
       >
-        ← All Writing
+        ← All Contents
       </UniversalLink>
       <ArticleMetaDetail article={article} />
       <div className="mt-12 md:mt-16 w-full">

@@ -53,7 +53,7 @@ export function Command() {
             )}
             <CommandLinkItem href="/articles">
               <PenLine className="mr-2 h-4 w-4" />
-              <span>All Writing</span>
+              <span>All Contents</span>
             </CommandLinkItem>
             <CommandLinkItem href="/behavior">
               <PenLine className="mr-2 h-4 w-4" />

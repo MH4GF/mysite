@@ -34,13 +34,13 @@ test.describe("Command Palette", () => {
     await expect(page.getByRole("dialog")).not.toBeVisible();
   });
 
-  test("Navigate to All Writing", async ({ page }) => {
+  test("Navigate to All Contents", async ({ page }) => {
     await setup(page, "/");
     await page.getByRole("button", { name: "Open command palette" }).click();
-    await page.getByRole("option", { name: "All Writing" }).click();
+    await page.getByRole("option", { name: "All Contents" }).click();
 
     await expect(page.getByRole("dialog")).not.toBeVisible();
-    await expect(page.getByRole("heading", { name: "All Writing" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "All Contents" })).toBeVisible();
   });
 
   test("Navigate to `Source of this site` on another tab", async ({ page }) => {
@@ -55,7 +55,7 @@ test.describe("Command Palette", () => {
     await expect(page.getByRole("dialog")).not.toBeVisible();
   });
 
-  test("Navigate to All Writing with Enter key", async ({ page }) => {
+  test("Navigate to All Contents with Enter key", async ({ page }) => {
     await setup(page, "/");
     await page.locator("body").press("ControlOrMeta+k");
     await page.keyboard.press("ArrowDown");
@@ -63,7 +63,7 @@ test.describe("Command Palette", () => {
     await page.keyboard.press("Enter");
 
     await expect(page.getByRole("dialog")).not.toBeVisible();
-    await expect(page.getByRole("heading", { name: "All Writing" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "All Contents" })).toBeVisible();
   });
 
   test("Navigate to `Source of this site` with Enter key", async ({ page }) => {
