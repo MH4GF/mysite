@@ -41,6 +41,8 @@ The website appears to be a fully functioning personal site with blog capabiliti
 ### Recent Improvements
 
 Recent commits indicate:
+- Tag navigation list added to article listing page for easier content browsing
+- Unified layout between main article page and tag-specific pages
 - UI refinements for date display in article listings
 - Dependency updates via Renovate
 - Bug fixes and small improvements
@@ -58,6 +60,8 @@ The project appears to be using modern web technologies with recent migrations t
 - Focus on clean, readable typography
 - Implementation of view transitions for smoother navigation
 - Refinement of mobile experience
+- Enhanced content browsing with tag navigation elements
+- Consistent layout and styling across different page types
 
 ### Content Evolution
 - Regular additions of new articles

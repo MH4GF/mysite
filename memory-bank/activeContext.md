@@ -5,6 +5,7 @@
 The project is an established personal website/blog built with Next.js, React 19, and TypeScript. Based on the repository structure and recent commits, the site appears to be actively maintained with ongoing improvements to both content and functionality.
 
 Recent changes indicate work on:
+- Implementing a tag navigation list in the article listing page
 - UI adjustments for date display in article listings
 - Dependency updates via Renovate
 - Visual regression testing integration
@@ -27,9 +28,9 @@ The website includes several notable features:
 
 3. **Page Structure**
    - Home page with personal information
-   - Articles listing with pagination
+   - Articles listing with pagination and tag filtering navigation
    - Individual article pages with metadata
-   - Tag-based filtering
+   - Tag-based filtering and browsing
 
 4. **Technical Features**
    - RSS feed generation
