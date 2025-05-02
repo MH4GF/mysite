@@ -45,3 +45,5 @@ axe-html-report/
 
 # pagefind
 public/search
+
+**/.claude/settings.local.json
