@@ -37,7 +37,7 @@ export const ArticleList = ({ tag }: Props): JSX.Element => {
 
   return (
     <div className="blur-enter-content">
-      <h1 className="text-xl">{tag ? tagLabelMap[tag] : "All Writing"}</h1>
+      <h1 className="text-xl">{tag ? tagLabelMap[tag] : "All Contents"}</h1>
 
       <div className="my-8 overflow-x-auto pb-2">
         <div className="flex gap-2 flex-nowrap">

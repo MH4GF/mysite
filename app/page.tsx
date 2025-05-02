@@ -34,7 +34,7 @@ export default function Page() {
           <div className="flex flex-col gap-1">
             <h3>
               <UniversalLink href="/articles" isEnabledUnderline>
-                All Writing
+                All Contents
               </UniversalLink>
             </h3>
             <p className="text-sm text-foreground-sub">
