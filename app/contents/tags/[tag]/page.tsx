@@ -37,7 +37,7 @@ export const generateMetadata = async (props: Props): Promise<Metadata> => {
   const params = await props.params;
   const tag = tagsSchema.parse(params.tag);
   const label = tagLabelMap[tag];
-  const title = `Articles - ${label}`;
+  const title = `Contents - ${label}`;
 
   return { title, openGraph: { title }, twitter: { title } };
 };

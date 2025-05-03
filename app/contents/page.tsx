@@ -16,5 +16,5 @@ export default function Page() {
 }
 
 export const metadata: Metadata = {
-  title: "Articles",
+  title: "All Contents",
 };

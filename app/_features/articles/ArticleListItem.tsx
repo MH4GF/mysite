@@ -36,7 +36,7 @@ export const ArticleListItem = ({
         <div className="text-xs text-zinc-500 dark:text-zinc-400">
           {tags.map((tag, index) => (
             <span key={tag}>
-              <UniversalLink href={`/articles/tags/${tag}`} isEnabledHoveredUnderline>
+              <UniversalLink href={`/contents/tags/${tag}`} isEnabledHoveredUnderline>
                 {tagLabelMap[tag]}
               </UniversalLink>
               {index < tags.length - 1 && ", "}

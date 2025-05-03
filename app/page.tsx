@@ -34,7 +34,7 @@ export default function Page() {
           <h2>About</h2>
           <div className="flex flex-col gap-1">
             <h3>
-              <UniversalLink href="/articles" isEnabledUnderline>
+              <UniversalLink href="/contents" isEnabledUnderline>
                 All Contents
               </UniversalLink>
             </h3>

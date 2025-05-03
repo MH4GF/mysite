@@ -17,7 +17,7 @@ export const Article = ({ slug, handleNotFound }: Props) => {
   return (
     <div className="blur-enter-content" data-pagefind-body>
       <UniversalLink
-        href="/articles"
+        href="/contents"
         isEnabledUnderline
         className="text-zinc-700 dark:text-zinc-300"
       >
