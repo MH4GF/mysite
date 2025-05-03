@@ -55,7 +55,7 @@ export const ArticleList = ({ tag }: Props): JSX.Element => {
 
       <div className="grid gap-6 blur-enter-content enter-step-80">
         {articlesMeta.map((article) => (
-          <ArticleListItem key={article.title} {...article} />
+          <ArticleListItem key={article.title} {...article} currentTag={tag} />
         ))}
       </div>
     </div>

@@ -4,9 +4,11 @@ import { format } from "../../_utils";
 import { UniversalLink } from "../viewTransition";
 
 import { tagLabelMap } from "./constants";
-import type { ArticleMeta } from "./type";
+import type { ArticleMeta, TagEnum } from "./type";
 
-type Props = ArticleMeta;
+type Props = ArticleMeta & {
+  currentTag?: TagEnum | undefined;
+};
 
 export const ArticleListItem = ({
   title,
@@ -14,8 +16,10 @@ export const ArticleListItem = ({
   externalLink,
   publishedAt: _publishedAt,
   tags,
+  currentTag,
 }: Props) => {
   const publishedAt = format(_publishedAt);
+  const filteredTags = tags.filter((tag) => tag !== currentTag);
 
   return (
     <article className="flex flex-col gap-1">
@@ -32,7 +36,7 @@ export const ArticleListItem = ({
           {publishedAt}
         </Time>
       </div>
-      {tags.length > 0 && (
+      {filteredTags.length > 0 && (
         <div className="text-xs text-zinc-500 dark:text-zinc-400">
           {tags.map((tag, index) => (
             <span key={tag}>
