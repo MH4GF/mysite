@@ -1,25 +1,78 @@
 ---
-title: Hirotaka Miyagi | 宮城 広隆
+title: MH4GF / Hirotaka Miyagi / 宮城広隆
 ---
 
-## 自己 PR
+| Social       | Account                       |
+| ------------ | ----------------------------- |
+| X            | https://x.com/MH4GF           |
+| GitHub       | https://github.com/MH4GF      |
+| Blog         | https://mh4gf.dev/articles    |
+| Speaker Deck | https://speakerdeck.com/mh4gf |
+| sizu.me      | https://sizu.me/mh4gf         |
 
-- フロントエンド・バックエンド・インフラまで一気通貫で開発を進められることを強みとしています。
-- キャリアの大半がスタートアップでの活動であり、会社の成長のためにフルサイクルになんでも取り組んできました。今後も継続していくつもりです。
-- チームで働き、一人だけでは得られない成果を生むことを大事にしています。丁寧なドキュメンテーションや仕組み化でトラック係数を上げつつ、チームビルディングやコミュニケーションを進めていきたいです。
-- どちらかというと仕事が好きな性格で、仕事へのモチベーションは新しい知識の学習と転用です。業界の最新動向・枯れて安定した技術それぞれ取り入れつつ、自身や会社としての技術投資を進めていきたいです。技術的なアウトプットや OSS 活動も継続して取り組んでいきたいです。
+## Summary
 
-[好む振る舞い](/behavior), [キャリアの指向性](/thinking-in-career)も合わせてご覧ください。
+フロントエンド／バックエンドからインフラ、PdM、マーケティングまでを一気通貫で担うプロダクトエンジニアです。  
+2018 年にスポットワークサービス「[タイミー](https://corp.timee.co.jp/)」に第一号社員として参画し、機能開発・SRE・新規事業 PjM をリードしました。法務チームと連携して [特許取得の QR コード勤怠システム](https://corp.timee.co.jp/news/detail-364/) を実装し、シリーズ C 調達期には TVCM 流入にも耐えるインフラ基盤を構築しました。  
+その後フリーランスとして複数スタートアップを支援し、React ＋ GraphQL による UI 刷新、Rails モノリスのモダン化、AWS／Terraform でのインフラ 0→1 を推進。2022 年に [ROUTE06](https://route06.co.jp/) へ加わり、商取引 DX プラットフォームのフロントエンドアーキテクチャをリードしたのち、現在は OSS のビジュアルデベロップメントプラットフォーム「Liam」シリーズをプロダクトマネージャー兼テックリードとして企画・開発しています。第一弾 [Liam ERD](https://liambx.com/) はリリース 3 か月で GitHub で 3,700 スターを獲得。  
+高速な学習と HRT（謙虚・尊敬・信頼）を軸に、プロダクトとチームの成長を両輪で加速させてきました。
 
-## 過去の使用技術
+こちらも合わせてご覧ください。
 
-- Ruby, Rails, Rspec, FactoryBot, RuboCop, graphql-ruby
-- TypeScript, React, Next.js, Jest, Testing Library, MSW, ESLint, Prettier, Tailwind CSS, Webpack, Vite, Vitest, Storybook, ProseMirror, reg-suit, urql, GraphQL Code Generator, Vue.js, Nuxt.js
+- [好む振る舞い](https://mh4gf.dev/behavior)
+
+## Technical Skills
+
+- TypeScript, React, Next.js, Vite, Tailwind CSS, Storybook, ProseMirror, reg-suit, Apollo Client
+- Ruby, Rails, Rspec, RuboCop, graphql-ruby
 - Go, Gorm, gplgen
 - Terraform, AWS Fargate, ALB, RDS, S3, CloudFront, CloudWatch, Route53, VPC, Amplify, Cognito
-- GitHub Actions, CircleCI, Sentry, Datadog, Redash, Slack, Figma, draw.io, VSCode, Notion, Google Workspace, Slack, Zoom, Google Meet
+- GitHub Actions, CircleCI, Sentry, Datadog, Redash, Slack, Figma, Notion, Google Workspace, Slack, Zoom, Google Meet
+- Cursor, Cline, Claude Code, Devin AI
 
-## RESUME
+## Public Speaking & Publications
+
+| Date       | Title                                                                                                                                                              |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2025/05/23 | Valibot Schema Driven UI - ノーコード Web サイトビルダーを実装してみよう！ - TSKaigi 2025                                                                          |
+| 2025/03/26 | [チームの性質によって変わる ADR との向き合い方と、生成 AI 時代のこれから - #技術選定\_findy](https://findy-tools.connpass.com/event/347251/)                       |
+| 2024/06/12 | [Playwright - 高速なフィードバックにより 0→1 フェーズでも生産性に大きく寄与する E2E テストツール - Findy Tools](https://findy-tools.io/products/playwright/33/109) |
+| 2023/09/09 | [pnpm workspace 実践ノウハウ - #DevelopersGuild](https://speakerdeck.com/mh4gf/pnpm-workspaceshi-jian-nouhau)                                                      |
+| 2022/10/22 | [sassc-rails を利用している我々は、Sass の@import の非推奨化をどのように乗り越えていくか - Kaigi on Rails 2022](https://kaigionrails.org/2022/talks/mh4gf/)        |
+
+## OSS Contribution
+
+- biomejs/biome
+  - [docs(website): fix italic text for ja docs by MH4GF · Pull Request #1272 · biomejs/biome](https://github.com/biomejs/biome/pull/1272)
+  - $5 a month Sponsor
+- vitejs/vite
+  - https://github.com/vitejs/docs-ja/pulls?q=is%3Apr+is%3Aclosed+author%3AMH4GF
+  - $5 a month Sponsor
+- langgenius/dify
+  - [fix(RetrievalConfig): Fix score threshold assignment for zero value by MH4GF · Pull Request #7865 · langgenius/dify](https://github.com/langgenius/dify/pull/7865)
+  - [fix(RunOnce): change to form submission instead of onKeyDown and onClick by MH4GF · Pull Request #8460 · langgenius/dify](https://github.com/langgenius/dify/pull/8460)
+- Code-Hex/graphql-codegen-typescript-validation-schema
+  - [feat: minimal implementation to support valibot by MH4GF · Pull Request #667 · Code-Hex/graphql-codegen-typescript-validation-schema](https://github.com/Code-Hex/graphql-codegen-typescript-validation-schema/pull/667)
+- sverweij/dependency-cruiser
+  - [feature(plugin): add alternative implementation for mermaid.js reporter plugin by MH4GF · Pull Request #599 · sverweij/dependency-cruiser](https://github.com/sverweij/dependency-cruiser/pull/599)
+- prosemirror
+  - [add serializer option to set custom regexp for escaping by MH4GF · Pull Request #68 · ProseMirror/prosemirror-markdown](https://github.com/ProseMirror/prosemirror-markdown/pull/68)
+  - [declare Builders type for builders() by MH4GF · Pull Request #9 · ProseMirror/prosemirror-test-builder](https://github.com/ProseMirror/prosemirror-test-builder/pull/9)
+  - [Fix types for cellSelection by MH4GF · Pull Request #160 · ProseMirror/prosemirror-tables](https://github.com/ProseMirror/prosemirror-tables/pull/160)
+  - フォーラムでのバグ報告や知見共有
+  - ガイドを和訳し公開: [https://zenn.dev/mh4gf/articles/d25ef1ff30b5a6](https://zenn.dev/mh4gf/articles/d25ef1ff30b5a6)
+
+## Work Experience
+
+### 株式会社 ROUTE06 ― Liam 事業部 (2024.02–現在) Product Manager / Tech Lead
+
+プロダクトビルダー向け OSS ツール群「Liam」を 0→1 で企画。第一弾 **「Liam ERD」** を公開。フルサイクルチーム（Eng 5 / Designer 1）をリード
+
+- **主な責務:**
+  - プロダクト企画、ロードマップ策定、アーキテクチャ設計、初期マーケティング戦略立案
+  - チーム組成・2 名のピープルマネジメント、AI ネイティブな開発プロセス設計
+- **技術スタック / キーワード:** TypeScript, Next.js (App Router), React Flow, WebAssembly, Supabase, LangChain, Langfuse, Devin AI, Cline
+- [Introducing Liam ERD](https://liambx.com/blog/liam-erd-introduction)
 
 ### 株式会社タイミー(2022/4~2022/10)
 
@@ -186,43 +239,6 @@ title: Hirotaka Miyagi | 宮城 広隆
 - Ruby/Rails のバージョンアップ業
 - API のバージョニング、Serializer のスキーマ分割
 - サービス固有の強いドメインを持つ機能の設計、実装
-
-### 業務外活動
-
-#### オープンソース貢献
-
-日常的に行なっています。いくつかリンクを紹介します。
-
-- ProseMirror コミュニティでの活動
-  - Pull Requests
-    - add serializer option to set custom regexp for escaping [https://github.com/ProseMirror/prosemirror-markdown/pull/68](https://github.com/ProseMirror/prosemirror-markdown/pull/68)
-    - declare Builders type for builders() \*\*\*\*[https://github.com/ProseMirror/prosemirror-test-builder/pull/9](https://github.com/ProseMirror/prosemirror-test-builder/pull/9)
-    - Fix types for cellSelection \*\*\*\*[https://github.com/ProseMirror/prosemirror-tables/pull/160](https://github.com/ProseMirror/prosemirror-tables/pull/160)
-  - フォーラムでのバグ報告や知見共有
-  - ガイドを和訳し公開: [https://zenn.dev/mh4gf/articles/d25ef1ff30b5a6](https://zenn.dev/mh4gf/articles/d25ef1ff30b5a6)
-- feature(plugin): add alternative implementation for mermaid.js reporter plugin \*\*\*\*[https://github.com/sverweij/dependency-cruiser/pull/599](https://github.com/sverweij/dependency-cruiser/pull/599)
-  - dependency-cruiser という JS/TS プロジェクトのディレクトリ構造のビジュアライズツールで、mermaid.js 構文での出力を可能にする実装を追加
-- feat: add generatorLibrary options and allow faker to select \*\*\*\*[https://github.com/ardeois/graphql-codegen-typescript-mock-data/pull/93](https://github.com/ardeois/graphql-codegen-typescript-mock-data/pull/93)
-- [ExtractType]: add `has` prefix to default values for config \*\*\*\*[https://github.com/DmitryTsepelev/rubocop-graphql/pull/89](https://github.com/DmitryTsepelev/rubocop-graphql/pull/89)
-
-#### 登壇
-
-社内外の勉強会・カンファレンスで発表を行っています。
-
-- [sassc-rails を利用している我々は、Sass の@import の非推奨化をどのように乗り越えていくか](https://speakerdeck.com/mh4gf/sassc-railswoli-yong-siteiruwo-ha-sassno-at-importnofei-tui-jiang-hua-wodonoyounicheng-riyue-eteikuka)
-- [Production で Rails6 マルチ DB 対応を小さく始める](https://speakerdeck.com/mh4gf/productionderails6marutidbdui-ying-woxiao-sakushi-meru)
-
-### 学歴
-
-- 2019/03 武蔵大学社会学部 メディア社会学科 中退
-
-### スキル
-
-- Ruby / Rails ... 6 年
-- TypeScript ... 2 年
-- React ... 2 年
-- Terraform / AWS ... 2 年
-- Go ... 2 年
 
 ### 免許・資格
 
