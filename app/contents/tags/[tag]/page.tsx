@@ -22,11 +22,7 @@ export default async function Page(props: Props) {
   }
   const tag = parsed.data;
 
-  return (
-    <main className="max-w-3xl mx-auto py-16 md:py-32 px-4 md:px-0">
-      <ArticleList tag={tag} />
-    </main>
-  );
+  return <ArticleList tag={tag} />;
 }
 
 export const generateStaticParams = (): Params[] => {
