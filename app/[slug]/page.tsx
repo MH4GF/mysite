@@ -15,7 +15,11 @@ interface Props {
 
 export default async function Page(props: Props) {
   const params = await props.params;
-  return <Content {...params} handleNotFound={notFound} />;
+  return (
+    <main className="max-w-3xl mx-auto py-16 md:py-32 px-4 md:px-0">
+      <Content {...params} handleNotFound={notFound} />
+    </main>
+  );
 }
 
 export const generateStaticParams = (): Params[] =>
