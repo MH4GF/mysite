@@ -10,7 +10,6 @@ export const tagLabelMap: Record<TagEnum, string> = {
   valibot: "Valibot",
   dev: "Dev",
   life: "Life",
-  "speaker-deck": "Speaker Deck",
   job: "Job",
   "desk-setup": "Desk Setup",
   graphql: "GraphQL",

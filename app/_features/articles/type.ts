@@ -22,7 +22,6 @@ export const tagList = [
   "zenn",
   "qiita",
   "note",
-  "speaker-deck",
   "graphql",
   "findy-tools",
 ] as const;

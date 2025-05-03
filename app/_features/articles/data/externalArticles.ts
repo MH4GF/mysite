@@ -6,16 +6,22 @@ type RawArticleMeta = Omit<ArticleMeta, "publishedAt"> & {
 
 const articles: Omit<RawArticleMeta, "externalLink">[] = [
   {
+    title: "sassc-railsを利用している我々は、Sassの@importの非推奨化をどのように乗り越えていくか",
+    publishedAt: "2022/10/22",
+    href: "https://kaigionrails.org/2022/talks/mh4gf/",
+    tags: ["talks", "ruby", "media"],
+  },
+  {
     title: "チームの性質によって変わる ADR との向き合い方と、生成 AI 時代のこれから",
     publishedAt: "2025/03/26",
     href: "https://speakerdeck.com/mh4gf/how-to-deal-with-adr-depends-on-the-characteristics-of-the-team",
-    tags: ["speaker-deck", "talks"],
+    tags: ["talks", "media", "generative-ai"],
   },
   {
     title: "Playwright でテストを書いててよかった！と思えた事例紹介",
     publishedAt: "2025/01/23",
     href: "https://speakerdeck.com/mh4gf/playwright-detesutowoshu-iteteyokatuta-tosi-etashi-li-shao-jie",
-    tags: ["speaker-deck", "talks"],
+    tags: ["talks", "media"],
   },
   {
     title: "Why Surrogate Keys Win: A Practical Guide to Database Key Selection",
@@ -113,13 +119,13 @@ const articles: Omit<RawArticleMeta, "externalLink">[] = [
     title: "to B プロダクトで Vite + React Router を採用して半年後の感想",
     href: "https://speakerdeck.com/mh4gf/impressions-after-6-months-of-using-vite-plus-react-router-e448b113-96f4-479a-adea-7d003e5d3fda",
     publishedAt: "2024/02/28",
-    tags: ["speaker-deck", "talks"],
+    tags: ["talks", "media"],
   },
   {
     title: "Playwright で一番小さく始める VRT と、次のステップの選択肢",
     href: "https://speakerdeck.com/mh4gf/playwright-de-fan-xiao-sakushi-meru-vrt-to-ci-nosutetupunoxuan-ze-zhi",
     publishedAt: "2024/02/21",
-    tags: ["speaker-deck", "talks"],
+    tags: ["talks", "media"],
   },
   {
     title: "GraphQL成熟度モデルをROUTE06のtoBプロダクトに当てはめてみる",
@@ -155,7 +161,7 @@ const articles: Omit<RawArticleMeta, "externalLink">[] = [
     title: "学習しながらアーキテクチャを進化させていくためのモノレポ",
     href: "https://speakerdeck.com/mh4gf/xue-xi-sinagaraakitekutiyawojin-hua-saseteikutamenomonorepo",
     publishedAt: "2023/10/06",
-    tags: ["speaker-deck", "talks"],
+    tags: ["talks"],
   },
   {
     title: "Amplify Hostingのプレビュー環境でパラメータストアの秘匿情報を取得する",
@@ -167,7 +173,7 @@ const articles: Omit<RawArticleMeta, "externalLink">[] = [
     title: "pnpm workspace実践ノウハウ",
     href: "https://speakerdeck.com/mh4gf/pnpm-workspaceshi-jian-nouhau",
     publishedAt: "2023/09/09",
-    tags: ["speaker-deck", "typescript"],
+    tags: ["typescript", "media"],
   },
   {
     title: "Plainのフロントエンドにおける技術選定(2023年8月版)",
