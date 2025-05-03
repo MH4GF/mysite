@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Fragment } from "react";
 import { MyAvatar } from "./_components";
 import { UniversalLink } from "./_features";
 import { WorkExperienceList } from "./_features/top";
@@ -61,15 +62,19 @@ export default function Page() {
 
         <div className="flex flex-col gap-4">
           <h2>Find me on</h2>
-          <div className="flex flex-col gap-2 w-56">
-            {me.findMeOn.map(({ service: sns, url, name }) => (
-              <p key={sns} className="inline-flex justify-between">
-                <span className="text-foreground-sub">{sns}</span>
-                <UniversalLink href={url} isEnabledUnderline>
-                  {name}
-                </UniversalLink>
-              </p>
-            ))}
+          <div>
+            <p className="flex gap-2">
+              {me.findMeOn.map(({ service: sns, url }, index) => (
+                <Fragment key={sns}>
+                  <span>
+                    <UniversalLink href={url} isEnabledUnderline>
+                      {sns}
+                    </UniversalLink>
+                  </span>
+                  <span>{index < me.findMeOn.length - 1 && "/"}</span>
+                </Fragment>
+              ))}
+            </p>
           </div>
         </div>
       </div>
