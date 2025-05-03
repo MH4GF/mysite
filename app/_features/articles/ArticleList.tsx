@@ -7,6 +7,7 @@ import { tagList } from "./type";
 import type { TagEnum } from "./type";
 
 import type { ComponentProps, JSX } from "react";
+import { UniversalLink } from "../viewTransition";
 
 type TagChipProps = {
   href: string;
@@ -36,7 +37,12 @@ export const ArticleList = ({ tag }: Props): JSX.Element => {
   const articlesMeta = getArticlesMeta({ tag });
 
   return (
-    <div className="blur-enter-content">
+    <main className="max-w-3xl mx-auto py-16 md:py-32 px-4 md:px-0 blur-enter-content">
+      <div className="mb-8">
+        <UniversalLink href="/" isEnabledUnderline className="text-zinc-700 dark:text-zinc-300">
+          ← Home
+        </UniversalLink>
+      </div>
       <h1 className="text-xl">{tag ? tagLabelMap[tag] : "All Contents"}</h1>
 
       <div className="my-8 overflow-x-auto pb-2">
@@ -58,6 +64,6 @@ export const ArticleList = ({ tag }: Props): JSX.Element => {
           <ArticleListItem key={article.title} {...article} currentTag={tag} />
         ))}
       </div>
-    </div>
+    </main>
   );
 };
