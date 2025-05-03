@@ -17,7 +17,7 @@ export const Content = ({ slug, handleNotFound }: Props): JSX.Element => {
 
   return (
     <>
-      <h1 className="font-bold text-4xl">{about.title}</h1>
+      <h1 className="text-xl mb-8">{about.title}</h1>
       <MarkdownRenderer raw={about.body.raw} />
     </>
   );

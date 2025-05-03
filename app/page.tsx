@@ -43,7 +43,11 @@ export default function Page() {
             </p>
           </div>
           <div className="flex flex-col gap-1">
-            <h3 className="cursor-not-allowed	">Media (in preparation)</h3>
+            <h3>
+              <UniversalLink href="/contents/tags/media" isEnabledUnderline>
+                Media
+              </UniversalLink>
+            </h3>
             <p className="text-sm text-foreground-sub">Talking at events, podcasts, etc...</p>
           </div>
           <div className="flex flex-col gap-1">
@@ -55,6 +59,13 @@ export default function Page() {
             <p className="text-sm text-foreground-sub">
               チームで心地よく働くために、意識していることをまとめています。
             </p>
+          </div>
+          <div className="flex flex-col gap-1">
+            <h3>
+              <UniversalLink href="/resume" isEnabledUnderline>
+                Resume
+              </UniversalLink>
+            </h3>
           </div>
         </div>
 
