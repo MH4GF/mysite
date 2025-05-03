@@ -102,8 +102,8 @@ test("behavior", async ({ page }, testInfo) => {
   await run(page, testInfo, { name: "behavior", path: "/behavior" });
 });
 
-test("articles", async ({ page }, testInfo) => {
-  await run(page, testInfo, { name: "articles", path: "/articles" });
+test("contents", async ({ page }, testInfo) => {
+  await run(page, testInfo, { name: "contents", path: "/contents" });
 });
 
 test("2024-development-wordpress-theme", async ({ page }, testInfo) => {
