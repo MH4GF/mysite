@@ -41,24 +41,24 @@ tags:
 
 ```
 <!-- リンクテキストとしてレンダリング -->
-- https://mh4gf.dev/articles
+- https://mh4gf.dev/contents
 
 <!-- 上下に空白行がある場合リンクカードとしてレンダリング -->
 
 https://mh4gf.dev
 
-https://mh4gf.dev/articles
+https://mh4gf.dev/contents
 
 <!-- 上下に空白行がない場合リンクテキストとしてレンダリング -->
 https://mh4gf.dev
 https://mh4gf.dev
 ```
 
-- https://mh4gf.dev/articles
+- https://mh4gf.dev/contents
 
 https://mh4gf.dev
 
-https://mh4gf.dev/articles
+https://mh4gf.dev/contents
 
 https://mh4gf.dev
 https://mh4gf.dev

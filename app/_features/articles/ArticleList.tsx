@@ -41,11 +41,11 @@ export const ArticleList = ({ tag }: Props): JSX.Element => {
 
       <div className="my-8 overflow-x-auto pb-2">
         <div className="flex gap-2 flex-nowrap">
-          <TagChip href="/articles" isActive={!tag} label="All" />
+          <TagChip href="/contents" isActive={!tag} label="All" />
           {tagList.map((tagItem) => (
             <TagChip
               key={tagItem}
-              href={`/articles/tags/${tagItem}`}
+              href={`/contents/tags/${tagItem}`}
               isActive={tag === tagItem}
               label={tagLabelMap[tagItem]}
             />
@@ -55,7 +55,7 @@ export const ArticleList = ({ tag }: Props): JSX.Element => {
 
       <div className="grid gap-6 blur-enter-content enter-step-80">
         {articlesMeta.map((article) => (
-          <ArticleListItem key={article.title} {...article} />
+          <ArticleListItem key={article.title} {...article} currentTag={tag} />
         ))}
       </div>
     </div>

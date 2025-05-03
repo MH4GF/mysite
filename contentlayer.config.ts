@@ -20,7 +20,6 @@ export const Article = defineDocumentType(() => ({
           "note",
           "dev",
           "life",
-          "speaker-deck",
         ],
         required: true,
       },
