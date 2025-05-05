@@ -2,6 +2,8 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+IMPORTANT: Read coding guidelines in docs/lint-rules.md before beginning code work.
+
 ## Build Commands
 - Build: `pnpm build`
 - Development: `pnpm dev`
