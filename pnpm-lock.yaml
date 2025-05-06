@@ -173,8 +173,8 @@ importers:
         specifier: 8.5.3
         version: 8.5.3
       rulens:
-        specifier: 0.2.0
-        version: 0.2.0(esbuild@0.24.0)(typescript@5.8.3)
+        specifier: 0.2.1
+        version: 0.2.1(esbuild@0.24.0)(typescript@5.8.3)
       tailwindcss:
         specifier: 3.4.17
         version: 3.4.17(ts-node@10.9.2(@types/node@20.17.32)(typescript@5.8.3))
@@ -4595,8 +4595,8 @@ packages:
   rss@1.2.2:
     resolution: {integrity: sha512-xUhRTgslHeCBeHAqaWSbOYTydN2f0tAzNXvzh3stjz7QDhQMzdgHf3pfgNIngeytQflrFPfy6axHilTETr6gDg==}
 
-  rulens@0.2.0:
-    resolution: {integrity: sha512-QpD5xEeDjB3Icf2i1kU/PebXBpSzvkAdjrgPVQJ5tUaaincS/zJlSJc8duZDfY/DuGatqJndyysHjl8+ZOxdGA==}
+  rulens@0.2.1:
+    resolution: {integrity: sha512-cy3lKcm6NlthW9lTw/+NCAr1Uc18oZVAHxfBu5cG4Gu7GupvqhAnUhT3yqeBAyj6VOdRz7pIPfvd9kp3Hy4BUg==}
     engines: {node: '>=20.0.0'}
     hasBin: true
 
@@ -10662,7 +10662,7 @@ snapshots:
       mime-types: 2.1.13
       xml: 1.0.1
 
-  rulens@0.2.0(esbuild@0.24.0)(typescript@5.8.3):
+  rulens@0.2.1(esbuild@0.24.0)(typescript@5.8.3):
     dependencies:
       bundle-require: 5.1.0(esbuild@0.24.0)
       commander: 13.1.0
