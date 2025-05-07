@@ -38,7 +38,7 @@
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0",
     "@types/rss": "0.0.32",
-    "autoprefixer": "10.4.20",
+    "autoprefixer": "10.4.21",
     "axe-html-reporter": "2.2.11",
     "dependency-cruiser": "16.10.1",
     "eslint": "9.26.0",
