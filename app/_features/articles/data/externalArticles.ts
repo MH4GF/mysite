@@ -6,6 +6,12 @@ type RawArticleMeta = Omit<ArticleMeta, "publishedAt"> & {
 
 const articles: Omit<RawArticleMeta, "externalLink">[] = [
   {
+    title: "AI生成コードの「70%問題」を突破するTypeScript Lintルール設計",
+    publishedAt: "2025/05/19",
+    href: "https://talks.mh4gf.dev/20250519",
+    tags: ["talks", "typescript", "media", "generative-ai"],
+  },
+  {
     title: "sassc-railsを利用している我々は、Sassの@importの非推奨化をどのように乗り越えていくか",
     publishedAt: "2022/10/22",
     href: "https://kaigionrails.org/2022/talks/mh4gf/",
