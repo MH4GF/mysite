@@ -173,8 +173,8 @@ importers:
         specifier: 8.5.3
         version: 8.5.3
       rulens:
-        specifier: 0.2.1
-        version: 0.2.1(esbuild@0.24.0)(typescript@5.8.3)
+        specifier: 0.2.2
+        version: 0.2.2(esbuild@0.24.0)(typescript@5.8.3)
       tailwindcss:
         specifier: 3.4.17
         version: 3.4.17(ts-node@10.9.2(@types/node@20.17.50)(typescript@5.8.3))
@@ -1644,6 +1644,11 @@ packages:
 
   '@rollup/rollup-linux-x64-gnu@4.18.0':
     resolution: {integrity: sha512-xuglR2rBVHA5UsI8h8UbX4VJ470PtGCf5Vpswh7p2ukaqBGFTnsfzxUBetoWBWymHMxbIG0Cmx7Y9qDZzr648w==}
+    cpu: [x64]
+    os: [linux]
+
+  '@rollup/rollup-linux-x64-gnu@4.41.0':
+    resolution: {integrity: sha512-XMLeKjyH8NsEDCRptf6LO8lJk23o9wvB+dJwcXMaH6ZQbbkHu2dbGIUindbMtRN6ux1xKi16iXWu6q9mu7gDhQ==}
     cpu: [x64]
     os: [linux]
 
@@ -3998,6 +4003,10 @@ packages:
     resolution: {integrity: sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==}
     engines: {node: '>= 0.6'}
 
+  neverthrow@8.2.0:
+    resolution: {integrity: sha512-kOCT/1MCPAxY5iUV3wytNFUMUolzuwd/VF/1KCx7kf6CutrOsTie+84zTGTpgQycjvfLdBBdvBvFLqFD2c0wkQ==}
+    engines: {node: '>=18'}
+
   next-contentlayer@0.3.4:
     resolution: {integrity: sha512-UtUCwgAl159KwfhNaOwyiI7Lg6sdioyKMeh+E7jxx0CJ29JuXGxBEYmCI6+72NxFGIFZKx8lvttbbQhbnYWYSw==}
     peerDependencies:
@@ -4595,8 +4604,8 @@ packages:
   rss@1.2.2:
     resolution: {integrity: sha512-xUhRTgslHeCBeHAqaWSbOYTydN2f0tAzNXvzh3stjz7QDhQMzdgHf3pfgNIngeytQflrFPfy6axHilTETr6gDg==}
 
-  rulens@0.2.1:
-    resolution: {integrity: sha512-cy3lKcm6NlthW9lTw/+NCAr1Uc18oZVAHxfBu5cG4Gu7GupvqhAnUhT3yqeBAyj6VOdRz7pIPfvd9kp3Hy4BUg==}
+  rulens@0.2.2:
+    resolution: {integrity: sha512-ORM/SBe2EFjYdvjNMkAWblspUVqzt1snW9nbdskqstUEjJaqm3D4AqrcyICgu6WwtW4cXGfTHFBTEelG+hxv0w==}
     engines: {node: '>=20.0.0'}
     hasBin: true
 
@@ -6750,6 +6759,9 @@ snapshots:
     optional: true
 
   '@rollup/rollup-linux-x64-gnu@4.18.0':
+    optional: true
+
+  '@rollup/rollup-linux-x64-gnu@4.41.0':
     optional: true
 
   '@rollup/rollup-linux-x64-musl@4.18.0':
@@ -9963,6 +9975,10 @@ snapshots:
 
   negotiator@1.0.0: {}
 
+  neverthrow@8.2.0:
+    optionalDependencies:
+      '@rollup/rollup-linux-x64-gnu': 4.41.0
+
   next-contentlayer@0.3.4(contentlayer@0.3.4(esbuild@0.24.0))(esbuild@0.24.0)(next@15.1.4(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       '@contentlayer/core': 0.3.4(esbuild@0.24.0)
@@ -10662,11 +10678,12 @@ snapshots:
       mime-types: 2.1.13
       xml: 1.0.1
 
-  rulens@0.2.1(esbuild@0.24.0)(typescript@5.8.3):
+  rulens@0.2.2(esbuild@0.24.0)(typescript@5.8.3):
     dependencies:
       bundle-require: 5.1.0(esbuild@0.24.0)
       commander: 13.1.0
       execa: 9.5.2
+      neverthrow: 8.2.0
       picocolors: 1.1.1
       valibot: 1.0.0(typescript@5.8.3)
     transitivePeerDependencies:
