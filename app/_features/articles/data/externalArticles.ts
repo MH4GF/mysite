@@ -6,6 +6,12 @@ type RawArticleMeta = Omit<ArticleMeta, "publishedAt"> & {
 
 const articles: Omit<RawArticleMeta, "externalLink">[] = [
   {
+    title: "Valibot Schema Driven UI - ノーコードWebサイトビルダーを実装してみよう！",
+    publishedAt: "2025/05/24",
+    href: "https://talks.mh4gf.dev/20250524",
+    tags: ["talks", "typescript", "media", "valibot"],
+  },
+  {
     title: "AI生成コードの「70%問題」を突破するTypeScript Lintルール設計",
     publishedAt: "2025/05/19",
     href: "https://talks.mh4gf.dev/20250519",
