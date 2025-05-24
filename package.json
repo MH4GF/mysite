@@ -29,7 +29,7 @@
     "@markuplint/jsx-parser": "4.7.19",
     "@markuplint/react-spec": "4.5.19",
     "@mh4gf/configs": "0.4.1",
-    "@mh4gf/eslint-config": "0.6.8",
+    "@mh4gf/eslint-config": "0.6.12",
     "@next/eslint-plugin-next": "15.3.1",
     "@playwright/test": "1.49.1",
     "@tsconfig/next": "2.0.3",
@@ -40,11 +40,11 @@
     "@types/rss": "0.0.32",
     "autoprefixer": "10.4.20",
     "axe-html-reporter": "2.2.11",
-    "dependency-cruiser": "16.10.1",
-    "eslint": "9.26.0",
+    "dependency-cruiser": "16.10.2",
+    "eslint": "9.27.0",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "5.1.0",
-    "knip": "5.53.0",
+    "knip": "5.58.0",
     "lost-pixel": "3.22.0",
     "markuplint": "4.12.0",
     "msw": "2.7.0",
@@ -85,7 +85,7 @@
     "unified": "11.0.5",
     "zod": "3.24.3"
   },
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.11.0",
   "pnpm": {
     "overrides": {
       "@types/react": "npm:types-react@19.0.0-rc.1",
