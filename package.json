@@ -30,7 +30,7 @@
     "@markuplint/react-spec": "4.5.19",
     "@mh4gf/configs": "0.4.1",
     "@mh4gf/eslint-config": "0.6.8",
-    "@next/eslint-plugin-next": "15.3.1",
+    "@next/eslint-plugin-next": "15.3.4",
     "@playwright/test": "1.49.1",
     "@tsconfig/next": "2.0.3",
     "@tsconfig/strictest": "2.0.5",
@@ -57,7 +57,7 @@
     "vitest": "3.0.5"
   },
   "dependencies": {
-    "@next/third-parties": "15.3.1",
+    "@next/third-parties": "15.3.4",
     "@radix-ui/react-dialog": "1.1.14",
     "@radix-ui/react-visually-hidden": "1.2.3",
     "@tailwindcss/typography": "0.5.16",
