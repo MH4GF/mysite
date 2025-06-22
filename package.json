@@ -61,7 +61,7 @@
     "@radix-ui/react-dialog": "1.1.14",
     "@radix-ui/react-visually-hidden": "1.2.3",
     "@tailwindcss/typography": "0.5.16",
-    "cheerio": "1.0.0",
+    "cheerio": "1.1.0",
     "clsx": "2.1.1",
     "cmdk": "1.0.4",
     "contentlayer": "0.3.4",
