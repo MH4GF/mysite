@@ -132,7 +132,7 @@ const LoadingItem = () => {
   return (
     <CommandLoading>
       <PenLine className="mr-2 h-5 w-5" />
-      <span className="animate-pulse bg-muted w-full h-5 rounded-sm" />
+      <span className="animate-pulse bg-muted w-full h-5 rounded-xs" />
     </CommandLoading>
   );
 };
