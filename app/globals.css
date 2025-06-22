@@ -20,11 +20,13 @@
   }
 }
 
-@layer base {
+@layer utilities {
   :is(.dark .dark\:prose-invert) {
     --mysite-code-bg: var(--mysite-invert-code-bg);
   }
+}
 
+@layer base {
   :root {
     --white: 255 255 255;
     --zinc-900: 24 24 27;
