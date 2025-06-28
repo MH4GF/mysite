@@ -107,8 +107,8 @@ importers:
         specifier: 4.5.19
         version: 4.5.19
       '@mh4gf/configs':
-        specifier: 0.4.1
-        version: 0.4.1(@tsconfig/strictest@2.0.5)
+        specifier: 0.5.0
+        version: 0.5.0(@tsconfig/strictest@2.0.5)
       '@mh4gf/eslint-config':
         specifier: 0.6.8
         version: 0.6.8(@typescript-eslint/eslint-plugin@8.19.0(@typescript-eslint/parser@8.19.0(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(@typescript-eslint/parser@8.19.0(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
@@ -1079,8 +1079,8 @@ packages:
   '@mdx-js/mdx@2.3.0':
     resolution: {integrity: sha512-jLuwRlz8DQfQNiUCJR50Y09CGPq3fLtmtUQfVrj79E0JWu3dvsVcxVIcfhR5h0iXu+/z++zDrYeiJqifRynJkA==}
 
-  '@mh4gf/configs@0.4.1':
-    resolution: {integrity: sha512-zHpNKkRuyioTB+673gCAEh7nnqiPpPcLyX8G6CgLiE2tnC9xrpLJTC9L7xkoWteP6xbYO/x/gqmTmTzYlzdeyg==}
+  '@mh4gf/configs@0.5.0':
+    resolution: {integrity: sha512-TgNM6rhCie66ApVyeM+at8UKGW/409Lif8+aZs2i3R4GmkmdDWsxmq+kPpwHL1rgS36hqF/EpYCfUDe64hz50Q==}
     peerDependencies:
       '@tsconfig/strictest': ^2
 
@@ -6303,7 +6303,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@mh4gf/configs@0.4.1(@tsconfig/strictest@2.0.5)':
+  '@mh4gf/configs@0.5.0(@tsconfig/strictest@2.0.5)':
     dependencies:
       '@tsconfig/strictest': 2.0.5
 
