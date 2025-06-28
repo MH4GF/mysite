@@ -117,7 +117,7 @@ export default async function Image({ params }: Props) {
         <div tw="flex">
           {article.tags.map((tag) => (
             <span
-              tw="rounded-sm border border-zinc-500 px-2 py-1 mr-2 text-lg text-zinc-500"
+              tw="rounded-xs border border-zinc-500 px-2 py-1 mr-2 text-lg text-zinc-500"
               key={tag}
             >
               {tagLabelMap[tag]}

@@ -21,9 +21,9 @@ const modeScript = `
   }
 
   function disableTransitionsTemporarily() {
-    document.documentElement.classList.add('[&_*]:!transition-none')
+    document.documentElement.classList.add('**:transition-none!')
     window.setTimeout(() => {
-      document.documentElement.classList.remove('[&_*]:!transition-none')
+      document.documentElement.classList.remove('**:transition-none!')
     }, 0)
   }
 
