@@ -32,7 +32,7 @@
     "@mh4gf/eslint-config": "0.6.8",
     "@next/eslint-plugin-next": "15.3.4",
     "@playwright/test": "1.49.1",
-    "@tailwindcss/postcss": "4.1.10",
+    "@tailwindcss/postcss": "4.1.11",
     "@tsconfig/next": "2.0.3",
     "@tsconfig/strictest": "2.0.5",
     "@types/node": "20.19.1",
