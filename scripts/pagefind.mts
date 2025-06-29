@@ -1,5 +1,5 @@
 import { createIndex } from "pagefind";
-import { externalArticles } from "../app/_features/articles/data/externalArticles.js";
+import { externalArticles } from "../app/_features/articles/data/externalArticles";
 
 async function main() {
   const { index } = await createIndex({});
