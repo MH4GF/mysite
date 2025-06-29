@@ -36,7 +36,7 @@ export const useColorMode = () => {
     const isDarkMode = document.documentElement.classList.toggle("dark");
 
     if (isDarkMode === isSystemDarkMode) {
-      // biome-ignore lint/performance/noDelete: <explanation>
+      // biome-ignore lint/performance/noDelete: Intentionally deleting localStorage property to reset to system preference
       delete window.localStorage.isDarkMode;
     } else {
       window.localStorage.isDarkMode = isDarkMode;

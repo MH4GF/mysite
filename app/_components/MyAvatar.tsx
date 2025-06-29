@@ -1,7 +1,6 @@
-import Image from "next/image";
-
-import avatar from "@/public/images/avatar.jpeg";
 import { Root as VisuallyHiddenRoot } from "@radix-ui/react-visually-hidden";
+import Image from "next/image";
+import avatar from "@/public/images/avatar.jpeg";
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "./ui/dialog";
 
 export const MyAvatar = () => {

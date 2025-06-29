@@ -1,4 +1,4 @@
-import { Children, type ComponentProps, type ReactNode, isValidElement } from "react";
+import { Children, type ComponentProps, isValidElement, type ReactNode } from "react";
 import { z } from "zod";
 
 import { RichLinkCard } from "../../richLinkCard";

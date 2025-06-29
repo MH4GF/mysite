@@ -1,5 +1,8 @@
 "use client";
 
+import { PenLine, UserRound } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { GitHubIcon } from "@/app/_components";
 import {
   CommandDialog,
@@ -8,9 +11,6 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/app/_components/ui/command";
-import { PenLine, UserRound } from "lucide-react";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 import { CommandFooter } from "./CommandFooter";
 import { CommandProvider } from "./CommandProvider";
 import { CommandTrigger } from "./CommandTrigger";

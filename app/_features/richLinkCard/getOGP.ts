@@ -12,19 +12,19 @@ export const getOGP = async (url: string): Promise<OGPResult> => {
     throw new Error(`Failed to fetch: ${url}`);
   });
   const body = await response.text();
-  const $ = load(body);
+  const cheerio = load(body);
 
   const title =
-    $('meta[property="title"]').attr("content") ??
-    $('meta[property="og:title"]').attr("content") ??
-    $('meta[name="twitter:title"]').attr("content") ??
+    cheerio('meta[property="title"]').attr("content") ??
+    cheerio('meta[property="og:title"]').attr("content") ??
+    cheerio('meta[name="twitter:title"]').attr("content") ??
     "";
   const description =
-    $('meta[property="description"]').attr("content") ??
-    $('meta[property="og:description"]').attr("content") ??
-    $('meta[name="twitter:description"]').attr("content") ??
+    cheerio('meta[property="description"]').attr("content") ??
+    cheerio('meta[property="og:description"]').attr("content") ??
+    cheerio('meta[name="twitter:description"]').attr("content") ??
     "";
-  const imageSrc = $('meta[property="og:image"]').attr("content") ?? "";
+  const imageSrc = cheerio('meta[property="og:image"]').attr("content") ?? "";
 
   return { url, title, description, imageSrc };
 };

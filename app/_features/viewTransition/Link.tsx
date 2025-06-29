@@ -4,13 +4,13 @@
 
 import type { LinkProps as NextLinkProps } from "next/link";
 import NextLink from "next/link";
-import { type ComponentProps, type MouseEvent, forwardRef } from "react";
+import { type ComponentProps, forwardRef, type MouseEvent } from "react";
 
 import { useViewTransitionRouter } from "./useViewTransitionRouter";
 
 const isSamePage = (href: string) => href.startsWith("#");
 
-// biome-ignore lint/suspicious/noEmptyBlockStatements: 意図的に空としている
+// biome-ignore lint/suspicious/noEmptyBlockStatements: Required no-op function for fallback
 const noop = () => {};
 
 export type LinkProps = NextLinkProps & Omit<ComponentProps<"a">, keyof NextLinkProps>;

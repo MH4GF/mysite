@@ -1,9 +1,7 @@
+import { allAbouts, allArticles } from "contentlayer/generated";
 import type { MetadataRoute } from "next";
-
 import { tagList } from "./_features";
 import { baseUrl } from "./_utils";
-
-import { allAbouts, allArticles } from "contentlayer/generated";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths: MetadataRoute.Sitemap = [

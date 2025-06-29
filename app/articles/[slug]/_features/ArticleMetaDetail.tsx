@@ -1,18 +1,17 @@
+import type { Article } from "contentlayer/generated";
 import Image from "next/image";
-
+import type { FC } from "react";
 import { MyAvatar, Time } from "@/app/_components";
 import { format } from "@/app/_utils";
-import type { Article } from "contentlayer/generated";
-import type { FC } from "react";
 
 interface Props {
   article: Article;
 }
 
 export const ArticleMetaDetail: FC<Props> = ({
-  article: { headingImage, title, publishedAt: _publishedAt },
+  article: { headingImage, title, publishedAt: PublishedAt },
 }) => {
-  const publishedAt = format(new Date(_publishedAt));
+  const publishedAt = format(new Date(PublishedAt));
 
   return (
     <div className="text-center blur-enter-content">

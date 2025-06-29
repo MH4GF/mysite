@@ -2,23 +2,84 @@
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "extends": ["./node_modules/@mh4gf/configs/biome/index.jsonc"],
   "files": {
-    "ignore": [".contentlayer"]
+    "includes": ["**", "!**/.contentlayer"]
   },
   "linter": {
     "enabled": true,
     "rules": {
+      "security": {
+        "noBlankTarget": "error"
+      },
       "style": {
-        "noDefaultExport": "off"
+        "noDefaultExport": "off",
+        "noNamespace": "error",
+        "noNegationElse": "error",
+        "noParameterProperties": "error",
+        "noRestrictedGlobals": "error",
+        "noShoutyConstants": "error",
+        "noYodaExpression": "error",
+        "useArrayLiterals": "error",
+        "useBlockStatements": "error",
+        "useCollapsedElseIf": "error",
+        "useConsistentArrayType": "error",
+        "useConsistentBuiltinInstantiation": "error",
+        "useDefaultSwitchClause": "error",
+        "useExplicitLengthCheck": "error",
+        "useForOf": "error",
+        "useFragmentSyntax": "error",
+        "useNodeAssertStrict": "error",
+        "useShorthandAssign": "error",
+        "useThrowNewError": "error",
+        "useThrowOnlyError": "error"
       },
       "performance": {
         "noBarrelFile": "off",
-        "noReExportAll": "off"
+        "noReExportAll": "off",
+        "noDelete": "error"
       },
       "suspicious": {
-        "noReactSpecificProps": "off" // Because this rule is for non-React projects
+        "noReactSpecificProps": "off", // Because this rule is for non-React projects
+        "noEmptyBlockStatements": "error",
+        "noDuplicateTestHooks": "error",
+        "noEvolvingTypes": "error",
+        "noExportsInTest": "error",
+        "noFocusedTests": "error",
+        "noMisplacedAssertion": "error",
+        "noSkippedTests": "error",
+        "noVar": "error",
+        "noWith": "error",
+        "useAwait": "error",
+        "useErrorMessage": "error"
+      },
+      "complexity": {
+        "noVoid": "error",
+        "noAdjacentSpacesInRegex": "error",
+        "noArguments": "error",
+        "noCommaOperator": "error",
+        "noExcessiveCognitiveComplexity": "error",
+        "noExcessiveNestedTestSuites": "error",
+        "noFlatMapIdentity": "error",
+        "noForEach": "error",
+        "noUselessContinue": "error",
+        "noUselessStringConcat": "error",
+        "useLiteralKeys": "error",
+        "useNumericLiterals": "error",
+        "useSimplifiedLogicExpression": "error"
+      },
+      "nursery": {
+        "useExplicitType": "off" // Too verbose for this project
       },
       "correctness": {
-        "useImportExtensions": "off" // Because this project use Next.js (commonjs)
+        "useImportExtensions": "off", // Because this project use Next.js (commonjs)
+        "useExhaustiveDependencies": "error",
+        "noNodejsModules": "error",
+        "noInvalidBuiltinInstantiation": "error",
+        "noRenderReturnValue": "error",
+        "noUndeclaredDependencies": "error",
+        "noUndeclaredVariables": "error",
+        "useHookAtTopLevel": "error",
+        "useJsxKeyInIterable": "error",
+        "useValidTypeof": "error"
       }
     }
   },

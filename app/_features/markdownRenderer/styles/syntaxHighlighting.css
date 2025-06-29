@@ -10,11 +10,6 @@ figcaption[data-rehype-pretty-code-title] {
   background-color: var(--tw-prose-pre-bg);
 }
 
-figure[data-rehype-pretty-code-figure] > figcaption[data-rehype-pretty-code-title] + pre {
-  margin-top: 0;
-  border-top-left-radius: 0;
-}
-
 figure[data-rehype-pretty-code-figure] {
   pre {
     padding: 0;
@@ -58,4 +53,9 @@ figure[data-rehype-pretty-code-figure] {
     content: "+";
     color: #3dd68c;
   }
+}
+
+figure[data-rehype-pretty-code-figure] > figcaption[data-rehype-pretty-code-title] + pre {
+  margin-top: 0;
+  border-top-left-radius: 0;
 }

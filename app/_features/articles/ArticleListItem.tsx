@@ -14,11 +14,11 @@ export const ArticleListItem = ({
   title,
   href,
   externalLink,
-  publishedAt: _publishedAt,
+  publishedAt: PublishedAt,
   tags,
   currentTag,
 }: Props) => {
-  const publishedAt = format(_publishedAt);
+  const publishedAt = format(PublishedAt);
   const filteredTags = tags.filter((tag) => tag !== currentTag);
 
   return (

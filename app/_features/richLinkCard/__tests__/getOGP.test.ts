@@ -3,7 +3,7 @@ import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 
 import { getOGP } from "../getOGP";
 
-import { NO_DATA_URL, SAMPLE_URL, handlers } from "./handlers";
+import { handlers, NO_DATA_URL, SAMPLE_URL } from "./handlers";
 
 const server = setupServer(...handlers);
 

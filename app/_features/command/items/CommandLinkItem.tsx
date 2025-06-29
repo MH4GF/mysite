@@ -1,7 +1,7 @@
-import { CommandItem } from "@/app/_components/ui/command";
-import { UniversalLink, isSameOrigin } from "@/app/_features/viewTransition";
-import { useCallback, useRef } from "react";
 import type { ComponentProps } from "react";
+import { useCallback, useRef } from "react";
+import { CommandItem } from "@/app/_components/ui/command";
+import { isSameOrigin, UniversalLink } from "@/app/_features/viewTransition";
 import { useViewTransitionRouter } from "../../viewTransition/useViewTransitionRouter";
 import { useCommandContext } from "../CommandProvider";
 

@@ -1,2 +1,2 @@
-export { Paragraph } from "./Paragraph";
 export * from "./Blockquote";
+export { Paragraph } from "./Paragraph";

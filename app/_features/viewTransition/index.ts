@@ -1,2 +1,2 @@
-export * from "./UniversalLink";
 export * from "./isSameOrigin";
+export * from "./UniversalLink";

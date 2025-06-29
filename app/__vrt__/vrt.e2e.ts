@@ -1,4 +1,4 @@
-// biome-ignore lint/correctness/noNodejsModules: テストファイルのため
+// biome-ignore lint/correctness/noNodejsModules: Test file needs Node.js modules
 import fs from "node:fs";
 
 import { AxeBuilder } from "@axe-core/playwright";

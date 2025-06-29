@@ -1,5 +1,5 @@
-import { me } from "@/app/_utils";
 import type { FC } from "react";
+import { me } from "@/app/_utils";
 import { UniversalLink } from "../viewTransition";
 
 export const WorkExperienceList: FC = () => {

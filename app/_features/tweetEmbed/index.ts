@@ -1,2 +1,2 @@
-export { TwitterWidgets } from "./TwitterWidgets";
 export * from "./TweetEmbed";
+export { TwitterWidgets } from "./TwitterWidgets";

@@ -1,13 +1,12 @@
+import type { ComponentProps, JSX } from "react";
 import { Link } from "@/app/_features/viewTransition/Link";
 import { cn } from "@/app/_utils/cn";
+import { UniversalLink } from "../viewTransition";
 import { ArticleListItem } from "./ArticleListItem";
 import { tagLabelMap } from "./constants";
 import { getArticlesMeta } from "./getArticlesMeta";
-import { tagList } from "./type";
 import type { TagEnum } from "./type";
-
-import type { ComponentProps, JSX } from "react";
-import { UniversalLink } from "../viewTransition";
+import { tagList } from "./type";
 
 type TagChipProps = {
   href: string;
