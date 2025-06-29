@@ -5,7 +5,7 @@ import { useLayoutEffect, useRef } from "react";
 
 const safeStartViewTransition = (callback: () => Promise<void> | void) => {
   if (!document.startViewTransition) {
-    // biome-ignore lint/complexity/noVoid: Promiseの場合があるためvoidを返す
+    // biome-ignore lint/complexity/noVoid: Required to handle async callback properly
     return void callback();
   }
   document.startViewTransition(callback);
@@ -17,7 +17,7 @@ export const useViewTransitionRouter = (): ReturnType<typeof useRouter> => {
 
   const promiseCallbacks = useRef<Record<"resolve" | "reject", () => void> | null>(null);
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: pathnameの変更時に意図的に実行する
+  // biome-ignore lint/correctness/useExhaustiveDependencies: Only re-run on pathname changes for cleanup
   useLayoutEffect(() => {
     return () => {
       if (promiseCallbacks.current) {

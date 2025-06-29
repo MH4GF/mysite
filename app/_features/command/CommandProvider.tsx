@@ -6,7 +6,7 @@ type CommandContextValue = {
 };
 
 const CommandContext = createContext<CommandContextValue>({
-  // biome-ignore lint/suspicious/noEmptyBlockStatements: expected to be empty
+  // biome-ignore lint/suspicious/noEmptyBlockStatements: Default no-op function required for context
   onOpenChange: () => {},
 });
 

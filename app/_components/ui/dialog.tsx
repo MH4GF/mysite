@@ -1,8 +1,5 @@
 "use client";
 
-import { X } from "lucide-react";
-
-import { cn } from "@/app/_utils/cn";
 import {
   Close,
   Content,
@@ -13,8 +10,10 @@ import {
   Title,
   Trigger,
 } from "@radix-ui/react-dialog";
+import { X } from "lucide-react";
 import type { ComponentPropsWithoutRef, ElementRef, HTMLAttributes } from "react";
 import { forwardRef } from "react";
+import { cn } from "@/app/_utils/cn";
 
 const Dialog = Root;
 

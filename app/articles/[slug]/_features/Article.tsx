@@ -1,4 +1,4 @@
-import { MarkdownRenderer, UniversalLink, getArticle } from "@/app/_features";
+import { getArticle, MarkdownRenderer, UniversalLink } from "@/app/_features";
 import { ArticleMetaDetail } from "./ArticleMetaDetail";
 
 interface Props {

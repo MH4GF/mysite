@@ -1,5 +1,5 @@
-import { allAbouts, allArticles } from "@/.contentlayer/generated";
 import { NextResponse } from "next/server";
+import { allAbouts, allArticles } from "@/.contentlayer/generated";
 import { externalArticles } from "../_features/articles/data";
 import { compareDesc, me } from "../_utils";
 

@@ -1,9 +1,7 @@
+import { allAbouts } from "contentlayer/generated";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-
 import { Content } from "./_features";
-
-import { allAbouts } from "contentlayer/generated";
 
 interface Params {
   slug: string;

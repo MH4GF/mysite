@@ -1,8 +1,7 @@
-import { externalArticles } from "./data";
-import { type ArticleMeta, type TagEnum, articlesMetaSchema } from "./type";
-
-import { compareDesc } from "@/app/_utils";
 import { allArticles as internalArticles } from "contentlayer/generated";
+import { compareDesc } from "@/app/_utils";
+import { externalArticles } from "./data";
+import { type ArticleMeta, articlesMetaSchema, type TagEnum } from "./type";
 
 type Options = {
   tag?: TagEnum | undefined;

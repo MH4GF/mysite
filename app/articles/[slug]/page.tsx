@@ -1,10 +1,9 @@
+import { allArticles } from "contentlayer/generated";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { Article } from "./_features";
-
 import { getArticle } from "@/app/_features";
-import { allArticles } from "contentlayer/generated";
+import { Article } from "./_features";
 
 interface Params {
   slug: string;

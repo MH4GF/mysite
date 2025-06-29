@@ -1,18 +1,17 @@
-import { MarkdownRenderer } from "@/app/_features";
 import { allAbouts } from "contentlayer/generated";
-
 import type { JSX } from "react";
+import { MarkdownRenderer } from "@/app/_features";
 
 interface Props {
   slug: string;
   handleNotFound: () => void;
 }
 
-export const Content = ({ slug, handleNotFound }: Props): JSX.Element => {
+export const Content = ({ slug, handleNotFound }: Props): JSX.Element | null => {
   const about = allAbouts.find((about) => about.href === `/${slug}`);
   if (!about) {
     handleNotFound();
-    return <></>;
+    return null;
   }
 
   return (

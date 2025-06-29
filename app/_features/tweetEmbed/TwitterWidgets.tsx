@@ -7,7 +7,7 @@ import { useEffect } from "react";
 export const TwitterWidgets = () => {
   const pathname = usePathname();
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  // biome-ignore lint/correctness/useExhaustiveDependencies: Only re-run on pathname changes to reload Twitter widgets
   useEffect(() => {
     if (typeof window.twttr === "object") {
       window.twttr.widgets.load();

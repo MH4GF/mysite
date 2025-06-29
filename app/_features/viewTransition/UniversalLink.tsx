@@ -1,9 +1,9 @@
 import NextLink from "next/link";
 
 import { forwardRef } from "react";
+import { isSameOrigin } from "./isSameOrigin";
 import type { LinkProps } from "./Link";
 import { Link } from "./Link";
-import { isSameOrigin } from "./isSameOrigin";
 
 const animatedUnderline =
   "no-underline transition-colors duration-300 border-b border-solid border-zinc-200 hover:border-zinc-500 dark:border-zinc-700 dark:hover:border-zinc-500";
@@ -23,12 +23,12 @@ export const UniversalLink = forwardRef<HTMLAnchorElement, Props>(
       isExternal,
       isEnabledUnderline = false,
       isEnabledHoveredUnderline = false,
-      className: _className,
+      className: ClassName,
       ...props
     }: Props,
     ref,
   ) => {
-    const className = `${_className || ""} ${isEnabledUnderline ? animatedUnderline : isEnabledHoveredUnderline ? hoveredUnderline : ""}`;
+    const className = `${ClassName || ""} ${isEnabledUnderline ? animatedUnderline : isEnabledHoveredUnderline ? hoveredUnderline : ""}`;
 
     if (isExternal || !isSameOrigin(props.href)) {
       return (

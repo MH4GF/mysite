@@ -14,9 +14,9 @@ interface Props {
 export default async function Page(props: Props) {
   const params = await props.params;
 
-  const { tag: _tag } = params;
+  const { tag: Tag } = params;
 
-  const parsed = tagsSchema.safeParse(_tag);
+  const parsed = tagsSchema.safeParse(Tag);
   if (!parsed.success) {
     notFound();
   }

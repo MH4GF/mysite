@@ -1,8 +1,8 @@
-import { CommandEmpty, CommandGroup, CommandLoading } from "@/app/_components/ui/command";
 import { useCommandState } from "cmdk";
 import { ExternalLink, PenLine } from "lucide-react";
 import type { FC } from "react";
 import { useEffect, useState } from "react";
+import { CommandEmpty, CommandGroup, CommandLoading } from "@/app/_components/ui/command";
 import { CommandLinkItem } from "./CommandLinkItem";
 
 type Data = {
@@ -29,7 +29,7 @@ declare global {
   }
 }
 
-// biome-ignore lint/complexity/noVoid: <explanation>
+// biome-ignore lint/complexity/noVoid: Required to execute async IIFE for pagefind initialization
 void (async () => {
   if (typeof window !== "undefined" && typeof window.pagefind === "undefined") {
     try {
