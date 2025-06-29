@@ -23,7 +23,7 @@ importers:
         version: 1.2.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(types-react-dom@19.0.0)(types-react@19.0.0-rc.1)
       '@tailwindcss/typography':
         specifier: 0.5.16
-        version: 0.5.16(tailwindcss@4.1.10)
+        version: 0.5.16(tailwindcss@4.1.11)
       cheerio:
         specifier: 1.0.0
         version: 1.0.0
@@ -37,8 +37,8 @@ importers:
         specifier: 0.3.4
         version: 0.3.4(esbuild@0.24.0)
       lucide-react:
-        specifier: 0.522.0
-        version: 0.522.0(react@19.1.0)
+        specifier: 0.525.0
+        version: 0.525.0(react@19.1.0)
       next:
         specifier: 15.1.4
         version: 15.1.4(@opentelemetry/api@1.9.0)(@playwright/test@1.49.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -86,7 +86,7 @@ importers:
         version: 3.3.1
       tailwindcss-animate:
         specifier: 1.0.7
-        version: 1.0.7(tailwindcss@4.1.10)
+        version: 1.0.7(tailwindcss@4.1.11)
       unified:
         specifier: 11.0.5
         version: 11.0.5
@@ -173,8 +173,8 @@ importers:
         specifier: 0.2.1
         version: 0.2.1(esbuild@0.24.0)(typescript@5.8.3)
       tailwindcss:
-        specifier: 4.1.10
-        version: 4.1.10
+        specifier: 4.1.11
+        version: 4.1.11
       tsx:
         specifier: 4.20.3
         version: 4.20.3
@@ -3683,8 +3683,8 @@ packages:
     resolution: {integrity: sha512-Qv32eSV1RSCfhY3fpPE2GNZ8jgM9X7rdAfemLWqTUxwiyIC4jJ6Sy0fZ8H+oLWevO6i4/bizg7c8d8i6bxrzbA==}
     engines: {node: 20 || >=22}
 
-  lucide-react@0.522.0:
-    resolution: {integrity: sha512-jnJbw974yZ7rQHHEFKJOlWAefG3ATSCZHANZxIdx8Rk/16siuwjgA4fBULpXEAWx/RlTs3FzmKW/udWUuO0aRw==}
+  lucide-react@0.525.0:
+    resolution: {integrity: sha512-Tm1txJ2OkymCGkvwoHt33Y2JpN5xucVq1slHcgE6Lk0WjDfjgKWor5CdVER8U6DvcfMwh4M8XxmpTiyzfmfDYQ==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
@@ -4935,6 +4935,9 @@ packages:
 
   tailwindcss@4.1.10:
     resolution: {integrity: sha512-P3nr6WkvKV/ONsTzj6Gb57sWPMX29EPNPopo7+FcpkQaNsrNpZ1pv8QmrYI2RqEKD7mlGqLnGovlcYnBK0IqUA==}
+
+  tailwindcss@4.1.11:
+    resolution: {integrity: sha512-2E9TBm6MDD/xKYe+dvJZAmg3yxIEDNRc0jwlNyDg/4Fil2QcSLjFKGVff0lAf1jjeaArlG/M75Ey/EYr/OJtBA==}
 
   tapable@2.2.1:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
@@ -6919,13 +6922,13 @@ snapshots:
       postcss: 8.5.6
       tailwindcss: 4.1.10
 
-  '@tailwindcss/typography@0.5.16(tailwindcss@4.1.10)':
+  '@tailwindcss/typography@0.5.16(tailwindcss@4.1.11)':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 4.1.10
+      tailwindcss: 4.1.11
 
   '@tsconfig/next@2.0.3': {}
 
@@ -9226,7 +9229,7 @@ snapshots:
 
   lru-cache@11.0.0: {}
 
-  lucide-react@0.522.0(react@19.1.0):
+  lucide-react@0.525.0(react@19.1.0):
     dependencies:
       react: 19.1.0
 
@@ -11063,11 +11066,13 @@ snapshots:
 
   tailwind-merge@3.3.1: {}
 
-  tailwindcss-animate@1.0.7(tailwindcss@4.1.10):
+  tailwindcss-animate@1.0.7(tailwindcss@4.1.11):
     dependencies:
-      tailwindcss: 4.1.10
+      tailwindcss: 4.1.11
 
   tailwindcss@4.1.10: {}
+
+  tailwindcss@4.1.11: {}
 
   tapable@2.2.1: {}
 
