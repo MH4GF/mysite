@@ -91,8 +91,8 @@ importers:
         specifier: 11.0.5
         version: 11.0.5
       zod:
-        specifier: 3.25.67
-        version: 3.25.67
+        specifier: 3.25.69
+        version: 3.25.69
     devDependencies:
       '@axe-core/playwright':
         specifier: 4.10.1
@@ -5448,8 +5448,8 @@ packages:
   zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
-  zod@3.25.67:
-    resolution: {integrity: sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw==}
+  zod@3.25.69:
+    resolution: {integrity: sha512-cjUx+boz8dfYGssYKLGNTF5VUF6NETpcZCDTN3knhUUXQTAAvErzRhV3pgeCZm2YsL4HOwtEHPonlsshPu2I0A==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -5587,7 +5587,7 @@ snapshots:
       ts-pattern: 4.3.0
       unified: 10.1.2
       yaml: 2.4.5
-      zod: 3.25.67
+      zod: 3.25.69
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
       - esbuild
@@ -6341,8 +6341,8 @@ snapshots:
       express-rate-limit: 7.5.0(express@5.1.0)
       pkce-challenge: 5.0.0
       raw-body: 3.0.0
-      zod: 3.25.67
-      zod-to-json-schema: 3.24.5(zod@3.25.67)
+      zod: 3.25.69
+      zod-to-json-schema: 3.24.5(zod@3.25.69)
     transitivePeerDependencies:
       - supports-color
 
@@ -8144,7 +8144,7 @@ snapshots:
       minimatch: 3.1.2
       natural-compare: 1.4.0
       optionator: 0.9.4
-      zod: 3.25.67
+      zod: 3.25.69
     optionalDependencies:
       jiti: 2.4.2
     transitivePeerDependencies:
@@ -9103,8 +9103,8 @@ snapshots:
       smol-toml: 1.3.1
       strip-json-comments: 5.0.1
       typescript: 5.8.3
-      zod: 3.25.67
-      zod-validation-error: 3.4.0(zod@3.25.67)
+      zod: 3.25.69
+      zod-validation-error: 3.4.0(zod@3.25.69)
 
   lcid@3.1.1:
     dependencies:
@@ -11615,16 +11615,16 @@ snapshots:
 
   yoctocolors@2.1.1: {}
 
-  zod-to-json-schema@3.24.5(zod@3.25.67):
+  zod-to-json-schema@3.24.5(zod@3.25.69):
     dependencies:
-      zod: 3.25.67
+      zod: 3.25.69
 
-  zod-validation-error@3.4.0(zod@3.25.67):
+  zod-validation-error@3.4.0(zod@3.25.69):
     dependencies:
-      zod: 3.25.67
+      zod: 3.25.69
 
   zod@3.23.8: {}
 
-  zod@3.25.67: {}
+  zod@3.25.69: {}
 
   zwitch@2.0.4: {}
