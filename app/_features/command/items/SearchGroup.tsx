@@ -108,7 +108,7 @@ const useSearch = (query: string) => {
 };
 
 const SearchResultItems = () => {
-  const query = useCommandState((state) => state.search) as string;
+  const query = useCommandState((state) => state.search);
   const { results, isLoading } = useSearch(query);
 
   if (isLoading) {
