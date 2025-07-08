@@ -47,3 +47,6 @@ axe-html-report/
 public/search
 
 **/.claude/settings.local.json
+
+# Generated ESLint bundled config files
+eslint.config.bundled_*.mjs
