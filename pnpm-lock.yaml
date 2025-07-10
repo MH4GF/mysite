@@ -91,8 +91,8 @@ importers:
         specifier: 11.0.5
         version: 11.0.5
       zod:
-        specifier: 4.0.3
-        version: 4.0.3
+        specifier: 4.0.4
+        version: 4.0.4
     devDependencies:
       '@axe-core/playwright':
         specifier: 4.10.2
@@ -5434,8 +5434,8 @@ packages:
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
-  zod@4.0.3:
-    resolution: {integrity: sha512-V78FonTAxtGAyF2xR75x0YoW8uKXdQiusoPtzbT07vH3mZiGdTQN6INuivHyYT6M2V2YRFDEKIF4ylTJh54EXg==}
+  zod@4.0.4:
+    resolution: {integrity: sha512-i+8X+1VC5B3ufKpHJYkp1uACl34n8MA3PNXiayDGmKVqTmiKgqmxSayPQjsYvkGs+DitAMS7U1l4uG6AZYCJGA==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -11611,6 +11611,6 @@ snapshots:
 
   zod@3.25.76: {}
 
-  zod@4.0.3: {}
+  zod@4.0.4: {}
 
   zwitch@2.0.4: {}
