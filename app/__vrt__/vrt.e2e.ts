@@ -34,6 +34,7 @@ const maskFlakyElements = async (page: Page, selectors: string[]) => {
 };
 
 const testA11y = async (page: Page, testName: string) => {
+  // @ts-expect-error - PlaywrightのPage型とAxeBuilderの期待するPage型に競合があります
   const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
   const reportHtml = createHtmlReport({
     results: accessibilityScanResults,
