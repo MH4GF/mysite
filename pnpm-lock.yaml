@@ -143,8 +143,8 @@ importers:
         specifier: 2.2.11
         version: 2.2.11(axe-core@4.10.3)
       dependency-cruiser:
-        specifier: 16.10.1
-        version: 16.10.1
+        specifier: 16.10.4
+        version: 16.10.4
       eslint:
         specifier: 9.26.0
         version: 9.26.0(jiti@2.4.2)
@@ -1968,8 +1968,8 @@ packages:
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
 
-  acorn-loose@8.4.0:
-    resolution: {integrity: sha512-M0EUka6rb+QC4l9Z3T0nJEzNOO7JcoJlYMrBlyBCiFSXRyxjLKayd4TbQs2FDRWQU1h9FR7QVNHt+PEaoNL5rQ==}
+  acorn-loose@8.5.2:
+    resolution: {integrity: sha512-PPvV6g8UGMGgjrMu+n/f9E/tCSkNQ2Y97eFvuVdJfG11+xdIeDcLyNdC8SHcrHbRqkfwLASdplyR6B6sKM1U4A==}
     engines: {node: '>=0.4.0'}
 
   acorn-walk@8.3.4:
@@ -1983,6 +1983,11 @@ packages:
 
   acorn@8.14.1:
     resolution: {integrity: sha512-OvQ/2pUDKmgfCg++xsTX1wGxfTaszcHVcTctW4UJB4hibJx2HXxxO5UmVgyjMa+ZDsiaf5wWLXYpRWMmBI0QHg==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+
+  acorn@8.15.0:
+    resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -2454,8 +2459,8 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  dependency-cruiser@16.10.1:
-    resolution: {integrity: sha512-Uw8/emAfzD+Zcua6Hfg1wCnskJd2QSRGKw5tUWrCtA8PBSz+n/zfUYCTjFi9MwdiTA5oecN93FBvh9jJhTLs4A==}
+  dependency-cruiser@16.10.4:
+    resolution: {integrity: sha512-hrxVOjIm8idZ9ZVDGSyyG3SHiNcEUPhL6RTEmO/3wfQWLepH5pA3nuDMMrcJ1DkZztFA7xg3tk8OVO+MmwwH9w==}
     engines: {node: ^18.17||>=20}
     hasBin: true
 
@@ -2537,6 +2542,10 @@ packages:
 
   enhanced-resolve@5.18.1:
     resolution: {integrity: sha512-ZSW3ma5GkcQBIpwZTSRAI8N71Uuwgs93IezB7mf7R60tC8ZbJideoDNKjHn2O9KIlx6rkGTTEk1xUCK2E1Y2Yg==}
+    engines: {node: '>=10.13.0'}
+
+  enhanced-resolve@5.18.2:
+    resolution: {integrity: sha512-6Jw4sE1maoRJo3q8MsSIn2onJFbLTOjY9hlx4DZXmOKvLRd1Ok2kXmAGXaafL2+ijsJZ1ClYbl/pmqr9+k4iUQ==}
     engines: {node: '>=10.13.0'}
 
   enquirer@2.4.1:
@@ -3201,6 +3210,10 @@ packages:
 
   ignore@7.0.3:
     resolution: {integrity: sha512-bAH5jbK/F3T3Jls4I0SO1hmPR0dKU0a7+SY6n1yzRtG54FLO8d6w/nxLFX2Nb7dBu6cCWXPaAME6cYqFUMmuCA==}
+    engines: {node: '>= 4'}
+
+  ignore@7.0.5:
+    resolution: {integrity: sha512-Hs59xBNfUIunMFgWAbGX5cq6893IbWg4KnrjbYwX3tx0ztorVgTDA6B2sxf8ejHJ4wz8BqGUMYlnzNBer5NvGg==}
     engines: {node: '>= 4'}
 
   imagescript@1.3.0:
@@ -4685,6 +4698,11 @@ packages:
 
   semver@7.7.1:
     resolution: {integrity: sha512-hlq8tAfn0m/61p4BVRcPzIGr6LKiMwo4VM6dGi6pt4qcRkmNzTcWq6eCEjEh+qXjkMDvPlOFFSGwQjoEa6gyMA==}
+    engines: {node: '>=10'}
+    hasBin: true
+
+  semver@7.7.2:
+    resolution: {integrity: sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -7132,17 +7150,23 @@ snapshots:
     dependencies:
       acorn: 8.14.1
 
-  acorn-loose@8.4.0:
+  acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
-      acorn: 8.14.1
+      acorn: 8.15.0
+
+  acorn-loose@8.5.2:
+    dependencies:
+      acorn: 8.15.0
 
   acorn-walk@8.3.4:
     dependencies:
-      acorn: 8.14.1
+      acorn: 8.15.0
 
   acorn@8.14.0: {}
 
   acorn@8.14.1: {}
+
+  acorn@8.15.0: {}
 
   ajv@6.12.6:
     dependencies:
@@ -7662,17 +7686,17 @@ snapshots:
 
   depd@2.0.0: {}
 
-  dependency-cruiser@16.10.1:
+  dependency-cruiser@16.10.4:
     dependencies:
-      acorn: 8.14.1
-      acorn-jsx: 5.3.2(acorn@8.14.1)
+      acorn: 8.15.0
+      acorn-jsx: 5.3.2(acorn@8.15.0)
       acorn-jsx-walk: 2.0.0
-      acorn-loose: 8.4.0
+      acorn-loose: 8.5.2
       acorn-walk: 8.3.4
       ajv: 8.17.1
       commander: 13.1.0
-      enhanced-resolve: 5.18.1
-      ignore: 7.0.3
+      enhanced-resolve: 5.18.2
+      ignore: 7.0.5
       interpret: 3.1.1
       is-installed-globally: 1.0.0
       json5: 2.2.3
@@ -7682,7 +7706,7 @@ snapshots:
       prompts: 2.4.2
       rechoir: 0.8.0
       safe-regex: 2.1.1
-      semver: 7.7.1
+      semver: 7.7.2
       teamcity-service-messages: 0.1.14
       tsconfig-paths-webpack-plugin: 4.2.0
       watskeburt: 4.2.3
@@ -7756,6 +7780,11 @@ snapshots:
       whatwg-encoding: 3.1.1
 
   enhanced-resolve@5.18.1:
+    dependencies:
+      graceful-fs: 4.2.11
+      tapable: 2.2.1
+
+  enhanced-resolve@5.18.2:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.2.1
@@ -8778,6 +8807,8 @@ snapshots:
   ignore@5.3.2: {}
 
   ignore@7.0.3: {}
+
+  ignore@7.0.5: {}
 
   imagescript@1.3.0: {}
 
@@ -10759,6 +10790,8 @@ snapshots:
 
   semver@7.7.1: {}
 
+  semver@7.7.2: {}
+
   send@1.2.0:
     dependencies:
       debug: 4.4.0
@@ -11136,7 +11169,7 @@ snapshots:
   tsconfig-paths-webpack-plugin@4.2.0:
     dependencies:
       chalk: 4.1.2
-      enhanced-resolve: 5.18.1
+      enhanced-resolve: 5.18.2
       tapable: 2.2.1
       tsconfig-paths: 4.2.0
 
