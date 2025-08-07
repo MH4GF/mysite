@@ -1,5 +1,6 @@
 import { getArticle, MarkdownRenderer, UniversalLink } from "@/app/_features";
 import { ArticleMetaDetail } from "./ArticleMetaDetail";
+import { CopyMarkdownButton } from "./CopyMarkdownButton";
 
 interface Props {
   slug: string;
@@ -30,3 +31,4 @@ export const Article = ({ slug, handleNotFound }: Props) => {
     </div>
   );
 };
+
