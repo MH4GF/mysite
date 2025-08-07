@@ -143,8 +143,8 @@ importers:
         specifier: 2.2.11
         version: 2.2.11(axe-core@4.10.3)
       dependency-cruiser:
-        specifier: 17.0.0
-        version: 17.0.0
+        specifier: 17.0.1
+        version: 17.0.1
       eslint:
         specifier: 9.32.0
         version: 9.32.0(jiti@2.4.2)
@@ -2417,8 +2417,8 @@ packages:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
     engines: {node: '>=0.4.0'}
 
-  dependency-cruiser@17.0.0:
-    resolution: {integrity: sha512-GlGBPwAoY3dUERyH2yNjEmZt3qDBj+R3ukcN7RJrgIsPrb5xfmjRs/XfzyMwvWMtG+3DPzlHPuaRuJUk0FA+bA==}
+  dependency-cruiser@17.0.1:
+    resolution: {integrity: sha512-4clZ8EPsOVoxGA8NMjaE95aJEO118Cd9D7gT5rysx5azij9cPiCSrnjYlZtV+90PFazlD2lZvjzBHkD1ZqGqlw==}
     engines: {node: ^20.12||^22||>=24}
     hasBin: true
 
@@ -4788,9 +4788,6 @@ packages:
   tar@7.4.3:
     resolution: {integrity: sha512-5S7Va8hKfV7W5U6g3aYxXmlPoZVAwUMy9AOKyF2fVuZa2UD3qZjg578OrLRt8PcNN1PleVaL/5/yYATNL0ICUw==}
     engines: {node: '>=18'}
-
-  teamcity-service-messages@0.1.14:
-    resolution: {integrity: sha512-29aQwaHqm8RMX74u2o/h1KbMLP89FjNiMxD9wbF2BbWOnbM+q+d1sCEC+MqCc4QW3NJykn77OMpTFw/xTHIc0w==}
 
   third-party-capital@1.0.20:
     resolution: {integrity: sha512-oB7yIimd8SuGptespDAZnNkzIz+NWaJCu2RMsbs4Wmp9zSDUM8Nhi3s2OOcqYuv3mN4hitXc8DVx+LyUmbUDiA==}
@@ -7444,7 +7441,7 @@ snapshots:
 
   delayed-stream@1.0.0: {}
 
-  dependency-cruiser@17.0.0:
+  dependency-cruiser@17.0.1:
     dependencies:
       acorn: 8.15.0
       acorn-jsx: 5.3.2(acorn@8.15.0)
@@ -7464,7 +7461,6 @@ snapshots:
       rechoir: 0.8.0
       safe-regex: 2.1.1
       semver: 7.7.2
-      teamcity-service-messages: 0.1.14
       tsconfig-paths-webpack-plugin: 4.2.0
       watskeburt: 4.2.3
 
@@ -10704,8 +10700,6 @@ snapshots:
       minizlib: 3.0.2
       mkdirp: 3.0.1
       yallist: 5.0.0
-
-  teamcity-service-messages@0.1.14: {}
 
   third-party-capital@1.0.20: {}
 
