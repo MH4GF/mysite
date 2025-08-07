@@ -84,7 +84,7 @@
     "unified": "11.0.5",
     "zod": "4.0.15"
   },
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.14.0",
   "pnpm": {
     "overrides": {
       "@types/react": "npm:types-react@19.0.0-rc.1",
