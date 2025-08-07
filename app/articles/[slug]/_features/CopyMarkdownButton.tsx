@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { CopyIcon } from "@/app/_components";
-import { cn } from "@/app/_utils";
+import { cn } from "@/app/_utils/cn";
 
 interface Props {
   markdownContent: string;
@@ -63,3 +63,4 @@ export const CopyMarkdownButton = ({ markdownContent }: Props) => {
     </button>
   );
 };
+
