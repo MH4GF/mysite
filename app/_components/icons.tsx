@@ -26,3 +26,17 @@ export const GitHubIcon: IconComponent = (props) => {
     </svg>
   );
 };
+
+export const CopyIcon: IconComponent = (props) => {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <title>Copy</title>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2V5zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1v2zm-4 2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1H5z"
+      />
+    </svg>
+  );
+};
+
