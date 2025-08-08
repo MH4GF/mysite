@@ -41,7 +41,7 @@
     "@types/rss": "0.0.32",
     "axe-html-reporter": "2.2.11",
     "dependency-cruiser": "17.0.1",
-    "eslint": "9.32.0",
+    "eslint": "9.33.0",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "5.2.0",
     "knip": "5.53.0",
