@@ -29,7 +29,7 @@
     "@markuplint/jsx-parser": "4.7.19",
     "@markuplint/react-spec": "4.5.19",
     "@mh4gf/configs": "0.5.0",
-    "@mh4gf/eslint-config": "0.6.8",
+    "@mh4gf/eslint-config": "0.6.12",
     "@next/eslint-plugin-next": "15.4.6",
     "@playwright/test": "1.54.2",
     "@tailwindcss/postcss": "4.1.11",
