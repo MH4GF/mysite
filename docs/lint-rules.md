@@ -396,7 +396,6 @@ Rules in this category enforce TypeScript-specific best practices and type safet
 | [`await-thenable`](https://typescript-eslint.io/rules/await-thenable) | Disallow awaiting a value that is not a Thenable |  |
 | [`ban-ts-comment`](https://typescript-eslint.io/rules/ban-ts-comment) | Disallow `@ts-<directive>` comments or require descriptions after directives | {"minimumDescriptionLength":10} |
 | [`consistent-type-imports`](https://typescript-eslint.io/rules/consistent-type-imports) | Enforce consistent usage of type imports | [] |
-| [`naming-convention`](https://typescript-eslint.io/rules/naming-convention) | Enforce naming conventions for everything across a codebase | [{"selector":"default","format":["camelCase","PascalCase","UPPER_CASE"],"leadingUnderscore":"allowSingleOrDouble"},{"selector":"parameter","format":["camelCase","PascalCase"],"leadingUnderscore":"allow"},{"selector":"typeLike","format":["PascalCase"]},{"selector":["classProperty","objectLiteralProperty","typeProperty","objectLiteralMethod"],"format":null}] |
 | [`no-array-constructor`](https://typescript-eslint.io/rules/no-array-constructor) | Disallow generic `Array` constructors |  |
 | [`no-array-delete`](https://typescript-eslint.io/rules/no-array-delete) | Disallow using the `delete` operator on array values |  |
 | [`no-base-to-string`](https://typescript-eslint.io/rules/no-base-to-string) | Require `.toString()` and `.toLocaleString()` to only be called on objects which provide useful information when stringified |  |
@@ -409,7 +408,7 @@ Rules in this category enforce TypeScript-specific best practices and type safet
 | [`no-extraneous-class`](https://typescript-eslint.io/rules/no-extraneous-class) | Disallow classes used as namespaces |  |
 | [`no-floating-promises`](https://typescript-eslint.io/rules/no-floating-promises) | Require Promise-like statements to be handled appropriately |  |
 | [`no-for-in-array`](https://typescript-eslint.io/rules/no-for-in-array) | Disallow iterating over an array with a for-in loop |  |
-| [`no-implied-eval`](https://typescript-eslint.io/rules/no-implied-eval) | Disallow the use of `eval()`-like methods |  |
+| [`no-implied-eval`](https://typescript-eslint.io/rules/no-implied-eval) | Disallow the use of `eval()`-like functions |  |
 | [`no-invalid-void-type`](https://typescript-eslint.io/rules/no-invalid-void-type) | Disallow `void` type outside of generic or return types |  |
 | [`no-misused-new`](https://typescript-eslint.io/rules/no-misused-new) | Enforce valid definition of `new` and `constructor` |  |
 | [`no-misused-promises`](https://typescript-eslint.io/rules/no-misused-promises) | Disallow Promises in places not designed to handle them |  |
@@ -494,30 +493,12 @@ Core ESLint rules that apply to JavaScript code.
 | `no-useless-catch` | ESLint rule: no-useless-catch |  |
 | `no-useless-escape` | ESLint rule: no-useless-escape |  |
 | `no-var` | ESLint rule: no-var |  |
-| `no-with` | ESLint rule: no-with |  |
 | `prefer-const` | ESLint rule: prefer-const |  |
 | `prefer-rest-params` | ESLint rule: prefer-rest-params |  |
 | `prefer-spread` | ESLint rule: prefer-spread |  |
 | `require-yield` | ESLint rule: require-yield |  |
 | `use-isnan` | ESLint rule: use-isnan |  |
 | `valid-typeof` | ESLint rule: valid-typeof |  |
-
----
-
-### import
-
-Rules provided from the import plugin.
-
-| Rule | Description | Options |
-| ---- | ----------- | ------- |
-| [`default`](https://github.com/import-js/eslint-plugin-import/blob/v2.31.0/docs/rules/default.md) | Ensure a default export is present, given a default import. |  |
-| [`export`](https://github.com/import-js/eslint-plugin-import/blob/v2.31.0/docs/rules/export.md) | Forbid any invalid exports, i.e. re-export of the same name. |  |
-| [`named`](https://github.com/import-js/eslint-plugin-import/blob/v2.31.0/docs/rules/named.md) | Ensure named imports correspond to a named export in the remote file. |  |
-| [`namespace`](https://github.com/import-js/eslint-plugin-import/blob/v2.31.0/docs/rules/namespace.md) | Ensure imported namespaces contain dereferenced properties as they are dereferenced. |  |
-| [`no-duplicates`](https://github.com/import-js/eslint-plugin-import/blob/v2.31.0/docs/rules/no-duplicates.md) | Forbid repeated import of the same module in multiple places. |  |
-| [`no-named-as-default`](https://github.com/import-js/eslint-plugin-import/blob/v2.31.0/docs/rules/no-named-as-default.md) | Forbid use of exported name as identifier of default export. |  |
-| [`no-named-as-default-member`](https://github.com/import-js/eslint-plugin-import/blob/v2.31.0/docs/rules/no-named-as-default-member.md) | Forbid use of exported name as property of default export. |  |
-| [`no-unresolved`](https://github.com/import-js/eslint-plugin-import/blob/v2.31.0/docs/rules/no-unresolved.md) | Ensure imports point to a file/module that can be resolved. |  |
 
 ---
 
