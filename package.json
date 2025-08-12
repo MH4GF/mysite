@@ -8,6 +8,7 @@
     "lint:tsc": "tsc",
     "lint:markuplint": "markuplint --problem-only \"**/*.tsx\"",
     "lint:knip": "knip",
+    "lint:lockfile": "pnpm install --frozen-lockfile",
     "lint:rulens": "rulens lint",
     "lint": "pnpm run '/^lint:.*/'",
     "fmt:biome-check": "biome check . --write --unsafe",
