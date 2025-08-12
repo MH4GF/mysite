@@ -1,5 +1,5 @@
 {
-  "entry": [".markuplintrc.ts", ".dependency-cruiser.js", "contentlayer.config.ts"],
+  "entry": [".markuplintrc.ts", "contentlayer.config.ts"],
   "ignore": [
     "app/_features/command/items/SearchGroup.tsx" // NOTE: Ignore importing pagefind js file
   ],
