@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "@next/third-parties": "15.4.6",
-    "@radix-ui/react-dialog": "1.1.14",
+    "@radix-ui/react-dialog": "1.1.15",
     "@radix-ui/react-visually-hidden": "1.2.3",
     "@tailwindcss/typography": "0.5.16",
     "cheerio": "1.1.2",
