@@ -104,8 +104,8 @@ importers:
         specifier: 4.7.21
         version: 4.7.21(typescript@5.9.2)
       '@markuplint/react-spec':
-        specifier: 4.5.20
-        version: 4.5.20
+        specifier: 4.5.21
+        version: 4.5.21
       '@mh4gf/configs':
         specifier: 0.5.0
         version: 0.5.0(@tsconfig/strictest@2.0.5)
@@ -1084,8 +1084,8 @@ packages:
   '@markuplint/parser-utils@4.8.9':
     resolution: {integrity: sha512-oaP3vGkgiSaXqzMlswpEbVUU4xgpaUOVBxnJZ+g2zhAVbkhX/gRXORBdv6SrzGAkBwvurp3FJ3LGP0NJZHoWUg==}
 
-  '@markuplint/react-spec@4.5.20':
-    resolution: {integrity: sha512-GmPV67my0Kp7HDt3DKRO0uDOUBJbyBZboAPrpWIaV0gxxqJBU/4VsmkIaIb7G4dyLgFUa+LghWNp1zilHnGl1w==}
+  '@markuplint/react-spec@4.5.21':
+    resolution: {integrity: sha512-DF/o9c6Fs9mGUbQG2KxOtucJfot0wvsB/bwrihQ/RYrNfaLpTI4cpbKMfFKEL8xT33v8JBijjICrtlJOTjFYzw==}
 
   '@markuplint/rules@4.11.0':
     resolution: {integrity: sha512-lH27+XmfWzDpXe+F6qUfuuk8+HMcPkyl0W/81SRv1ac2Gs7e1aji0uId9q4v5+JPcMJP7Jra4UrVx06qCGoncg==}
@@ -6357,9 +6357,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@markuplint/react-spec@4.5.20':
+  '@markuplint/react-spec@4.5.21':
     dependencies:
-      '@markuplint/ml-spec': 4.9.7
+      '@markuplint/ml-spec': 4.10.0
     transitivePeerDependencies:
       - supports-color
 
