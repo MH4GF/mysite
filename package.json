@@ -45,7 +45,7 @@
     "eslint": "9.34.0",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "5.2.0",
-    "knip": "5.63.0",
+    "knip": "5.63.1",
     "lost-pixel": "3.22.0",
     "markuplint": "4.13.1",
     "msw": "2.11.1",
