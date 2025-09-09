@@ -37,8 +37,8 @@ importers:
         specifier: 0.3.4
         version: 0.3.4(esbuild@0.25.0)
       lucide-react:
-        specifier: 0.542.0
-        version: 0.542.0(react@19.1.1)
+        specifier: 0.543.0
+        version: 0.543.0(react@19.1.1)
       next:
         specifier: 15.5.2
         version: 15.5.2(@opentelemetry/api@1.9.0)(@playwright/test@1.54.2)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -3829,8 +3829,8 @@ packages:
     resolution: {integrity: sha512-Qv32eSV1RSCfhY3fpPE2GNZ8jgM9X7rdAfemLWqTUxwiyIC4jJ6Sy0fZ8H+oLWevO6i4/bizg7c8d8i6bxrzbA==}
     engines: {node: 20 || >=22}
 
-  lucide-react@0.542.0:
-    resolution: {integrity: sha512-w3hD8/SQB7+lzU2r4VdFyzzOzKnUjTZIF/MQJGSSvni7Llewni4vuViRppfRAa2guOsY5k4jZyxw/i9DQHv+dw==}
+  lucide-react@0.543.0:
+    resolution: {integrity: sha512-fpVfuOQO0V3HBaOA1stIiP/A2fPCXHIleRZL16Mx3HmjTYwNSbimhnFBygs2CAfU1geexMX5ItUcWBGUaqw5CA==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
@@ -9338,7 +9338,7 @@ snapshots:
 
   lru-cache@11.0.0: {}
 
-  lucide-react@0.542.0(react@19.1.1):
+  lucide-react@0.543.0(react@19.1.1):
     dependencies:
       react: 19.1.1
 
