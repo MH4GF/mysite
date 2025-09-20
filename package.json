@@ -84,7 +84,7 @@
     "tailwind-merge": "3.3.1",
     "tailwindcss-animate": "1.0.7",
     "unified": "11.0.5",
-    "zod": "4.1.9"
+    "zod": "4.1.11"
   },
   "packageManager": "pnpm@10.17.0",
   "pnpm": {
