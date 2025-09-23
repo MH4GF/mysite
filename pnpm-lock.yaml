@@ -108,7 +108,7 @@ importers:
         version: 4.5.21
       '@mh4gf/configs':
         specifier: 0.5.0
-        version: 0.5.0(@tsconfig/strictest@2.0.5)
+        version: 0.5.0(@tsconfig/strictest@2.0.6)
       '@mh4gf/eslint-config':
         specifier: 0.6.12
         version: 0.6.12(@typescript-eslint/eslint-plugin@8.31.1(@typescript-eslint/parser@8.31.1(eslint@9.36.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.36.0(jiti@2.5.1))(typescript@5.9.2))(@typescript-eslint/utils@8.31.1(eslint@9.36.0(jiti@2.5.1))(typescript@5.9.2))(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.36.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.36.0(jiti@2.5.1)))(eslint@9.36.0(jiti@2.5.1))(typescript@5.9.2)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@22.18.6)(lightningcss@1.30.1)(msw@2.11.3(@types/node@22.18.6)(typescript@5.9.2)))
@@ -125,8 +125,8 @@ importers:
         specifier: 2.0.3
         version: 2.0.3
       '@tsconfig/strictest':
-        specifier: 2.0.5
-        version: 2.0.5
+        specifier: 2.0.6
+        version: 2.0.6
       '@types/node':
         specifier: 22.18.6
         version: 22.18.6
@@ -1904,8 +1904,8 @@ packages:
   '@tsconfig/node16@1.0.4':
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
 
-  '@tsconfig/strictest@2.0.5':
-    resolution: {integrity: sha512-ec4tjL2Rr0pkZ5hww65c+EEPYwxOi4Ryv+0MtjeaSQRJyq322Q27eOQiFbuNgw2hpL4hB1/W/HBGk3VKS43osg==}
+  '@tsconfig/strictest@2.0.6':
+    resolution: {integrity: sha512-tPOhmDhIUcDjvpDDYyiUdssP84Eqm7n5KxJe5J3/g+s6xoDIPAf+SIn06dhw7VkhxIvLOnhDDrX7tsqMHNEhDg==}
 
   '@tybys/wasm-util@0.10.0':
     resolution: {integrity: sha512-VyyPYFlOMNylG45GoAe0xDoLwWuowvf92F9kySqzYh8vmYm7D2u4iUJKa1tOUpS70Ku13ASrOkS4ScXFsTaCNQ==}
@@ -6418,9 +6418,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@mh4gf/configs@0.5.0(@tsconfig/strictest@2.0.5)':
+  '@mh4gf/configs@0.5.0(@tsconfig/strictest@2.0.6)':
     dependencies:
-      '@tsconfig/strictest': 2.0.5
+      '@tsconfig/strictest': 2.0.6
 
   '@mh4gf/eslint-config@0.6.12(@typescript-eslint/eslint-plugin@8.31.1(@typescript-eslint/parser@8.31.1(eslint@9.36.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.36.0(jiti@2.5.1))(typescript@5.9.2))(@typescript-eslint/utils@8.31.1(eslint@9.36.0(jiti@2.5.1))(typescript@5.9.2))(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.31.1(eslint@9.36.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.36.0(jiti@2.5.1)))(eslint@9.36.0(jiti@2.5.1))(typescript@5.9.2)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@22.18.6)(lightningcss@1.30.1)(msw@2.11.3(@types/node@22.18.6)(typescript@5.9.2)))':
     dependencies:
@@ -7071,7 +7071,7 @@ snapshots:
 
   '@tsconfig/node16@1.0.4': {}
 
-  '@tsconfig/strictest@2.0.5': {}
+  '@tsconfig/strictest@2.0.6': {}
 
   '@tybys/wasm-util@0.10.0':
     dependencies:
