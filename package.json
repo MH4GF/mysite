@@ -44,7 +44,7 @@
     "dependency-cruiser": "17.1.0",
     "eslint": "9.38.0",
     "eslint-plugin-react": "7.37.5",
-    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-react-hooks": "7.0.0",
     "knip": "5.66.0",
     "lost-pixel": "3.22.0",
     "markuplint": "4.13.1",
