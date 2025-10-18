@@ -41,7 +41,7 @@
     "@types/react-dom": "npm:types-react-dom@19.0.0",
     "@types/rss": "0.0.32",
     "axe-html-reporter": "2.2.11",
-    "dependency-cruiser": "17.0.2",
+    "dependency-cruiser": "17.1.0",
     "eslint": "9.37.0",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "5.2.0",
