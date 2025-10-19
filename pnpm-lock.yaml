@@ -155,8 +155,8 @@ importers:
         specifier: 5.2.0
         version: 5.2.0(eslint@9.38.0(jiti@2.6.0))
       knip:
-        specifier: 5.66.0
-        version: 5.66.0(@types/node@22.18.11)(typescript@5.9.3)
+        specifier: 5.66.1
+        version: 5.66.1(@types/node@22.18.11)(typescript@5.9.3)
       lost-pixel:
         specifier: 3.22.0
         version: 3.22.0(@types/node@22.18.11)(playwright-core@1.54.2)(typescript@5.9.3)
@@ -3675,8 +3675,8 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
-  knip@5.66.0:
-    resolution: {integrity: sha512-b1IR8sEgeywrnzhl0ePDM6euAjrC3Jefdpg6EpUc2z+WSYO0UChGQhftZIbnSNTeqYi//7/5vh+lLAxwO1AoVQ==}
+  knip@5.66.1:
+    resolution: {integrity: sha512-Ad3VUPIk9GZYovKuwKtGMheupek7IoPGaDEBAvnCYLKJXnwmqNLyXqMp+l5r3OOpFVjF7DdkFIZFVrXESDNylQ==}
     engines: {node: '>=18.18.0'}
     hasBin: true
     peerDependencies:
@@ -9169,7 +9169,7 @@ snapshots:
 
   kleur@4.1.5: {}
 
-  knip@5.66.0(@types/node@22.18.11)(typescript@5.9.3):
+  knip@5.66.1(@types/node@22.18.11)(typescript@5.9.3):
     dependencies:
       '@nodelib/fs.walk': 1.2.8
       '@types/node': 22.18.11
