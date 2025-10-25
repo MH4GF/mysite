@@ -25,7 +25,7 @@
     "test:vitest": "vitest run"
   },
   "devDependencies": {
-    "@axe-core/playwright": "4.10.2",
+    "@axe-core/playwright": "4.11.0",
     "@biomejs/biome": "2.1.4",
     "@markuplint/jsx-parser": "4.7.21",
     "@markuplint/react-spec": "4.5.21",
