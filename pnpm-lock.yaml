@@ -104,8 +104,8 @@ importers:
         specifier: 4.7.22
         version: 4.7.22(typescript@5.9.3)
       '@markuplint/react-spec':
-        specifier: 4.5.21
-        version: 4.5.21
+        specifier: 4.5.22
+        version: 4.5.22
       '@mh4gf/configs':
         specifier: 0.5.0
         version: 0.5.0(@tsconfig/strictest@2.0.6)
@@ -1094,8 +1094,8 @@ packages:
   '@markuplint/parser-utils@4.8.9':
     resolution: {integrity: sha512-oaP3vGkgiSaXqzMlswpEbVUU4xgpaUOVBxnJZ+g2zhAVbkhX/gRXORBdv6SrzGAkBwvurp3FJ3LGP0NJZHoWUg==}
 
-  '@markuplint/react-spec@4.5.21':
-    resolution: {integrity: sha512-DF/o9c6Fs9mGUbQG2KxOtucJfot0wvsB/bwrihQ/RYrNfaLpTI4cpbKMfFKEL8xT33v8JBijjICrtlJOTjFYzw==}
+  '@markuplint/react-spec@4.5.22':
+    resolution: {integrity: sha512-W5ZZO0PSZJS73SOJ3vPNwwJxr0SA4HSDiRXfCTux2Go9axgVUYy5rDL9Yz6SNDf8dO0O/9D+NPziG2aZQm7icA==}
 
   '@markuplint/rules@4.11.1':
     resolution: {integrity: sha512-o4sp0KnL0Frkvi2dFymUkzx1zs0DE6tN1JYyCUA9ZJOPNjwHDbpc8OxGPPU+tPbRFEmlOpFxK3SMty6Fu94zCQ==}
@@ -5737,7 +5737,7 @@ snapshots:
   '@esbuild-plugins/node-resolve@0.1.4(esbuild@0.25.0)':
     dependencies:
       '@types/resolve': 1.20.6
-      debug: 4.4.1
+      debug: 4.4.3
       esbuild: 0.25.0
       escape-string-regexp: 4.0.0
       resolve: 1.22.8
@@ -6348,9 +6348,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@markuplint/react-spec@4.5.21':
+  '@markuplint/react-spec@4.5.22':
     dependencies:
-      '@markuplint/ml-spec': 4.10.0
+      '@markuplint/ml-spec': 4.10.1
     transitivePeerDependencies:
       - supports-color
 
@@ -7238,7 +7238,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/typescript-estree': 8.31.1(typescript@5.9.3)
       '@typescript-eslint/utils': 8.31.1(eslint@9.38.0(jiti@2.6.1))(typescript@5.9.3)
-      debug: 4.4.1
+      debug: 4.4.3
       eslint: 9.38.0(jiti@2.6.1)
       ts-api-utils: 2.1.0(typescript@5.9.3)
       typescript: 5.9.3
@@ -7253,7 +7253,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.31.1
       '@typescript-eslint/visitor-keys': 8.31.1
-      debug: 4.4.1
+      debug: 4.4.3
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -10080,7 +10080,7 @@ snapshots:
   micromark@3.2.0:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.4.1
+      debug: 4.4.3
       decode-named-character-reference: 1.0.2
       micromark-core-commonmark: 1.1.0
       micromark-factory-space: 1.1.0
