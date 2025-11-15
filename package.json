@@ -81,7 +81,7 @@
     "remark-rehype": "11.1.2",
     "rss": "1.2.2",
     "shikiji-transformers": "0.10.2",
-    "tailwind-merge": "3.3.1",
+    "tailwind-merge": "3.4.0",
     "tailwindcss-animate": "1.0.7",
     "unified": "11.0.5",
     "zod": "4.1.12"
