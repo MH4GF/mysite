@@ -55,7 +55,7 @@
     "tailwindcss": "4.1.17",
     "tsx": "4.20.6",
     "typescript": "5.9.3",
-    "vitest": "3.2.4"
+    "vitest": "4.0.9"
   },
   "dependencies": {
     "@next/third-parties": "15.5.6",
