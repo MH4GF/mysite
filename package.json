@@ -4,7 +4,7 @@
   "scripts": {
     "lint:depcruise": "depcruise --config .dependency-cruiser.js .",
     "lint:biome": "biome check .",
-    "lint:next": "next lint",
+    "lint:next": "eslint .",
     "lint:tsc": "tsc",
     "lint:markuplint": "markuplint --problem-only \"**/*.tsx\"",
     "lint:knip": "knip",
