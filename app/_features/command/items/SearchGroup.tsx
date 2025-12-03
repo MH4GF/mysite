@@ -58,8 +58,11 @@ const useData = (result: Result) => {
 
   useEffect(() => {
     setIsLoading(true);
-    result.data().then(setData).catch(console.error);
-    setIsLoading(false);
+    result
+      .data()
+      .then(setData)
+      .catch(console.error)
+      .finally(() => setIsLoading(false));
   }, [result]);
 
   return { data, isLoading };
@@ -99,8 +102,10 @@ const useSearch = (query: string) => {
 
   useEffect(() => {
     setIsLoading(true);
-    search(query).then(setResults).catch(console.error);
-    setIsLoading(false);
+    search(query)
+      .then(setResults)
+      .catch(console.error)
+      .finally(() => setIsLoading(false));
   }, [query]);
 
   return { results, isLoading };
