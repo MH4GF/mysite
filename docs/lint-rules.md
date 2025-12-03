@@ -103,6 +103,7 @@ Rules in this category help maintain code that is easy to understand, modify, an
 | [`noExtraBooleanCast`](https://biomejs.dev/linter/rules/no-extra-boolean-cast) | Disallow unnecessary boolean casts |  |
 | `noFlatMapIdentity` | No description available |  |
 | [`noForEach`](https://biomejs.dev/linter/rules/no-for-each) | Prefer for\.\.\.of statement instead of Array\.forEach\. |  |
+| `noImportantStyles` | No description available |  |
 | [`noStaticOnlyClass`](https://biomejs.dev/linter/rules/no-static-only-class) | This rule reports when a class has no non\-static members, such as for a class used exclusively as a static namespace\. |  |
 | [`noThisInStatic`](https://biomejs.dev/linter/rules/no-this-in-static) | Disallow this and super in static contexts\. |  |
 | [`noUselessCatch`](https://biomejs.dev/linter/rules/no-useless-catch) | Disallow unnecessary catch clauses\. |  |
@@ -125,6 +126,7 @@ Rules in this category help maintain code that is easy to understand, modify, an
 | [`useArrowFunction`](https://biomejs.dev/linter/rules/use-arrow-function) | Use arrow functions over function expressions\. |  |
 | [`useDateNow`](https://biomejs.dev/linter/rules/use-date-now) | Use Date\.now\(\) to get the number of milliseconds since the Unix Epoch\. |  |
 | [`useFlatMap`](https://biomejs.dev/linter/rules/use-flat-map) | Promotes the use of \.flatMap\(\) when map\(\)\.flat\(\) are used together\. |  |
+| `useIndexOf` | No description available |  |
 | [`useLiteralKeys`](https://biomejs.dev/linter/rules/use-literal-keys) | Enforce the usage of a literal access to properties over computed property access\. |  |
 | `useNumericLiterals` | No description available |  |
 | [`useOptionalChain`](https://biomejs.dev/linter/rules/use-optional-chain) | Enforce using concise optional chain instead of chained logical expressions\. |  |
@@ -140,7 +142,6 @@ Rules in this category identify code that is likely to be incorrect or lead to b
 
 | Rule | Description | Options |
 | ---- | ----------- | ------- |
-| [`noChildrenProp`](https://biomejs.dev/linter/rules/no-children-prop) | Prevent passing of children as props\. |  |
 | [`noConstantCondition`](https://biomejs.dev/linter/rules/no-constant-condition) | Disallow constant expressions in conditions |  |
 | [`noConstantMathMinMaxClamp`](https://biomejs.dev/linter/rules/no-constant-math-min-max-clamp) | Disallow the use of Math\.min and Math\.max to clamp a value where the result itself is constant\. |  |
 | [`noConstAssign`](https://biomejs.dev/linter/rules/no-const-assign) | Prevents from having const variables being re\-assigned\. |  |
@@ -186,9 +187,11 @@ Rules in this category identify code that is likely to be incorrect or lead to b
 | [`noVoidElementsWithChildren`](https://biomejs.dev/linter/rules/no-void-elements-with-children) | This rules prevents void elements \(AKA self\-closing elements\) from having children\. |  |
 | [`noVoidTypeReturn`](https://biomejs.dev/linter/rules/no-void-type-return) | Disallow returning a value from a function with the return type ‘void’ |  |
 | [`useExhaustiveDependencies`](https://biomejs.dev/linter/rules/use-exhaustive-dependencies) | Enforce all dependencies are correctly specified in a React hook\. |  |
+| `useGraphqlNamedOperations` | No description available |  |
 | [`useHookAtTopLevel`](https://biomejs.dev/linter/rules/use-hook-at-top-level) | Enforce that all React hooks are being called from the Top Level component functions\. |  |
 | [`useIsNan`](https://biomejs.dev/linter/rules/use-is-nan) | Require calls to isNaN\(\) when checking for NaN\. |  |
 | [`useJsxKeyInIterable`](https://biomejs.dev/linter/rules/use-jsx-key-in-iterable) | Disallow missing key props in iterators/collection literals\. |  |
+| `useParseIntRadix` | No description available |  |
 | [`useValidForDirection`](https://biomejs.dev/linter/rules/use-valid-for-direction) | Enforce “for” loop update clause moving the counter in the right direction\. |  |
 | `useValidTypeof` | No description available |  |
 | [`useYield`](https://biomejs.dev/linter/rules/use-yield) | Require generator functions to contain yield\. |  |
@@ -214,8 +217,6 @@ Rules in this category identify security vulnerabilities that could be exploited
 | Rule | Description | Options |
 | ---- | ----------- | ------- |
 | `noBlankTarget` | No description available |  |
-| [`noDangerouslySetInnerHtml`](https://biomejs.dev/linter/rules/no-dangerously-set-inner-html/) | Prevent the usage of dangerous JSX props |  |
-| [`noDangerouslySetInnerHtmlWithChildren`](https://biomejs.dev/linter/rules/no-dangerously-set-inner-html-with-children) | Report when a DOM element or a component uses both children and dangerouslySetInnerHTML prop\. |  |
 | [`noGlobalEval`](https://biomejs.dev/linter/rules/no-global-eval) | Disallow the use of global eval\(\)\. |  |
 
 ---
@@ -278,9 +279,9 @@ Rules in this category identify potentially problematic code patterns.
 | Rule | Description | Options |
 | ---- | ----------- | ------- |
 | [`noApproximativeNumericConstant`](https://biomejs.dev/linter/rules/no-approximative-numeric-constant) | Use standard constants instead of approximated literals\. |  |
-| [`noArrayIndexKey`](https://biomejs.dev/linter/rules/no-array-index-key) | Discourage the usage of Array index in keys\. |  |
 | [`noAssignInExpressions`](https://biomejs.dev/linter/rules/no-assign-in-expressions) | Disallow assignments in expressions\. |  |
 | [`noAsyncPromiseExecutor`](https://biomejs.dev/linter/rules/no-async-promise-executor) | Disallows using an async function as a Promise executor\. |  |
+| `noBiomeFirstException` | No description available |  |
 | [`noCatchAssign`](https://biomejs.dev/linter/rules/no-catch-assign) | Disallow reassigning exceptions in catch clauses\. |  |
 | [`noClassAssign`](https://biomejs.dev/linter/rules/no-class-assign) | Disallow reassigning class members\. |  |
 | [`noCommentText`](https://biomejs.dev/linter/rules/no-comment-text) | Prevent comments from being inserted as text nodes |  |
@@ -327,8 +328,10 @@ Rules in this category identify potentially problematic code patterns.
 | [`noMisleadingInstantiator`](https://biomejs.dev/linter/rules/no-misleading-instantiator) | Enforce proper usage of new and constructor\. |  |
 | [`noMisplacedAssertion`](https://biomejs.dev/linter/rules/no-misplaced-assertion) | Checks that the assertion function, for example expect, is placed inside an it\(\) function call\. |  |
 | [`noMisrefactoredShorthandAssign`](https://biomejs.dev/linter/rules/no-misrefactored-shorthand-assign) | Disallow shorthand assign when variable appears on both sides\. |  |
+| `noNonNullAssertedOptionalChain` | No description available |  |
 | `noOctalEscape` | No description available |  |
 | [`noPrototypeBuiltins`](https://biomejs.dev/linter/rules/no-prototype-builtins) | Disallow direct use of Object\.prototype builtins\. |  |
+| `noQuickfixBiome` | No description available |  |
 | [`noRedeclare`](https://biomejs.dev/linter/rules/no-redeclare) | Disallow variable, function, class, and type redeclarations in the same scope\. |  |
 | [`noRedundantUseStrict`](https://biomejs.dev/linter/rules/no-redundant-use-strict) | Prevents from having redundant "use strict"\. |  |
 | [`noSelfCompare`](https://biomejs.dev/linter/rules/no-self-compare) | Disallow comparisons where both sides are exactly the same\. |  |
@@ -339,17 +342,23 @@ Rules in this category identify potentially problematic code patterns.
 | [`noSuspiciousSemicolonInJsx`](https://biomejs.dev/linter/rules/no-suspicious-semicolon-in-jsx) | It detects possible “wrong” semicolons inside JSX elements\. |  |
 | `noTemplateCurlyInString` | No description available |  |
 | [`noThenProperty`](https://biomejs.dev/linter/rules/no-then-property) | Disallow then property\. |  |
+| `noTsIgnore` | No description available |  |
+| `noUnknownAtRules` | No description available |  |
 | [`noUnsafeDeclarationMerging`](https://biomejs.dev/linter/rules/no-unsafe-declaration-merging) | Disallow unsafe declaration merging between interfaces and classes\. |  |
 | [`noUnsafeNegation`](https://biomejs.dev/linter/rules/no-unsafe-negation) | Disallow using unsafe negation\. |  |
+| `noUselessEscapeInString` | No description available |  |
+| `noUselessRegexBackrefs` | No description available |  |
 | `noVar` | No description available |  |
 | `noWith` | No description available |  |
 | `useAdjacentOverloadSignatures` | No description available |  |
 | [`useAwait`](https://biomejs.dev/linter/rules/use-await) | Ensure async functions utilize await\. |  |
+| `useBiomeIgnoreFolder` | No description available |  |
 | [`useDefaultSwitchClauseLast`](https://biomejs.dev/linter/rules/use-default-switch-clause-last) | Enforce default clauses in switch statements to be last |  |
 | [`useErrorMessage`](https://biomejs.dev/linter/rules/use-error-message) | Enforce passing a message value when creating a built\-in error\. |  |
 | [`useGetterReturn`](https://biomejs.dev/linter/rules/use-getter-return) | Enforce get methods to always return a value\. |  |
 | `useGoogleFontDisplay` | No description available |  |
 | [`useIsArray`](https://biomejs.dev/linter/rules/use-is-array) | Use Array\.isArray\(\) instead of instanceof Array\. |  |
+| `useIterableCallbackReturn` | No description available |  |
 | [`useNamespaceKeyword`](https://biomejs.dev/linter/rules/use-namespace-keyword) | Require using the namespace keyword over the module keyword to declare TypeScript namespaces\. |  |
 
 
