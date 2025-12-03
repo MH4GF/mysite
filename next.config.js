@@ -6,9 +6,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
     remotePatterns: [
       {
@@ -21,6 +18,7 @@ const nextConfig = {
       },
     ],
   },
+  turbopack: {},
 };
 
 module.exports = withContentlayer(nextConfig);
