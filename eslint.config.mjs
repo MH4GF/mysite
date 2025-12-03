@@ -28,4 +28,19 @@ export default [
       },
     },
   },
+  {
+    ignores: [
+      "node_modules/**",
+      ".next/**",
+      "out/**",
+      "build/**",
+      "next-env.d.ts",
+      ".contentlayer/**",
+      "public/search/**",
+      "*.config.js",
+      "*.config.mjs",
+      ".dependency-cruiser.js",
+      ".markuplintrc.ts",
+    ],
+  },
 ];
