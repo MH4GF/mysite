@@ -522,8 +522,23 @@ Rules provided from the react-hooks plugin.
 
 | Rule | Description | Options |
 | ---- | ----------- | ------- |
+| `component-hook-factories` | Validates against higher order functions defining nested components or hooks. Components and hooks should be defined at the module level |  |
+| `config` | Validates the compiler configuration options |  |
+| `error-boundaries` | Validates usage of error boundaries instead of try/catch for errors in child components |  |
 | [`exhaustive-deps`](https://github.com/facebook/react/issues/14920) | verifies the list of dependencies for Hooks like useEffect and similar |  |
-| [`rules-of-hooks`](https://reactjs.org/docs/hooks-rules.html) | enforces the Rules of Hooks |  |
+| `gating` | Validates configuration of [gating mode](https://react.dev/reference/react-compiler/gating) |  |
+| `globals` | Validates against assignment/mutation of globals during render, part of ensuring that [side effects must render outside of render](https://react.dev/reference/rules/components-and-hooks-must-be-pure#side-effects-must-run-outside-of-render) |  |
+| `immutability` | Validates against mutating props, state, and other values that [are immutable](https://react.dev/reference/rules/components-and-hooks-must-be-pure#props-and-state-are-immutable) |  |
+| `incompatible-library` | Validates against usage of libraries which are incompatible with memoization (manual or automatic) |  |
+| `preserve-manual-memoization` | Validates that existing manual memoized is preserved by the compiler. React Compiler will only compile components and hooks if its inference [matches or exceeds the existing manual memoization](https://react.dev/learn/react-compiler/introduction#what-should-i-do-about-usememo-usecallback-and-reactmemo) |  |
+| `purity` | Validates that [components/hooks are pure](https://react.dev/reference/rules/components-and-hooks-must-be-pure) by checking that they do not call known-impure functions |  |
+| `refs` | Validates correct usage of refs, not reading/writing during render. See the "pitfalls" section in [`useRef()` usage](https://react.dev/reference/react/useRef#usage) |  |
+| [`rules-of-hooks`](https://react.dev/reference/rules/rules-of-hooks) | enforces the Rules of Hooks |  |
+| `set-state-in-effect` | Validates against calling setState synchronously in an effect, which can lead to re-renders that degrade performance |  |
+| `set-state-in-render` | Validates against setting state during render, which can trigger additional renders and potential infinite render loops |  |
+| `static-components` | Validates that components are static, not recreated every render. Components that are recreated dynamically can reset state and trigger excessive re-rendering |  |
+| `unsupported-syntax` | Validates against syntax that we do not plan to support in React Compiler |  |
+| `use-memo` | Validates usage of the useMemo() hook against common mistakes. See [`useMemo()` docs](https://react.dev/reference/react/useMemo) for more information. |  |
 
 ---
 
