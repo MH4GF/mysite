@@ -88,5 +88,11 @@
       "semicolons": "always",
       "quoteStyle": "double"
     }
+  },
+  "css": {
+    "parser": {
+      "cssModules": false,
+      "tailwindDirectives": true
+    }
   }
 }

@@ -34,7 +34,6 @@ const modeScript = `
 `;
 
 export const ColorModeScript = () => {
-  // biome-ignore lint/security/noDangerouslySetInnerHtml: Next.js requires dangerouslySetInnerHTML for script injection
   // biome-ignore lint/style/useNamingConvention: React's dangerouslySetInnerHTML requires __html key
   return <script dangerouslySetInnerHTML={{ __html: modeScript }} />;
 };
