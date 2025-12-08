@@ -71,12 +71,14 @@ const syncContentFromWorks = async (_contentDirPath: string) => {
   const bashScript = `
     if [ -d "${contentDir}" ]; then
       cd ${contentDir}
-      git sparse-checkout set blog
+      git sparse-checkout set --no-cone blog/*
       git pull
     else
-      git clone --filter=blob:none --sparse ${repoUrl} ${contentDir}
+      git clone --filter=blob:none --no-checkout --sparse ${repoUrl} ${contentDir}
       cd ${contentDir}
-      git sparse-checkout set blog
+      git sparse-checkout init --no-cone
+      git sparse-checkout set blog/*
+      git checkout
     fi
   `;
 
