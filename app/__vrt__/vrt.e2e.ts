@@ -75,9 +75,8 @@ const setup = async (
 };
 
 const screenshot = async (page: Page, testName: string) => {
-  await page.screenshot({
+  await expect(page).toHaveScreenshot(`${testName}.png`, {
     fullPage: true,
-    path: `app/__vrt__/screenshots/${testName}.png`,
   });
 };
 
@@ -126,6 +125,8 @@ test("opengraph-image", async ({ page }, testInfo) => {
     name: "opengraph-image",
     path: "/articles/embed-tweet-with-app-router/opengraph-image",
   };
+  await page.goto(targetPage.path);
+  await waitForPageReady(page);
   const testName = formatTestName(testInfo, targetPage, "light");
   await screenshot(page, testName);
 });
