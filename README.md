@@ -4,18 +4,17 @@
 
 ### Environment Setup
 
-This project syncs blog content from a private repository ([MH4GF/works](https://github.com/MH4GF/works)). You need to set up a GitHub Personal Access Token:
+This project syncs blog content from a private repository. You need to:
 
-1. Create a Fine-grained Personal Access Token at [GitHub Settings > Developer settings > Personal access tokens](https://github.com/settings/tokens)
-2. Configure the token:
-   - Resource owner: Your GitHub account
-   - Repository access: Only select repositories > works
-   - Repository permissions: Contents > Read-only
-3. Copy `.env.example` to `.env.local` and set your token:
+1. Create a [Fine-grained Personal Access Token](https://github.com/settings/tokens?type=beta)
+2. Grant **Read-only** access to the `Contents` of the `MH4GF/works` repository
+3. Set the token in `.env.local`:
    ```sh
    cp .env.example .env.local
-   # Edit .env.local and set GITHUB_TOKEN=your_token_here
+   # Edit .env.local and set GITHUB_TOKEN=ghp_...
    ```
+
+**Note**: If you're not the repository owner, you can skip this step and use the existing content cache.
 
 ### Running the development server
 
