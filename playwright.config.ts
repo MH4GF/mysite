@@ -8,6 +8,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : "100%",
   reporter: "list",
+  timeout: 60000, // toHaveScreenshot()はpage.screenshot()より処理が重いため延長
   use: {
     baseURL: process.env.BASE_URL || "http://localhost:3000",
     trace: "on-first-retry",
