@@ -8,9 +8,6 @@ import { me, siteInfo } from "./_utils";
 export default function Page() {
   return (
     <main className="max-w-3xl mx-auto py-16 md:py-32 px-4 md:px-0 blur-enter-content">
-      <div className="bg-red-500 text-white text-2xl font-bold p-4 mb-8">
-        DEBUG: VRT SHOULD FAIL
-      </div>
       <div className="flex flex-col gap-4 mb-40 md:mb-72">
         <div className="flex gap-2 items-center">
           <MyAvatar />
