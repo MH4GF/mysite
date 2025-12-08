@@ -57,9 +57,12 @@ const useData = (result: Result) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsLoading(true);
-    result.data().then(setData).catch(console.error);
-    setIsLoading(false);
+    Promise.resolve()
+      .then(() => setIsLoading(true))
+      .then(() => result.data())
+      .then(setData)
+      .catch(console.error)
+      .finally(() => setIsLoading(false));
   }, [result]);
 
   return { data, isLoading };
@@ -98,9 +101,12 @@ const useSearch = (query: string) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setIsLoading(true);
-    search(query).then(setResults).catch(console.error);
-    setIsLoading(false);
+    Promise.resolve()
+      .then(() => setIsLoading(true))
+      .then(() => search(query))
+      .then(setResults)
+      .catch(console.error)
+      .finally(() => setIsLoading(false));
   }, [query]);
 
   return { results, isLoading };
