@@ -14,11 +14,7 @@ export default function Page() {
           <h1>{me.name}</h1>
         </div>
         <p className="text-sm text-foreground-sub whitespace-pre-wrap">
-          Building{" "}
-          <UniversalLink href="https://liambx.com" isEnabledUnderline>
-            Liam ERD
-          </UniversalLink>
-          , Software Engineer at ROUTE06, inc.
+          Freelance Software Engineer
           <br />
           Tokyo, Japan
         </p>
