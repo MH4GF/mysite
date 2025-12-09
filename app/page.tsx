@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Fragment } from "react";
+import hiroshimaTripImage from "../public/images/hiroshima-trip.jpeg";
 import { MyAvatar } from "./_components";
 import { UniversalLink } from "./_features";
 import { WorkExperienceList } from "./_features/top";
@@ -8,7 +10,7 @@ import { me, siteInfo } from "./_utils";
 export default function Page() {
   return (
     <main className="max-w-3xl mx-auto py-16 md:py-32 px-4 md:px-0 blur-enter-content">
-      <div className="flex flex-col gap-4 mb-40 md:mb-72">
+      <div className="flex flex-col gap-4 mb-20 md:mb-32">
         <div className="flex gap-2 items-center">
           <MyAvatar />
           <h1>{me.name}</h1>
@@ -18,6 +20,15 @@ export default function Page() {
           <br />
           Tokyo, Japan
         </p>
+      </div>
+
+      <div className="mb-20 md:mb-32">
+        <Image
+          src={hiroshimaTripImage}
+          alt="Hiroshima trip"
+          className="w-full rounded-lg"
+          placeholder="blur"
+        />
       </div>
 
       <div className="flex flex-col gap-20 blur-enter-content">
