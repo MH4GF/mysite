@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Fragment } from "react";
 import hiroshimaTripImage from "../public/images/hiroshima-trip.jpeg";
 import { MyAvatar } from "./_components";
 import { UniversalLink } from "./_features";
-import { WorkExperienceList } from "./_features/top";
+import { HeroImage, WorkExperienceList } from "./_features/top";
 import { me, siteInfo } from "./_utils";
 
 export default function Page() {
@@ -29,12 +28,7 @@ export default function Page() {
       </div>
 
       <div className="mb-20 md:mb-32">
-        <Image
-          src={hiroshimaTripImage}
-          alt="Hiroshima trip"
-          className="w-full rounded-lg"
-          placeholder="blur"
-        />
+        <HeroImage src={hiroshimaTripImage} alt="Hiroshima trip" tooltip="Hiroshima trip :)" />
       </div>
 
       <div className="flex flex-col gap-20 blur-enter-content">
