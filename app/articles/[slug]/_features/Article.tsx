@@ -14,6 +14,8 @@ export const Article = ({ slug, handleNotFound }: Props) => {
     return null;
   }
 
+  const markdownUrl = `/articles/${slug}.md`;
+
   return (
     <div className="blur-enter-content" data-pagefind-body>
       <UniversalLink
@@ -23,7 +25,7 @@ export const Article = ({ slug, handleNotFound }: Props) => {
       >
         ← All Contents
       </UniversalLink>
-      <ArticleMetaDetail article={article} />
+      <ArticleMetaDetail article={article} markdownUrl={markdownUrl} />
       <div className="mt-12 md:mt-16 w-full">
         <MarkdownRenderer raw={article.body.raw} />
       </div>
