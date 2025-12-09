@@ -1,0 +1,256 @@
+"use client";
+
+import {
+  AlertCircle,
+  Check,
+  ChevronDown,
+  Copy,
+  ExternalLink,
+  FileText,
+  MessageCircle,
+} from "lucide-react";
+import { useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { Popover, PopoverContent, PopoverTrigger } from "@/app/_components/ui/popover";
+import { cn } from "@/app/_utils/cn";
+
+interface Props {
+  markdownUrl: string;
+}
+
+type CopyState = "idle" | "loading" | "copied" | "error";
+
+const emptySubscribe = () => () => {
+  // No-op for useSyncExternalStore
+};
+
+export function AskAIDropdown({ markdownUrl }: Props) {
+  const [copyState, setCopyState] = useState<CopyState>("idle");
+  const cacheRef = useRef<Map<string, string>>(new Map());
+
+  const fullUrl = useSyncExternalStore(
+    emptySubscribe,
+    () => new URL(markdownUrl, window.location.origin).toString(),
+    () => markdownUrl,
+  );
+
+  const aiItems = useMemo(() => {
+    const q = `Read ${fullUrl}, I want to ask questions about it.`;
+    return [
+      {
+        title: "Open in ChatGPT",
+        href: `https://chatgpt.com/?${new URLSearchParams({ hints: "search", q })}`,
+        icon: <OpenAIIcon className="size-4" />,
+      },
+      {
+        title: "Open in Claude",
+        href: `https://claude.ai/new?${new URLSearchParams({ q })}`,
+        icon: <AnthropicIcon className="size-4" />,
+      },
+      {
+        title: "Open in Scira AI",
+        href: `https://scira.ai/?${new URLSearchParams({ q })}`,
+        icon: <SciraIcon className="size-4" />,
+      },
+      {
+        title: "Open in T3 Chat",
+        href: `https://t3.chat/new?${new URLSearchParams({ q })}`,
+        icon: <MessageCircle className="size-4" />,
+      },
+    ];
+  }, [fullUrl]);
+
+  const handleCopy = async () => {
+    const cached = cacheRef.current.get(markdownUrl);
+    if (cached) {
+      await navigator.clipboard.writeText(cached);
+      setCopyState("copied");
+      setTimeout(() => setCopyState("idle"), 2000);
+      return;
+    }
+
+    setCopyState("loading");
+    try {
+      const res = await fetch(markdownUrl);
+      if (!res.ok) {
+        setCopyState("error");
+        setTimeout(() => setCopyState("idle"), 2000);
+        return;
+      }
+      const content = await res.text();
+      cacheRef.current.set(markdownUrl, content);
+      await navigator.clipboard.writeText(content);
+      setCopyState("copied");
+      setTimeout(() => setCopyState("idle"), 2000);
+    } catch {
+      setCopyState("error");
+      setTimeout(() => setCopyState("idle"), 2000);
+    }
+  };
+
+  const copyIcon = {
+    idle: <Copy className="size-4 text-zinc-500" />,
+    loading: <Copy className="size-4 text-zinc-500 animate-pulse" />,
+    copied: <Check className="size-4 text-green-600" />,
+    error: <AlertCircle className="size-4 text-red-500" />,
+  }[copyState];
+
+  const copyLabel = {
+    idle: "Copy Markdown",
+    loading: "Copying...",
+    copied: "Copied!",
+    error: "Failed to copy",
+  }[copyState];
+
+  return (
+    <Popover>
+      <PopoverTrigger
+        className={cn(
+          "inline-flex items-center gap-1.5 text-sm",
+          "text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100",
+          "transition-colors",
+        )}
+      >
+        Ask AI
+        <ChevronDown className="size-3.5" />
+      </PopoverTrigger>
+      <PopoverContent className="flex w-56 flex-col p-1.5">
+        <button
+          type="button"
+          disabled={copyState === "loading"}
+          onClick={() => {
+            handleCopy().catch(() => {
+              // Error already handled in handleCopy
+            });
+          }}
+          className={cn(
+            "flex items-center gap-2 rounded-md px-2 py-1.5 text-sm text-left",
+            "hover:bg-zinc-100 dark:hover:bg-zinc-800",
+            "transition-colors disabled:opacity-50",
+          )}
+        >
+          {copyIcon}
+          {copyLabel}
+        </button>
+        <a
+          href={fullUrl}
+          rel="noreferrer noopener"
+          target="_blank"
+          className={cn(
+            "flex items-center gap-2 rounded-md px-2 py-1.5 text-sm",
+            "hover:bg-zinc-100 dark:hover:bg-zinc-800",
+            "transition-colors",
+          )}
+        >
+          <FileText className="size-4 text-zinc-500" />
+          Open Markdown
+          <ExternalLink className="ml-auto size-3.5 text-zinc-400" />
+        </a>
+
+        <div className="my-1 h-px bg-zinc-200 dark:bg-zinc-700" />
+
+        {aiItems.map((item) => (
+          <a
+            key={item.href}
+            href={item.href}
+            rel="noreferrer noopener"
+            target="_blank"
+            className={cn(
+              "flex items-center gap-2 rounded-md px-2 py-1.5 text-sm",
+              "hover:bg-zinc-100 dark:hover:bg-zinc-800",
+              "transition-colors",
+            )}
+          >
+            {item.icon}
+            {item.title}
+            <ExternalLink className="ml-auto size-3.5 text-zinc-400" />
+          </a>
+        ))}
+      </PopoverContent>
+    </Popover>
+  );
+}
+
+function SciraIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 910 934" fill="none" role="img" aria-label="Scira AI">
+      <title>Scira AI</title>
+      <path
+        d="M647.664 197.775C569.13 189.049 525.5 145.419 516.774 66.8849C508.048 145.419 464.418 189.049 385.884 197.775C464.418 206.501 508.048 250.131 516.774 328.665C525.5 250.131 569.13 206.501 647.664 197.775Z"
+        fill="currentColor"
+        stroke="currentColor"
+        strokeWidth="8"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M516.774 304.217C510.299 275.491 498.208 252.087 480.335 234.214C462.462 216.341 439.058 204.251 410.333 197.775C439.059 191.3 462.462 179.209 480.335 161.336C498.208 143.463 510.299 120.06 516.774 91.334C523.25 120.059 535.34 143.463 553.213 161.336C571.086 179.209 594.49 191.3 623.216 197.775C594.49 204.251 571.086 216.341 553.213 234.214C535.34 252.087 523.25 275.491 516.774 304.217Z"
+        fill="currentColor"
+        stroke="currentColor"
+        strokeWidth="8"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M857.5 508.116C763.259 497.644 710.903 445.288 700.432 351.047C689.961 445.288 637.605 497.644 543.364 508.116C637.605 518.587 689.961 570.943 700.432 665.184C710.903 570.943 763.259 518.587 857.5 508.116Z"
+        stroke="currentColor"
+        strokeWidth="20"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M700.432 615.957C691.848 589.05 678.575 566.357 660.383 548.165C642.191 529.973 619.499 516.7 592.593 508.116C619.499 499.533 642.191 486.258 660.383 468.066C678.575 449.874 691.848 427.181 700.432 400.274C709.015 427.181 722.289 449.874 740.481 468.066C758.673 486.258 781.365 499.533 808.271 508.116C781.365 516.7 758.673 529.973 740.481 548.165C722.289 566.357 709.015 589.05 700.432 615.957Z"
+        stroke="currentColor"
+        strokeWidth="20"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M889.949 121.237C831.049 114.692 798.326 81.9698 791.782 23.0692C785.237 81.9698 752.515 114.692 693.614 121.237C752.515 127.781 785.237 160.504 791.782 219.404C798.326 160.504 831.049 127.781 889.949 121.237Z"
+        fill="currentColor"
+        stroke="currentColor"
+        strokeWidth="8"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M791.782 196.795C786.697 176.937 777.869 160.567 765.16 147.858C752.452 135.15 736.082 126.322 716.226 121.237C736.082 116.152 752.452 107.324 765.16 94.6152C777.869 81.9065 786.697 65.5368 791.782 45.6797C796.867 65.5367 805.695 81.9066 818.403 94.6152C831.112 107.324 847.481 116.152 867.338 121.237C847.481 126.322 831.112 135.15 818.403 147.858C805.694 160.567 796.867 176.937 791.782 196.795Z"
+        fill="currentColor"
+        stroke="currentColor"
+        strokeWidth="8"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M760.632 764.337C720.719 814.616 669.835 855.1 611.872 882.692C553.91 910.285 490.404 924.255 426.213 923.533C362.022 922.812 298.846 907.419 241.518 878.531C184.19 849.643 134.228 808.026 95.4548 756.863C56.6815 705.7 30.1238 646.346 17.8129 583.343C5.50207 520.339 7.76433 455.354 24.4266 393.359C41.089 331.364 71.7099 274.001 113.947 225.658C156.184 177.315 208.919 139.273 268.117 114.442"
+        stroke="currentColor"
+        strokeWidth="30"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function OpenAIIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      role="img"
+      aria-label="OpenAI"
+    >
+      <title>OpenAI</title>
+      <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z" />
+    </svg>
+  );
+}
+
+function AnthropicIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      role="img"
+      aria-label="Anthropic"
+    >
+      <title>Anthropic</title>
+      <path d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z" />
+    </svg>
+  );
+}

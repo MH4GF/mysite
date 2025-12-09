@@ -3,13 +3,16 @@ import Image from "next/image";
 import type { FC } from "react";
 import { MyAvatar, Time } from "@/app/_components";
 import { format } from "@/app/_utils";
+import { AskAIDropdown } from "./PageActions";
 
 interface Props {
   article: Article;
+  markdownUrl: string;
 }
 
 export const ArticleMetaDetail: FC<Props> = ({
   article: { headingImage, title, publishedAt: PublishedAt },
+  markdownUrl,
 }) => {
   const publishedAt = format(new Date(PublishedAt));
 
@@ -35,12 +38,14 @@ export const ArticleMetaDetail: FC<Props> = ({
           </span>
         </span>
         <span className="hidden md:block bg-foreground-sub w-1 h-1 rounded-full" />
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center">
           <Time dateTime={publishedAt} className="leading-none">
             {publishedAt}
           </Time>
-          <span className="bg-foreground-sub w-1 h-1 rounded-full m-auto" />
+          <span className="bg-foreground-sub w-1 h-1 rounded-full" />
           <span className="text-sm text-foreground-sub leading-none">5 min read</span>
+          <span className="bg-foreground-sub w-1 h-1 rounded-full" />
+          <AskAIDropdown markdownUrl={markdownUrl} />
         </div>
       </div>
     </div>

@@ -15,6 +15,76 @@ test("/articles/testing-markdown-renderer", async ({ page }) => {
   await expect(page.getByRole("region", { name: "About | Hirotaka Miyagi" })).toBeVisible();
 });
 
+test.describe("Ask AI Dropdown", () => {
+  const articlePath = "/articles/testing-markdown-renderer";
+
+  const setupArticle = async (page: Page) => {
+    await page.goto(articlePath);
+    await page.getByRole("button", { name: "Ask AI" }).waitFor({ state: "visible" });
+  };
+
+  test("Markdown endpoint returns plain text", async ({ page }) => {
+    const response = await page.goto(`${articlePath}.md`);
+    expect(response?.headers()["content-type"]).toContain("text/plain");
+    const content = await response?.text();
+    expect(content).toContain("# 見出し");
+  });
+
+  test("Opens dropdown and shows all menu items", async ({ page }) => {
+    await setupArticle(page);
+
+    await page.getByRole("button", { name: "Ask AI" }).click();
+    await expect(page.getByRole("button", { name: "Copy Markdown" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Open Markdown" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Open in ChatGPT" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Open in Claude" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Open in Scira AI" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Open in T3 Chat" })).toBeVisible();
+  });
+
+  test("Open Markdown link has correct href", async ({ page }) => {
+    await setupArticle(page);
+
+    await page.getByRole("button", { name: "Ask AI" }).click();
+    const openMarkdownLink = page.getByRole("link", { name: "Open Markdown" });
+    await expect(openMarkdownLink).toHaveAttribute(
+      "href",
+      /\/articles\/testing-markdown-renderer\.md$/,
+    );
+  });
+
+  test("AI service links have correct query format", async ({ page }) => {
+    await setupArticle(page);
+
+    await page.getByRole("button", { name: "Ask AI" }).click();
+
+    const chatGptLink = page.getByRole("link", { name: "Open in ChatGPT" });
+    await expect(chatGptLink).toHaveAttribute("href", /chatgpt\.com.*hints=search.*q=Read/);
+
+    const claudeLink = page.getByRole("link", { name: "Open in Claude" });
+    await expect(claudeLink).toHaveAttribute("href", /claude\.ai\/new\?q=Read/);
+
+    const sciraLink = page.getByRole("link", { name: "Open in Scira AI" });
+    await expect(sciraLink).toHaveAttribute("href", /scira\.ai.*q=Read/);
+
+    const t3Link = page.getByRole("link", { name: "Open in T3 Chat" });
+    await expect(t3Link).toHaveAttribute("href", /t3\.chat\/new\?q=Read/);
+  });
+
+  test("Copy Markdown copies content to clipboard", async ({ page, context }) => {
+    await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+    await setupArticle(page);
+
+    await page.getByRole("button", { name: "Ask AI" }).click();
+    await page.getByRole("button", { name: "Copy Markdown" }).click();
+
+    await expect(page.getByRole("button", { name: "Copied!" })).toBeVisible();
+
+    const clipboardContent = await page.evaluate(() => navigator.clipboard.readText());
+    expect(clipboardContent).toContain("# 見出し");
+  });
+});
+
 test.describe("Command Palette", () => {
   test("Open and close with mouse", async ({ page }) => {
     await setup(page, "/");
