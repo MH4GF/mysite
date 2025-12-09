@@ -9,7 +9,7 @@ import {
   FileText,
   MessageCircle,
 } from "lucide-react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/app/_components/ui/popover";
 import { cn } from "@/app/_utils/cn";
 
@@ -19,14 +19,19 @@ interface Props {
 
 type CopyState = "idle" | "loading" | "copied" | "error";
 
+const emptySubscribe = () => () => {
+  // No-op for useSyncExternalStore
+};
+
 export function AskAIDropdown({ markdownUrl }: Props) {
-  const [fullUrl, setFullUrl] = useState(markdownUrl);
   const [copyState, setCopyState] = useState<CopyState>("idle");
   const cacheRef = useRef<Map<string, string>>(new Map());
 
-  useEffect(() => {
-    setFullUrl(new URL(markdownUrl, window.location.origin).toString());
-  }, [markdownUrl]);
+  const fullUrl = useSyncExternalStore(
+    emptySubscribe,
+    () => new URL(markdownUrl, window.location.origin).toString(),
+    () => markdownUrl,
+  );
 
   const aiItems = useMemo(() => {
     const q = `Read ${fullUrl}, I want to ask questions about it.`;
@@ -112,7 +117,11 @@ export function AskAIDropdown({ markdownUrl }: Props) {
         <button
           type="button"
           disabled={copyState === "loading"}
-          onClick={handleCopy}
+          onClick={() => {
+            handleCopy().catch(() => {
+              // Error already handled in handleCopy
+            });
+          }}
           className={cn(
             "flex items-center gap-2 rounded-md px-2 py-1.5 text-sm text-left",
             "hover:bg-zinc-100 dark:hover:bg-zinc-800",
