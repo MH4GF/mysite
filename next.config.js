@@ -21,6 +21,14 @@ const nextConfig = {
       },
     ],
   },
+  rewrites() {
+    return [
+      {
+        source: "/articles/:slug.md",
+        destination: "/articles/:slug/raw",
+      },
+    ];
+  },
 };
 
 module.exports = withContentlayer(nextConfig);
