@@ -34,25 +34,25 @@ export function AskAIDropdown({ markdownUrl }: Props) {
   );
 
   const aiItems = useMemo(() => {
-    const q = `Read ${fullUrl}, I want to ask questions about it.`;
+    const q = `${fullUrl} を読んで、この記事について質問に答えてください。`;
     return [
       {
-        title: "Open in ChatGPT",
+        title: "ChatGPTで開く",
         href: `https://chatgpt.com/?${new URLSearchParams({ hints: "search", q })}`,
         icon: <OpenAIIcon className="size-4" />,
       },
       {
-        title: "Open in Claude",
+        title: "Claudeで開く",
         href: `https://claude.ai/new?${new URLSearchParams({ q })}`,
         icon: <AnthropicIcon className="size-4" />,
       },
       {
-        title: "Open in Scira AI",
+        title: "Scira AIで開く",
         href: `https://scira.ai/?${new URLSearchParams({ q })}`,
         icon: <SciraIcon className="size-4" />,
       },
       {
-        title: "Open in T3 Chat",
+        title: "T3 Chatで開く",
         href: `https://t3.chat/new?${new URLSearchParams({ q })}`,
         icon: <MessageCircle className="size-4" />,
       },
@@ -95,10 +95,10 @@ export function AskAIDropdown({ markdownUrl }: Props) {
   }[copyState];
 
   const copyLabel = {
-    idle: "Copy Markdown",
-    loading: "Copying...",
-    copied: "Copied!",
-    error: "Failed to copy",
+    idle: "Markdownをコピー",
+    loading: "コピー中...",
+    copied: "コピーしました",
+    error: "コピーに失敗しました",
   }[copyState];
 
   return (
@@ -142,7 +142,7 @@ export function AskAIDropdown({ markdownUrl }: Props) {
           )}
         >
           <FileText className="size-4 text-zinc-500" />
-          Open Markdown
+          Markdownを開く
           <ExternalLink className="ml-auto size-3.5 text-zinc-400" />
         </a>
 
