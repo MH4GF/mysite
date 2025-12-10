@@ -34,19 +34,19 @@ test.describe("Ask AI Dropdown", () => {
     await setupArticle(page);
 
     await page.getByRole("button", { name: "Ask AI" }).click();
-    await expect(page.getByRole("button", { name: "Copy Markdown" })).toBeVisible();
-    await expect(page.getByRole("link", { name: "Open Markdown" })).toBeVisible();
-    await expect(page.getByRole("link", { name: "Open in ChatGPT" })).toBeVisible();
-    await expect(page.getByRole("link", { name: "Open in Claude" })).toBeVisible();
-    await expect(page.getByRole("link", { name: "Open in Scira AI" })).toBeVisible();
-    await expect(page.getByRole("link", { name: "Open in T3 Chat" })).toBeVisible();
+    await expect(page.getByRole("button", { name: "Markdownをコピー" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Markdownを開く" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "ChatGPTで開く" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Claudeで開く" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "Scira AIで開く" })).toBeVisible();
+    await expect(page.getByRole("link", { name: "T3 Chatで開く" })).toBeVisible();
   });
 
   test("Open Markdown link has correct href", async ({ page }) => {
     await setupArticle(page);
 
     await page.getByRole("button", { name: "Ask AI" }).click();
-    const openMarkdownLink = page.getByRole("link", { name: "Open Markdown" });
+    const openMarkdownLink = page.getByRole("link", { name: "Markdownを開く" });
     await expect(openMarkdownLink).toHaveAttribute(
       "href",
       /\/articles\/testing-markdown-renderer\.md$/,
@@ -58,17 +58,17 @@ test.describe("Ask AI Dropdown", () => {
 
     await page.getByRole("button", { name: "Ask AI" }).click();
 
-    const chatGptLink = page.getByRole("link", { name: "Open in ChatGPT" });
-    await expect(chatGptLink).toHaveAttribute("href", /chatgpt\.com.*hints=search.*q=Read/);
+    const chatGptLink = page.getByRole("link", { name: "ChatGPTで開く" });
+    await expect(chatGptLink).toHaveAttribute("href", /chatgpt\.com.*hints=search/);
 
-    const claudeLink = page.getByRole("link", { name: "Open in Claude" });
-    await expect(claudeLink).toHaveAttribute("href", /claude\.ai\/new\?q=Read/);
+    const claudeLink = page.getByRole("link", { name: "Claudeで開く" });
+    await expect(claudeLink).toHaveAttribute("href", /claude\.ai\/new\?q=/);
 
-    const sciraLink = page.getByRole("link", { name: "Open in Scira AI" });
-    await expect(sciraLink).toHaveAttribute("href", /scira\.ai.*q=Read/);
+    const sciraLink = page.getByRole("link", { name: "Scira AIで開く" });
+    await expect(sciraLink).toHaveAttribute("href", /scira\.ai.*q=/);
 
-    const t3Link = page.getByRole("link", { name: "Open in T3 Chat" });
-    await expect(t3Link).toHaveAttribute("href", /t3\.chat\/new\?q=Read/);
+    const t3Link = page.getByRole("link", { name: "T3 Chatで開く" });
+    await expect(t3Link).toHaveAttribute("href", /t3\.chat\/new\?q=/);
   });
 
   test("Copy Markdown copies content to clipboard", async ({ page, context }) => {
@@ -76,9 +76,9 @@ test.describe("Ask AI Dropdown", () => {
     await setupArticle(page);
 
     await page.getByRole("button", { name: "Ask AI" }).click();
-    await page.getByRole("button", { name: "Copy Markdown" }).click();
+    await page.getByRole("button", { name: "Markdownをコピー" }).click();
 
-    await expect(page.getByRole("button", { name: "Copied!" })).toBeVisible();
+    await expect(page.getByRole("button", { name: "コピーしました" })).toBeVisible();
 
     const clipboardContent = await page.evaluate(() => navigator.clipboard.readText());
     expect(clipboardContent).toContain("# 見出し");

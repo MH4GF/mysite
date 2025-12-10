@@ -27,6 +27,10 @@ const nextConfig = {
         source: "/articles/:slug.md",
         destination: "/articles/:slug/raw",
       },
+      {
+        source: "/:slug.md",
+        destination: "/:slug/raw",
+      },
     ];
   },
 };
