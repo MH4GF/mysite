@@ -1,4 +1,5 @@
 export * from "./articles";
+export * from "./askAI";
 export * from "./colorMode";
 export * from "./Header";
 export * from "./markdownRenderer";

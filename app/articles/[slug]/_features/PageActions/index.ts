@@ -1,1 +1,1 @@
-export { AskAIDropdown } from "./AskAIDropdown";
+export { AskAIDropdown } from "@/app/_features/askAI";
