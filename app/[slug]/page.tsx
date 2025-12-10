@@ -21,11 +21,11 @@ export default async function Page(props: Props) {
 }
 
 export const generateStaticParams = (): Params[] =>
-  allAbouts.map((about) => ({ slug: about.href }));
+  allAbouts.map((about) => ({ slug: about.href.replace(/^\//, "") }));
 
 export const generateMetadata = async (props: Props): Promise<Metadata> => {
   const params = await props.params;
-  const title = allAbouts.find((about) => about.href === params.slug)?.title ?? "";
+  const title = allAbouts.find((about) => about.href === `/${params.slug}`)?.title ?? "";
 
   return { title, openGraph: { title }, twitter: { title } };
 };
