@@ -33,7 +33,7 @@
     "@mh4gf/eslint-config": "0.6.12",
     "@next/eslint-plugin-next": "15.5.7",
     "@playwright/test": "1.57.0",
-    "@tailwindcss/postcss": "4.1.17",
+    "@tailwindcss/postcss": "4.1.18",
     "@tsconfig/next": "2.0.5",
     "@tsconfig/strictest": "2.0.8",
     "@types/node": "24.10.3",
@@ -51,7 +51,7 @@
     "pagefind": "1.4.0",
     "postcss": "8.5.6",
     "rulens": "0.2.2",
-    "tailwindcss": "4.1.17",
+    "tailwindcss": "4.1.18",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
     "vitest": "4.0.15"
