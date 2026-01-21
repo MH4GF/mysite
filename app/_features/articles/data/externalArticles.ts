@@ -6,6 +6,12 @@ type RawArticleMeta = Omit<ArticleMeta, "publishedAt"> & {
 
 const articles: Omit<RawArticleMeta, "externalLink">[] = [
   {
+    title: '【連載57】"パズル的思考"がキャリアをつくる──制約を楽しむエンジニア論',
+    publishedAt: "2025/08/01",
+    href: "https://www.tech-street.jp/entry/2025/08/01/111851",
+    tags: ["media", "tech-street"],
+  },
+  {
     title: "Valibot Schema Driven UI - ノーコードWebサイトビルダーを実装してみよう！",
     publishedAt: "2025/05/24",
     href: "https://talks.mh4gf.dev/20250524",

@@ -20,6 +20,7 @@ export const tagList = [
   "route06-tech-blog",
   "route06-radio",
   "timee-product-team-blog",
+  "tech-street",
   "zenn",
   "qiita",
   "note",
