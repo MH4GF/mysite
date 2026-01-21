@@ -212,6 +212,12 @@ const articles: Omit<RawArticleMeta, "externalLink">[] = [
     tags: ["route06-tech-blog", "github"],
   },
   {
+    title: "ようこそMiyagi-san!",
+    href: "https://creators.spotify.com/pod/profile/route06-radio/episodes/Miyagi-san-e1uhamq/a-a99ql7p",
+    publishedAt: "2023/2/6",
+    tags: ["media", "route06-radio"],
+  },
+  {
     title: "GraphQL Code Generator v3 Roadmapで推されているclient-presetを紹介する",
     href: "https://zenn.dev/mh4gf/articles/graphql-codegen-client-preset",
     publishedAt: "2023/1/26",

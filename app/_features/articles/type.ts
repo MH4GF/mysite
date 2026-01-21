@@ -18,6 +18,7 @@ export const tagList = [
   "gadget",
   "desk-setup",
   "route06-tech-blog",
+  "route06-radio",
   "timee-product-team-blog",
   "zenn",
   "qiita",

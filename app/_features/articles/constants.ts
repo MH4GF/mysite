@@ -20,6 +20,7 @@ export const tagLabelMap: Record<TagEnum, string> = {
   react: "React",
   ruby: "Ruby",
   "route06-tech-blog": "ROUTE06 Tech Blog",
+  "route06-radio": "ROUTE06 Radio",
   "timee-product-team-blog": "Timee Product Team Blog",
   zenn: "Zenn",
   qiita: "Qiita",
