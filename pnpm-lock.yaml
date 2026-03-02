@@ -104,8 +104,8 @@ importers:
         version: 4.2.1
     devDependencies:
       '@axe-core/playwright':
-        specifier: 4.11.0
-        version: 4.11.0(playwright-core@1.57.0)
+        specifier: 4.11.1
+        version: 4.11.1(playwright-core@1.57.0)
       '@biomejs/biome':
         specifier: 2.4.4
         version: 2.4.4
@@ -150,7 +150,7 @@ importers:
         version: 0.0.32
       axe-html-reporter:
         specifier: 2.2.11
-        version: 2.2.11(axe-core@4.11.0)
+        version: 2.2.11(axe-core@4.11.1)
       dependency-cruiser:
         specifier: 17.3.4
         version: 17.3.4
@@ -200,8 +200,8 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
 
-  '@axe-core/playwright@4.11.0':
-    resolution: {integrity: sha512-70vBT/Ylqpm65RQz2iCG2o0JJCEG/WCNyefTr2xcOcr1CoSee60gNQYUMZZ7YukoKkFLv26I/jjlsvwwp532oQ==}
+  '@axe-core/playwright@4.11.1':
+    resolution: {integrity: sha512-mKEfoUIB1MkVTht0BGZFXtSAEKXMJoDkyV5YZ9jbBmZCcWDz71tegNsdTkIN8zc/yMi5Gm2kx7Z5YQ9PfWNAWw==}
     peerDependencies:
       playwright-core: '>= 1.0.0'
 
@@ -2387,8 +2387,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axe-core@4.11.0:
-    resolution: {integrity: sha512-ilYanEU8vxxBexpJd8cWM4ElSQq4QctCLKih0TSfjIfCQTeyH/6zVrmIJfLPrKTKJRbiG+cfnZbQIjAlJmF1jQ==}
+  axe-core@4.11.1:
+    resolution: {integrity: sha512-BASOg+YwO2C+346x3LZOeoovTIoTrRqEsqMa6fmfAV0P+U9mFr9NsyOEpiYvFjbc64NMrSswhV50WdXzdb/Z5A==}
     engines: {node: '>=4'}
 
   axe-html-reporter@2.2.11:
@@ -5356,9 +5356,9 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@axe-core/playwright@4.11.0(playwright-core@1.57.0)':
+  '@axe-core/playwright@4.11.1(playwright-core@1.57.0)':
     dependencies:
-      axe-core: 4.11.0
+      axe-core: 4.11.1
       playwright-core: 1.57.0
 
   '@babel/code-frame@7.24.7':
@@ -7493,11 +7493,11 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  axe-core@4.11.0: {}
+  axe-core@4.11.1: {}
 
-  axe-html-reporter@2.2.11(axe-core@4.11.0):
+  axe-html-reporter@2.2.11(axe-core@4.11.1):
     dependencies:
-      axe-core: 4.11.0
+      axe-core: 4.11.1
       mustache: 4.2.0
 
   bail@2.0.2: {}
