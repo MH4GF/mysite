@@ -39,6 +39,7 @@ export default [
       "public/search/**",
       "*.config.js",
       "*.config.mjs",
+      "contentlayer.config.ts",
       ".dependency-cruiser.js",
       ".markuplintrc.ts",
     ],
