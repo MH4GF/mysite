@@ -131,8 +131,8 @@ importers:
         specifier: 4.1.18
         version: 4.1.18
       '@tsconfig/next':
-        specifier: 2.0.5
-        version: 2.0.5
+        specifier: 2.0.6
+        version: 2.0.6
       '@tsconfig/strictest':
         specifier: 2.0.8
         version: 2.0.8
@@ -1972,8 +1972,8 @@ packages:
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders || >=4.0.0-alpha.20 || >=4.0.0-beta.1'
 
-  '@tsconfig/next@2.0.5':
-    resolution: {integrity: sha512-Cnzzme52Hk+YWQX/BKbjxAyBmLJXQaXjhVBBLkCpUQK8j+aGBk4csWAt5XpbU64NHG5XxT2d/Yr9M0e1fxRN5A==}
+  '@tsconfig/next@2.0.6':
+    resolution: {integrity: sha512-C6eZoNyAMKv2UvzDZqcp8zXPviu6W4Ev1KUbqfmaMSZuq+tmbtTWaqxTif/yaui8WCEcRlQrHC8q9tNzBclHOw==}
 
   '@tsconfig/strictest@2.0.8':
     resolution: {integrity: sha512-XnQ7vNz5HRN0r88GYf1J9JJjqtZPiHt2woGJOo2dYqyHGGcd6OLGqSlBB6p1j9mpzja6Oe5BoPqWmeDx6X9rLw==}
@@ -7053,7 +7053,7 @@ snapshots:
       postcss-selector-parser: 6.0.10
       tailwindcss: 4.1.18
 
-  '@tsconfig/next@2.0.5': {}
+  '@tsconfig/next@2.0.6': {}
 
   '@tsconfig/strictest@2.0.8': {}
 
