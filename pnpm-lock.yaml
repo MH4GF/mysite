@@ -152,8 +152,8 @@ importers:
         specifier: 2.2.11
         version: 2.2.11(axe-core@4.11.1)
       dependency-cruiser:
-        specifier: 17.3.4
-        version: 17.3.4
+        specifier: 17.3.8
+        version: 17.3.8
       eslint:
         specifier: 9.39.2
         version: 9.39.2(jiti@2.6.1)
@@ -2592,8 +2592,8 @@ packages:
     resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
     engines: {node: '>=18'}
 
-  commander@14.0.2:
-    resolution: {integrity: sha512-TywoWNNRbhoD0BXs1P3ZEScW8W5iKrnbithIl0YH+uCmBd0QpPOA8yc82DS3BIE5Ma6FnBVUsJ7wVUDz4dvOWQ==}
+  commander@14.0.3:
+    resolution: {integrity: sha512-H+y0Jo/T1RZ9qPP4Eh1pkcQcLRglraJaSLoyOtHxu6AapkjWVCy2Sit1QQ4x3Dng8qDlSsZEet7g5Pq06MvTgw==}
     engines: {node: '>=20'}
 
   comment-json@4.2.3:
@@ -2713,8 +2713,8 @@ packages:
     resolution: {integrity: sha512-8QmQKqEASLd5nx0U1B1okLElbUuuttJ/AnYmRXbbbGDWh6uS208EjD4Xqq/I9wK7u0v6O08XhTWnt5XtEbR6Dg==}
     engines: {node: '>= 0.4'}
 
-  dependency-cruiser@17.3.4:
-    resolution: {integrity: sha512-co6WQmyTl7KLrL6OR3cCFl0Ol2SBoY5e5kQBfE6ZR8+W+GCBqoq7A67br51O/Tp2ixL2ZVmLrPcyddtuXKBnYA==}
+  dependency-cruiser@17.3.8:
+    resolution: {integrity: sha512-ziP2ziP7D6MVFK/mFTOQAAb7t2VAD6mhBMjD1Pu9CWDMzozssDN49RprKn8u85mTuK/W6kyiRg9WOyr1Y7lNqg==}
     engines: {node: ^20.12||^22||>=24}
     hasBin: true
 
@@ -2789,8 +2789,8 @@ packages:
     resolution: {integrity: sha512-d4lC8xfavMeBjzGr2vECC3fsGXziXZQyJxD868h2M/mBI3PwAuODxAkLkq5HYuvrPYcUtiLzsTo8U3PgX3Ocww==}
     engines: {node: '>=10.13.0'}
 
-  enhanced-resolve@5.18.4:
-    resolution: {integrity: sha512-LgQMM4WXU3QI+SYgEc2liRgznaD5ojbmY3sb8LxyguVkIg5FxdpTkvk72te2R38/TGKxH634oLxXRGY6d7AP+Q==}
+  enhanced-resolve@5.19.0:
+    resolution: {integrity: sha512-phv3E1Xl4tQOShqSte26C7Fl84EwUdZsyOuSSk9qtAGyyQs2s3jJzComh+Abf4g187lUUAvH+H26omrqia2aGg==}
     engines: {node: '>=10.13.0'}
 
   enquirer@2.4.1:
@@ -3945,10 +3945,6 @@ packages:
     resolution: {integrity: sha512-UERzLsxzllchadvbPs5aolHh65ISpKpM+ccLbOJ8/vvpBKmAWf+la7dXFy7Mr0ySHbdHrFv5kGFCUHHe6GFEmw==}
     engines: {node: '>= 4.0.0'}
 
-  memoize@10.2.0:
-    resolution: {integrity: sha512-DeC6b7QBrZsRs3Y02A6A7lQyzFbsQbqgjI6UW0GigGWV+u1s25TycMr0XHZE4cJce7rY/vyw2ctMQqfDkIhUEA==}
-    engines: {node: '>=18'}
-
   meow@13.2.0:
     resolution: {integrity: sha512-pxQJQzB6djGPXh08dacEloMFopsOqGVRKFPYvPOt9XDZ1HasbgDZA74CJGreSU4G3Ak7EFJGoiH2auq+yXISgA==}
     engines: {node: '>=18'}
@@ -4139,10 +4135,6 @@ packages:
   mime-types@2.1.13:
     resolution: {integrity: sha512-ryBDp1Z/6X90UvjUK3RksH0IBPM137T7cmg4OgD5wQBojlAiUwuok0QeELkim/72EtcYuNlmbkrcGuxj3Kl0YQ==}
     engines: {node: '>= 0.6'}
-
-  mimic-function@5.0.1:
-    resolution: {integrity: sha512-VP79XUPxV2CigYP3jWwAUFSku2aKqBH7uTAapFWCBqutsbmDo96KY5o8uh6U+/YSIn5OxJnXp73beVkpqMIGhA==}
-    engines: {node: '>=18'}
 
   minimatch@10.0.3:
     resolution: {integrity: sha512-IPZ167aShDZZUMdRk66cyQAW3qr0WzbHkPdMYa8bzZhlHhO3jALbKdxcaak7W9FfT2rZNpQuUu4Od7ILEpXSaw==}
@@ -4696,6 +4688,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  semver@7.7.4:
+    resolution: {integrity: sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   set-function-length@1.2.2:
     resolution: {integrity: sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==}
     engines: {node: '>= 0.4'}
@@ -4911,6 +4908,10 @@ packages:
 
   tapable@2.2.1:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
+    engines: {node: '>=6'}
+
+  tapable@2.3.0:
+    resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
     engines: {node: '>=6'}
 
   third-party-capital@1.0.20:
@@ -5274,8 +5275,8 @@ packages:
     resolution: {integrity: sha512-3hu+tD8YzSLGuFYtPRb48vdhKMi0KQV5sn+uWr8+7dMEq/2G/dtLrdDinkLjqq5TIbIBjYJ4Ax/n3YiaW7QM8A==}
     engines: {node: 20 || >=22}
 
-  watskeburt@5.0.0:
-    resolution: {integrity: sha512-fEMhfIzu9WOuAJdDcTT+aPjn0JHI2+UeJ+zWSEs/tgMvc+MFDZVmhlZ8C1uJWXax1ETYc4trUnHFHyx2DrG0jQ==}
+  watskeburt@5.0.2:
+    resolution: {integrity: sha512-8xIz2RALjwTA7kYeRtkiQ2uaFyr327T1GXJnVcGOoPuzQX2axpUXqeJPcgOEVemCWB2YveZjhWCcW/eZ3uTkZA==}
     engines: {node: ^20.12||^22.13||>=24.0}
     hasBin: true
 
@@ -7797,7 +7798,7 @@ snapshots:
 
   commander@13.1.0: {}
 
-  commander@14.0.2: {}
+  commander@14.0.3: {}
 
   comment-json@4.2.3:
     dependencies:
@@ -7918,27 +7919,26 @@ snapshots:
       has-property-descriptors: 1.0.2
       object-keys: 1.1.1
 
-  dependency-cruiser@17.3.4:
+  dependency-cruiser@17.3.8:
     dependencies:
       acorn: 8.15.0
       acorn-jsx: 5.3.2(acorn@8.15.0)
       acorn-jsx-walk: 2.0.0
       acorn-loose: 8.5.2
       acorn-walk: 8.3.4
-      commander: 14.0.2
-      enhanced-resolve: 5.18.4
+      commander: 14.0.3
+      enhanced-resolve: 5.19.0
       ignore: 7.0.5
       interpret: 3.1.1
       is-installed-globally: 1.0.0
       json5: 2.2.3
-      memoize: 10.2.0
       picomatch: 4.0.3
       prompts: 2.4.2
       rechoir: 0.8.0
       safe-regex: 2.1.1
-      semver: 7.7.3
+      semver: 7.7.4
       tsconfig-paths-webpack-plugin: 4.2.0
-      watskeburt: 5.0.0
+      watskeburt: 5.0.2
 
   dequal@2.0.3: {}
 
@@ -8008,10 +8008,10 @@ snapshots:
       graceful-fs: 4.2.11
       tapable: 2.2.1
 
-  enhanced-resolve@5.18.4:
+  enhanced-resolve@5.19.0:
     dependencies:
       graceful-fs: 4.2.11
-      tapable: 2.2.1
+      tapable: 2.3.0
 
   enquirer@2.4.1:
     dependencies:
@@ -9612,10 +9612,6 @@ snapshots:
     dependencies:
       fs-monkey: 1.0.6
 
-  memoize@10.2.0:
-    dependencies:
-      mimic-function: 5.0.1
-
   meow@13.2.0: {}
 
   merge2@1.4.1: {}
@@ -10034,8 +10030,6 @@ snapshots:
   mime-types@2.1.13:
     dependencies:
       mime-db: 1.25.0
-
-  mimic-function@5.0.1: {}
 
   minimatch@10.0.3:
     dependencies:
@@ -10748,6 +10742,8 @@ snapshots:
 
   semver@7.7.3: {}
 
+  semver@7.7.4: {}
+
   set-function-length@1.2.2:
     dependencies:
       define-data-property: 1.1.4
@@ -11003,6 +10999,8 @@ snapshots:
 
   tapable@2.2.1: {}
 
+  tapable@2.3.0: {}
+
   third-party-capital@1.0.20: {}
 
   tinybench@2.9.0: {}
@@ -11058,7 +11056,7 @@ snapshots:
   tsconfig-paths-webpack-plugin@4.2.0:
     dependencies:
       chalk: 4.1.2
-      enhanced-resolve: 5.18.4
+      enhanced-resolve: 5.19.0
       tapable: 2.2.1
       tsconfig-paths: 4.2.0
 
@@ -11406,7 +11404,7 @@ snapshots:
 
   walk-up-path@4.0.0: {}
 
-  watskeburt@5.0.0: {}
+  watskeburt@5.0.2: {}
 
   web-namespaces@2.0.1: {}
 
