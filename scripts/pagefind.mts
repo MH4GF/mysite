@@ -11,9 +11,7 @@ async function main() {
     path: ".next",
   });
 
-  const { externalArticles } = await import(
-    "../app/_features/articles/data/externalArticles.js"
-  );
+  const { externalArticles } = await import("../app/_features/articles/data/externalArticles.js");
 
   for (const article of externalArticles) {
     await index.addCustomRecord({
