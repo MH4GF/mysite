@@ -30,7 +30,6 @@ const nextConfig = {
       },
     ];
   },
-  turbopack: {},
 };
 
 module.exports = withContentlayer(nextConfig);

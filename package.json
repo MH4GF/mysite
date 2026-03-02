@@ -13,7 +13,7 @@
     "lint": "pnpm run '/^lint:.*/'",
     "fmt:biome-check": "biome check . --write --unsafe",
     "fmt": "pnpm run '/^fmt:.*/'",
-    "build": "next build",
+    "build": "next build --webpack",
     "build:contentlayer": "contentlayer build",
     "build:pagefind": "tsx ./scripts/pagefind.mts",
     "build:rulens": "rulens generate",
