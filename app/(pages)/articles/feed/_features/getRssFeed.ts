@@ -12,10 +12,11 @@ export const getRssFeed = (): string => {
   });
   const articlesMeta = getArticlesMeta({});
   for (const article of articlesMeta) {
+    const url = article.href.startsWith("http") ? article.href : `${siteInfo.url}${article.href}`;
     rss.item({
       title: article.title,
       description: "",
-      url: article.href,
+      url,
       date: article.publishedAt,
     });
   }
