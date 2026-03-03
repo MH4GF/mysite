@@ -64,7 +64,7 @@
     "@radix-ui/react-tooltip": "1.2.8",
     "@radix-ui/react-visually-hidden": "1.2.4",
     "@tailwindcss/typography": "0.5.19",
-    "cheerio": "1.1.2",
+    "cheerio": "1.2.0",
     "clsx": "2.1.1",
     "cmdk": "1.1.1",
     "contentlayer": "0.3.4",
