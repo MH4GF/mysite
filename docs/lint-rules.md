@@ -375,7 +375,7 @@ Rules provided from the @next/next plugin.
 | [`google-font-display`](https://nextjs.org/docs/messages/google-font-display) | Enforce font-display behavior with Google Fonts. |  |
 | [`google-font-preconnect`](https://nextjs.org/docs/messages/google-font-preconnect) | Ensure `preconnect` is used with Google Fonts. |  |
 | [`inline-script-id`](https://nextjs.org/docs/messages/inline-script-id) | Enforce `id` attribute on `next/script` components with inline content. |  |
-| [`next-script-for-ga`](https://nextjs.org/docs/messages/next-script-for-ga) | Prefer `next/script` component when using the inline script for Google Analytics. |  |
+| [`next-script-for-ga`](https://nextjs.org/docs/messages/next-script-for-ga) | Prefer `@next/third-parties/google` when using the inline script for Google Analytics and Tag Manager. |  |
 | [`no-assign-module-variable`](https://nextjs.org/docs/messages/no-assign-module-variable) | Prevent assignment to the `module` variable. |  |
 | [`no-async-client-component`](https://nextjs.org/docs/messages/no-async-client-component) | Prevent Client Components from being async functions. |  |
 | [`no-before-interactive-script-outside-document`](https://nextjs.org/docs/messages/no-before-interactive-script-outside-document) | Prevent usage of `next/script`'s `beforeInteractive` strategy outside of `pages/_document.js`. |  |

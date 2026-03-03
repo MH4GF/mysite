@@ -113,6 +113,7 @@ module.exports = {
       from: {
         pathNot: [
           ".next", // generated files
+          "next-env.d.ts", // references .next/types which only exist after build
         ],
       },
       to: {

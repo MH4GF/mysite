@@ -1,5 +1,4 @@
 import { createIndex } from "pagefind";
-import { externalArticles } from "../app/_features/articles/data/externalArticles.js";
 
 async function main() {
   const { index } = await createIndex({});
@@ -11,6 +10,8 @@ async function main() {
   await index.addDirectory({
     path: ".next",
   });
+
+  const { externalArticles } = await import("../app/_features/articles/data/externalArticles.js");
 
   for (const article of externalArticles) {
     await index.addCustomRecord({
@@ -29,4 +30,7 @@ async function main() {
   });
 }
 
-main();
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});
