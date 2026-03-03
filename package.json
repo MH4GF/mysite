@@ -47,7 +47,7 @@
     "eslint-plugin-react-hooks": "7.0.1",
     "knip": "5.85.0",
     "markuplint": "4.14.1",
-    "msw": "2.12.4",
+    "msw": "2.12.10",
     "pagefind": "1.4.0",
     "postcss": "8.5.6",
     "rulens": "0.2.2",
