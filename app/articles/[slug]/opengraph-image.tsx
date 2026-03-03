@@ -74,12 +74,13 @@ const generateFonts = async (): Promise<FontOptions[] | null> => {
 };
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export default async function Image({ params }: Props) {
+export default async function Image(props: Props) {
+  const params = await props.params;
   const article = getArticle(`/articles/${params.slug}`);
   if (!article) {
     return new Response("Not Found", { status: 404 });
