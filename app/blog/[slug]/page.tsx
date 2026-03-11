@@ -26,7 +26,7 @@ export const generateStaticParams = (): Params[] => allArticles.map(({ slug }) =
 
 export const generateMetadata = async (props: Props): Promise<Metadata> => {
   const params = await props.params;
-  const article = getArticle(`/articles/${params.slug}`);
+  const article = getArticle(`/blog/${params.slug}`);
   const title = article?.title ?? "";
   const description = article?.description ?? "";
   const headingImage = article?.headingImage;

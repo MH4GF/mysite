@@ -8,23 +8,19 @@ interface Props {
 }
 
 export const Article = ({ slug, handleNotFound }: Props) => {
-  const article = getArticle(`/articles/${slug}`);
+  const article = getArticle(`/blog/${slug}`);
 
   if (!article) {
     handleNotFound();
     return null;
   }
 
-  const markdownUrl = `/articles/${slug}.md`;
+  const markdownUrl = `/blog/${slug}.md`;
 
   return (
     <div className="blur-enter-content" data-pagefind-body>
-      <UniversalLink
-        href="/contents"
-        isEnabledUnderline
-        className="text-zinc-700 dark:text-zinc-300"
-      >
-        ← All Contents
+      <UniversalLink href="/blog" isEnabledUnderline className="text-zinc-700 dark:text-zinc-300">
+        ← Blog
       </UniversalLink>
       <ArticleMetaDetail article={article} markdownUrl={markdownUrl} />
       <div className="mt-12 md:mt-16 w-full">

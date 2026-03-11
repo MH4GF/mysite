@@ -4,9 +4,7 @@ import { cn } from "@/app/_utils/cn";
 import { UniversalLink } from "../viewTransition";
 import { ArticleListItem } from "./ArticleListItem";
 import { tagLabelMap } from "./constants";
-import { getArticlesMeta } from "./getArticlesMeta";
-import type { TagEnum } from "./type";
-import { tagList } from "./type";
+import type { ArticleMeta, TagEnum } from "./type";
 
 type TagChipProps = {
   href: string;
@@ -14,27 +12,31 @@ type TagChipProps = {
   label: string;
 } & Omit<ComponentProps<typeof Link>, "href" | "className">;
 
-const TagChip = ({ href, isActive, label, ...props }: TagChipProps) => (
-  <Link
-    href={href}
-    className={cn(
-      "inline-flex items-center rounded-md px-3 py-1 text-xs transition-colors whitespace-nowrap",
-      "border border-muted-foreground/20 hover:bg-accent",
-      isActive && "bg-accent hover:bg-accent/90",
-    )}
-    {...props}
-  >
-    {label}
-  </Link>
-);
+function TagChip({ href, isActive, label, ...props }: TagChipProps): JSX.Element {
+  return (
+    <Link
+      href={href}
+      className={cn(
+        "inline-flex items-center rounded-md px-3 py-1 text-xs transition-colors whitespace-nowrap",
+        "border border-muted-foreground/20 hover:bg-accent",
+        isActive && "bg-accent hover:bg-accent/90",
+      )}
+      {...props}
+    >
+      {label}
+    </Link>
+  );
+}
 
 type Props = {
+  articles: ArticleMeta[];
+  title: string;
   tag?: TagEnum;
+  allHref?: string;
+  allTags: TagEnum[];
 };
 
-export const ArticleList = ({ tag }: Props): JSX.Element => {
-  const articlesMeta = getArticlesMeta({ tag });
-
+export function ArticleList({ articles, title, tag, allHref, allTags }: Props): JSX.Element {
   return (
     <main className="max-w-3xl mx-auto py-16 md:py-32 px-4 md:px-0 blur-enter-content">
       <div className="mb-8">
@@ -42,15 +44,15 @@ export const ArticleList = ({ tag }: Props): JSX.Element => {
           ← Home
         </UniversalLink>
       </div>
-      <h1 className="text-xl">{tag ? tagLabelMap[tag] : "All Contents"}</h1>
+      <h1 className="text-xl">{title}</h1>
 
       <div className="my-8 overflow-x-auto pb-2">
         <div className="flex gap-2 flex-nowrap">
-          <TagChip href="/contents" isActive={!tag} label="All" />
-          {tagList.map((tagItem) => (
+          {allHref && <TagChip href={allHref} isActive={!tag} label="All" />}
+          {allTags.map((tagItem) => (
             <TagChip
               key={tagItem}
-              href={`/contents/tags/${tagItem}`}
+              href={`/tags/${tagItem}`}
               isActive={tag === tagItem}
               label={tagLabelMap[tagItem]}
             />
@@ -59,10 +61,10 @@ export const ArticleList = ({ tag }: Props): JSX.Element => {
       </div>
 
       <div className="grid gap-6 blur-enter-content enter-step-80">
-        {articlesMeta.map((article) => (
+        {articles.map((article) => (
           <ArticleListItem key={article.title} {...article} currentTag={tag} />
         ))}
       </div>
     </main>
   );
-};
+}

@@ -9,7 +9,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: baseUrl,
     },
     {
-      url: `${baseUrl}/contents`,
+      url: `${baseUrl}/blog`,
+    },
+    {
+      url: `${baseUrl}/media`,
     },
   ];
 
@@ -23,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const tagPaths: MetadataRoute.Sitemap = tagList.map((tag) => ({
-    url: `${baseUrl}/contents/tags/${tag}`,
+    url: `${baseUrl}/tags/${tag}`,
   }));
 
   return [...staticPaths, ...articlePaths, ...aboutPaths, ...tagPaths];

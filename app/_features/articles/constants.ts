@@ -1,8 +1,6 @@
 import type { TagEnum } from "./type";
 
 export const tagLabelMap: Record<TagEnum, string> = {
-  talks: "Talks",
-  media: "Media",
   nextjs: "Next.js",
   "generative-ai": "Generative AI",
   liam: "Liam",

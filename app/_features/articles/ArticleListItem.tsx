@@ -1,4 +1,5 @@
 import { MoveUpRight } from "lucide-react";
+import type { JSX } from "react";
 import { Time } from "../../_components";
 import { format } from "../../_utils";
 import { UniversalLink } from "../viewTransition";
@@ -10,15 +11,15 @@ type Props = ArticleMeta & {
   currentTag?: TagEnum | undefined;
 };
 
-export const ArticleListItem = ({
+export function ArticleListItem({
   title,
   href,
   externalLink,
-  publishedAt: PublishedAt,
+  publishedAt: rawPublishedAt,
   tags,
   currentTag,
-}: Props) => {
-  const publishedAt = format(PublishedAt);
+}: Props): JSX.Element {
+  const publishedAt = format(rawPublishedAt);
   const filteredTags = tags.filter((tag) => tag !== currentTag);
 
   return (
@@ -38,16 +39,16 @@ export const ArticleListItem = ({
       </div>
       {filteredTags.length > 0 && (
         <div className="text-xs text-zinc-500 dark:text-zinc-400">
-          {tags.map((tag, index) => (
+          {filteredTags.map((tag, index) => (
             <span key={tag}>
-              <UniversalLink href={`/contents/tags/${tag}`} isEnabledHoveredUnderline>
+              <UniversalLink href={`/tags/${tag}`} isEnabledHoveredUnderline>
                 {tagLabelMap[tag]}
               </UniversalLink>
-              {index < tags.length - 1 && ", "}
+              {index < filteredTags.length - 1 && ", "}
             </span>
           ))}
         </div>
       )}
     </article>
   );
-};
+}
