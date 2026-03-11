@@ -101,21 +101,21 @@ test("behavior", async ({ page }, testInfo) => {
   await run(page, testInfo, { name: "behavior", path: "/behavior" });
 });
 
-test("contents", async ({ page }, testInfo) => {
-  await run(page, testInfo, { name: "contents", path: "/contents" });
+test("blog", async ({ page }, testInfo) => {
+  await run(page, testInfo, { name: "blog", path: "/blog" });
 });
 
 test("2024-development-wordpress-theme", async ({ page }, testInfo) => {
   await run(page, testInfo, {
     name: "2024-development-wordpress-theme",
-    path: "/articles/2024-development-wordpress-theme",
+    path: "/blog/2024-development-wordpress-theme",
   });
 });
 
 test("testing-markdown-renderer", async ({ page }, testInfo) => {
   await run(page, testInfo, {
     name: "testing-markdown-renderer",
-    path: "/articles/testing-markdown-renderer",
+    path: "/blog/testing-markdown-renderer",
   });
 });
 
@@ -123,7 +123,7 @@ test("testing-markdown-renderer", async ({ page }, testInfo) => {
 test("opengraph-image", async ({ page }, testInfo) => {
   const targetPage = {
     name: "opengraph-image",
-    path: "/articles/embed-tweet-with-app-router/opengraph-image",
+    path: "/blog/embed-tweet-with-app-router/opengraph-image",
   };
   await page.goto(targetPage.path);
   await waitForPageReady(page);

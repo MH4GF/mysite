@@ -5,6 +5,11 @@ import { spawn } from "node:child_process";
 import { makeSource } from "@contentlayer/source-remote-files";
 import { defineDocumentType } from "contentlayer/source-files";
 
+const extractSlug = (flattenedPath: string): string => {
+  const segments = flattenedPath.split("/");
+  return segments.at(-1) ?? flattenedPath;
+};
+
 export const Article = defineDocumentType(() => ({
   name: "Article",
   filePathPattern: "articles/*.md",
@@ -32,13 +37,13 @@ export const Article = defineDocumentType(() => ({
     },
   },
   computedFields: {
-    href: { type: "string", resolve: (article) => `/${article._raw.flattenedPath}` },
+    href: {
+      type: "string",
+      resolve: (article) => `/blog/${extractSlug(article._raw.flattenedPath)}`,
+    },
     slug: {
       type: "string",
-      resolve: (article) => {
-        const segments = article._raw.flattenedPath.split("/");
-        return segments[segments.length - 1];
-      },
+      resolve: (article) => extractSlug(article._raw.flattenedPath),
     },
     externalLink: { type: "boolean", resolve: () => false },
   },
@@ -53,10 +58,7 @@ export const About = defineDocumentType(() => ({
   computedFields: {
     href: {
       type: "string",
-      resolve: (about) => {
-        const segments = about._raw.flattenedPath.split("/");
-        return `/${segments[segments.length - 1]}`;
-      },
+      resolve: (about) => `/${extractSlug(about._raw.flattenedPath)}`,
     },
   },
 }));

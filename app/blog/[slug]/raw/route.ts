@@ -7,7 +7,7 @@ interface Params {
 
 export async function GET(_request: Request, { params }: { params: Promise<Params> }) {
   const { slug } = await params;
-  const article = getArticle(`/articles/${slug}`);
+  const article = getArticle(`/blog/${slug}`);
 
   if (!article) {
     return new NextResponse("Article not found", { status: 404 });

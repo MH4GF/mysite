@@ -18,11 +18,45 @@ const nextConfig = {
       },
     ],
   },
+  redirects() {
+    return [
+      {
+        source: "/articles/:slug((?!feed$).*)",
+        destination: "/blog/:slug",
+        permanent: true,
+      },
+      {
+        source: "/articles/:slug/:path*",
+        destination: "/blog/:slug/:path*",
+        permanent: true,
+      },
+      {
+        source: "/contents",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/contents/tags/media",
+        destination: "/media",
+        permanent: true,
+      },
+      {
+        source: "/contents/tags/:tag",
+        destination: "/tags/:tag",
+        permanent: true,
+      },
+      {
+        source: "/blog/tags/:tag",
+        destination: "/tags/:tag",
+        permanent: true,
+      },
+    ];
+  },
   rewrites() {
     return [
       {
-        source: "/articles/:slug.md",
-        destination: "/articles/:slug/raw",
+        source: "/blog/:slug.md",
+        destination: "/blog/:slug/raw",
       },
       {
         source: "/:slug.md",

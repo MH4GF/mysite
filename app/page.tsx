@@ -41,8 +41,8 @@ export default function Page() {
           <h2>About</h2>
           <div className="flex flex-col gap-1">
             <h3>
-              <UniversalLink href="/contents" isEnabledUnderline>
-                All Contents
+              <UniversalLink href="/blog" isEnabledUnderline>
+                Blog
               </UniversalLink>
             </h3>
             <p className="text-sm text-foreground-sub">
@@ -51,7 +51,7 @@ export default function Page() {
           </div>
           <div className="flex flex-col gap-1">
             <h3>
-              <UniversalLink href="/contents/tags/media" isEnabledUnderline>
+              <UniversalLink href="/media" isEnabledUnderline>
                 Media
               </UniversalLink>
             </h3>

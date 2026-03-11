@@ -81,7 +81,7 @@ type Props = {
 
 export default async function Image(props: Props) {
   const params = await props.params;
-  const article = getArticle(`/articles/${params.slug}`);
+  const article = getArticle(`/blog/${params.slug}`);
   if (!article) {
     return new Response("Not Found", { status: 404 });
   }

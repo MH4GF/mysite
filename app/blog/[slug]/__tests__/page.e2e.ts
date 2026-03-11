@@ -6,8 +6,8 @@ const setup = async (page: Page, path: string) => {
   await page.waitForLoadState("networkidle");
 };
 
-test("/articles/testing-markdown-renderer", async ({ page }) => {
-  await setup(page, "/articles/testing-markdown-renderer");
+test("/blog/testing-markdown-renderer", async ({ page }) => {
+  await setup(page, "/blog/testing-markdown-renderer");
 
   await expect(page.getByRole("heading", { name: "見出し" })).toBeVisible();
   await expect(page.getByRole("link", { name: "アンカーテキスト" })).toBeVisible();
@@ -16,7 +16,7 @@ test("/articles/testing-markdown-renderer", async ({ page }) => {
 });
 
 test.describe("Ask AI Dropdown", () => {
-  const articlePath = "/articles/testing-markdown-renderer";
+  const articlePath = "/blog/testing-markdown-renderer";
 
   const setupArticle = async (page: Page) => {
     await page.goto(articlePath);
@@ -49,7 +49,7 @@ test.describe("Ask AI Dropdown", () => {
     const openMarkdownLink = page.getByRole("link", { name: "Markdownを開く" });
     await expect(openMarkdownLink).toHaveAttribute(
       "href",
-      /\/articles\/testing-markdown-renderer\.md$/,
+      /\/blog\/testing-markdown-renderer\.md$/,
     );
   });
 
@@ -104,13 +104,13 @@ test.describe("Command Palette", () => {
     await expect(page.getByRole("dialog")).not.toBeVisible();
   });
 
-  test("Navigate to All Contents", async ({ page }) => {
+  test("Navigate to Blog", async ({ page }) => {
     await setup(page, "/");
     await page.getByRole("button", { name: "Open command palette" }).click();
-    await page.getByRole("option", { name: "All Contents" }).click();
+    await page.getByRole("option", { name: "Blog" }).click();
 
     await expect(page.getByRole("dialog")).not.toBeVisible();
-    await expect(page.getByRole("heading", { name: "All Contents" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Blog" })).toBeVisible();
   });
 
   test("Navigate to `Source of this site` on another tab", async ({ page }) => {
@@ -125,7 +125,7 @@ test.describe("Command Palette", () => {
     await expect(page.getByRole("dialog")).not.toBeVisible();
   });
 
-  test("Navigate to All Contents with Enter key", async ({ page }) => {
+  test("Navigate to Blog with Enter key", async ({ page }) => {
     await setup(page, "/");
     await page.locator("body").press("ControlOrMeta+k");
     await page.keyboard.press("ArrowDown");
@@ -133,7 +133,7 @@ test.describe("Command Palette", () => {
     await page.keyboard.press("Enter");
 
     await expect(page.getByRole("dialog")).not.toBeVisible();
-    await expect(page.getByRole("heading", { name: "All Contents" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Blog" })).toBeVisible();
   });
 
   test("Navigate to `Source of this site` with Enter key", async ({ page }) => {

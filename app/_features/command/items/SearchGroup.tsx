@@ -44,12 +44,12 @@ void (async () => {
   }
 })();
 
-const URL_REGEX = /\/server\/app\/articles\/(.*)\.html/;
+const URL_REGEX = /\/server\/app\/blog\/(.*)\.html/;
 
 const formatUrl = (url: string): string => {
-  // /server/app/articles/kaigi-on-rails-2022.html
-  // /articles/kaigi-on-rails-2022 にしたい
-  return url.replace(URL_REGEX, "/articles/$1");
+  // /server/app/blog/kaigi-on-rails-2022.html
+  // /blog/kaigi-on-rails-2022 にしたい
+  return url.replace(URL_REGEX, "/blog/$1");
 };
 
 const useData = (result: Result) => {
