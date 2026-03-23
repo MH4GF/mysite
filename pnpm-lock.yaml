@@ -152,8 +152,8 @@ importers:
         specifier: 2.2.11
         version: 2.2.11(axe-core@4.11.1)
       dependency-cruiser:
-        specifier: 17.3.8
-        version: 17.3.8
+        specifier: 17.3.9
+        version: 17.3.9
       eslint:
         specifier: 9.39.4
         version: 9.39.4(jiti@2.6.1)
@@ -2409,12 +2409,17 @@ packages:
     resolution: {integrity: sha512-PPvV6g8UGMGgjrMu+n/f9E/tCSkNQ2Y97eFvuVdJfG11+xdIeDcLyNdC8SHcrHbRqkfwLASdplyR6B6sKM1U4A==}
     engines: {node: '>=0.4.0'}
 
-  acorn-walk@8.3.4:
-    resolution: {integrity: sha512-ueEepnujpqee2o5aIYnvHU6C0A42MNdsIDeqy5BydrkuC5R1ZuUFnm27EeFJGoEHJQgn3uleRvmTXaJgfXbt4g==}
+  acorn-walk@8.3.5:
+    resolution: {integrity: sha512-HEHNfbars9v4pgpW6SO1KSPkfoS0xVOM/9UzkJltjlsHZmJasxg8aXkuZa7SMf8vKGIBhpUsPluQSqhJFCqebw==}
     engines: {node: '>=0.4.0'}
 
   acorn@8.15.0:
     resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+
+  acorn@8.16.0:
+    resolution: {integrity: sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -2782,8 +2787,8 @@ packages:
     resolution: {integrity: sha512-8QmQKqEASLd5nx0U1B1okLElbUuuttJ/AnYmRXbbbGDWh6uS208EjD4Xqq/I9wK7u0v6O08XhTWnt5XtEbR6Dg==}
     engines: {node: '>= 0.4'}
 
-  dependency-cruiser@17.3.8:
-    resolution: {integrity: sha512-ziP2ziP7D6MVFK/mFTOQAAb7t2VAD6mhBMjD1Pu9CWDMzozssDN49RprKn8u85mTuK/W6kyiRg9WOyr1Y7lNqg==}
+  dependency-cruiser@17.3.9:
+    resolution: {integrity: sha512-LwaotlB9bZ8zhdFGGYf/g2oYkYj7YNxlqx1btL/XIYGob/aKRArsSwkLKo+ZrHiegsEArQVg4ZQ3NhAh8uk+hg==}
     engines: {node: ^20.12||^22||>=24}
     hasBin: true
 
@@ -2847,6 +2852,10 @@ packages:
 
   enhanced-resolve@5.19.0:
     resolution: {integrity: sha512-phv3E1Xl4tQOShqSte26C7Fl84EwUdZsyOuSSk9qtAGyyQs2s3jJzComh+Abf4g187lUUAvH+H26omrqia2aGg==}
+    engines: {node: '>=10.13.0'}
+
+  enhanced-resolve@5.20.0:
+    resolution: {integrity: sha512-/ce7+jQ1PQ6rVXwe+jKEg5hW5ciicHwIQUagZkp6IufBoY3YDgdTTY1azVs0qoRgVmvsNB+rbjLJxDAeHHtwsQ==}
     engines: {node: '>=10.13.0'}
 
   enquirer@2.4.1:
@@ -4754,11 +4763,6 @@ packages:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
 
-  semver@7.7.3:
-    resolution: {integrity: sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==}
-    engines: {node: '>=10'}
-    hasBin: true
-
   semver@7.7.4:
     resolution: {integrity: sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==}
     engines: {node: '>=10'}
@@ -4973,10 +4977,6 @@ packages:
 
   tailwindcss@4.2.1:
     resolution: {integrity: sha512-/tBrSQ36vCleJkAOsy9kbNTgaxvGbyOamC30PRePTQe/o1MFwEKHQk4Cn7BNGaPtjp+PuUrByJehM1hgxfq4sw==}
-
-  tapable@2.2.1:
-    resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
-    engines: {node: '>=6'}
 
   tapable@2.3.0:
     resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
@@ -5344,8 +5344,8 @@ packages:
     resolution: {integrity: sha512-3hu+tD8YzSLGuFYtPRb48vdhKMi0KQV5sn+uWr8+7dMEq/2G/dtLrdDinkLjqq5TIbIBjYJ4Ax/n3YiaW7QM8A==}
     engines: {node: 20 || >=22}
 
-  watskeburt@5.0.2:
-    resolution: {integrity: sha512-8xIz2RALjwTA7kYeRtkiQ2uaFyr327T1GXJnVcGOoPuzQX2axpUXqeJPcgOEVemCWB2YveZjhWCcW/eZ3uTkZA==}
+  watskeburt@5.0.3:
+    resolution: {integrity: sha512-g9CXukMjazlJJVQ3OHzXsnG25KFYgSgKMIyoJrD8ggr0DbS9UNF7OzIqWmmKKBMedkxj3T01uqEaGnn+y7QhMA==}
     engines: {node: ^20.12||^22.13||>=24.0}
     hasBin: true
 
@@ -6609,7 +6609,7 @@ snapshots:
       '@opentelemetry/propagator-b3': 1.25.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/propagator-jaeger': 1.25.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/sdk-trace-base': 1.25.1(@opentelemetry/api@1.9.0)
-      semver: 7.7.3
+      semver: 7.7.4
 
   '@opentelemetry/semantic-conventions@1.13.0': {}
 
@@ -7376,7 +7376,7 @@ snapshots:
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.7.3
+      semver: 7.7.4
       ts-api-utils: 2.1.0(typescript@5.9.3)
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -7405,7 +7405,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 8.54.0
       debug: 4.4.3
       minimatch: 9.0.5
-      semver: 7.7.3
+      semver: 7.7.4
       tinyglobby: 0.2.15
       ts-api-utils: 2.4.0(typescript@5.9.3)
       typescript: 5.9.3
@@ -7568,15 +7568,21 @@ snapshots:
     dependencies:
       acorn: 8.15.0
 
+  acorn-jsx@5.3.2(acorn@8.16.0):
+    dependencies:
+      acorn: 8.16.0
+
   acorn-loose@8.5.2:
     dependencies:
-      acorn: 8.15.0
+      acorn: 8.16.0
 
-  acorn-walk@8.3.4:
+  acorn-walk@8.3.5:
     dependencies:
-      acorn: 8.15.0
+      acorn: 8.16.0
 
   acorn@8.15.0: {}
+
+  acorn@8.16.0: {}
 
   ajv@6.14.0:
     dependencies:
@@ -8006,15 +8012,15 @@ snapshots:
       has-property-descriptors: 1.0.2
       object-keys: 1.1.1
 
-  dependency-cruiser@17.3.8:
+  dependency-cruiser@17.3.9:
     dependencies:
-      acorn: 8.15.0
-      acorn-jsx: 5.3.2(acorn@8.15.0)
+      acorn: 8.16.0
+      acorn-jsx: 5.3.2(acorn@8.16.0)
       acorn-jsx-walk: 2.0.0
       acorn-loose: 8.5.2
-      acorn-walk: 8.3.4
+      acorn-walk: 8.3.5
       commander: 14.0.3
-      enhanced-resolve: 5.19.0
+      enhanced-resolve: 5.20.0
       ignore: 7.0.5
       interpret: 3.1.1
       is-installed-globally: 1.0.0
@@ -8025,7 +8031,7 @@ snapshots:
       safe-regex: 2.1.1
       semver: 7.7.4
       tsconfig-paths-webpack-plugin: 4.2.0
-      watskeburt: 5.0.2
+      watskeburt: 5.0.3
 
   dequal@2.0.3: {}
 
@@ -8085,6 +8091,11 @@ snapshots:
       whatwg-encoding: 3.1.1
 
   enhanced-resolve@5.19.0:
+    dependencies:
+      graceful-fs: 4.2.11
+      tapable: 2.3.0
+
+  enhanced-resolve@5.20.0:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.3.0
@@ -9131,7 +9142,7 @@ snapshots:
 
   is-bun-module@2.0.0:
     dependencies:
-      semver: 7.7.3
+      semver: 7.7.4
 
   is-callable@1.2.7: {}
 
@@ -10902,8 +10913,6 @@ snapshots:
 
   semver@6.3.1: {}
 
-  semver@7.7.3: {}
-
   semver@7.7.4: {}
 
   set-function-length@1.2.2:
@@ -11159,8 +11168,6 @@ snapshots:
 
   tailwindcss@4.2.1: {}
 
-  tapable@2.2.1: {}
-
   tapable@2.3.0: {}
 
   third-party-capital@1.0.20: {}
@@ -11213,8 +11220,8 @@ snapshots:
   tsconfig-paths-webpack-plugin@4.2.0:
     dependencies:
       chalk: 4.1.2
-      enhanced-resolve: 5.19.0
-      tapable: 2.2.1
+      enhanced-resolve: 5.20.0
+      tapable: 2.3.0
       tsconfig-paths: 4.2.0
 
   tsconfig-paths@3.15.0:
@@ -11553,7 +11560,7 @@ snapshots:
 
   walk-up-path@4.0.0: {}
 
-  watskeburt@5.0.2: {}
+  watskeburt@5.0.3: {}
 
   web-namespaces@2.0.1: {}
 
