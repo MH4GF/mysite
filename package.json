@@ -54,7 +54,7 @@
     "tailwindcss": "4.2.2",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
-    "vitest": "4.1.2"
+    "vitest": "4.1.3"
   },
   "dependencies": {
     "@contentlayer/source-remote-files": "0.3.4",
