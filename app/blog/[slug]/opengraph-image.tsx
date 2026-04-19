@@ -1,5 +1,7 @@
+// biome-ignore-start lint/correctness/noNodejsModules: Node runtime reads local asset for ImageResponse
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+// biome-ignore-end lint/correctness/noNodejsModules: Node runtime reads local asset for ImageResponse
 
 import { ImageResponse } from "next/og";
 
