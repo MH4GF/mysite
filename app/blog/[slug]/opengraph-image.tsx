@@ -1,3 +1,6 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
+
 import { ImageResponse } from "next/og";
 
 import { tagLabelMap } from "../../_features/articles/constants";
@@ -84,9 +87,9 @@ export default async function Image(props: Props) {
     return new Response("Not Found", { status: 404 });
   }
 
-  const imageData = fetch(new URL("./_assets/og-image-base.jpg", import.meta.url)).then((res) =>
-    res.arrayBuffer(),
-  );
+  const imageData = readFile(
+    path.join(process.cwd(), "app/blog/[slug]/_assets/og-image-base.jpg"),
+  ).then((buf) => `data:image/jpeg;base64,${buf.toString("base64")}`);
   const fonts = await generateFonts();
   if (!fonts) {
     return new Response("Error", { status: 500 });
