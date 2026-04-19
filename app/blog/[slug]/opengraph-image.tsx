@@ -3,8 +3,6 @@ import { ImageResponse } from "next/og";
 import { tagLabelMap } from "../../_features/articles/constants";
 import { getArticle } from "../../_features/articles/getArticle";
 
-export const runtime = "edge";
-
 export const alt = "記事タイトル";
 export const size = {
   width: 1200,
