@@ -18,7 +18,7 @@
     "build:pagefind": "tsx ./scripts/pagefind.mts",
     "build:rulens": "rulens generate",
     "postbuild": "pnpm run build:pagefind",
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "start": "next start",
     "test": "pnpm run '/^test:.*/'",
     "test:playwright": "playwright test",
