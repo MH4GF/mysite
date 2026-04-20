@@ -49,7 +49,7 @@
     "markuplint": "4.14.1",
     "msw": "2.13.4",
     "pagefind": "1.5.2",
-    "postcss": "8.5.9",
+    "postcss": "8.5.10",
     "rulens": "0.2.2",
     "tailwindcss": "4.2.2",
     "tsx": "4.21.0",
