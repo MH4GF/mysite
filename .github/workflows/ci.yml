@@ -20,6 +20,7 @@ jobs:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@7f2072e386bda50a4ab71eb64b41ca6ab0b250a1 # main
       - run: pnpm build:contentlayer
+      - run: pnpm exec next typegen
       - run: pnpm lint
 
   test:
