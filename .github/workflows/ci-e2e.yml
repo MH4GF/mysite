@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
-      - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@81f91cc88cec01cb9c162bc905b6b4169b444787 # main
+      - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@c910cd36da22aeaf74113b133edfc66d7d9d7849 # main
       # 本番環境（https://mh4gf.dev）でベースラインスクリーンショット取得
       - name: Capture baseline screenshots from production
         run: pnpm test:playwright app/__vrt__ --update-snapshots
