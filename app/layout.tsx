@@ -31,9 +31,6 @@ export const metadata: Metadata = {
     site: twitter,
     creator: twitter,
   },
-  alternates: {
-    canonical: url,
-  },
   icons: [
     {
       rel: "icon",
