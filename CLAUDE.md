@@ -22,3 +22,10 @@ IMPORTANT: Read coding guidelines in docs/lint-rules.md before beginning code wo
 - Error handling: use try/catch blocks with proper error typing
 - CSS: use Tailwind utility classes with cn() helper for conditionals
 - Testing: use Vitest for unit tests, Playwright for e2e tests
+
+## File Access Rules (Next.js App Router)
+
+`app/` ディレクトリには `_features/`, `_utils/`, `_components/`, `[slug]/`, `[tag]/`, `(pages)/` 等の慣習的ディレクトリが含まれる。以下を守ること:
+
+- **ディレクトリを Read しない** - `app/_features`, `app/[slug]/_features` 等は**ディレクトリ**であり Read ツールはEISDIRで失敗する。中身を知りたい場合は Glob で `app/_features/**/*.{ts,tsx}` のようにファイル列挙してから個別に Read する
+- **角括弧パスは必ずシングルクォートで囲む** - zsh はデフォルトで `[slug]` を glob として解釈し `no matches found` で失敗する。Bashで絶対パスを扱う時は `ls '/path/to/app/[slug]/_features'` のようにクォート必須。Read/Glob/Grep ツールの path 引数はクォート不要
