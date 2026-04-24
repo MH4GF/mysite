@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
-      - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@c910cd36da22aeaf74113b133edfc66d7d9d7849 # main
+      - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@7e03cba02a86a54be72a51fd3dd9fcd42858aee0 # main
       - run: pnpm build:contentlayer
       - run: pnpm exec next typegen
       - run: pnpm lint
@@ -29,5 +29,5 @@ jobs:
       image: mcr.microsoft.com/playwright:v1.54.2-noble@sha256:18b4bcff4f8ba0ac8c44b09f09def6a4f6cb8579e5f26381c21f38b50935d5d8
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
-      - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@c910cd36da22aeaf74113b133edfc66d7d9d7849 # main
+      - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@7e03cba02a86a54be72a51fd3dd9fcd42858aee0 # main
       - run: pnpm test:vitest
