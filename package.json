@@ -44,7 +44,7 @@
     "dependency-cruiser": "17.3.10",
     "eslint": "9.39.4",
     "eslint-plugin-react": "7.37.5",
-    "eslint-plugin-react-hooks": "7.0.1",
+    "eslint-plugin-react-hooks": "7.1.1",
     "knip": "5.88.1",
     "markuplint": "4.18.1",
     "msw": "2.13.6",
