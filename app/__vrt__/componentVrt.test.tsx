@@ -66,14 +66,12 @@ const themes = ["light", "dark"] as const;
 const storyFilePathFor = (modulePath: string): string =>
   modulePath.replace(/^\.\.\//, "").replace(/\.stories\.tsx$/, "");
 
-/** スクリーンショット名: ストーリーID（ファイルパス + export 名）+ テーマで安定・一意にする */
-const screenshotNameFor = (storyFilePath: string, exportName: string, theme: string): string => {
-  const fileId = storyFilePath
-    .replaceAll(/[^a-zA-Z0-9]+/g, "-")
-    .replace(/^-+/, "")
-    .replace(/-+$/, "");
-  return `${fileId}--${exportName}--${theme}`;
-};
+/**
+ * スクリーンショット名: ストーリーのファイルパス / export 名 / テーマの階層構造にする。
+ * 例: "_components/Time/Default/dark(-chromium-linux.png)"
+ */
+const screenshotNameFor = (storyFilePath: string, exportName: string, theme: string): string =>
+  `${storyFilePath}/${exportName}/${theme}`;
 
 for (const [modulePath, storiesModule] of Object.entries(storyModules)) {
   const storyFilePath = storyFilePathFor(modulePath);
