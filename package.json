@@ -25,6 +25,8 @@
     "test": "pnpm run '/^test:.*/'",
     "test:playwright": "playwright test",
     "test:vitest": "vitest run --coverage",
+    "vrt": "./scripts/vrt.sh",
+    "vrt:update": "./scripts/vrt.sh --update",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

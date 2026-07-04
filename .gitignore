@@ -41,6 +41,11 @@ tsconfig.tsbuildinfo
 /playwright-report/
 /playwright/.cache/
 app/__vrt__/vrt.e2e.ts-snapshots/
+
+# component VRT (vitest toMatchScreenshot) の失敗時 actual / diff 出力。
+# 基準画像 (app/__vrt__/__screenshots__/) はコミット対象なので ignore しない
+.vitest-attachments/
+
 .contentlayer
 axe-html-report/
 
