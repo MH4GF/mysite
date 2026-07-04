@@ -32,7 +32,7 @@ const filePathToRoute = (filePath: string): string => {
 };
 
 const findPageFiles = (dir: string): string[] => {
-  const entries = fs.readdirSync(dir, { recursive: true, withFileTypes: true }) as fs.Dirent[];
+  const entries = fs.readdirSync(dir, { recursive: true, withFileTypes: true });
   return entries
     .filter((entry) => entry.isFile() && entry.name === PAGE_FILE_NAME)
     .map((entry) => path.join(entry.parentPath, entry.name));

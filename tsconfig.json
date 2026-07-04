@@ -20,6 +20,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated",
+    ".storybook/**/*.ts",
     "scripts/pagefind.mts",
     "scripts/checkRouteCoverage.mts",
     "scripts/checkStoryExistence.mts"

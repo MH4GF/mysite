@@ -45,7 +45,7 @@ const isTargetComponentFile = (entry: fs.Dirent): boolean => {
  *       *.stories.tsx、*.test.tsx、*.e2e.ts(x)、__tests__ / __vrt__ 配下
  */
 const findComponentFiles = (dir: string): string[] => {
-  const entries = fs.readdirSync(dir, { recursive: true, withFileTypes: true }) as fs.Dirent[];
+  const entries = fs.readdirSync(dir, { recursive: true, withFileTypes: true });
   return entries
     .filter((entry) => isTargetComponentFile(entry))
     .map((entry) => path.join(entry.parentPath, entry.name))
