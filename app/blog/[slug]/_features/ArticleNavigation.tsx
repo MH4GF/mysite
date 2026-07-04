@@ -1,5 +1,8 @@
 import type { JSX } from "react";
-import { type AdjacentArticles, UniversalLink } from "@/app/_features";
+// ルートバレル（@/app/_features）は contentlayer/generated に依存する getArticle 等を含み
+// Storybook（Vitest Browser Mode）で解決できないため、サブパスから直接 import する
+import type { AdjacentArticles } from "@/app/_features/articles/findAdjacentArticles";
+import { UniversalLink } from "@/app/_features/viewTransition";
 
 export const ArticleNavigation = ({ older, newer }: AdjacentArticles): JSX.Element | null => {
   if (!(older || newer)) {

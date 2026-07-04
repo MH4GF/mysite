@@ -1,7 +1,7 @@
 {
   "entry": [".markuplintrc.ts", "contentlayer.config.ts"],
   "ignore": [
-    "app/_features/command/items/SearchGroup.tsx" // NOTE: Ignore importing pagefind js file
+    "public/mockServiceWorker.js" // NOTE: msw init で生成される Service Worker。import されず実行時に登録される
   ],
   "ignoreDependencies": ["@markuplint/jsx-parser", "@markuplint/react-spec"]
 }

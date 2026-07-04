@@ -18,32 +18,11 @@ export const storyExclusions = [
   // --- RSC: ページVRT（ゲート②）で担保 ---
   "app/_features/markdownRenderer/MarkdownRenderer.tsx",
   "app/_features/richLinkCard/RichLinkCard.tsx",
-
-  // --- ラチェット: Storybook 導入時点で未作成。ストーリー追加時に削除する ---
-  "app/[slug]/_features/Content.tsx",
-  "app/_components/Footer.tsx",
-  "app/_components/MyAvatar.tsx",
-  "app/_features/Header.tsx",
-  "app/_features/articles/ArticleList.tsx",
-  "app/_features/articles/ArticleListItem.tsx",
-  "app/_features/askAI/AskAIDropdown.tsx",
-  "app/_features/colorMode/ColorModeScript.tsx",
-  "app/_features/command/Command.tsx",
-  "app/_features/command/CommandProvider.tsx",
-  "app/_features/command/CommandTrigger.tsx",
-  "app/_features/command/items/ColorTheme.tsx",
-  "app/_features/command/items/CommandLinkItem.tsx",
-  "app/_features/command/items/SearchGroup.tsx",
-  "app/_features/command/items/ShareToX.tsx",
-  "app/_features/markdownRenderer/elements/Blockquote.tsx",
-  "app/_features/markdownRenderer/elements/Paragraph.tsx",
-  "app/_features/top/HeroImage.tsx",
-  "app/_features/top/WorkExperienceList.tsx",
-  "app/_features/tweetEmbed/TweetEmbed.tsx",
-  "app/_features/tweetEmbed/TwitterWidgets.tsx",
-  "app/_features/viewTransition/Link.tsx",
-  "app/_features/viewTransition/UniversalLink.tsx",
+  // Article は async RSC の MarkdownRenderer を子に持つためストーリー化できない。
+  // ゲート①はユニットテスト（__tests__/article.test.tsx）、視覚検証はページVRTで担保
   "app/blog/[slug]/_features/Article.tsx",
-  "app/blog/[slug]/_features/ArticleMetaDetail.tsx",
-  "app/blog/[slug]/_features/ArticleNavigation.tsx",
+  // Content は contentlayer 実データ（外部リポジトリ由来・非決定的）を値 import し、
+  // かつ async RSC の MarkdownRenderer を子に持つためストーリー化できない。
+  // ゲート①は生成物依存として恒久除外済み（coverageExclusions.ts）、視覚検証はページVRTで担保
+  "app/[slug]/_features/Content.tsx",
 ];

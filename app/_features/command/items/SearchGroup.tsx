@@ -33,11 +33,11 @@ declare global {
 void (async () => {
   if (typeof window !== "undefined" && typeof window.pagefind === "undefined") {
     try {
+      // pagefind.js はビルド後に生成されるため、webpack / Vite いずれのバンドラにも
+      // 解決させず実行時にロードする（変数指定 + ignore コメントで静的解析を回避する）
+      const pagefindPath = "/search/pagefind.js";
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      window.pagefind = await import(
-        // @ts-expect-error pagefind.js generated after build
-        /* webpackIgnore: true */ "/search/pagefind.js"
-      );
+      window.pagefind = await import(/* webpackIgnore: true */ /* @vite-ignore */ pagefindPath);
     } catch {
       window.pagefind = { search: () => Promise.resolve({ results: [] }) };
     }

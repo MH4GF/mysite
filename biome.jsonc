@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "extends": ["./node_modules/@mh4gf/configs/biome/index.jsonc"],
   "files": {
-    "includes": ["!**/.contentlayer", "!**/*.css"]
+    // public/mockServiceWorker.js は MSW が生成する Service Worker スクリプト（手編集不可の生成物）
+    "includes": ["!**/.contentlayer", "!**/*.css", "!public/mockServiceWorker.js"]
   },
   "linter": {
     "enabled": true,

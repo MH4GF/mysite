@@ -35,6 +35,7 @@ module.exports = {
           "postcss.config.js", // postcssの設定ファイル
           "lostpixel.config.ts", // lostpixelの設定ファイル
           "(^|/)\\.storybook/", // Storybook の設定ファイル。storybook CLI / addon-vitest が設定として読み込むため orphan ではない
+          "public/mockServiceWorker\\.js", // msw init で生成される Service Worker。ストーリーが実行時に登録するため orphan ではない
         ],
       },
       to: {},
