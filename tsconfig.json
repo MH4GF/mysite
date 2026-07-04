@@ -20,7 +20,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated",
-    "scripts/pagefind.mts"
+    "scripts/pagefind.mts",
+    "scripts/checkRouteCoverage.mts",
+    "scripts/checkStoryExistence.mts"
   ],
   "exclude": ["node_modules"]
 }
