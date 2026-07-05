@@ -5,10 +5,8 @@ import { expect, userEvent, waitFor } from "storybook/test";
 import { CommandList } from "@/app/_components/ui/command";
 import { ColorTheme } from "./ColorTheme";
 
-/** documentElement の dark クラスから現在のカラーモードを読む */
 const isDarkMode = () => document.documentElement.classList.contains("dark");
 
-/** currentMode に対して表示されるラベル */
 const labelFor = (dark: boolean) => (dark ? "Change to Light Mode" : "Change to Dark Mode");
 
 /** toggleMode が一時付与する transition 無効化クラスが外れるまで待つ */

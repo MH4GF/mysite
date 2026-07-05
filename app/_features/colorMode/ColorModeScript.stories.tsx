@@ -16,8 +16,8 @@ export const Default: Story = {
     const script = canvasElement.querySelector("script");
     await expect(script).not.toBeNull();
 
-    // Assert on the meaningful logic embedded in the inline script rather than
-    // snapshotting its full text, per SPEC.md's guidance for this component.
+    // SPEC.md のこのコンポーネントへの指針に従い、インラインスクリプト全文のスナップショットではなく
+    // 埋め込まれたロジックの要点をアサートする
     const code = script?.textContent ?? "";
     await expect(code).toContain("prefers-color-scheme: dark");
     await expect(code).toContain("window.localStorage.isDarkMode");

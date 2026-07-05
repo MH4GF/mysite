@@ -58,7 +58,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Loading: Story = {
-  // 検索が完了するまでの間、3 件のローディングスケルトンを表示する
   play: async ({ canvas }) => {
     await overridePagefind(() => new Promise(() => undefined));
     await userEvent.type(canvas.getByPlaceholderText("Search articles..."), "next");
@@ -67,7 +66,6 @@ export const Loading: Story = {
 };
 
 export const NoResults: Story = {
-  // 検索結果が 0 件の場合、クエリを含めた旨を表示する
   play: async ({ canvas }) => {
     await overridePagefind(() => Promise.resolve({ results: [] }));
     await userEvent.type(canvas.getByPlaceholderText("Search articles..."), "zzz");
@@ -76,7 +74,6 @@ export const NoResults: Story = {
 };
 
 export const WithResults: Story = {
-  // 検索結果をブログ記事へのリンクとして表示する。外部リンク記事はアイコンが変わる
   play: async ({ canvas }) => {
     await overridePagefind(() => Promise.resolve({ results: [internalArticle, externalArticle] }));
     await userEvent.type(canvas.getByPlaceholderText("Search articles..."), "article");

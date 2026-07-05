@@ -13,7 +13,6 @@ const { storyExclusions } = await import("../storyExclusions.js");
 
 const APP_DIR = "app";
 
-// これらのディレクトリ配下はコンポーネント探索の対象外とする
 const SKIP_DIR_NAMES = new Set(["__tests__", "__vrt__"]);
 
 const isSkippedPath = (relativePath: string): boolean =>
@@ -36,14 +35,6 @@ const isTargetComponentFile = (entry: fs.Dirent): boolean => {
   return true;
 };
 
-/**
- * app 配下を再帰的に走査し、対象となる PascalCase コンポーネントファイルの
- * リポジトリルート相対パス(POSIX区切り)を列挙する。
- *
- * 対象: `[A-Z]*.tsx`
- * 除外: page.tsx / layout.tsx / opengraph-image.tsx 等(小文字始まりのため自然に対象外)、
- *       *.stories.tsx、*.test.tsx、*.e2e.ts(x)、__tests__ / __vrt__ 配下
- */
 const findComponentFiles = (dir: string): string[] => {
   const entries = fs.readdirSync(dir, { recursive: true, withFileTypes: true });
   return entries
@@ -63,12 +54,6 @@ interface Classification {
   danglingExclusions: string[];
 }
 
-/**
- * コンポーネント一覧と allowlist を突き合わせ、以下の3種の問題を検出する:
- * - missing: stories が無く、allowlist にも無い
- * - staleExclusions: allowlist にあるが、既に stories が存在する（縮め忘れ）
- * - danglingExclusions: allowlist にあるが、対応するコンポーネントファイル自体が無い
- */
 const classify = (componentFiles: string[], exclusions: readonly string[]): Classification => {
   const exclusionSet = new Set(exclusions);
   const seenExclusions = new Set<string>();

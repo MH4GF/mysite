@@ -22,6 +22,16 @@ const baseArticle: Article = {
 
 const meta = {
   component: ArticleMetaDetail,
+  decorators: [
+    // 本番では app/blog/[slug]/page.tsx が `max-w-3xl` のコンテナで記事本文を包む。
+    // このストーリーではその制約がないため、next/image の width="1120" がコンテナ幅を
+    // 超えて VRT の body 撮影で右端が切れる。本番同様のコンテナ幅で包み、はみ出しを隠す
+    (Story) => (
+      <div className="max-w-3xl mx-auto overflow-hidden">
+        <Story />
+      </div>
+    ),
+  ],
 } satisfies Meta<typeof ArticleMetaDetail>;
 
 export default meta;

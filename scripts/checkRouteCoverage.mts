@@ -40,7 +40,6 @@ const findPageFiles = (dir: string): string[] => {
 
 const escapeRegExp = (value: string): string => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-/** 動的ルート(例: /blog/[slug])を、実パスにマッチする正規表現に変換する */
 const routeToRegExp = (route: string): RegExp => {
   const pattern = route
     .split("/")

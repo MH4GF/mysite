@@ -24,16 +24,16 @@ export const Open: Story = {
     const trigger = canvas.getByAltText("MH4GF profile picture");
     await userEvent.click(trigger);
 
-    // DialogTitle is wrapped in VisuallyHiddenRoot for a11y (kept for screen readers,
-    // not visually shown), so it is present in the DOM but intentionally not `toBeVisible()`.
+    // DialogTitle は a11y のため VisuallyHiddenRoot でラップされ視覚的には非表示だが、
+    // スクリーンリーダー向けに DOM 上には存在するため toBeVisible ではなく toBeInTheDocument を使う
     const title = await screen.findByText("MH4GF profile picture");
     await expect(title).toBeInTheDocument();
 
     const description = screen.getByText(
       "MH4GF profile picture. The rabbit in the front, his name is Ponpoko.",
     );
-    // The dialog content animates in (fade/zoom), so wait for the transition to finish
-    // before asserting visibility to avoid a race with the opacity-0 initial frame.
+    // ダイアログの内容は fade/zoom でアニメーション表示されるため、opacity: 0 の初期フレームとの
+    // レースを避けるためトランジション完了を待ってから可視性をアサートする
     await waitFor(() => expect(description).toBeVisible());
   },
 };

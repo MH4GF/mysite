@@ -30,7 +30,6 @@ beforeAll(() => {
 
   const style = document.createElement("style");
   style.textContent = `
-    /* アニメーション・トランジション・キャレットを全停止する */
     *, *::before, *::after {
       animation-duration: 0s !important;
       animation-delay: 0s !important;
@@ -62,32 +61,24 @@ beforeAll(() => {
 // 含む）をテスト内で即時完結させる。これにより body に残った残骸の掃除が安全になる
 const flushStory = composeStory({ render: () => <></> }, {});
 
-// 現在のテストが body に追加したストーリー用コンテナ
 let activeCanvasElement: HTMLElement | undefined;
 
 afterEach(async () => {
-  // 1. 直前のストーリーを即時アンマウントする（フラッシュ用ストーリー自身は detached な
-  //    コンテナにマウントされるため body には現れず、その unmount は次の run() 冒頭で回収される）
   await flushStory.run({ canvasElement: document.createElement("div") });
 
-  // 2. ストーリー用コンテナを除去する
   activeCanvasElement?.remove();
   activeCanvasElement = undefined;
 
-  // 3. ストーリーが body に直接注入した React 管理外のノード（next/script が挿入する
-  //    script タグ等）を含め、スイート開始時に存在しなかった body 直下の残骸を全て除去する
   for (const node of Array.from(document.body.children)) {
     if (!initialBodyChildren.has(node)) {
       node.remove();
     }
   }
 
-  // 4. ストーリーの副作用が次のテストへ漏れないよう、グローバル状態を完全復元する
   document.documentElement.className = initialHtmlClassName;
   window.localStorage.clear();
 });
 
-/** composeStories が返す合成済みストーリーのうち、このテストが利用する部分の型 */
 interface RunnableStory {
   run: (context?: { canvasElement?: HTMLElement }) => Promise<void>;
 }
@@ -102,19 +93,13 @@ declare global {
   }
 }
 
-// app 配下の全ストーリーを機械的に列挙する（このファイルは app/__vrt__/ にあるため "../" = app/）
 const storyModules = import.meta.glob<StoriesModule>("../**/*.stories.tsx", { eager: true });
 
 const themes = ["light", "dark"] as const;
 
-/** "../_components/Time.stories.tsx" -> "_components/Time" */
 const storyFilePathFor = (modulePath: string): string =>
   modulePath.replace(/^\.\.\//, "").replace(/\.stories\.tsx$/, "");
 
-/**
- * スクリーンショット名: ストーリーのファイルパス / export 名 / テーマの階層構造にする。
- * 例: "_components/Time/Default/dark(-chromium-linux.png)"
- */
 const screenshotNameFor = (storyFilePath: string, exportName: string, theme: string): string =>
   `${storyFilePath}/${exportName}/${theme}`;
 
@@ -137,7 +122,6 @@ for (const [modulePath, storiesModule] of Object.entries(storyModules)) {
         document.body.appendChild(canvasElement);
         activeCanvasElement = canvasElement;
 
-        // レンダリング + play function 実行（Storybook のライフサイクルフックを全て実行する）
         await story.run({ canvasElement });
 
         // SPEC.md「VRT の決定性」: フォントのロード完了を待つ

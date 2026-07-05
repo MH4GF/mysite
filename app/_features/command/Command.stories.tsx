@@ -3,7 +3,6 @@ import { expect, screen, userEvent, waitFor, within } from "storybook/test";
 
 import { Command } from "./Command";
 
-/** ダイアログ内の検索（pagefind）が完了し、ローディングスケルトンが消えるまで待つ */
 const waitForSearchSettled = async (dialog: HTMLElement) => {
   await waitFor(() => expect(within(dialog).queryAllByRole("progressbar")).toHaveLength(0), {
     timeout: 5000,
@@ -33,8 +32,6 @@ export const OpenedWithTriggerOnTopPage: Story = {
       navigation: { pathname: "/" },
     },
   },
-  // トップページ: トリガーで開くと各コマンドが表示されるが、About me へのリンクは表示されない。
-  // Escape で閉じる
   play: async ({ canvas }) => {
     await userEvent.click(canvas.getByRole("button", { name: "Open command palette" }));
 
@@ -64,8 +61,6 @@ export const OpenedWithKeyboardOnBlogPage: Story = {
       navigation: { pathname: "/blog" },
     },
   },
-  // ブログページ: 修飾キーなしの k や他のキーでは開かず、⌘K で開くと About me へのリンクを
-  // 表示する。Ctrl+K でトグルして閉じる
   play: async () => {
     await userEvent.keyboard("k");
     await userEvent.keyboard("j");

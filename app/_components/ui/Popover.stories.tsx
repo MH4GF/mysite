@@ -34,8 +34,8 @@ export const Open: Story = {
     await userEvent.click(trigger);
 
     const content = await screen.findByText("Popover content");
-    // The popover animates in (fade/zoom), so wait for the transition to finish
-    // before asserting visibility to avoid a race with the opacity-0 initial frame.
+    // Popover は fade/zoom でアニメーション表示されるため、opacity: 0 の初期フレームとの
+    // レースを避けるためトランジション完了を待ってから可視性をアサートする
     await waitFor(() => expect(content).toBeVisible());
   },
 };

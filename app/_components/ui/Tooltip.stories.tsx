@@ -8,7 +8,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./tool
 const meta = {
   title: "Components/UI/Tooltip",
   render: () => (
-    // delayDuration=0 keeps the story deterministic (no reliance on the 700ms default hover delay)
+    // delayDuration=0 でホバー時のデフォルト遅延 700ms に依存させず、ストーリーを決定的にする
     <TooltipProvider delayDuration={0}>
       <Tooltip>
         <TooltipTrigger>Hover me</TooltipTrigger>
@@ -36,8 +36,8 @@ export const Open: Story = {
     const trigger = canvas.getByText("Hover me");
     await userEvent.hover(trigger);
 
-    // Radix renders the content twice: once visible, once in a visually-hidden
-    // live region for screen readers. Wait for the visible one specifically.
+    // Radix は内容を可視版とスクリーンリーダー向けの visually-hidden ライブリージョン版の
+    // 2 重に描画するため、可視な方が現れるのを待つ
     await waitFor(async () => {
       const matches = screen.getAllByText("Tooltip content");
       await expect(matches.some((element) => element.checkVisibility())).toBe(true);

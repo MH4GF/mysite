@@ -42,7 +42,6 @@ describe("processor", () => {
     const markup = await renderMarkdown("[example](https://example.com)");
 
     expect(markup).toContain('href="https://example.com"');
-    // 外部リンクは別タブで開く
     expect(markup).toContain('target="_blank"');
     expect(markup).toContain('rel="noreferrer"');
   });

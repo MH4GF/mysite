@@ -24,7 +24,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  // 現在のページ URL とタイトルを含む X の共有 URL へのリンクを表示する
   play: async ({ canvas }) => {
     // アクセシブルネームには XIcon の svg title（"X"）も含まれるため部分一致で取得する
     const item = canvas.getByRole("option", { name: /Share to X/ });
