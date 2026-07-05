@@ -12,11 +12,6 @@ const waitForSearchSettled = async (dialog: HTMLElement) => {
 
 const meta = {
   component: Command,
-  parameters: {
-    nextjs: {
-      appDirectory: true,
-    },
-  },
   decorators: [
     // トリガーボタンは fixed 配置、ダイアログはポータルで body 直下に描画されるため、
     // canvasElement 自体が高さ 0 にならないようコンテナで最低限のサイズを確保する
@@ -35,7 +30,6 @@ type Story = StoryObj<typeof meta>;
 export const OpenedWithTriggerOnTopPage: Story = {
   parameters: {
     nextjs: {
-      appDirectory: true,
       navigation: { pathname: "/" },
     },
   },
@@ -67,7 +61,6 @@ export const OpenedWithTriggerOnTopPage: Story = {
 export const OpenedWithKeyboardOnBlogPage: Story = {
   parameters: {
     nextjs: {
-      appDirectory: true,
       navigation: { pathname: "/blog" },
     },
   },

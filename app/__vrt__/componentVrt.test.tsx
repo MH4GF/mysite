@@ -9,7 +9,7 @@
  *   `pnpm vrt:update`）。vitest.config.ts の VRT=1 ゲートにより、ホスト環境の
  *   `pnpm test:vitest` では構成上実行されない（macOS 産スナップショットの混入を排除する）
  */
-import { composeStories, setProjectAnnotations } from "@storybook/nextjs-vite";
+import { composeStories, composeStory, setProjectAnnotations } from "@storybook/nextjs-vite";
 import { afterEach, beforeAll, expect, test } from "vitest";
 import { page } from "vitest/browser";
 
@@ -18,13 +18,15 @@ import * as previewAnnotations from "../../.storybook/preview";
 const annotations = setProjectAnnotations([previewAnnotations]);
 beforeAll(annotations.beforeAll);
 
-// documentElement の初期状態。ストーリーの副作用（ColorModeScript のインライン script や
-// ColorTheme のトグル等）で変化しても afterEach で完全復元するために保持する
+// documentElement / body の初期状態。ストーリーの副作用（ColorModeScript のインライン script、
+// next/script が body に直接注入する script 等）が残っても afterEach で完全復元するために保持する
 let initialHtmlClassName = "";
+let initialBodyChildren = new Set<Element>();
 
 // SPEC.md「VRT の決定性」: 撮影環境を固定する
 beforeAll(() => {
   initialHtmlClassName = document.documentElement.className;
+  initialBodyChildren = new Set(document.body.children);
 
   const style = document.createElement("style");
   style.textContent = `
@@ -39,30 +41,48 @@ beforeAll(() => {
       scroll-behavior: auto !important;
     }
     /* スクロールバーの出現有無でビューポート実効幅が揺れると、全要素のレイアウトが
-       水平方向にずれて右端 1 列分の非決定差分になる。ガター幅を常に確保して排除する */
+       水平方向にずれて右端 1 列分の非決定差分になる。ガター幅を常に確保して排除する。
+       また、撮影対象は documentElement（下記コメント参照）なので、fixed 配置の要素や
+       body 直下の portal（Radix の Dialog / Popover / Tooltip 等のオーバーレイ）が
+       必ず撮影範囲に入るよう、html の高さを最低 1 ビューポートぶん確保する */
     html {
       scrollbar-gutter: stable;
+      min-height: 100vh;
     }
   `;
   document.head.appendChild(style);
 });
 
+// 【重要】portable stories の unmount コールバックは「次の story.run() の冒頭」で遅延実行される
+// （composeStories 内部のモジュール共有 cleanups 配列）。そのため、afterEach で React 管理下の
+// DOM（Radix 等が body 直下に追加する portal を含む）を直接消すと、遅延アンマウント時に React の
+// removeChild が NotFoundError を投げ、後続テストが連鎖失敗する。
+// そこで、何もレンダリングしない「フラッシュ用ストーリー」の run() を afterEach で呼ぶことで、
+// 直前のストーリーのアンマウント（portal 回収・react-remove-scroll 等による body スタイル復元を
+// 含む）をテスト内で即時完結させる。これにより body に残った残骸の掃除が安全になる
+const flushStory = composeStory({ render: () => <></> }, {});
+
 // 現在のテストが body に追加したストーリー用コンテナ
 let activeCanvasElement: HTMLElement | undefined;
 
-afterEach(() => {
-  // 【重要】React ツリーをここで手動破壊しないこと。
-  // portable stories の unmount コールバックは「次の story.run() の冒頭」で遅延実行される
-  // （composeStories 内部のモジュール共有 cleanups 配列）。そのため、ここで
-  // body.replaceChildren() 等により React 管理下の DOM（Radix 等が body 直下に追加する
-  // portal を含む）を直接消すと、遅延アンマウント時に React の removeChild が
-  // NotFoundError を投げ、後続テストが連鎖失敗する。
-  // コンテナは中身（マウント済みツリー）を保ったまま detach するだけにし、portal や
-  // body のスタイル復元（react-remove-scroll 等）は遅延アンマウントに正しく回収させる
+afterEach(async () => {
+  // 1. 直前のストーリーを即時アンマウントする（フラッシュ用ストーリー自身は detached な
+  //    コンテナにマウントされるため body には現れず、その unmount は次の run() 冒頭で回収される）
+  await flushStory.run({ canvasElement: document.createElement("div") });
+
+  // 2. ストーリー用コンテナを除去する
   activeCanvasElement?.remove();
   activeCanvasElement = undefined;
 
-  // ストーリーの副作用が次のテストへ漏れないよう、グローバル状態を完全復元する
+  // 3. ストーリーが body に直接注入した React 管理外のノード（next/script が挿入する
+  //    script タグ等）を含め、スイート開始時に存在しなかった body 直下の残骸を全て除去する
+  for (const node of Array.from(document.body.children)) {
+    if (!initialBodyChildren.has(node)) {
+      node.remove();
+    }
+  }
+
+  // 4. ストーリーの副作用が次のテストへ漏れないよう、グローバル状態を完全復元する
   document.documentElement.className = initialHtmlClassName;
   window.localStorage.clear();
 });
@@ -114,10 +134,6 @@ for (const [modulePath, storiesModule] of Object.entries(storyModules)) {
         document.documentElement.classList.toggle("dark", theme === "dark");
 
         const canvasElement = document.createElement("div");
-        // null レンダリングのストーリー（例: ArticleNavigation の None）でも撮影対象が
-        // 0px にならないようにする。Playwright は 0 サイズ要素を撮影できず、
-        // stable screenshot 待ちの 5000ms タイムアウトになる
-        canvasElement.style.minHeight = "1px";
         document.body.appendChild(canvasElement);
         activeCanvasElement = canvasElement;
 
@@ -134,8 +150,16 @@ for (const [modulePath, storiesModule] of Object.entries(storyModules)) {
           active.blur();
         }
 
+        // 撮影対象は canvasElement ではなく body（ポータル含む全体）とする。
+        // Radix の Dialog / Popover / Tooltip 等は body 直下の portal にオーバーレイを
+        // 描画するため、canvasElement の矩形だけを撮ると「Open 状態のストーリーなのに
+        // トリガーしか写らない」ことになり、SPEC の検知範囲を満たさない。
+        // fixed 配置のコンポーネント（CommandTrigger 等）も同様に body 撮影でのみ写る。
+        // html には min-height: 100vh を注入済み（beforeAll）なので 0 サイズにはならない。
+        // 注: page.elementLocator(document.documentElement) は Vitest Browser Mode で
+        // locator('html') に解決され「要素が見つからない」エラーになるため body を使う
         await expect
-          .element(page.elementLocator(canvasElement))
+          .element(page.elementLocator(document.body))
           .toMatchScreenshot(screenshotNameFor(storyFilePath, exportName, theme));
       });
     }

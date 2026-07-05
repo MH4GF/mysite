@@ -5,11 +5,6 @@ import { UniversalLink } from "./index";
 
 const meta = {
   component: UniversalLink,
-  parameters: {
-    nextjs: {
-      appDirectory: true,
-    },
-  },
   args: {
     href: "/blog",
     children: "内部リンク",

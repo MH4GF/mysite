@@ -5,11 +5,6 @@ import { Header } from "./Header";
 
 const meta = {
   component: Header,
-  parameters: {
-    nextjs: {
-      appDirectory: true,
-    },
-  },
 } satisfies Meta<typeof Header>;
 
 export default meta;

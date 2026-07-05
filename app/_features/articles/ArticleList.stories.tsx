@@ -35,11 +35,6 @@ const allTags: TagEnum[] = ["react", "typescript"];
 
 const meta = {
   component: ArticleList,
-  // UniversalLink -> Link が next/navigation の useRouter を利用するため、
-  // Storybook の App Router モックを有効にする
-  parameters: {
-    nextjs: { appDirectory: true },
-  },
 } satisfies Meta<typeof ArticleList>;
 
 export default meta;

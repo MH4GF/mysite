@@ -29,11 +29,6 @@ const stubViewTransition = () =>
 
 const meta = {
   component: CommandLinkItem,
-  parameters: {
-    nextjs: {
-      appDirectory: true,
-    },
-  },
   decorators: [
     // CommandItem は cmdk の Command ルート + CommandList 配下でのみ正しく動作するためラップする
     (Story) => (
@@ -61,15 +56,16 @@ export const InternalLink: Story = {
   play: async ({ canvas }) => {
     onOpenChange.mockClear();
     const viewTransitionSpy = stubViewTransition();
+    try {
+      const item = canvas.getByRole("option", { name: "Blog" });
+      await expect(item).toHaveAttribute("href", "/blog");
 
-    const item = canvas.getByRole("option", { name: "Blog" });
-    await expect(item).toHaveAttribute("href", "/blog");
-
-    await userEvent.click(item);
-    await expect(getRouter().push).toHaveBeenCalledWith("/blog");
-    await expect(onOpenChange).toHaveBeenCalledWith(false);
-
-    viewTransitionSpy.mockRestore();
+      await userEvent.click(item);
+      await expect(getRouter().push).toHaveBeenCalledWith("/blog");
+      await expect(onOpenChange).toHaveBeenCalledWith(false);
+    } finally {
+      viewTransitionSpy.mockRestore();
+    }
   },
 };
 
@@ -82,21 +78,22 @@ export const ExternalLink: Story = {
   play: async ({ canvas, canvasElement }) => {
     onOpenChange.mockClear();
     const openSpy = spyOn(window, "open").mockImplementation(() => null);
+    try {
+      const item = canvas.getByRole("option", { name: "Example" });
+      await expect(item).toHaveAttribute("href", "https://example.com/");
+      await expect(item).toHaveAttribute("target", "_blank");
 
-    const item = canvas.getByRole("option", { name: "Example" });
-    await expect(item).toHaveAttribute("href", "https://example.com/");
-    await expect(item).toHaveAttribute("target", "_blank");
-
-    // アンカーのクリックは実ページ遷移を伴うため、cmdk のキーボード選択（Enter）で onSelect を発火する
-    const root = canvasElement.querySelector("[cmdk-root]");
-    await expect(root).not.toBeNull();
-    if (root instanceof HTMLElement) {
+      // アンカーのクリックは実ページ遷移を伴うため、cmdk のキーボード選択（Enter）で onSelect を発火する
+      const root = canvasElement.querySelector("[cmdk-root]");
+      if (!(root instanceof HTMLElement)) {
+        throw new Error("[cmdk-root] element not found");
+      }
       await fireEvent.keyDown(root, { key: "Enter" });
+
+      await expect(openSpy).toHaveBeenCalledWith("https://example.com/", "_blank");
+      await expect(onOpenChange).toHaveBeenCalledWith(false);
+    } finally {
+      openSpy.mockRestore();
     }
-
-    await expect(openSpy).toHaveBeenCalledWith("https://example.com/", "_blank");
-    await expect(onOpenChange).toHaveBeenCalledWith(false);
-
-    openSpy.mockRestore();
   },
 };

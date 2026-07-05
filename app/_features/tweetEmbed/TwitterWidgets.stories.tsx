@@ -19,15 +19,14 @@ const worker = setupWorker(
 
 const meta = {
   component: TwitterWidgets,
-  parameters: {
-    // usePathname (next/navigation) を利用するため App Router のモックを有効化する
-    nextjs: { appDirectory: true },
+  // ストーリー毎に worker を start/stop し、後続ストーリーへのリークを防ぐ
+  // (AskAIDropdown.stories.tsx と同じパターン)
+  beforeEach: async () => {
+    await worker.start({ onUnhandledRequest: "bypass", quiet: true });
+    return () => {
+      worker.stop();
+    };
   },
-  loaders: [
-    async () => {
-      await worker.start({ onUnhandledRequest: "bypass", quiet: true });
-    },
-  ],
 } satisfies Meta<typeof TwitterWidgets>;
 
 export default meta;

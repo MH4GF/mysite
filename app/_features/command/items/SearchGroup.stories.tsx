@@ -39,11 +39,6 @@ const externalArticle = {
 
 const meta = {
   component: SearchGroup,
-  parameters: {
-    nextjs: {
-      appDirectory: true,
-    },
-  },
   decorators: [
     // SearchGroup は cmdk の Command ルート配下でのみ動作する。
     // 検索クエリを入力できるよう CommandInput も併せてレンダリングする

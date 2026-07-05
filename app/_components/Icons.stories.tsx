@@ -3,10 +3,9 @@ import { expect } from "storybook/test";
 
 import { GitHubIcon, XIcon } from "./icons";
 
-// `icons.tsx` starts with a lowercase letter, so it is exempt from the
-// component/story existence check (scripts/checkStoryExistence.mts), but it
-// is still subject to line-coverage gate ①. This story renders every icon
-// component from the module so each is exercised for coverage.
+// `icons.tsx` は小文字始まりのため component/story 存在チェック
+// (scripts/checkStoryExistence.mts) の対象外だが、カバレッジ gate ① の対象ではある。
+// モジュール内の全アイコンをレンダリングし、カバレッジを稼ぐ
 const meta = {
   title: "Components/Icons",
   render: () => (

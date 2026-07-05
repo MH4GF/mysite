@@ -18,8 +18,7 @@ export const Closed: Story = {
   },
 };
 
-// Radix Dialog renders its content into a portal appended to document.body,
-// which lives outside canvasElement, so assertions use `screen` instead of `canvas`.
+// Radix Dialog はポータルで canvasElement 外に描画されるため screen から取得する
 export const Open: Story = {
   play: async ({ canvas }) => {
     const trigger = canvas.getByAltText("MH4GF profile picture");

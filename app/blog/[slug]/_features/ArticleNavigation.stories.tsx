@@ -22,11 +22,6 @@ const newer: ArticleMeta = {
 
 const meta = {
   component: ArticleNavigation,
-  // UniversalLink -> Link が next/navigation の useRouter を利用するため、
-  // Storybook の App Router モックを有効にする
-  parameters: {
-    nextjs: { appDirectory: true },
-  },
 } satisfies Meta<typeof ArticleNavigation>;
 
 export default meta;

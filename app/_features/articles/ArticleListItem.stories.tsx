@@ -5,11 +5,6 @@ import { ArticleListItem } from "./ArticleListItem";
 
 const meta = {
   component: ArticleListItem,
-  // UniversalLink -> Link が next/navigation の useRouter を利用するため、
-  // Storybook の App Router モックを有効にする
-  parameters: {
-    nextjs: { appDirectory: true },
-  },
 } satisfies Meta<typeof ArticleListItem>;
 
 export default meta;

@@ -1,12 +1,12 @@
-import { HttpResponse, http } from "msw";
 import { setupServer } from "msw/node";
 import type { ReactElement } from "react";
 import { renderToReadableStream, renderToStaticMarkup } from "react-dom/server";
-import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 
+import { handlers, SAMPLE_URL } from "@/app/_features/richLinkCard/__tests__/handlers";
 import { processor } from "../processor";
 
-const process = async (markdown: string): Promise<string> => {
+const renderMarkdown = async (markdown: string): Promise<string> => {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
   const file = await processor.process(markdown);
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
@@ -24,37 +24,22 @@ const processWithStream = async (markdown: string): Promise<string> => {
   return await new Response(stream).text();
 };
 
-const LINK_CARD_URL = "https://mh4gf.dev";
-
-// 単体URL段落 → RichLinkCard の変換を検証するための OGP レスポンスモック
-const server = setupServer(
-  http.get(LINK_CARD_URL, () => {
-    return new HttpResponse(
-      `<!doctype html>
-<html>
-  <head>
-    <meta property="og:title" content="MH4GF Site" />
-    <meta property="og:description" content="mysite description" />
-  </head>
-  <body></body>
-</html>`,
-      { status: 200 },
-    );
-  }),
-);
+// 単体URL段落 → RichLinkCard の変換を検証するため、richLinkCard の OGP モックを共有する
+const server = setupServer(...handlers);
 
 describe("processor", () => {
   beforeAll(() => server.listen());
+  afterEach(() => server.resetHandlers());
   afterAll(() => server.close());
 
   it("renders a paragraph with inline emphasis", async () => {
-    const markup = await process("Hello **world**");
+    const markup = await renderMarkdown("Hello **world**");
 
     expect(markup).toContain("<p>Hello <strong>world</strong></p>");
   });
 
   it("renders links with target blank for external URLs", async () => {
-    const markup = await process("[example](https://example.com)");
+    const markup = await renderMarkdown("[example](https://example.com)");
 
     expect(markup).toContain('href="https://example.com"');
     // 外部リンクは別タブで開く
@@ -63,7 +48,7 @@ describe("processor", () => {
   });
 
   it("renders images through next/image with default dimensions", async () => {
-    const markup = await process("![サンプルの図](/images/sample.png)");
+    const markup = await renderMarkdown("![サンプルの図](/images/sample.png)");
 
     expect(markup).toContain("<img");
     expect(markup).toContain('alt="サンプルの図"');
@@ -72,14 +57,14 @@ describe("processor", () => {
   });
 
   it("renders plain blockquotes as blockquote elements", async () => {
-    const markup = await process("> 引用テキスト");
+    const markup = await renderMarkdown("> 引用テキスト");
 
     expect(markup).toContain("<blockquote>");
     expect(markup).toContain("引用テキスト");
   });
 
   it("renders twitter-tweet blockquotes as TweetEmbed with light/dark themes", async () => {
-    const markup = await process(
+    const markup = await renderMarkdown(
       '<blockquote class="twitter-tweet"><p>ツイート本文</p></blockquote>',
     );
 
@@ -89,17 +74,17 @@ describe("processor", () => {
   });
 
   it("renders code blocks as focusable pre elements with syntax highlighting", async () => {
-    const markup = await process('```ts\nconst a = "b";\n```');
+    const markup = await renderMarkdown('```ts\nconst a = "b";\n```');
 
     expect(markup).toContain('<pre tabindex="0"');
     expect(markup).toContain("const");
   });
 
   it("renders a single bare URL paragraph as a RichLinkCard", async () => {
-    const markup = await processWithStream(LINK_CARD_URL);
+    const markup = await processWithStream(SAMPLE_URL);
 
     expect(markup).toContain('data-testid="rich-link-card"');
-    expect(markup).toContain("MH4GF Site");
-    expect(markup).toContain("mysite description");
+    expect(markup).toContain("Example Domain");
+    expect(markup).toContain("Hello! This is example :)");
   });
 });

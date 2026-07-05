@@ -17,11 +17,15 @@ describe("externalArticles", () => {
   });
 
   it("has a valid, non-future publishedAt for every entry", () => {
-    const now = Date.now();
+    // 日付のみの文字列（YYYY-MM-DD）は UTC 深夜 00:00 として parse される。
+    // UTC より進んだタイムゾーン（UTC+14 の Kiribati が最大）で「今日」の日付を入力すると、
+    // その UTC 深夜時刻は実行環境の Date.now() より最大 14 時間先になり得るため、
+    // 地球上のどのタイムゾーンの「今日」でも未来日と誤判定しないよう許容幅を設ける
+    const maxAllowedTime = Date.now() + 14 * 60 * 60 * 1000;
     for (const article of externalArticles) {
       const time = new Date(article.publishedAt).getTime();
       expect(Number.isNaN(time)).toBe(false);
-      expect(time).toBeLessThanOrEqual(now);
+      expect(time).toBeLessThanOrEqual(maxAllowedTime);
     }
   });
 

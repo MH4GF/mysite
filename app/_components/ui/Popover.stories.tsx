@@ -3,9 +3,8 @@ import { expect, screen, userEvent, waitFor } from "storybook/test";
 
 import { Popover, PopoverContent, PopoverTrigger } from "./popover";
 
-// `popover.tsx` starts with a lowercase letter, so it is exempt from the
-// component/story existence check (scripts/checkStoryExistence.mts), but it
-// is still subject to line-coverage gate ①.
+// `popover.tsx` は小文字始まりのため component/story 存在チェック
+// (scripts/checkStoryExistence.mts) の対象外だが、カバレッジ gate ① の対象ではある
 const meta = {
   title: "Components/UI/Popover",
   render: () => (
@@ -28,8 +27,7 @@ export const Closed: Story = {
   },
 };
 
-// Radix Popover renders its content into a portal appended to document.body,
-// which lives outside canvasElement, so assertions use `screen` instead of `canvas`.
+// Radix Popover はポータルで canvasElement 外に描画されるため screen から取得する
 export const Open: Story = {
   play: async ({ canvas }) => {
     const trigger = canvas.getByText("Open popover");

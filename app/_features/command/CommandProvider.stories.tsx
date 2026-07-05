@@ -32,14 +32,16 @@ export const ProvidesOnOpenChange: Story = {
 };
 
 export const WithoutProvider: Story = {
+  // component の必須 prop を満たすためだけの args。render が CommandProvider 自体を
+  // 描画しないため実際には使われず、観測対象はクリックが問題なく完了することのみ
   args: {
     onOpenChange: fn(),
-    children: null,
   },
-  // Provider の外では default context の no-op ハンドラが使われ、クリックしても何も起きない
   render: () => <CloseConsumer />,
-  play: async ({ args, canvas }) => {
-    await userEvent.click(canvas.getByRole("button", { name: "Close palette" }));
-    await expect(args.onOpenChange).not.toHaveBeenCalled();
+  play: async ({ canvas }) => {
+    const button = canvas.getByRole("button", { name: "Close palette" });
+    // no-op ハンドラが呼ばれてもエラーにならず、クリックが問題なく完了することを確認する
+    await userEvent.click(button);
+    await expect(button).toBeVisible();
   },
 };

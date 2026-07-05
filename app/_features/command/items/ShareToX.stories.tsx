@@ -7,11 +7,6 @@ import { ShareToX } from "./ShareToX";
 
 const meta = {
   component: ShareToX,
-  parameters: {
-    nextjs: {
-      appDirectory: true,
-    },
-  },
   decorators: [
     // CommandItem は cmdk の Command ルート + CommandList 配下でのみ正しく動作するためラップする
     (Story) => (

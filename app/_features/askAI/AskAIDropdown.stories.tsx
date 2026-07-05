@@ -114,23 +114,26 @@ export const Opened: Story = {
 export const CopyMarkdown: Story = {
   play: async ({ canvas }) => {
     const { writeTextMock, restore } = mockClipboard(() => Promise.resolve());
-    const fetchCountBefore = markdownFetchCount;
-    await openDropdown(canvas);
+    try {
+      const fetchCountBefore = markdownFetchCount;
+      await openDropdown(canvas);
 
-    // 1 回目: fetch して clipboard に書き込み、copied → idle と遷移する
-    screen.getByRole("button", { name: "Markdownをコピー" }).click();
-    await waitFor(() => expect(screen.getByText("コピーしました")).toBeVisible());
-    await expect(writeTextMock).toHaveBeenCalledWith(MARKDOWN_CONTENT);
-    await waitForIdleCopyState();
-    await expect(markdownFetchCount).toBe(fetchCountBefore + 1);
+      // 1 回目: fetch して clipboard に書き込み、copied → idle と遷移する
+      screen.getByRole("button", { name: "Markdownをコピー" }).click();
+      await waitFor(() => expect(screen.getByText("コピーしました")).toBeVisible());
+      await expect(writeTextMock).toHaveBeenCalledWith(MARKDOWN_CONTENT);
+      await waitForIdleCopyState();
+      await expect(markdownFetchCount).toBe(fetchCountBefore + 1);
 
-    // 2 回目: キャッシュから即座にコピーされ、再 fetch しない
-    screen.getByRole("button", { name: "Markdownをコピー" }).click();
-    await waitFor(() => expect(screen.getByText("コピーしました")).toBeVisible());
-    await expect(writeTextMock).toHaveBeenCalledTimes(2);
-    await expect(markdownFetchCount).toBe(fetchCountBefore + 1);
-    await waitForIdleCopyState();
-    restore();
+      // 2 回目: キャッシュから即座にコピーされ、再 fetch しない
+      screen.getByRole("button", { name: "Markdownをコピー" }).click();
+      await waitFor(() => expect(screen.getByText("コピーしました")).toBeVisible());
+      await expect(writeTextMock).toHaveBeenCalledTimes(2);
+      await expect(markdownFetchCount).toBe(fetchCountBefore + 1);
+      await waitForIdleCopyState();
+    } finally {
+      restore();
+    }
   },
 };
 
@@ -140,12 +143,17 @@ export const CopyLoading: Story = {
   },
   play: async ({ canvas }) => {
     const { restore } = mockClipboard(() => Promise.resolve());
-    await openDropdown(canvas);
+    try {
+      await openDropdown(canvas);
 
-    screen.getByRole("button", { name: "Markdownをコピー" }).click();
-    await waitFor(() => expect(screen.getByRole("button", { name: "コピー中..." })).toBeVisible());
-    await expect(screen.getByRole("button", { name: "コピー中..." })).toBeDisabled();
-    restore();
+      screen.getByRole("button", { name: "Markdownをコピー" }).click();
+      await waitFor(() =>
+        expect(screen.getByRole("button", { name: "コピー中..." })).toBeVisible(),
+      );
+      await expect(screen.getByRole("button", { name: "コピー中..." })).toBeDisabled();
+    } finally {
+      restore();
+    }
   },
 };
 
@@ -179,19 +187,25 @@ export const CachedCopyClipboardRejection: Story = {
   play: async ({ canvas }) => {
     // 1 回目のコピーでキャッシュを作る
     const { writeTextMock, restore } = mockClipboard(() => Promise.resolve());
-    await openDropdown(canvas);
-    screen.getByRole("button", { name: "Markdownをコピー" }).click();
-    await waitFor(() => expect(screen.getByText("コピーしました")).toBeVisible());
-    await waitForIdleCopyState();
-    restore();
+    try {
+      await openDropdown(canvas);
+      screen.getByRole("button", { name: "Markdownをコピー" }).click();
+      await waitFor(() => expect(screen.getByText("コピーしました")).toBeVisible());
+      await waitForIdleCopyState();
+    } finally {
+      restore();
+    }
 
     // 2 回目はキャッシュ経路で clipboard が reject し、ボタンの onClick 側の catch で握り潰される
     const rejecting = mockClipboard(() => Promise.reject(new Error("clipboard denied")));
-    screen.getByRole("button", { name: "Markdownをコピー" }).click();
-    await waitFor(() => expect(rejecting.writeTextMock).toHaveBeenCalledWith(MARKDOWN_CONTENT));
-    await expect(writeTextMock).toHaveBeenCalledTimes(1);
-    await expect(screen.getByRole("button", { name: "Markdownをコピー" })).toBeVisible();
-    rejecting.restore();
+    try {
+      screen.getByRole("button", { name: "Markdownをコピー" }).click();
+      await waitFor(() => expect(rejecting.writeTextMock).toHaveBeenCalledWith(MARKDOWN_CONTENT));
+      await expect(writeTextMock).toHaveBeenCalledTimes(1);
+      await expect(screen.getByRole("button", { name: "Markdownをコピー" })).toBeVisible();
+    } finally {
+      rejecting.restore();
+    }
   },
 };
 
