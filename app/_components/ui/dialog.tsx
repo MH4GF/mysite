@@ -11,7 +11,7 @@ import {
   Trigger,
 } from "@radix-ui/react-dialog";
 import { X } from "lucide-react";
-import type { ComponentPropsWithoutRef, ElementRef, HTMLAttributes } from "react";
+import type { ComponentPropsWithoutRef, ElementRef } from "react";
 import { forwardRef } from "react";
 import { cn } from "@/app/_utils/cn";
 
@@ -59,19 +59,6 @@ const DialogContent = forwardRef<
   </DialogPortal>
 ));
 DialogContent.displayName = Content.displayName;
-
-const DialogHeader = ({ className, ...props }: HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn("flex flex-col space-y-1.5 text-center sm:text-left", className)} {...props} />
-);
-DialogHeader.displayName = "DialogHeader";
-
-const DialogFooter = ({ className, ...props }: HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className={cn("flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2", className)}
-    {...props}
-  />
-);
-DialogFooter.displayName = "DialogFooter";
 
 const DialogTitle = forwardRef<ElementRef<typeof Title>, ComponentPropsWithoutRef<typeof Title>>(
   ({ className, ...props }, ref) => (

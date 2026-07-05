@@ -29,8 +29,46 @@ const SAMPLE_HTML = `
 </html>
 `;
 
+// title / description が <meta property="title"> / <meta property="description">
+// （og: 接頭辞なし）でのみ提供されるページ。og:image を持たない
+const LEGACY_META_HTML = `
+<!doctype html>
+<html>
+  <head>
+    <title>Legacy Meta Domain</title>
+    <meta property="title" content="Legacy Meta Domain" />
+    <meta property="description" content="Legacy style meta tags" />
+  </head>
+<body>
+  <div>
+    <h1>Legacy Meta Domain</h1>
+  </div>
+</body>
+</html>
+`;
+
+// title / description が twitter:* の name 属性メタでのみ提供されるページ
+const TWITTER_META_HTML = `
+<!doctype html>
+<html>
+  <head>
+    <title>Twitter Meta Domain</title>
+    <meta name="twitter:title" content="Twitter Meta Domain" />
+    <meta name="twitter:description" content="Twitter style meta tags" />
+  </head>
+<body>
+  <div>
+    <h1>Twitter Meta Domain</h1>
+  </div>
+</body>
+</html>
+`;
+
 export const SAMPLE_URL = "https://mh4gf.dev";
 export const NO_DATA_URL = "https://nodata.mh4gf.dev";
+export const LEGACY_META_URL = "https://legacy.mh4gf.dev";
+export const TWITTER_META_URL = "https://twitter-meta.mh4gf.dev";
+export const FETCH_ERROR_URL = "https://network-error.mh4gf.dev";
 
 export const handlers = [
   http.get(SAMPLE_URL, () => {
@@ -38,5 +76,14 @@ export const handlers = [
   }),
   http.get(NO_DATA_URL, () => {
     return HttpResponse.json("", { status: 200 });
+  }),
+  http.get(LEGACY_META_URL, () => {
+    return new HttpResponse(LEGACY_META_HTML, { status: 200 });
+  }),
+  http.get(TWITTER_META_URL, () => {
+    return new HttpResponse(TWITTER_META_HTML, { status: 200 });
+  }),
+  http.get(FETCH_ERROR_URL, () => {
+    return HttpResponse.error();
   }),
 ];
