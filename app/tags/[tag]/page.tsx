@@ -9,6 +9,7 @@ import {
   tagList,
   tagsSchema,
 } from "@/app/_features";
+import { siteInfo } from "@/app/_utils";
 
 interface Params {
   tag: string;
@@ -49,5 +50,10 @@ export const generateMetadata = async (props: Props): Promise<Metadata> => {
   }
   const label = tagLabelMap[parsed.data];
 
-  return { title: label, openGraph: { title: label }, twitter: { title: label } };
+  return {
+    title: label,
+    alternates: { canonical: `${siteInfo.url}/tags/${parsed.data}` },
+    openGraph: { title: label },
+    twitter: { title: label },
+  };
 };
