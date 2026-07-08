@@ -1,6 +1,7 @@
 import { allAbouts } from "contentlayer/generated";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { siteInfo } from "@/app/_utils";
 import { Content } from "./_features";
 
 interface Params {
@@ -27,5 +28,10 @@ export const generateMetadata = async (props: Props): Promise<Metadata> => {
   const params = await props.params;
   const title = allAbouts.find((about) => about.href === `/${params.slug}`)?.title ?? "";
 
-  return { title, openGraph: { title }, twitter: { title } };
+  return {
+    title,
+    alternates: { canonical: `${siteInfo.url}/${params.slug}` },
+    openGraph: { title },
+    twitter: { title },
+  };
 };

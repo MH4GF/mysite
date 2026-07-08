@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { ArticleList, getAllTags, getMediaMeta } from "../_features";
+import { siteInfo } from "../_utils";
 
 export default function Page() {
   return (
@@ -10,4 +11,5 @@ export default function Page() {
 
 export const metadata: Metadata = {
   title: "Media",
+  alternates: { canonical: `${siteInfo.url}/media` },
 };
