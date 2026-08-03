@@ -102,4 +102,5 @@ export default function Page() {
 
 export const metadata: Metadata = {
   title: `About | ${siteInfo.siteName}`,
+  alternates: { canonical: siteInfo.url },
 };

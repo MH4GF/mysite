@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { getArticle } from "@/app/_features";
+import { siteInfo } from "@/app/_utils";
 import { Article } from "./_features";
 
 interface Params {
@@ -34,6 +35,7 @@ export const generateMetadata = async (props: Props): Promise<Metadata> => {
   return {
     title,
     description,
+    alternates: { canonical: `${siteInfo.url}/blog/${params.slug}` },
     openGraph: { title, description, ...(headingImage ? { images: headingImage } : undefined) },
     twitter: {
       title,
