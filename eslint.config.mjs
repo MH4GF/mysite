@@ -42,6 +42,8 @@ export default [
       "contentlayer.config.ts",
       ".dependency-cruiser.js",
       ".markuplintrc.ts",
+      // MSW が生成する Service Worker スクリプト。コミットは必要だが手編集しない生成物のため lint 対象外にする
+      "public/mockServiceWorker.js",
     ],
   },
 ];

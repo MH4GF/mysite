@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "extends": ["./node_modules/@mh4gf/configs/biome/index.jsonc"],
   "files": {
-    "includes": ["!**/.contentlayer", "!**/*.css"]
+    // public/mockServiceWorker.js は MSW が生成する Service Worker スクリプト（手編集不可の生成物）
+    "includes": ["!**/.contentlayer", "!**/*.css", "!public/mockServiceWorker.js"]
   },
   "linter": {
     "enabled": true,
@@ -84,6 +85,26 @@
       }
     }
   },
+  "overrides": [
+    {
+      // <Component>.stories.tsx は scripts/checkStoryExistence.mts がコンポーネントファイル名
+      // (PascalCase) と突合するため、stories ファイル名は PascalCase を必須とする
+      "includes": ["app/**/*.stories.tsx"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useFilenamingConvention": {
+              "level": "error",
+              "options": {
+                "strictCase": false,
+                "filenameCases": ["PascalCase"]
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
   "javascript": {
     "formatter": {
       "semicolons": "always",
