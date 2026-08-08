@@ -1,11 +1,21 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { setupWorker } from "msw/browser";
 import { expect } from "storybook/test";
 
 import { handlers, SAMPLE_TWEET_ID } from "../../tweetEmbed/__tests__/handlers";
 import { Blockquote } from "./Blockquote";
 
+// TwitterTweet ストーリーは TweetEmbed 経由で syndication API を叩くため MSW でモックする
+const worker = setupWorker(...handlers);
+
 const meta = {
   component: Blockquote,
+  beforeEach: async () => {
+    await worker.start({ quiet: true, onUnhandledRequest: "bypass" });
+    return () => {
+      worker.stop();
+    };
+  },
 } satisfies Meta<typeof Blockquote>;
 
 export default meta;
@@ -39,9 +49,6 @@ export const WithCustomClassName: Story = {
 export const TwitterTweet: Story = {
   args: {
     "data-tweet-id": SAMPLE_TWEET_ID,
-  },
-  parameters: {
-    msw: { handlers },
   },
   play: async ({ canvas, canvasElement }) => {
     // data-tweet-id があるときは TweetEmbed に委譲され、blockquote は描画されない

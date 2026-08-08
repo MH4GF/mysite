@@ -1,25 +1,31 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { setupWorker } from "msw/browser";
 import { expect, within } from "storybook/test";
 
 import { handlers, SAMPLE_TWEET_ID } from "./__tests__/handlers";
 import { TweetEmbed } from "./TweetEmbed";
 
+// react-tweet はブラウザでは SWR で syndication API を取得する。
+// 外部依存を MSW でモックし、ストーリーを決定的にする
+const worker = setupWorker(...handlers);
+
 const meta = {
   component: TweetEmbed,
+  beforeEach: async () => {
+    await worker.start({ quiet: true, onUnhandledRequest: "bypass" });
+    return () => {
+      worker.stop();
+    };
+  },
 } satisfies Meta<typeof TweetEmbed>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-// react-tweet はブラウザでは SWR で syndication API からツイートを取得する。
-// MSW で固定レスポンスを返し、外部ネットワークに一切依存せず決定的にする
 export const Default: Story = {
   args: {
     id: SAMPLE_TWEET_ID,
-  },
-  parameters: {
-    msw: { handlers },
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
