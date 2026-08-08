@@ -142,4 +142,25 @@ describe("rehypeTweetId", () => {
     }
     expect(bq.properties.dataTweetId).toBe("42");
   });
+
+  it("ignores anchors without an href", () => {
+    const anchorWithoutHref: Root["children"][number] = {
+      type: "element",
+      tagName: "a",
+      properties: {},
+      children: [{ type: "text", value: "link" }],
+    };
+    const tree: Root = {
+      type: "root",
+      children: [blockquote(["twitter-tweet"], [anchorWithoutHref])],
+    };
+
+    run(tree);
+
+    const bq = tree.children[0];
+    if (bq?.type !== "element") {
+      throw new Error("unexpected");
+    }
+    expect(bq.properties.dataTweetId).toBeUndefined();
+  });
 });

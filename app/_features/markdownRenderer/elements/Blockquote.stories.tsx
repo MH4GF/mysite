@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { expect } from "storybook/test";
 
+import { handlers, SAMPLE_TWEET_ID } from "../../tweetEmbed/__tests__/handlers";
 import { Blockquote } from "./Blockquote";
 
 const meta = {
@@ -37,14 +38,14 @@ export const WithCustomClassName: Story = {
 
 export const TwitterTweet: Story = {
   args: {
-    className: "twitter-tweet",
-    children: "ツイート本文のプレースホルダです。",
+    "data-tweet-id": SAMPLE_TWEET_ID,
   },
-  play: async ({ canvasElement }) => {
-    // TweetEmbed に委譲され、ライト / ダーク両テーマ用の blockquote が描画される
-    const light = canvasElement.querySelector('blockquote[data-theme="light"]');
-    const dark = canvasElement.querySelector('blockquote[data-theme="dark"]');
-    await expect(light).not.toBeNull();
-    await expect(dark).not.toBeNull();
+  parameters: {
+    msw: { handlers },
+  },
+  play: async ({ canvas, canvasElement }) => {
+    // data-tweet-id があるときは TweetEmbed に委譲され、blockquote は描画されない
+    await expect(await canvas.findByText("ツイート本文のプレースホルダです。")).toBeInTheDocument();
+    await expect(canvasElement.querySelectorAll("blockquote")).toHaveLength(0);
   },
 };

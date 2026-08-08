@@ -190,6 +190,9 @@ importers:
       msw:
         specifier: 2.13.6
         version: 2.13.6(@types/node@24.12.2)(typescript@5.9.3)
+      msw-storybook-addon:
+        specifier: 3.0.0
+        version: 3.0.0(msw@2.13.6(@types/node@24.12.2)(typescript@5.9.3))(storybook@10.4.6(@testing-library/dom@10.4.1)(react@19.2.5)(types-react@19.0.0-rc.1))
       pagefind:
         specifier: 1.5.2
         version: 1.5.2
@@ -4796,6 +4799,13 @@ packages:
 
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
+
+  msw-storybook-addon@3.0.0:
+    resolution: {integrity: sha512-tyYmYAwSGcfFSHhrE5yzun/OXuVIkBGOt4YTsH5IR94N38F+hzZhvGqe5scu1ENJh/hOApI/8ZRQkWdFNFsKcw==}
+    hasBin: true
+    peerDependencies:
+      msw: '>=2'
+      storybook: '>=9'
 
   msw@2.13.6:
     resolution: {integrity: sha512-GAJbQy8Ra/Ydjt0Hb2MGT2qhzd83J3+QZMHdH85uW7r/XkKc846+Ma2PLif5hGvTm5Yqa+wkcstpim0WeLZU9g==}
@@ -11413,6 +11423,11 @@ snapshots:
   mrmime@2.0.1: {}
 
   ms@2.1.3: {}
+
+  msw-storybook-addon@3.0.0(msw@2.13.6(@types/node@24.12.2)(typescript@5.9.3))(storybook@10.4.6(@testing-library/dom@10.4.1)(react@19.2.5)(types-react@19.0.0-rc.1)):
+    dependencies:
+      msw: 2.13.6(@types/node@24.12.2)(typescript@5.9.3)
+      storybook: 10.4.6(@testing-library/dom@10.4.1)(react@19.2.5)(types-react@19.0.0-rc.1)
 
   msw@2.13.6(@types/node@24.12.2)(typescript@5.9.3):
     dependencies:
