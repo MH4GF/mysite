@@ -4,7 +4,7 @@ import type { DialogProps } from "@radix-ui/react-dialog";
 import { Root as VisuallyHiddenRoot } from "@radix-ui/react-visually-hidden";
 import { Command as CommandPrimitive } from "cmdk";
 import { Search } from "lucide-react";
-import type { ComponentPropsWithoutRef, ElementRef, HTMLAttributes } from "react";
+import type { ComponentPropsWithoutRef, ElementRef } from "react";
 import { forwardRef } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/app/_components/ui/dialog";
 import { cn } from "@/app/_utils/cn";
@@ -143,16 +143,6 @@ const CommandLoading = forwardRef<
   />
 ));
 CommandLoading.displayName = CommandPrimitive.Loading.displayName;
-
-const CommandShortcut = ({ className, ...props }: HTMLAttributes<HTMLSpanElement>) => {
-  return (
-    <span
-      className={cn("ml-auto text-xs tracking-widest text-muted-foreground", className)}
-      {...props}
-    />
-  );
-};
-CommandShortcut.displayName = "CommandShortcut";
 
 export {
   CommandDialog,

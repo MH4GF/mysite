@@ -6,6 +6,8 @@ import type { Page, TestInfo } from "@playwright/test";
 import { expect, test } from "@playwright/test";
 import { createHtmlReport } from "axe-html-reporter";
 
+import { TARGET_PAGES, type TargetPage } from "./targetPages";
+
 const waitForBlurEnterContent = async (page: Page) => {
   await page.evaluate(() => {
     return new Promise<void>((resolve) => {
@@ -80,11 +82,6 @@ const screenshot = async (page: Page, testName: string) => {
   });
 };
 
-interface TargetPage {
-  name: string;
-  path: string;
-}
-
 const run = async (page: Page, testInfo: TestInfo, targetPage: TargetPage) => {
   const { testName: lightTestName } = await setup(page, testInfo, targetPage, "light");
   await Promise.all([testA11y(page, lightTestName), screenshot(page, lightTestName)]);
@@ -93,40 +90,20 @@ const run = async (page: Page, testInfo: TestInfo, targetPage: TargetPage) => {
   await Promise.all([testA11y(page, darkTestName), screenshot(page, darkTestName)]);
 };
 
-test("home", async ({ page }, testInfo) => {
-  await run(page, testInfo, { name: "home", path: "/" });
-});
-
-test("behavior", async ({ page }, testInfo) => {
-  await run(page, testInfo, { name: "behavior", path: "/behavior" });
-});
-
-test("blog", async ({ page }, testInfo) => {
-  await run(page, testInfo, { name: "blog", path: "/blog" });
-});
-
-test("2024-development-wordpress-theme", async ({ page }, testInfo) => {
-  await run(page, testInfo, {
-    name: "2024-development-wordpress-theme",
-    path: "/blog/2024-development-wordpress-theme",
-  });
-});
-
-test("testing-markdown-renderer", async ({ page }, testInfo) => {
-  await run(page, testInfo, {
-    name: "testing-markdown-renderer",
-    path: "/blog/testing-markdown-renderer",
-  });
-});
-
-// Note: テーマの概念がないページは今のところopengraph-imageのみのため、一旦ここに記述
-test("opengraph-image", async ({ page }, testInfo) => {
-  const targetPage = {
-    name: "opengraph-image",
-    path: "/blog/embed-tweet-with-app-router/opengraph-image",
-  };
+// Note: テーマの概念がなくa11y検査も行わないページは今のところopengraph-imageのみのため、isOpengraphImageフラグで分岐する
+const runOpengraphImage = async (page: Page, testInfo: TestInfo, targetPage: TargetPage) => {
   await page.goto(targetPage.path);
   await waitForPageReady(page);
   const testName = formatTestName(testInfo, targetPage, "light");
   await screenshot(page, testName);
-});
+};
+
+for (const targetPage of TARGET_PAGES) {
+  test(targetPage.name, async ({ page }, testInfo) => {
+    if (targetPage.isOpengraphImage) {
+      await runOpengraphImage(page, testInfo, targetPage);
+      return;
+    }
+    await run(page, testInfo, targetPage);
+  });
+}

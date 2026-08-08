@@ -12,6 +12,7 @@ import remarkRehype from "remark-rehype";
 import { transformerNotationDiff } from "shikiji-transformers";
 import { unified } from "unified";
 
+import { RichLinkCard } from "../richLinkCard";
 import { UniversalLink } from "../viewTransition";
 
 import { Blockquote, Paragraph } from "./elements";
@@ -19,6 +20,16 @@ import { rehypeTweetId } from "./plugins/rehypeTweetId";
 
 const Link = (props: ComponentProps<typeof UniversalLink>) => {
   return <UniversalLink {...props} isEnabledUnderline />;
+};
+
+// 単体URL段落のリンクカード実体（async RSC）はここで注入する。
+// Paragraph 側は props 経由で受け取るため、ストーリー（ブラウザ実行）に RSC が混入しない
+const renderRichLinkCard = (url: string) => {
+  return <RichLinkCard url={url} />;
+};
+
+const P = (props: ComponentProps<"p">) => {
+  return <Paragraph {...props} renderRichLinkCard={renderRichLinkCard} />;
 };
 
 const Img = (props: ComponentProps<typeof Image>) => {
@@ -62,7 +73,7 @@ export const processor = unified()
     jsx,
     jsxs,
     components: {
-      p: Paragraph,
+      p: P,
       a: Link,
       blockquote: Blockquote,
       img: Img,

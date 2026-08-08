@@ -34,6 +34,8 @@ module.exports = {
           "packages/eslint-config/src/base.cjs", // eslintのextendsで使う
           "postcss.config.js", // postcssの設定ファイル
           "lostpixel.config.ts", // lostpixelの設定ファイル
+          "(^|/)\\.storybook/", // Storybook の設定ファイル。storybook CLI / addon-vitest が設定として読み込むため orphan ではない
+          "public/mockServiceWorker\\.js", // msw init で生成される Service Worker。ストーリーが実行時に登録するため orphan ではない
         ],
       },
       to: {},
@@ -212,10 +214,9 @@ module.exports = {
        - dynamic: a boolean indicating whether to ignore dynamic (true) or static (false) dependencies.
           leave out if you want to exclude neither (recommended!)
     */
-    // exclude : {
-    //   path: '',
-    //   dynamic: true
-    // },
+    exclude: {
+      path: "^coverage", // generated files (vitest coverage report)
+    },
 
     /* pattern specifying which files to include (regular expression)
        dependency-cruiser will skip everything not matching this pattern
