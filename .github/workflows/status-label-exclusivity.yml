@@ -1,0 +1,37 @@
+name: status label exclusivity
+
+on:
+  issues:
+    types: [labeled]
+
+# Symphony の GitHub tracker は issue の status:* label を状態の SSoT として読む。
+# 1 issue が status:* を 2 つ以上持つと状態が曖昧になるため、label が付いた直後に
+# 他の status:* を剥がす。これにより人間は「新しい label を付ける」1 操作だけで
+# 状態遷移でき、モバイルからの操作が成立する。
+jobs:
+  normalize:
+    if: startsWith(github.event.label.name, 'status:')
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Remove the other status labels
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          ISSUE: ${{ github.event.issue.number }}
+          KEEP: ${{ github.event.label.name }}
+        run: |
+          set -euo pipefail
+
+          gh api "repos/${REPO}/issues/${ISSUE}/labels" \
+            | jq -r --arg keep "${KEEP}" \
+              '.[].name | select(startswith("status:")) | select(. != $keep)' \
+            > stale-labels.txt
+
+          while IFS= read -r label; do
+            [ -n "${label}" ] || continue
+            encoded="$(jq -rn --arg l "${label}" '$l | @uri')"
+            gh api --method DELETE "repos/${REPO}/issues/${ISSUE}/labels/${encoded}"
+            echo "removed ${label}"
+          done < stale-labels.txt
