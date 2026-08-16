@@ -1,11 +1,14 @@
 ---
 tracker:
-  kind: linear
-  project_slug: "ai-native-workspace-202646c35423"
-  api_key: $LINEAR_API_KEY
+  kind: github
+  repo: MH4GF/mysite
   active_states: ["Todo", "In Progress", "Merging", "Rework"]
-  terminal_states: ["Human Review", "Done", "Canceled", "Duplicate"]
-  required_labels: ["mysite"]
+  terminal_states: ["Done", "Canceled"]
+
+review_watch:
+  enabled: true
+  states: ["Human Review"]
+  on_conflict_state: "In Progress"
 
 workspace:
   root: /Users/hermes/.symphony/workspaces/mysite
@@ -48,7 +51,7 @@ MH4GF/mysite (Next.js App Router 製の個人サイト) の clone で作業す�
 ## ワークフロー手順
 
 - セッション起動直後に `symphony-workflow` スキルを呼ぶ。ステータスの振り分け / workpad 運用 / 実装 / レビュースイープ / `Human Review` 遷移 / マージまで、進行は全て同スキルの手順に従う
-- `symphony-workflow` スキルが利用できない環境では実装に入らない。Linear issue にブロッカーコメント (何が不足しているか / 解除に必要な人間の対応) を 1 件書き、issue を `Human Review` へ動かして終了する
+- `symphony-workflow` スキルが利用できない環境では実装に入らない。issue にブロッカーコメント (何が不足しているか / 解除に必要な人間の対応) を 1 件書き、issue を `Human Review` へ動かして終了する
 - 下の「本リポジトリ固有ルール」はスキルの共通手順を上書きする
 
 ## 本リポジトリ固有ルール
