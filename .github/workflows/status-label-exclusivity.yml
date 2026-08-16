@@ -14,6 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: write
+    # 同一 issue へ短時間に 2 回 label が付くと、古い run が自分の KEEP を基準に
+    # 新しい label を剥がし、双方が消えて status:* がゼロになる。最新の run だけを
+    # 残す。
+    concurrency:
+      group: status-label-exclusivity-${{ github.event.issue.number }}
+      cancel-in-progress: true
     steps:
       - name: Remove the other status labels
         env:
@@ -24,7 +30,17 @@ jobs:
         run: |
           set -euo pipefail
 
-          gh api "repos/${REPO}/issues/${ISSUE}/labels" \
+          labels_json="$(gh api "repos/${REPO}/issues/${ISSUE}/labels")"
+
+          # cancel-in-progress をすり抜けた古い run への保険。KEEP が既に剥がされて
+          # いるなら、この run の基準は古い。何もせず抜ける。
+          if ! printf '%s' "${labels_json}" \
+            | jq -e --arg keep "${KEEP}" 'any(.[]; .name == $keep)' > /dev/null; then
+            echo "skip: ${KEEP} is no longer on the issue"
+            exit 0
+          fi
+
+          printf '%s' "${labels_json}" \
             | jq -r --arg keep "${KEEP}" \
               '.[].name | select(startswith("status:")) | select(. != $keep)' \
             > stale-labels.txt
