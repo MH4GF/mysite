@@ -26,7 +26,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: mcr.microsoft.com/playwright:v1.57.0-noble@sha256:3bed4b1a12f2338642f3d8cba28e291deef3c66bd4a964bbeb3e57bbff511dbd
+      image: mcr.microsoft.com/playwright:v1.62.1-noble@sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e
     env:
       # コンポーネントVRT (component-vrt プロジェクト) を有効化する。scripts/vrt.sh と同一 digest の
       # コンテナ内でのみ VRT=1 になるため、コミット済み基準画像と決定的に比較できる
