@@ -17,7 +17,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@f2796daf3cd57dcc0a63b5093dfd2eb32bbcc4a5 # main
       - run: pnpm build:contentlayer
       - run: pnpm exec next typegen
@@ -32,11 +32,11 @@ jobs:
       # コンテナ内でのみ VRT=1 になるため、コミット済み基準画像と決定的に比較できる
       VRT: "1"
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
       - uses: MH4GF/shared-config/.github/composite-actions/setup-pnpm@f2796daf3cd57dcc0a63b5093dfd2eb32bbcc4a5 # main
       - run: pnpm test:vitest
       # VRT 失敗時の actual / diff 画像を差分レビュー用にアップロードする
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: failure()
         with:
           name: component-vrt-results
