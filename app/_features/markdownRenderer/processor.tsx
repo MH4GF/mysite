@@ -16,6 +16,7 @@ import { RichLinkCard } from "../richLinkCard";
 import { UniversalLink } from "../viewTransition";
 
 import { Blockquote, Paragraph } from "./elements";
+import { rehypeTweetId } from "./plugins/rehypeTweetId";
 
 const Link = (props: ComponentProps<typeof UniversalLink>) => {
   return <UniversalLink {...props} isEnabledUnderline />;
@@ -64,6 +65,8 @@ export const processor = unified()
   })
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   .use(rehypeRaw)
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+  .use(rehypeTweetId)
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   .use(rehypeReact, {
     Fragment,

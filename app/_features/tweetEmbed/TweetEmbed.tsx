@@ -1,17 +1,10 @@
-import type { ComponentProps } from "react";
+import { Tweet } from "react-tweet";
+import "react-tweet/theme.css";
 
-type Props = ComponentProps<"blockquote">;
+type Props = {
+  id: string;
+};
 
-// @see: https://developer.twitter.com/en/docs/twitter-for-websites/webpage-properties
-export const TweetEmbed = (props: Props) => {
-  return (
-    <>
-      <div className="dark:hidden">
-        <blockquote {...props} data-theme="light" />
-      </div>
-      <div className="hidden dark:block">
-        <blockquote {...props} data-theme="dark" />
-      </div>
-    </>
-  );
+export const TweetEmbed = ({ id }: Props) => {
+  return <Tweet id={id} />;
 };
