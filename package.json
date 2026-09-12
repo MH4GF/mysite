@@ -63,7 +63,7 @@
     "rulens": "0.2.2",
     "storybook": "10.4.6",
     "tailwindcss": "4.2.4",
-    "tsx": "4.21.0",
+    "tsx": "4.23.13",
     "typescript": "5.9.3",
     "vitest": "4.1.11"
   },
