@@ -66,6 +66,9 @@ export default defineConfig({
         test: {
           name: "unit",
           include: ["**/__tests__/**/*.test.ts?(x)"],
+          // react-tweet は CSS Modules を同梱しており、node の ESM ローダーが .css を
+          // 解決できず "Unknown file extension" で落ちる。Vite に変換させるため inline 化する
+          server: { deps: { inline: ["react-tweet"] } },
         },
       },
       {

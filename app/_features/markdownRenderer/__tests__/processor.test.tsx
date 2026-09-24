@@ -62,13 +62,23 @@ describe("processor", () => {
     expect(markup).toContain("引用テキスト");
   });
 
-  it("renders twitter-tweet blockquotes as TweetEmbed with light/dark themes", async () => {
+  it("delegates twitter-tweet blockquotes with a status link to TweetEmbed", async () => {
+    const markup = await renderMarkdown(
+      '<blockquote class="twitter-tweet"><p>ツイート本文</p>' +
+        '<a href="https://x.com/test_user/status/1234567890123456789">link</a></blockquote>',
+    );
+
+    // rehypeTweetId が data-tweet-id を付与し、Blockquote が TweetEmbed へ委譲するため
+    // blockquote 要素は残らない。ツイート本体の描画は TweetEmbed のストーリーで担保する
+    expect(markup).not.toContain("<blockquote");
+  });
+
+  it("keeps twitter-tweet blockquotes without a status link as blockquotes", async () => {
     const markup = await renderMarkdown(
       '<blockquote class="twitter-tweet"><p>ツイート本文</p></blockquote>',
     );
 
-    expect(markup).toContain('data-theme="light"');
-    expect(markup).toContain('data-theme="dark"');
+    expect(markup).toContain("<blockquote");
     expect(markup).toContain("ツイート本文");
   });
 

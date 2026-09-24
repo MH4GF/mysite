@@ -1,31 +1,36 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { expect } from "storybook/test";
+import { setupWorker } from "msw/browser";
+import { expect, within } from "storybook/test";
 
+import { handlers, SAMPLE_TWEET_ID } from "./__tests__/handlers";
 import { TweetEmbed } from "./TweetEmbed";
+
+// react-tweet はブラウザでは SWR で syndication API を取得する。
+// 外部依存を MSW でモックし、ストーリーを決定的にする
+const worker = setupWorker(...handlers);
 
 const meta = {
   component: TweetEmbed,
+  beforeEach: async () => {
+    await worker.start({ quiet: true, onUnhandledRequest: "bypass" });
+    return () => {
+      worker.stop();
+    };
+  },
 } satisfies Meta<typeof TweetEmbed>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-// Twitter ウィジェットの外部スクリプト（TwitterWidgets）を読み込まない状態、
-// すなわちハイドレーション前のプレースホルダ表示をストーリーとして固定する。
-// 外部ネットワークに一切依存せず決定的である
 export const Default: Story = {
   args: {
-    className: "twitter-tweet",
-    children: "ツイート本文のプレースホルダです。",
+    id: SAMPLE_TWEET_ID,
   },
   play: async ({ canvasElement }) => {
-    // ライト / ダーク両テーマ用の blockquote が描画され、CSS でどちらか一方だけが表示される
-    const light = canvasElement.querySelector('blockquote[data-theme="light"]');
-    const dark = canvasElement.querySelector('blockquote[data-theme="dark"]');
-    await expect(light).not.toBeNull();
-    await expect(dark).not.toBeNull();
-    await expect(light).toHaveClass("twitter-tweet");
-    await expect(dark).toHaveClass("twitter-tweet");
+    const canvas = within(canvasElement);
+    // SWR の解決を待つ。取得前は TweetSkeleton が描画される
+    await expect(await canvas.findByText("ツイート本文のプレースホルダです。")).toBeInTheDocument();
+    await expect(canvas.getByText("テストユーザー")).toBeInTheDocument();
   },
 };

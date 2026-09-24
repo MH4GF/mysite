@@ -5,7 +5,7 @@ import "./globals.css";
 
 import type { ReactNode } from "react";
 
-import { ColorModeScript, TwitterWidgets } from "./_features";
+import { ColorModeScript } from "./_features";
 import { Command } from "./_features/command";
 import { baseUrl, siteInfo } from "./_utils";
 
@@ -67,7 +67,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="ja" className={inter.variable} suppressHydrationWarning>
       <body className="bg-background text-foreground">
         <ColorModeScript />
-        <TwitterWidgets />
         {children}
         <Command />
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""} />

@@ -103,6 +103,18 @@
           }
         }
       }
+    },
+    {
+      // MSW の fixture は外部 API のレスポンス形状をそのまま写すため、命名を選べない
+      // (react-tweet の Tweet 型が要求する __typename 等)
+      "includes": ["app/**/__tests__/handlers.ts"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useNamingConvention": "off"
+          }
+        }
+      }
     }
   ],
   "javascript": {
