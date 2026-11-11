@@ -39,7 +39,7 @@
     "@mh4gf/eslint-config": "0.6.12",
     "@next/eslint-plugin-next": "16.2.4",
     "@playwright/test": "1.57.0",
-    "@storybook/addon-vitest": "10.4.6",
+    "@storybook/addon-vitest": "10.6.2",
     "@storybook/nextjs-vite": "10.4.6",
     "@tailwindcss/postcss": "4.2.4",
     "@tsconfig/next": "2.0.6",
